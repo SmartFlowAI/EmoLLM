@@ -9,7 +9,7 @@ def qwen_api(data, emo):
     import dashscope
     from http import HTTPStatus
 
-    dashscope.api_key = ""
+    dashscope.api_key = "sk-8f4f4e79f2a34165994b09caa066ea66"
     prompt = f'''你是一个研究过无数具有心理健康问题的病人与心理健康医生对话的专家，请你构造一些符合实际情况的具有心理健康问题的病
     人和心理健康医生的连续的多轮对话记录。要求病人的问题属于{data}场景，具有{emo}情感，医生的回复尽可能包含心理辅导知识，并且能够一步步诱导病人说出自己的问题进而提供解决问题的可行方案。注意，构造的数据必须以医生的陈述为结束语，请只返回完整的对话内容。请以如下格式返回生成的数据：
     病人：病人的咨询或陈述 
@@ -141,3 +141,4 @@ if __name__ == '__main__':
         if (idx % 2 == 0):
             path = f'./{args.data}.jsonl'
             save_jsonl(data_lis=conversation_lis, file_path=path)
+            conversation_lis = [] # 清空
