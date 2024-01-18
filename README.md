@@ -1,7 +1,5 @@
 # EmoLLM
 
-## 贡献者
+## 🌟 Contributors
 
-<!-- readme: collaborators,contributors -start -->
-
-<!-- readme: collaborators,contributors -end -->
+[![EmoLLM contributors](https://contrib.rocks/image?repo=aJupyter/EmoLLM&max=2000)](https://github.com/aJupyter/EmoLLM/graphs/contributors)
