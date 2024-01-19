@@ -2,3 +2,4 @@ ESConv.json
 .DS_Store
 __pycache__/
 tmp/
+data/zhipuai/
