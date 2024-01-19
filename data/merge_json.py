@@ -26,7 +26,7 @@ if __name__ == '__main__':
     for path in get_all_file_paths('res/'):
         print(path)
 
-        with open('res/学业.jsonl', 'rt', encoding='utf-8') as file:
+        with open(path, 'rt', encoding='utf-8') as file:
             for line in file:
                 # 移除行尾的换行符
                 line = line.rstrip('\n')
@@ -36,4 +36,5 @@ if __name__ == '__main__':
                     conversion_lis.append(data)
                 except json.JSONDecodeError as e:
                     print(f"Error decoding JSON: {e}")
-        save_merge_json(data_lis=conversion_lis, file_path='merge.json')
+        
+    save_merge_json(data_lis=conversion_lis, file_path='merge.json')
