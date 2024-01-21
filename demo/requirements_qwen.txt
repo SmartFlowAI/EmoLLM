@@ -1,0 +1,2 @@
+gradio<3.42
+mdtex2html
