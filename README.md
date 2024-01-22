@@ -1,6 +1,6 @@
-# EmoLLM
+# EmoLLM-心理健康大模型 
 
-ProjectName and Description
+该EmoLLM-心理健康大模型主要基于...
 
 <!-- PROJECT SHIELDS -->
 
@@ -52,16 +52,11 @@ ProjectName and Description
 - [作者](#作者)
 - [鸣谢](#鸣谢)
 
-### 上手指南
-
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
-
-
 
 ###### 开发前的配置要求
 
-1. xxxxx x.x.x
-2. xxxxx x.x.x
+1. 
+2. 
 
 ###### **安装步骤**
 
@@ -69,7 +64,7 @@ ProjectName and Description
 2. Clone the repo
 
 ```sh
-git clone https://github.com/shaojintian/Best_README_template.git
+git clone https://github.com/aJupyter/EmoLLM.git
 ```
 
 ### 文件目录说明
@@ -105,7 +100,7 @@ filetree
 
 ### 部署
 
-暂无
+...
 
 ### 使用到的框架
 
