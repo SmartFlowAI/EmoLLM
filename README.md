@@ -25,7 +25,7 @@
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aJupyter/EmoLLM">查看Demo</a>
+    <a href="https://github.com/aJupyter/EmoLLM/demo">查看Demo</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">报告Bug</a>
     ·
@@ -54,9 +54,7 @@
 
 
 ###### 开发前的配置要求
-
-1. 
-2. 
+详见[部署要求](https://github.com/aJupyter/EmoLLM/tree/main/%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82)
 
 ###### **安装步骤**
 
@@ -98,9 +96,9 @@ filetree
 
 请阅读[ARCHITECTURE.md](https://github.com/aJupyter/EmoLLM/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
 
-### 部署
+### demo部署
 
-...
+详见[demo](https://github.com/aJupyter/EmoLLM/demo)
 
 ### 使用到的框架
 
@@ -139,7 +137,7 @@ xxx@xxxx
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE.txt)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)
 
 ### 鸣谢
 
@@ -162,7 +160,7 @@ xxx@xxxx
 [issues-shield]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
-[license-url]: https://github.com/aJupyter/EmoLLM/blob/master/LICENSE.txt
+[license-url]: https://github.com/aJupyter/EmoLLM/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/aJupyter
 
