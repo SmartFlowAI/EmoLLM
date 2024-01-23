@@ -25,7 +25,7 @@
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aJupyter/EmoLLM/demo">查看Demo</a>
+    <a href="https://github.com/aJupyter/EmoLLM/tree/main/demo">查看Demo</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">报告Bug</a>
     ·
@@ -129,15 +129,14 @@ filetree
 
 ### 作者
 
-xxx@xxxx
-
-知乎:xxxx  &ensp; qq:xxxxxx    
+@xxxx
+ 
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)
 
 ### 鸣谢
 
