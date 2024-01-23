@@ -1,0 +1,8 @@
+transformers==4.36.2
+streamlit==1.24.0
+sentencepiece==0.1.99
+accelerate==0.24.1
+transformers_stream_generator==0.0.4
+openxlab
+tiktoken
+einops

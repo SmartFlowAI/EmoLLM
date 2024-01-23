@@ -16,7 +16,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
 from transformers.trainer_utils import set_seed
 
-DEFAULT_CKPT_PATH = './merged'
+DEFAULT_CKPT_PATH = './model'
 
 _WELCOME_MSG = '''\
 Welcome to use Emo-Chat model, type text to start chat, type :h to show command help.

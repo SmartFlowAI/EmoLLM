@@ -15,7 +15,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
 
 
-DEFAULT_CKPT_PATH = './merged'
+DEFAULT_CKPT_PATH = './model'
 
 
 def _get_args():

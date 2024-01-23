@@ -1,22 +1,21 @@
 # EmoLLM-心理健康大模型 
 
-该EmoLLM-心理健康大模型主要基于...
 
-<!-- PROJECT SHIELDS -->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 <!-- PROJECT LOGO -->
 <br />
 
 <p align="center">
   <a href="https://github.com/aJupyter/EmoLLM/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/logo.jpeg" alt="Logo" width="30%">
   </a>
 
   <h3 align="center">EmoLLM</h3>
@@ -35,22 +34,44 @@
 </p>
 
 
- 本篇README.md面向开发者
+ <!-- 本篇README.md面向开发者 -->
+
+该模型基于InternLM2-7B-chat进行微调，从而构建一个能够理解用户-支持用户-帮助用户提供解决问题思路的心理AI助手。 心理健康大模型（Mental Health Grand Model）是一个综合性的概念，它旨在全面理解和促进个体、群体乃至整个社会的心理健康状态。这个模型通常包含以下几个关键组成部分：
+
+认知因素：涉及个体的思维模式、信念系统、认知偏差以及解决问题的能力。认知因素对心理健康有重要影响，因为它们影响个体如何解释和应对生活中的事件。
+
+情感因素：包括情绪调节、情感表达和情感体验。情感健康是心理健康的重要组成部分，涉及个体如何管理和表达自己的情感，以及如何从负面情绪中恢复。
+
+行为因素：涉及个体的行为模式、习惯和应对策略。这包括应对压力的技巧、社交技能以及自我效能感，即个体对自己能力的信心。
+
+社会环境：包括家庭、工作、社区和文化背景等外部因素，这些因素对个体的心理健康有着直接和间接的影响。
+
+生理健康：身体健康与心理健康紧密相关。良好的身体健康可以促进心理健康，反之亦然。
+
+心理韧性：指个体在面对逆境时的恢复力和适应能力。心理韧性强的人更能够从挑战中恢复，并从中学习和成长。
+
+预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
+
+评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
  
 ## 目录
 
-- [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
-  - [安装步骤](#安装步骤)
-- [文件目录说明](#文件目录说明)
-- [开发的架构](#开发的架构)
-- [部署](#部署)
-- [使用到的框架](#使用到的框架)
-- [贡献者](#贡献者)
-  - [如何参与开源项目](#如何参与开源项目)
-- [版本控制](#版本控制)
-- [作者](#作者)
-- [鸣谢](#鸣谢)
+- [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
+  - [目录](#目录)
+          - [开发前的配置要求](#开发前的配置要求)
+          - [**安装步骤**](#安装步骤)
+    - [文件目录说明](#文件目录说明)
+    - [开发的架构](#开发的架构)
+    - [demo部署](#demo部署)
+    - [使用到的框架](#使用到的框架)
+    - [贡献者](#贡献者)
+      - [如何参与开源项目](#如何参与开源项目)
+    - [版本控制](#版本控制)
+    - [作者](#作者)
+    - [版权说明](#版权说明)
+    - [鸣谢](#鸣谢)
+  - [Star History](#star-history)
+  - [🌟 Contributors](#-contributors)
 
 
 ###### 开发前的配置要求
@@ -159,9 +180,9 @@ filetree
 [issues-shield]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
-[license-url]: https://github.com/aJupyter/EmoLLM/blob/master/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/aJupyter
+[license-url]: https://github.com/aJupyter/EmoLLM/blob/main/LICENSE
+<!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555 -->
+<!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
 
 
 
@@ -172,3 +193,7 @@ filetree
 
 ## Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
+
+## 🌟 Contributors
+
+[![EmoLLM contributors](https://contrib.rocks/image?repo=aJupyter/EmoLLM&max=50)](https://github.com/aJupyter/EmoLLM/graphs/contributors)
