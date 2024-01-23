@@ -1,0 +1,4 @@
+erniebot  #文心一言
+dashscope  # 通义千问
+zhipuai # 智浦
+websocket #调用星火大模型的时候会使用 
