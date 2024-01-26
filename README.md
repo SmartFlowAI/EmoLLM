@@ -34,7 +34,7 @@
 
 <!-- 本篇README.md面向开发者 -->
 
-**EmoLLM**是一个能够支持 **理解用户-支持用户-帮助用户**心理健康辅导链路的心理健康大模型，由[InternLM2](https://github.com/InternLM/InternLM)指令微调而来，欢迎大家star~⭐⭐
+**EmoLLM**是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由[InternLM2](https://github.com/InternLM/InternLM)指令微调而来，欢迎大家star~⭐⭐
 
 
 
