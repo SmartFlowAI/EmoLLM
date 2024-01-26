@@ -112,6 +112,7 @@ filetree
 
 ```
 
+
 ### 数据构建
 
 请阅读[数据构建指南](generate_data/tutorial.md)查阅
@@ -125,6 +126,11 @@ filetree
 ### demo部署
 
 详见[demo](https://github.com/aJupyter/EmoLLM/demo)
+
+<details>
+<summary>更多详情</summary>
+
+
 
 ### 使用到的框架
 
@@ -146,9 +152,14 @@ filetree
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
+
+
 ### 版本控制
 
 该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
+
+</details>
 
 ### 作者（排名不分先后）
 
@@ -195,3 +206,4 @@ filetree
 [issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/aJupyter/EmoLLM/blob/main/LICENSE
+
