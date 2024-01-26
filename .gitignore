@@ -2,6 +2,7 @@ ESConv.json
 .DS_Store
 tmp/
 zhipuai/
+data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
