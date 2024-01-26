@@ -36,8 +36,6 @@
 
 **EmoLLM**是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由[InternLM2](https://github.com/InternLM/InternLM)指令微调而来，欢迎大家star~⭐⭐
 
-
-
 ---
 
 心理健康大模型（Mental Health Grand Model）是一个综合性的概念，它旨在全面理解和促进个体、群体乃至整个社会的心理健康状态。这个模型通常包含以下几个关键组成部分：
@@ -111,6 +109,8 @@ filetree
 ### 数据构建
 
 请阅读[数据构建指南](generate_data/tutorial.md)查阅
+
+本次微调用到的数据集见[datasets](datasets/data.json)
 
 ### 微调指南
 
