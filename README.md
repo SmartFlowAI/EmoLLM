@@ -80,14 +80,22 @@
 
 详见[部署要求](https://github.com/aJupyter/EmoLLM/tree/main/%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82)
 
-###### **安装步骤**
+###### **使用指南**
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-
+1. Clone the repo
 ```sh
 git clone https://github.com/aJupyter/EmoLLM.git
 ```
+2. 依次阅读或者选择感兴趣的部分阅读：
+   - [文件目录说明](#文件目录说明)
+   - [数据构建](#数据构建)
+   - [微调指南](#微调指南)
+   - [demo部署](#demo部署)
+
+
+
+<details>
+<summary>更多详情</summary>
 
 ### 文件目录说明
 
@@ -128,8 +136,7 @@ filetree
 
 详见[demo](https://github.com/aJupyter/EmoLLM/demo)
 
-<details>
-<summary>更多详情</summary>
+
 
 
 
