@@ -109,11 +109,11 @@ filetree
 
 ### 数据构建
 
-请阅读[数据构建指南](generate_data\tutorial.md)查阅
+请阅读[数据构建指南](generate_data/tutorial.md)查阅
 
 ### 微调
 
-详见[微调指南](xtuner_config\README.md)
+详见[微调指南](xtuner_config/README.md)
 
 ### demo部署
 
