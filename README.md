@@ -135,9 +135,10 @@ filetree
 
 ### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
+- [Xtuner](https://github.com/InternLM/xtuner)
+- [Trasformers](https://github.com/huggingface/transformers)
+- [Pytorch](https://pytorch.org/)
+- …
 
 ### 贡献者
 
