@@ -1,16 +1,15 @@
 # EmoLLM-心理健康大模型
 
-
-
 <!-- PROJECT SHIELDS -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Stargazers][stars-shield]][stars-url]
+[Contributors][contributors-url]
+[Forks][forks-url]
+[Issues][issues-url]
+[MIT License][license-url]
+[Stargazers][stars-url]
 
 <!-- PROJECT LOGO -->
+
 <br />
 
 <!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
@@ -60,8 +59,8 @@
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
   - [目录](#目录)
-          - [开发前的配置要求](#开发前的配置要求)
-          - [**使用指南**](#使用指南)
+    - [开发前的配置要求](#开发前的配置要求)
+    - [**使用指南**](#使用指南)
     - [文件目录说明](#文件目录说明)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
@@ -77,14 +76,16 @@
 
 ###### 开发前的配置要求
 
-详见[部署要求](https://github.com/aJupyter/EmoLLM/tree/main/%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82)
+- 硬件：A100 40G
 
 ###### **使用指南**
 
 1. Clone the repo
+
 ```sh
 git clone https://github.com/aJupyter/EmoLLM.git
 ```
+
 2. 依次阅读或者选择感兴趣的部分阅读：
    - [文件目录说明](#文件目录说明)
    - [数据构建](#数据构建)
@@ -92,34 +93,21 @@ git clone https://github.com/aJupyter/EmoLLM.git
    - [部署指南](#部署指南)
    - 查看更多详情
 
-
-
 <details>
 <summary>更多详情</summary>
 
 ### 文件目录说明
 
-eg:
-
 ```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+├─assets：图像资源
+├─datasets：数据集
+├─demo：demo脚本
+├─generate_data：生成数据指南
+│  └─xinghuo
+├─scripts：一些可用工具
+└─xtuner_config：微调指南
+    └─images
 ```
-
 
 ### 数据构建
 
@@ -156,9 +144,6 @@ filetree
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-
 ### 版本控制
 
 该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
@@ -192,6 +177,7 @@ filetree
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
 
 <!-- 太少了，没必要放 -->
+
 <!-- ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date) -->
@@ -211,4 +197,3 @@ filetree
 [issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/aJupyter/EmoLLM/blob/main/LICENSE
-
