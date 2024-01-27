@@ -41,7 +41,7 @@
 
 <!-- 本篇README.md面向开发者 -->
 
-**EmoLLM**是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由[InternLM2](https://github.com/InternLM/InternLM)指令微调而来，欢迎大家star~⭐⭐
+**EmoLLM** 是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 [InternLM2](https://github.com/InternLM/InternLM) 指令微调而来，欢迎大家star~⭐⭐
 
 ---
 
@@ -60,20 +60,19 @@
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
   - [目录](#目录)
-    - [开发前的配置要求](#开发前的配置要求)
-    - [**使用指南**](#使用指南)
+          - [开发前的配置要求](#开发前的配置要求)
+          - [**使用指南**](#使用指南)
     - [文件目录说明](#文件目录说明)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
-    - [demo部署](#demo部署)
+    - [部署指南](#部署指南)
     - [使用到的框架](#使用到的框架)
     - [贡献者](#贡献者)
       - [如何参与开源项目](#如何参与开源项目)
     - [版本控制](#版本控制)
-    - [作者](#作者)
+    - [作者（排名不分先后）](#作者排名不分先后)
     - [版权说明](#版权说明)
-    - [鸣谢](#鸣谢)
-  - [Star History](#star-history)
+    - [特别鸣谢](#特别鸣谢)
   - [🌟 Contributors](#-contributors)
 
 ###### 开发前的配置要求
@@ -90,7 +89,7 @@ git clone https://github.com/aJupyter/EmoLLM.git
    - [文件目录说明](#文件目录说明)
    - [数据构建](#数据构建)
    - [微调指南](#微调指南)
-   - [demo部署](#demo部署)
+   - [部署指南](#部署指南)
    - 查看更多详情
 
 
@@ -119,7 +118,6 @@ filetree
 ├── /templates/
 ├── useless.md
 └── /util/
-
 ```
 
 
@@ -133,13 +131,9 @@ filetree
 
 详见[微调指南](xtuner_config/README.md)
 
-### demo部署
+### 部署指南
 
-详见[demo](https://github.com/aJupyter/EmoLLM/demo)
-
-
-
-
+详见[部署指南](demo/README.md)
 
 ### 使用到的框架
 
@@ -150,7 +144,7 @@ filetree
 
 ### 贡献者
 
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
+请阅读 **CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
 
 #### 如何参与开源项目
 
@@ -175,7 +169,7 @@ filetree
 
 [aJupyter](https://github.com/aJupyter)@datawhale成员、南开大学在读硕士
 
-[jujimeizup](https://github.com/jujimeizuo)@
+[jujimeizuo](https://github.com/jujimeizuo)@江南大学硕士
 
 [Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@
 
@@ -197,9 +191,10 @@ filetree
 
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
 
-## Star History
+<!-- 太少了，没必要放 -->
+<!-- ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date) -->
 
 ## 🌟 Contributors
 
