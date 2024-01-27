@@ -119,7 +119,7 @@ git clone https://github.com/aJupyter/EmoLLM.git
 ### 使用到的框架
 
 - [Xtuner](https://github.com/InternLM/xtuner)
-- [Trasformers](https://github.com/huggingface/transformers)
+- [Transformers](https://github.com/huggingface/transformers)
 - [Pytorch](https://pytorch.org/)
 - …
 
