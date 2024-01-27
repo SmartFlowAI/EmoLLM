@@ -2,20 +2,13 @@
 
 <!-- PROJECT SHIELDS -->
 
-[Contributors][contributors-url]
-[Forks][forks-url]
-[Issues][issues-url]
-[MIT License][license-url]
-[Stargazers][stars-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Stargazers][stars-shield]][stars-url]
 
 <!-- PROJECT LOGO -->
-
-<br />
-
-<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
-
-<!-- PROJECT LOGO -->
-
 <br />
 
 <p align="center">
@@ -59,8 +52,8 @@
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
   - [目录](#目录)
-    - [开发前的配置要求](#开发前的配置要求)
-    - [**使用指南**](#使用指南)
+          - [开发前的配置要求](#开发前的配置要求)
+          - [**使用指南**](#使用指南)
     - [文件目录说明](#文件目录说明)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
@@ -158,7 +151,7 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 [Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@
 
-[Farewell](https://github.com/8baby8)@
+[Farewell](https://github.com/8baby8)@哈尔滨工业大学（威海）在读本科生
 
 ### 版权说明
 
