@@ -2,14 +2,13 @@
 
 <!-- PROJECT SHIELDS -->
 
-[Contributors][contributors-url]
-[Forks][forks-url]
-[Issues][issues-url]
-[MIT License][license-url]
-[Stargazers][stars-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Stargazers][stars-shield]][stars-url]
 
 <!-- PROJECT LOGO -->
-
 <br />
 
 <!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
