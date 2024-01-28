@@ -151,9 +151,9 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 [jujimeizuo](https://github.com/jujimeizuo)@江南大学硕士
 
-[Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@
+[Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@哈尔滨工业大学（威海）在读本科生
 
-[Farewell](https://github.com/8baby8)@哈尔滨工业大学（威海）在读本科生
+[Farewell](https://github.com/8baby8)@
 
 ### 版权说明
 
