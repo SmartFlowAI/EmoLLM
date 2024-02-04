@@ -56,7 +56,7 @@
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
 </p>
 
-
+- 【2024.2.5】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
 - 【2024.1.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
 - 【2024.1.25】 完成EmoLLM第一版并部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
 
