@@ -51,14 +51,25 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
 ### 最近更新
+
+- 【2024.2.6】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
+<p align="center"> 
+  <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
+</p>
+
 - 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳 
 <p align="center">
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
 </p>
 
+<details>
+<summary>查看更多</summary>
+  
 - 【2024.2.3】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
 - 【2024.1.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
 - 【2024.1.25】 完成EmoLLM第一版并部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
+
+</details>
 
 ## 目录
 
