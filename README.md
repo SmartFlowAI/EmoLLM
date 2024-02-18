@@ -192,9 +192,9 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 <!-- 太少了，没必要放 -->
 
-<!-- ## Star History
+## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date) -->
+[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
 
 ## 🌟 Contributors
 
