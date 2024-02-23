@@ -44,7 +44,6 @@
 | DeepSeek MoE_16B_chat |  qlora   |
 | Mixtral 8x7B_instruct |  qlora   |
 |          ……           |    ……    |
-
 欢迎大家为本项目做出贡献~
 
 ---
