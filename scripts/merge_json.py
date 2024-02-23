@@ -3,39 +3,38 @@ import os
 
 
 def save_merge_json(data_lis, file_path):
+    import json
+
     with open(file_path, 'wt', encoding='utf-8') as file:
-        json.dump(data_lis, file, indent=4, ensure_ascii=False)
+        json.dump(data_lis, file, ensure_ascii=False)
 
 
-def get_all_file_paths(folder_path, suffix=''):
-    print(folder_path)
-    files = os.listdir(folder_path)
-    path = []
-    for file in files:
-        file_path = os.path.join(folder_path, file)
-        if os.path.isdir(file_path):
-            path.extend(get_all_file_paths(file_path))
-        else:
-            if file_path.endswith(suffix):
-                path.append(file_path)
-    return path
+def get_all_file_paths(folder_path):
+    # 确保传入的是一个目录
+    if not os.path.isdir(folder_path):
+        raise ValueError(f"{folder_path} is not a valid directory")
+
+    # 获取文件夹下所有文件的路径
+    file_paths = [os.path.join(folder_path, file) for file in os.listdir(
+        folder_path) if os.path.isfile(os.path.join(folder_path, file))]
+    return file_paths
 
 
 if __name__ == '__main__':
     conversion_lis = []
-    folder_path = './' # input
-    merge_path = 'merge.json' # input
-    paths = get_all_file_paths(folder_path=folder_path, suffix='.json')
 
-    for path in paths:
+    for path in get_all_file_paths(r'data\res-aiwei'):
         print(path)
-        with open(path, 'rt', encoding='utf-8') as lines:
-            datas = []
-            for line in lines:
-                datas.append(line)
-            try:
-                datas = json.loads(''.join(datas))
-                conversion_lis.extend(datas)
-            except json.JSONDecodeError as e:
-                print(f"Error decoding JSON: {e}")
-        save_merge_json(data_lis=conversion_lis, file_path=merge_path)
+
+        with open(path, 'rt', encoding='utf-8') as file:
+            for line in file:
+                # 移除行尾的换行符
+                line = line.rstrip('\n')
+                # 解析JSON
+                try:
+                    data = json.loads(line)
+                    conversion_lis.append(data)
+                except json.JSONDecodeError as e:
+                    print(f"Error decoding JSON: {e}")
+        save_merge_json(data_lis=conversion_lis,
+                        file_path=r'.\merge.json')

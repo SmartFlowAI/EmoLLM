@@ -2,16 +2,14 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Stargazers][stars-shield]][stars-url]
-
+[Contributors][contributors-url]
+[Forks][forks-url]
+[Issues][issues-url]
+[MIT License][license-url]
+[Stargazers][stars-url]
 
 <br />
 <!-- PROJECT LOGO -->
-
 
 <p align="center">
   <a href="https://github.com/aJupyter/EmoLLM/">
@@ -35,7 +33,21 @@
 
 <!-- 本篇README.md面向开发者 -->
 
-**EmoLLM** 是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 [InternLM2](https://github.com/InternLM/InternLM) 指令微调而来，欢迎大家star~⭐⭐
+**EmoLLM** 是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 `LLM`指令微调而来，欢迎大家star~⭐⭐。目前已经开源的 `LLM`微调配置如下：
+
+|         模型          |   类型   |
+| :-------------------: | :------: |
+|   InternLM2_7B_chat   |  qlora   |
+|  InternLM2_1_8B_chat  | 全量微调 |
+|     Qwen_7b_chat      |  qlora   |
+|   Qwen1_5-0_5B-Chat   | 全量微调 |
+|  Baichuan2_13B_chat   |  qlora   |
+|      ChatGLM3_6B      |   lora   |
+| DeepSeek MoE_16B_chat |  qlora   |
+| Mixtral 8x7B_instruct |  qlora   |
+|          ……           |    ……    |
+
+欢迎大家为本项目做出贡献~
 
 ---
 
@@ -52,20 +64,23 @@
 
 ### 最近更新
 
+- 【2024.2.23】更新[若干微调配置](/xtuner_config/)（目前微调的模型请见）新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
 - 【2024.2.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
 - 【2024.2.6】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
+
 <p align="center"> 
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
 
-- 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳 
+<details>
+<summary>查看更多</summary>
+
+- 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
+
 <p align="center">
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
 </p>
 
-<details>
-<summary>查看更多</summary>
-  
 - 【2024.2.3】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
 - 【2024.1.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
 - 【2024.1.25】 完成EmoLLM第一版并部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
@@ -75,23 +90,26 @@
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
-  - [开发前的配置要求](#开发前的配置要求)
-  - [**使用指南**](#使用指南)
+  - [最近更新](#最近更新)
+  - [目录](#目录)
+    - [开发前的配置要求](#开发前的配置要求)
+    - [**使用指南**](#使用指南)
     - [文件目录说明](#文件目录说明)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
     - [部署指南](#部署指南)
     - [使用到的框架](#使用到的框架)
-    - [如何参与本项目](#如何参与本项目)
+      - [如何参与本项目](#如何参与本项目)
     - [版本控制](#版本控制)
     - [作者（排名不分先后）](#作者排名不分先后)
     - [版权说明](#版权说明)
     - [特别鸣谢](#特别鸣谢)
+  - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
 
 ###### 开发前的配置要求
 
-- 硬件：A100 40G
+- 硬件：A100 40G（仅针对InternLM2_7B_chat+qlora微调+deepspeed zero2优化）
 
 ###### **使用指南**
 
@@ -144,8 +162,6 @@ git clone https://github.com/aJupyter/EmoLLM.git
 - [Transformers](https://github.com/huggingface/transformers)
 - [Pytorch](https://pytorch.org/)
 - …
-
-
 
 #### 如何参与本项目
 
