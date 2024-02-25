@@ -188,6 +188,8 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 [ZhouXinAo](https://github.com/zxazys)@南开大学在读硕士
 
+[MING_X](https://github.com/MING-ZCH)@华中科技大学在读本科生
+
 ### 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)
