@@ -153,11 +153,11 @@ The dataset used for this fine-tuning can be found at[datasets](datasets/data.js
 
 ### Fine-tuning Guide
 
-For details, see the[微调指南](xtuner_config/README.md)
+For details, see the [fine-tuning guide](xtuner_config/README.md)
 
 ### Deployment Guide
 
-For details, see the[部署指南](demo/README.md)
+For details, see the [deployment guide](demo/README.md)
 
 ### Frameworks Used
 
