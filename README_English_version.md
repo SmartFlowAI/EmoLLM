@@ -201,9 +201,9 @@ The project is licensed under the MIT License. Please refer to the details
 ### Acknowledgments
 
 - [Sanbu](https://github.com/sanbuphy)
-- [上海人工智能实验室](https://www.shlab.org.cn/)
-- [闻星大佬（小助手）](https://github.com/vansin)
-- [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/)
+- [Vanin](https://github.com/vansin)
+- [扫地升(WeChat Official Account)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 
 <!-- links -->
 
