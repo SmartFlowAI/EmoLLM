@@ -15,7 +15,10 @@
   </a>
 
 <h3 align="center">EmoLLM</h3>
+
   <p align="center">
+      简体中文| <a href="README_English_version.md" >English</a> 
+    <br />
     <br />
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
@@ -31,7 +34,7 @@
 
 <!-- 本篇README.md面向开发者 -->
 
-**EmoLLM** 是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 `LLM`指令微调而来，欢迎大家star~⭐⭐。目前已经开源的 `LLM`微调配置如下：
+**EmoLLM** 是一系列能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 `LLM`指令微调而来，欢迎大家star~⭐⭐。目前已经开源的 `LLM`微调配置如下：
 
 |         模型          |   类型   |
 | :-------------------: | :------: |
@@ -189,6 +192,8 @@ git clone https://github.com/aJupyter/EmoLLM.git
 [ZhouXinAo](https://github.com/zxazys)@南开大学在读硕士
 
 [MING_X](https://github.com/MING-ZCH)@华中科技大学在读本科生
+
+[Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
 
 ### 版权说明
 
