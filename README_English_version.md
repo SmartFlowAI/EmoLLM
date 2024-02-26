@@ -15,7 +15,10 @@
   </a>
 
 <h3 align="center">EmoLLM</h3>
+
   <p align="center">
+  <a href="README.md">简体中文</a> | English 
+    <br />
     <br />
     <a href="https://github.com/aJupyter/EmoLLM"><strong>Explore the documentation of this project »</strong></a>
     <br />
