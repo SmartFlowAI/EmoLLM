@@ -35,7 +35,7 @@
 <!-- 本篇README.md面向开发者 -->
 
 
-**EmoLLM** is a large language model designed to understand, support and help customers in mental health counseling. It is fine-tuned from the LLM instructions. We really appreciate it if you can give it a star~⭐⭐. The open-sourced configuration is as follows:
+**EmoLLM** is a series of large language models designed to understand, support and help customers in mental health counseling. It is fine-tuned from the LLM instructions. We really appreciate it if you can give it a star~⭐⭐. The open-sourced configuration is as follows:
 
 |         model          |   type   |
 | :-------------------: | :------: |
@@ -208,7 +208,7 @@ The project is licensed under the MIT License. Please refer to the details
 - [Sanbu](https://github.com/sanbuphy)
 - [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/)
 - [Vanin](https://github.com/vansin)
-- [扫地升(WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- [Bloom up (WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 
 <!-- links -->
 
