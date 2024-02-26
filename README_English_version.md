@@ -149,7 +149,7 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 Please read the [Data Construction Guide ](generate_data/tutorial.md)for reference.
 
-The dataset used for this fine-tuning can be found at[datasets](datasets/data.json)
+The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
 ### Fine-tuning Guide
 
