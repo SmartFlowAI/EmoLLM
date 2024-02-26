@@ -194,7 +194,9 @@ This project uses Git for version control. You can see the current available ver
 
 [ZhouXinAo](https://github.com/zxazys)@Master's student at Nankai University
 
-[MING_X](https://github.com/MING-ZCH) @Undergraduate at Huazhong University of Science and Technology.
+[MING_X](https://github.com/MING-ZCH) @Undergraduate at Huazhong University of Science and Technology
+
+[Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
 
 ### Copyright Notice
 
