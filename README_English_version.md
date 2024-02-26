@@ -123,10 +123,10 @@ git clone https://github.com/aJupyter/EmoLLM.git
 ```
 
 1. Read in sequence or read sections you're interested in：
-   - [File Directory Explanation](#文件目录说明)
-   - [Data Construction](#数据构建)
-   - [Fine-tuning Guide](#微调指南)
-   - [Deployment Guide](#部署指南)
+   - [File Directory Explanation](#file-directory-explanation)
+   - [Data Construction](#data-construction)
+   - [Fine-tuning Guide](#fine-tuning-guide)
+   - [Deployment Guide](#deployment-guide)
    - View More Details
 
 <details>
