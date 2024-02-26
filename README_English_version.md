@@ -203,7 +203,7 @@ The project is licensed under the MIT License. Please refer to the details
 - [Sanbu](https://github.com/sanbuphy)
 - [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/)
 - [Vanin](https://github.com/vansin)
-- [扫地升(WeChat Official Account)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- [扫地升(WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 
 <!-- links -->
 
