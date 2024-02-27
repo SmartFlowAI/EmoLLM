@@ -90,10 +90,10 @@
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
-  - [最近更新](#最近更新)
+    - [最近更新](#最近更新)
   - [目录](#目录)
-    - [开发前的配置要求](#开发前的配置要求)
-    - [**使用指南**](#使用指南)
+          - [开发前的配置要求](#开发前的配置要求)
+          - [**使用指南**](#使用指南)
     - [文件目录说明](#文件目录说明)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
@@ -183,7 +183,7 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 [aJupyter](https://github.com/aJupyter)@datawhale成员、南开大学在读硕士
 
-[jujimeizuo](https://github.com/jujimeizuo)@江南大学硕士
+[jujimeizuo](https://github.com/jujimeizuo)@江南大学在读硕士
 
 [Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@哈尔滨工业大学（威海）在读本科生
 
@@ -212,7 +212,6 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
 
-<!-- 太少了，没必要放 -->
 
 ## Star History
 
@@ -220,16 +219,16 @@ git clone https://github.com/aJupyter/EmoLLM.git
 
 ## 🌟 Contributors
 
-[![EmoLLM contributors](https://contrib.rocks/image?repo=aJupyter/EmoLLM&max=50)](https://github.com/aJupyter/EmoLLM/graphs/contributors)
+[![EmoLLM contributors](https://contrib.rocks/image?repo=SmartFlowAI/EmoLLM&max=50)](https://github.com/SmartFlowAI/EmoLLM/graphs/contributors)
 
-[your-project-path]: aJupyter/EmoLLM
-[contributors-shield]: https://img.shields.io/github/contributors/aJupyter/EmoLLM.svg?style=flat-square
-[contributors-url]: https://github.com/aJupyter/EmoLLM/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/aJupyter/EmoLLM.svg?style=flat-square
-[forks-url]: https://github.com/aJupyter/EmoLLM/network/members
-[stars-shield]: https://img.shields.io/github/stars/aJupyter/EmoLLM.svg?style=flat-square
-[stars-url]: https://github.com/aJupyter/EmoLLM/stargazers
-[issues-shield]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
-[license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
-[license-url]: https://github.com/aJupyter/EmoLLM/blob/main/LICENSE
+[your-project-path]: SmartflowAI/EmoLLM
+[contributors-shield]: https://img.shields.io/github/contributors/SmartflowAI/EmoLLM.svg?style=flat-square
+[contributors-url]: https://github.com/SmartflowAI/EmoLLM/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SmartflowAI/EmoLLM.svg?style=flat-square
+[forks-url]: https://github.com/SmartflowAI/EmoLLM/network/members
+[stars-shield]: https://img.shields.io/github/stars/SmartflowAI/EmoLLM.svg?style=flat-square
+[stars-url]: https://github.com/SmartflowAI/EmoLLM/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
+[license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
+[license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
