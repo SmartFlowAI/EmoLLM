@@ -62,6 +62,8 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 ### Recent Updates
+
+- 【2024.2.27】 Updated English README and a series of datasets (licking dogs and one-round dialogue)
 - 【2024.2.23】The "Gentle Lady Psychologist Ai Wei" based on InternLM2_7B_chat_qlora was launched. [Click here to obtain the model weights](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei), [configuration file](xtuner_config/aiwei-internlm2_chat_7b_qlora.py), [online experience link](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
 
 - 【2024.2.23】Updated [several fine-tuning configurations](/xtuner_config/), added [data_pro.json](/datasets/data_pro.json) (more quantity, more comprehensive scenarios, richer content) and [aiwei.json](/datasets/aiwei.json) (dedicated to the gentle lady role-play, featuring Emoji expressions), the "Gentle Lady Psychologist Ai Wei" is coming soon.
@@ -119,7 +121,7 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 1. Clone the repo
 
 ```sh
-git clone https://github.com/aJupyter/EmoLLM.git
+git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
 
 1. Read in sequence or read sections you're interested in：
@@ -198,6 +200,8 @@ This project uses Git for version control. You can see the current available ver
 
 [Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
 
+[MrCatAI](https://github.com/MrCatAI)@AI Removal of Labour
+
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details
@@ -224,16 +228,16 @@ The project is licensed under the MIT License. Please refer to the details
 
 ## 🌟 Contributors
 
-[![EmoLLM contributors](https://contrib.rocks/image?repo=aJupyter/EmoLLM&max=50)](https://github.com/aJupyter/EmoLLM/graphs/contributors)
+[![EmoLLM contributors](https://contrib.rocks/image?repo=SmartFlowAI/EmoLLM&max=50)](https://github.com/SmartFlowAI/EmoLLM/graphs/contributors)
 
-[your-project-path]: aJupyter/EmoLLM
-[contributors-shield]: https://img.shields.io/github/contributors/aJupyter/EmoLLM.svg?style=flat-square
-[contributors-url]: https://github.com/aJupyter/EmoLLM/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/aJupyter/EmoLLM.svg?style=flat-square
-[forks-url]: https://github.com/aJupyter/EmoLLM/network/members
-[stars-shield]: https://img.shields.io/github/stars/aJupyter/EmoLLM.svg?style=flat-square
-[stars-url]: https://github.com/aJupyter/EmoLLM/stargazers
-[issues-shield]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
-[license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
-[license-url]: https://github.com/aJupyter/EmoLLM/blob/main/LICENSE
+[your-project-path]: SmartflowAI/EmoLLM
+[contributors-shield]: https://img.shields.io/github/contributors/SmartflowAI/EmoLLM.svg?style=flat-square
+[contributors-url]: https://github.com/SmartflowAI/EmoLLM/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SmartflowAI/EmoLLM.svg?style=flat-square
+[forks-url]: https://github.com/SmartflowAI/EmoLLM/network/members
+[stars-shield]: https://img.shields.io/github/stars/SmartflowAI/EmoLLM.svg?style=flat-square
+[stars-url]: https://github.com/SmartflowAI/EmoLLM/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
+[license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
+[license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
