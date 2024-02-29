@@ -62,7 +62,7 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 ### Recent Updates
-
+- 【2024.2.29】 Updated objective assessment calculations, see [evaluate](./evaluate/) for details. A series of datasets have also been updated, see [datasets](./datasets/) for details.
 - 【2024.2.27】 Updated English README and a series of datasets (licking dogs and one-round dialogue)
 - 【2024.2.23】The "Gentle Lady Psychologist Ai Wei" based on InternLM2_7B_chat_qlora was launched. [Click here to obtain the model weights](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei), [configuration file](xtuner_config/aiwei-internlm2_chat_7b_qlora.py), [online experience link](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
 
@@ -201,6 +201,8 @@ This project uses Git for version control. You can see the current available ver
 [Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
 
 [MrCatAI](https://github.com/MrCatAI)@AI Removal of Labour
+
+[ZeyuBa](https://github.com/ZeyuBa)@Master's student at Institute of Automation
 
 ### Copyright Notice
 
