@@ -1,4 +1,4 @@
-# 说明
+# Introduction
 * gen_Chat 使用于生成ChatGLM3-6B的数据集
 * gen_data 使用于生成InternLM所需要的数据集
   
