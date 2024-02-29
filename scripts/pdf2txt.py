@@ -5,10 +5,12 @@ try:
     import  cv2
 except :
     os.system('pip install opencv-python')
+    import  cv2
 try :
     from  paddleocr  import  PaddleOCR ,  draw_ocr ,  download_with_progressbar 
 except:
     os.system('pip install paddleocr')
+    from  paddleocr  import  PaddleOCR ,  draw_ocr ,  download_with_progressbar 
 output_folder_path = 'res/'
 if not os.path.exists(output_folder_path):  
     os.makedirs(output_folder_path) 
