@@ -189,7 +189,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 [Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@哈尔滨工业大学（威海）在读本科生
 
-[Farewell](https://github.com/8baby8)@
+[Farewell](https://github.com/8baby8)@飞桨领航团区域主管、文心大模型核心开发者
 
 [ZhouXinAo](https://github.com/zxazys)@南开大学在读硕士
 
