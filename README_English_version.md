@@ -202,9 +202,9 @@ This project uses Git for version control. You can see the current available ver
 
 [MrCatAI](https://github.com/MrCatAI)@AI Removal of Labour
 
-[ZeyuBa](https://github.com/ZeyuBa)@Master's student at University of Pennsylvania
+[ZeyuBa](https://github.com/ZeyuBa)@Master's student at Institute of Automation
 
-[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@宾夕法尼亚大学在读硕士
+[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@Master's student at University of Pennsylvania
 
 ### Copyright Notice
 
