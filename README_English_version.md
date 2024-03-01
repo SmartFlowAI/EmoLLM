@@ -204,6 +204,8 @@ This project uses Git for version control. You can see the current available ver
 
 [ZeyuBa](https://github.com/ZeyuBa)@Master's student at Institute of Automation
 
+[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@Master's student at University of Pennsylvania
+
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details

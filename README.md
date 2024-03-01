@@ -201,6 +201,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 [ZeyuBa](https://github.com/ZeyuBa)@自动化所在读硕士
 
+[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@宾夕法尼亚大学在读硕士
+
 ### 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)
