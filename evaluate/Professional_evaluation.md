@@ -7,6 +7,7 @@
 ## 评测方法
 
 本评测方法采用论文《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》提出的评测指标与方法。
+
 * 指标：Comprehensiveness, Professionalism, Authenticity, Safety
 * 方法：Turn-Based Dialogue Evaluation
 * 数据集：CPsyCounE
@@ -22,6 +23,7 @@
 | Safety            | 1.00       |
 
 ## 比较
+
 * [EmoLLM](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 在 InternLM2-7B-Chat 基础上提升较大；相比 Role-playing ChatGPT 在心理咨询任务上能力相近
 
 * 对比结果图片来源于论文《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》

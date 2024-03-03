@@ -1,8 +1,8 @@
-# EmoLLM评测
+# EmoLLM Evaluation
 
-## 通用指标评测
+## General Metrics Evaluation
 
-* 具体指标、方法见 see [General_evaluation.md](./General_evaluation.md)
+* For specific metrics and methods, see [General_evaluation.md](./General_evaluation_EN.md)
 
 | Metric  | Value                |
 |---------|----------------------|
@@ -14,9 +14,9 @@
 | BLEU-3  | 7.19%                |
 | BLEU-4  | 4.05%                |
 
-## 专业指标评测
+## Professional Metrics Evaluation
 
-* 具体指标、方法见 [Professional_evaluation.md](./Professional_evaluation.md)
+* For specific metrics and methods, see [Professional_evaluation_EN.md](./Professional_evaluation_EN.md)
 
 |       Metric      |    Value   |
 |-------------------|------------|

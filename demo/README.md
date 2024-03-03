@@ -15,17 +15,16 @@ pip install -r requirements.txt
 ```
 
 - 下载模型
- 
-    - 模型权重：https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model
-    - 通过 openxlab.model.download 下载，详情请看 [cli_internlm2](./cli_internlm2.py)
+  - 模型权重：https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model
+  - 通过 openxlab.model.download 下载，详情请看 [cli_internlm2](./cli_internlm2.py)
 
-        ```bash
-        from openxlab.model import download
+    ```bash
+    from openxlab.model import download
 
-        download(model_repo='jujimeizuo/EmoLLM_Model', 
-                output='model')
-        ```
-    - 可以手动下载，放在 `./model` 目录下，然后把上面的代码删掉
+    download(model_repo='jujimeizuo/EmoLLM_Model', output='model')
+    ```
+
+  - 可以手动下载，放在 `./model` 目录下，然后把上面的代码删掉
 
 - cli_demo
 
