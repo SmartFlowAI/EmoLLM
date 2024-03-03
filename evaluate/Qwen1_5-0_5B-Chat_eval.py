@@ -25,7 +25,7 @@ batch_size=12
 
 
 #prepare data and dataloader
-dataset = datasets.load_dataset('json', data_files='./train_dir/converted.json',split=f"train[:{test_num}]")
+dataset = datasets.load_dataset('json', data_files='./data_dir/converted.json',split=f"train[:{test_num}]")
 references =dataset['output'][:test_num]
 
 hypotheses = []
