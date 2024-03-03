@@ -18,8 +18,8 @@ def compute_metrics(eval_pred):
 
     rouge = Rouge()
 
-    bleu =np.array([0,0,0,0])
-    weights = [(1.,0,0,0),(1./2., 1./2.),(1./3., 1./3., 1./3.),(1./4., 1./4., 1./4., 1./4.)]
+    bleu =np.array([0.,0.,0.,0.])
+    weights = [(1.,0.,0.,0.),(1./2., 1./2.),(1./3., 1./3., 1./3.),(1./4., 1./4., 1./4., 1./4.)]
     for decoded_label, decoded_pred in zip(decoded_labels, decoded_preds):
         bleu +=np.array( sentence_bleu(
             references=[decoded_label.split(' ')],
