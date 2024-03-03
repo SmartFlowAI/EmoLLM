@@ -102,7 +102,7 @@ for batch in dataloader:
         verbose=False,
         errors='replace'
     ).replace("医生：","") for i in range(batch_size)]
-    hypotheses.extend([r.replace(stop_word," ").split()[0] for r in batch_response if stop_word in r])
+    hypotheses.extend([r.replace(stop_word," ").split()[0] if stop_word in r else r for r in batch_response])
 
 
 # Load metric
