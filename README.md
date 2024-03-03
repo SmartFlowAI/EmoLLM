@@ -39,6 +39,7 @@
 |         模型          |   类型   |
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  qlora   |
+|   InternLM2_7B_chat   | 全量微调 |
 |  InternLM2_1_8B_chat  | 全量微调 |
 |     Qwen_7b_chat      |  qlora   |
 |   Qwen1_5-0_5B-Chat   | 全量微调 |
@@ -63,11 +64,15 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
 ### 最近更新
+- 【2024.3.3】 [基于InternLM2-7B-chat全量微调版本开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
 - 【2024.2.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)。
 - 【2024.2.27】更新英文readme和一系列数据集（舔狗和单轮对话）
 - 【2024.2.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
 - 【2024.2.23】更新[若干微调配置](/xtuner_config/)，新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
 - 【2024.2.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
+
+<summary>查看更多</summary>
+
 - 【2024.2.6】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
 
 <p align="center"> 
@@ -75,7 +80,6 @@
 </p>
 
 <details>
-<summary>查看更多</summary>
 
 - 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
 
@@ -247,8 +251,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 
 ## 交流群
+- 如果失效，请移步Issue区
+
 <p align="center">
   <img  width="30%" src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/55ecd0aa-4832-4269-ad57-4c26f9aa286b" alt="EmoLLM官方交流群">
 </p>
 
-- 如果失效，请移步Issue区
+

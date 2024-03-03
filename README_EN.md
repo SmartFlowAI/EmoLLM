@@ -40,6 +40,7 @@
 |         model          |   type   |
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  qlora   |
+|  InternLM2_7B_chat  | full finetuning |
 |  InternLM2_1_8B_chat  | full finetuning |
 |     Qwen_7b_chat      |  qlora   |
 |   Qwen1_5-0_5B-Chat   | full finetuning |
@@ -62,6 +63,7 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 ### Recent Updates
+- 【2024.3.3】 [Based on InternLM2-7B-chat full amount of fine-tuned version of open source](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full), need two 100*80G, update professional evaluation, see [evaluate](./evaluate/), update PaddleOCR-based PDF to txt tool scripts, see [scripts](./scripts/).
 - 【2024.2.29】 Updated objective assessment calculations, see [evaluate](./evaluate/) for details. A series of datasets have also been updated, see [datasets](./datasets/) for details.
 - 【2024.2.27】 Updated English README and a series of datasets (licking dogs and one-round dialogue)
 - 【2024.2.23】The "Gentle Lady Psychologist Ai Wei" based on InternLM2_7B_chat_qlora was launched. [Click here to obtain the model weights](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei), [configuration file](xtuner_config/aiwei-internlm2_chat_7b_qlora.py), [online experience link](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
@@ -70,14 +72,15 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 
 - 【2024.2.18】 The full fine-tuned version based on Qwen1_5-0_5B-Chat has been [open-sourced](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary). Friends with limited computational resources can now dive in and explore it.
 
+
+<details>
+<summary>View More</summary>
+
 - 【2024.2.6】 [Open-sourced based on the Qwen1_5-0_5B-Chat full-scale fine-tuned version](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary), friends with limited computing power can start experimenting~
 
 <p align="center"> 
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
-
-<details>
-<summary>View More</summary>
 
 - 【2024.2.5】 The project has been promoted by the official WeChat account NLP Engineering. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A) to the article. Welcome everyone to follow!! 🥳🥳
 
@@ -249,3 +252,10 @@ The project is licensed under the MIT License. Please refer to the details
 [issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
+
+## Communication group
+- If it fails, go to the Issue section.
+
+<p align="center">
+  <img  width="30%" src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/55ecd0aa-4832-4269-ad57-4c26f9aa286b" alt="EmoLLM official communication group">
+</p>
