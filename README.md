@@ -64,7 +64,7 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
 ### 最近更新
-- 【2024.3.3】 [基于InternLM2-7B-chat全量微调版本开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
+- 【2024.3.3】 [基于InternLM2-7B-chat全量微调版本开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块A100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
 - 【2024.2.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)。
 - 【2024.2.27】更新英文readme和一系列数据集（舔狗和单轮对话）
 - 【2024.2.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
