@@ -203,9 +203,9 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 [aiyinyuedejustin](https://github.com/aiyinyuedejustin)@宾夕法尼亚大学在读硕士
 
-[chg0901](https://github.com/chg0901)@韩国光云大学博士生
-
 [Nobody-ML](https://github.com/Nobody-ML)@中国石油大学（华东）在读本科生
+
+[chg0901](https://github.com/chg0901)@韩国光云大学博士生
 
 ### 版权说明
 
