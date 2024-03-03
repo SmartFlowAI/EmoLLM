@@ -2,7 +2,7 @@
 
 ## 通用指标评测
 
-* 具体指标、方法见 see [General_evaluation.md](./General_evaluation.md)
+* 具体评测指标和评测方法见 [General_evaluation.md](./General_evaluation.md)
 
 | Model    | ROUGE-1 | ROUGE-2 | ROUGE-L | BLEU-1  | BLEU-2  | BLEU-3  | BLEU-4  |
 |----------|---------|---------|---------|---------|---------|---------|---------|
@@ -11,11 +11,9 @@
 | InternLM2_7B_chat_full  | 32.45%  | 10.82%   | 20.17%  | 30.48%  | 15.67%  | 8.84%   | 5.02%   |
 ## 专业指标评测
 
-* 具体指标、方法见 [Professional_evaluation.md](./Professional_evaluation.md)
+* 具体评测指标和评测方法见 [Professional_evaluation.md](./Professional_evaluation.md)
 
-|       Metric      |    Value   |
-|-------------------|------------|
-| Comprehensiveness | 1.32       |
-| Professionalism   | 2.20       |
-| Authenticity      | 2.10       |
-| Safety            | 1.00       |
+|       Model       |    Comprehensiveness  |   rofessionalism  |  Authenticity   | Safety  |
+|-------------------|-----------------------|-------------------|-----------------|---------|
+| InternLM2_7B_chat_qlora |      1.32       |        2.20       |      2.10       | 1.00    |
+
