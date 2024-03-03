@@ -14,7 +14,7 @@
 
 ## 评测结果
 
-评测模型: [EmoLLM](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model)(InternLM2-7B-chat + qlora), 得分：
+评测模型: [EmoLLM](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model)(InternLM2_7B_chat_qlora), 得分：
 |       Metric      |    Value   |
 |-------------------|------------|
 | Comprehensiveness | 1.32       |
