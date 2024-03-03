@@ -244,3 +244,11 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
+
+
+## 交流群
+<p align="center">
+  <img  width="30%" src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/55ecd0aa-4832-4269-ad57-4c26f9aa286b" alt="EmoLLM官方交流群">
+</p>
+
+- 如果失效，请移步Issue区
