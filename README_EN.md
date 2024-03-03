@@ -206,7 +206,9 @@ This project uses Git for version control. You can see the current available ver
 
 [aiyinyuedejustin](https://github.com/aiyinyuedejustin)@Master's student at University of Pennsylvania
 
-[Nobody-ML](https://github.com/Nobody-ML)@Undergraduate at China University of Petroleum (East China)
+[Nobody-ML](https://github.com/Nobody-ML)@中国石油大学（华东）在读本科生
+
+[chg0901](https://github.com/chg0901)@韩国光云大学博士生
 
 ### Copyright Notice
 

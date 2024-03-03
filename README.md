@@ -205,6 +205,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 [Nobody-ML](https://github.com/Nobody-ML)@中国石油大学（华东）在读本科生
 
+[chg0901](https://github.com/chg0901)@韩国光云大学博士生
+
 ### 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)

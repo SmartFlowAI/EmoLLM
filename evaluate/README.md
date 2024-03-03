@@ -2,7 +2,7 @@
 
 ## 通用指标评测
 
-* 具体指标、方法见 General evaluation.md
+* 具体指标、方法见 see [General_evaluation.md](./General_evaluation.md)
 
 | Model    | ROUGE-1 | ROUGE-2 | ROUGE-L | BLEU-1  | BLEU-2  | BLEU-3  | BLEU-4  |
 |----------|---------|---------|---------|---------|---------|---------|---------|
@@ -11,7 +11,7 @@
 
 ## 专业指标评测
 
-* 具体指标、方法见 Professional evaluation.md
+* 具体指标、方法见 [Professional_evaluation.md](./Professional_evaluation.md)
 
 |       Metric      |    Value   |
 |-------------------|------------|
