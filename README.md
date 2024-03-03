@@ -1,16 +1,13 @@
 # EmoLLM-心理健康大模型
 
-[Contributors][contributors-url]
-[Forks][forks-url]
-[Stargazers][stars-url]
-[Issues][issues-url]
-[MIT License][license-url]
-
-<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
-
-<!-- PROJECT LOGO -->
-
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Stargazers][stars-shield]][stars-url]
 <br />
+<!-- PROJECT LOGO -->
 
 <p align="center">
   <a href="https://github.com/aJupyter/EmoLLM/">
@@ -18,7 +15,10 @@
   </a>
 
 <h3 align="center">EmoLLM</h3>
+
   <p align="center">
+      简体中文| <a href="README_English_version.md" >English</a> 
+    <br />
     <br />
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
@@ -34,7 +34,20 @@
 
 <!-- 本篇README.md面向开发者 -->
 
-**EmoLLM**是一个能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由[InternLM2](https://github.com/InternLM/InternLM)指令微调而来，欢迎大家star~⭐⭐
+**EmoLLM** 是一系列能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 `LLM`指令微调而来，欢迎大家star~⭐⭐。目前已经开源的 `LLM`微调配置如下：
+
+|         模型          |   类型   |
+| :-------------------: | :------: |
+|   InternLM2_7B_chat   |  qlora   |
+|  InternLM2_1_8B_chat  | 全量微调 |
+|     Qwen_7b_chat      |  qlora   |
+|   Qwen1_5-0_5B-Chat   | 全量微调 |
+|  Baichuan2_13B_chat   |  qlora   |
+|      ChatGLM3_6B      |   lora   |
+| DeepSeek MoE_16B_chat |  qlora   |
+| Mixtral 8x7B_instruct |  qlora   |
+|          ……           |    ……    |
+欢迎大家为本项目做出贡献~
 
 ---
 
@@ -49,61 +62,86 @@
 - 预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
+### 最近更新
+- 【2024.2.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)。
+- 【2024.2.27】更新英文readme和一系列数据集（舔狗和单轮对话）
+- 【2024.2.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
+- 【2024.2.23】更新[若干微调配置](/xtuner_config/)，新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
+- 【2024.2.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
+- 【2024.2.6】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
+
+<p align="center"> 
+  <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
+</p>
+
+<details>
+<summary>查看更多</summary>
+
+- 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
+
+<p align="center">
+  <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
+</p>
+
+- 【2024.2.3】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
+- 【2024.1.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
+- 【2024.1.25】 完成EmoLLM第一版并部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
+
+</details>
+
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
+    - [最近更新](#最近更新)
   - [目录](#目录)
-    - [开发前的配置要求](#开发前的配置要求)
-    - [**安装步骤**](#安装步骤)
+          - [开发前的配置要求](#开发前的配置要求)
+          - [**使用指南**](#使用指南)
     - [文件目录说明](#文件目录说明)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
-    - [demo部署](#demo部署)
+    - [部署指南](#部署指南)
     - [使用到的框架](#使用到的框架)
-    - [贡献者](#贡献者)
-      - [如何参与开源项目](#如何参与开源项目)
+      - [如何参与本项目](#如何参与本项目)
     - [版本控制](#版本控制)
-    - [作者](#作者)
+    - [作者（排名不分先后）](#作者排名不分先后)
     - [版权说明](#版权说明)
-    - [鸣谢](#鸣谢)
+    - [特别鸣谢](#特别鸣谢)
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
 
 ###### 开发前的配置要求
 
-详见[部署要求](https://github.com/aJupyter/EmoLLM/tree/main/%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82)
+- 硬件：A100 40G（仅针对InternLM2_7B_chat+qlora微调+deepspeed zero2优化）
 
-###### **安装步骤**
+###### **使用指南**
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
 
 ```sh
-git clone https://github.com/aJupyter/EmoLLM.git
+git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
+
+2. 依次阅读或者选择感兴趣的部分阅读：
+   - [文件目录说明](#文件目录说明)
+   - [数据构建](#数据构建)
+   - [微调指南](#微调指南)
+   - [部署指南](#部署指南)
+   - 查看更多详情
+
+<details>
+<summary>更多详情</summary>
 
 ### 文件目录说明
 
-eg:
-
 ```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
-
+├─assets：图像资源
+├─datasets：数据集
+├─demo：demo脚本
+├─generate_data：生成数据指南
+│  └─xinghuo
+├─scripts：一些可用工具
+└─xtuner_config：微调指南
+    └─images
 ```
 
 ### 数据构建
@@ -116,21 +154,18 @@ filetree
 
 详见[微调指南](xtuner_config/README.md)
 
-### demo部署
+### 部署指南
 
-详见[demo](https://github.com/aJupyter/EmoLLM/demo)
+详见[部署指南](demo/README.md)
 
 ### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
+- [Xtuner](https://github.com/InternLM/xtuner)
+- [Transformers](https://github.com/huggingface/transformers)
+- [Pytorch](https://pytorch.org/)
+- …
 
-### 贡献者
-
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
-
-#### 如何参与开源项目
+#### 如何参与本项目
 
 贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
 
@@ -144,15 +179,33 @@ filetree
 
 该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
 
+</details>
+
 ### 作者（排名不分先后）
 
 [aJupyter](https://github.com/aJupyter)@datawhale成员、南开大学在读硕士
 
-[jujimeizup](https://github.com/jujimeizuo)@
+[jujimeizuo](https://github.com/jujimeizuo)@江南大学在读硕士
 
-[Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@
+[Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@哈尔滨工业大学（威海）在读本科生
 
-[Farewell](https://github.com/8baby8)@
+[Farewell](https://github.com/8baby8)@飞桨领航团区域主管、文心大模型核心开发者
+
+[ZhouXinAo](https://github.com/zxazys)@南开大学在读硕士
+
+[MING_X](https://github.com/MING-ZCH)@华中科技大学在读本科生
+
+[Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
+
+[MrCatAI](https://github.com/MrCatAI)@AI搬用工
+
+[ZeyuBa](https://github.com/ZeyuBa)@自动化所在读硕士
+
+[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@宾夕法尼亚大学在读硕士
+
+[Nobody-ML](https://github.com/Nobody-ML)@中国石油大学（华东）在读本科生
+
+[chg0901](https://github.com/chg0901)@韩国光云大学博士生
 
 ### 版权说明
 
@@ -163,6 +216,7 @@ filetree
 - [Sanbu](https://github.com/sanbuphy)
 - [上海人工智能实验室](https://www.shlab.org.cn/)
 - [闻星大佬（小助手）](https://github.com/vansin)
+- [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 
 <!-- links -->
 
@@ -170,22 +224,23 @@ filetree
 
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
 
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
 
 ## 🌟 Contributors
 
-[![EmoLLM contributors](https://contrib.rocks/image?repo=aJupyter/EmoLLM&max=50)](https://github.com/aJupyter/EmoLLM/graphs/contributors)
+[![EmoLLM contributors](https://contrib.rocks/image?repo=SmartFlowAI/EmoLLM&max=50)](https://github.com/SmartFlowAI/EmoLLM/graphs/contributors)
 
-[your-project-path]: aJupyter/EmoLLM
-[contributors-shield]: https://img.shields.io/github/contributors/aJupyter/EmoLLM.svg?style=flat-square
-[contributors-url]: https://github.com/aJupyter/EmoLLM/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/aJupyter/EmoLLM.svg?style=flat-square
-[forks-url]: https://github.com/aJupyter/EmoLLM/network/members
-[stars-shield]: https://img.shields.io/github/stars/aJupyter/EmoLLM.svg?style=flat-square
-[stars-url]: https://github.com/aJupyter/EmoLLM/stargazers
-[issues-shield]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/aJupyter/EmoLLM.svg
-[license-shield]: https://img.shields.io/github/license/aJupyter/EmoLLM.svg?style=flat-square
-[license-url]: https://github.com/aJupyter/EmoLLM/blob/main/LICENSE
+[your-project-path]: SmartflowAI/EmoLLM
+[contributors-shield]: https://img.shields.io/github/contributors/SmartflowAI/EmoLLM.svg?style=flat-square
+[contributors-url]: https://github.com/SmartflowAI/EmoLLM/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SmartflowAI/EmoLLM.svg?style=flat-square
+[forks-url]: https://github.com/SmartflowAI/EmoLLM/network/members
+[stars-shield]: https://img.shields.io/github/stars/SmartflowAI/EmoLLM.svg?style=flat-square
+[stars-url]: https://github.com/SmartflowAI/EmoLLM/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
+[license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
+[license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
