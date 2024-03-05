@@ -2,7 +2,7 @@
 
 ## General Metrics Evaluation
 
-* For specific metrics and methods, see [General_evaluation.md](./General_evaluation_EN.md)
+* For specific metrics and methods, see [General_evaluation_EN.md](./General_evaluation_EN.md)
 
 | Model    | ROUGE-1 | ROUGE-2 | ROUGE-L | BLEU-1  | BLEU-2  | BLEU-3  | BLEU-4  |
 |----------|---------|---------|---------|---------|---------|---------|---------|
