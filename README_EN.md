@@ -134,8 +134,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [Deployment Guide](#deployment-guide)
    - View More Details
 
-<details>
-<summary>Additional Details</summary>
+
 
 ### File Directory Explanation
 
@@ -164,6 +163,9 @@ For details, see the [fine-tuning guide](xtuner_config/README.md)
 
 For details, see the [deployment guide](demo/README.md)
 
+<details>
+<summary>Additional Details</summary>
+  
 ### Frameworks Used
 
 - [Xtuner](https://github.com/InternLM/xtuner)
@@ -235,7 +237,7 @@ The project is licensed under the MIT License. Please refer to the details
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=SmartFlowAI/EmoLLM&type=Date)](https://star-history.com/#SmartFlowAI/EmoLLM&Date)
 
 ## 🌟 Contributors
 
