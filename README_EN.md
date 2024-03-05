@@ -94,6 +94,13 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 
 </details>
 
+### Roadmap
+
+<p align="center">
+  <a href="https://github.com/aJupyter/EmoLLM/">
+    <img src="assets/Roadmap_EN.png" alt="Roadmap_EN">
+  </a>
+
 ## Contents
 
 - [EmoLLM - Large Languge Model for Mental Health](#emollm---large-languge-model-for-mental-health)
