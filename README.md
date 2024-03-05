@@ -79,6 +79,7 @@
 <p align="center"> 
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
+
 - 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
 
 <p align="center">
@@ -130,8 +131,6 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [部署指南](#部署指南)
    - 查看更多详情
 
-<details>
-<summary>更多详情</summary>
 
 ### 文件目录说明
 
@@ -160,6 +159,9 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 详见[部署指南](demo/README.md)
 
+<details>
+<summary>更多详情</summary>
+  
 ### 使用到的框架
 
 - [Xtuner](https://github.com/InternLM/xtuner)
@@ -229,7 +231,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=SmartFlowAI/EmoLLM&type=Date)](https://star-history.com/#SmartFlowAI/EmoLLM&Date)
 
 ## 🌟 Contributors
 
