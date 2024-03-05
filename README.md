@@ -92,6 +92,13 @@
 
 </details>
 
+### 路线图
+
+<p align="center">
+  <a href="https://github.com/aJupyter/EmoLLM/">
+    <img src="assets/Roadmap_ZH.png" alt="Roadmap_ZH">
+  </a>
+
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
