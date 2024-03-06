@@ -26,7 +26,7 @@
 
 ## 比较
 
-* [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 在 InternLM2-7B-Chat 基础上提升较大；相比 Role-playing ChatGPT 在心理咨询任务上能力相近
+* [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 在 InternLM2_7B_Chat 基础上提升较大；相比 Role-playing ChatGPT 在心理咨询任务上能力相近
 
 * 对比结果图片来源于论文《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》
 ![image](https://github.com/MING-ZCH/EmoLLM/assets/119648793/abc9f626-11bc-4ec8-84a4-427c4600a720)
