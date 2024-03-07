@@ -17,7 +17,7 @@ interval: 存储间隔，即每隔多少条存一次文件，过密的间隔会�
 """
 def generate_qa(
     model_name: str = 'qwen',
-    interval: int = 1,
+    interval: int = 10,
 ):
     current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     
