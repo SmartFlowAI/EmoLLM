@@ -1,0 +1,4 @@
+sentence_transformers
+transformers
+numpy
+loguru
