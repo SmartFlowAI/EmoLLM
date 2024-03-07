@@ -1,14 +1,12 @@
 # QA Generation Pipeline
 
-
-
 ## 1. 使用方法
 
-检查 `requirements.txt` 中的依赖是否满足。
+1. 检查 `requirements.txt` 中的依赖是否满足。
 
-而后，在 `config/config.py` 配置所需的 API KEY，从 `main.py` 启动即可。生成的 QA 对会以 jsonl 的格式存在 `data/generated` 下。
-
-可以调整 `system_prompt`，增强生成的多样性和稳定性。
+2. 调整代码中 `system_prompt`，确保与repo最新版本一致，保证生成QA的多样性和稳定性。
+  
+3. 在 `config/config.py` 配置所需的 API KEY，从 `main.py` 启动即可。生成的 QA 对会以 jsonl 的格式存在 `data/generated` 下。
 
 ### 1.1 API KEY 获取方法
 
