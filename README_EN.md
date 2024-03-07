@@ -172,7 +172,7 @@ For details, see the [deployment guide](demo/README.md)
 
 <details>
 <summary>Additional Details</summary>
-  
+
 ### Frameworks Used
 
 - [Xtuner](https://github.com/InternLM/xtuner)
@@ -221,6 +221,8 @@ This project uses Git for version control. You can see the current available ver
 [Nobody-ML](https://github.com/Nobody-ML)@Undergraduate at China University of Petroleum (East China)
 
 [chg0901](https://github.com/chg0901)@PhD Candidate at Kwangwoon University
+
+[Mxoder](https://github.com/Mxoder)@Undergraduate at Beihang University
 
 ### Copyright Notice
 

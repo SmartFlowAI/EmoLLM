@@ -168,7 +168,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 <details>
 <summary>更多详情</summary>
-  
+
 ### 使用到的框架
 
 - [Xtuner](https://github.com/InternLM/xtuner)
@@ -217,6 +217,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [Nobody-ML](https://github.com/Nobody-ML)@中国石油大学（华东）在读本科生
 
 [chg0901](https://github.com/chg0901)@韩国光云大学博士生
+
+[Mxoder](https://github.com/Mxoder)@北京航空航天大学在读本科生
 
 ### 版权说明
 
