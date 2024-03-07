@@ -8,7 +8,7 @@
 
 而后，在 `config/config.py` 配置所需的 API KEY，从 `main.py` 启动即可。生成的 QA 对会以 jsonl 的格式存在 `data/generated` 下。
 
-可以调整 `system_prompt.md`，增强生成的多样性和稳定性。
+可以调整 `system_prompt`，增强生成的多样性和稳定性。
 
 ### 1.1 API KEY 获取方法
 
