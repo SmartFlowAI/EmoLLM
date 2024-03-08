@@ -3,10 +3,9 @@
 ## 1. 使用方法
 
 1. 检查 `requirements.txt` 中的依赖是否满足。
-
 2. 调整代码中 `system_prompt`，确保与repo最新版本一致，保证生成QA的多样性和稳定性。
-  
-3. 在 `config/config.py` 配置所需的 API KEY，从 `main.py` 启动即可。生成的 QA 对会以 jsonl 的格式存在 `data/generated` 下。
+3. 将txt文件放到与 `model`同级目录 `data`文件夹中.
+4. 在 `config/config.py` 配置所需的 API KEY，从 `main.py` 启动即可。生成的 QA 对会以 jsonl 的格式存在 `data/generated` 下。
 
 ### 1.1 API KEY 获取方法
 
@@ -15,8 +14,6 @@
 #### 1.1.1 Qwen
 
 前往[模型服务灵积-API-KEY管理 (aliyun.com)](https://dashscope.console.aliyun.com/apiKey)，点击”创建新的 API-KEY“，将获取的 API KEY 填至 `config/config.py` 中的 `DASHSCOPE_API_KEY` 即可。
-
-
 
 ## 2. 注意事项
 
@@ -31,8 +28,6 @@
 ### 2.3 书本文件格式 Corpus Format
 
 目前仅支持了 txt 格式，可以将清洗好的书籍文本放在 `data` 文件夹下，程序会递归检索该文件夹下的所有 txt 文件。
-
-
 
 ## TODO
 
