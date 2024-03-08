@@ -3,7 +3,7 @@ import json
 from tqdm import tqdm
 from datetime import datetime
 
-from config.config import result_dir
+from config.config import result_dir, storage_interval, window_size, overlap_size
 from model.qwen import call_qwen_single_turn
 from util.logger import get_logger
 from util.data_loader import get_file_list, get_txt_content, capture_qa
@@ -35,7 +35,7 @@ def generate_qa(
     storage_counter = 0
     storage_list = []
     for file_path in file_list:
-        contents = get_txt_content(file_path)
+        contents = get_txt_content(file_path, window_size=window_size, overlap_size=overlap_size)
         storage_list = []
         
         _, file_name = os.path.split(file_path)
@@ -72,4 +72,4 @@ if __name__ == '__main__':
 
     # 创建generated文件夹
     os.makedirs('./data/generated', exist_ok=True)
-    generate_qa()
+    generate_qa(interval=storage_interval)
