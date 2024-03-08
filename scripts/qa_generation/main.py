@@ -37,12 +37,17 @@ def generate_qa(
     for file_name in file_list:
         contents = get_txt_content(file_name)
         storage_list = []
-        storage_jsonl_path = os.path.join(result_dir, f'{current_time}-{file_name}-{model_name}.jsonl')
+        
+        file_name = file_name.split('/')[-1]
+        storage_jsonl_path = os.path.join(
+            result_dir, f'{current_time}-{file_name}-{model_name}.jsonl')
         logger.info(f'The generated QA will be stored in {storage_jsonl_path}.')
         
         for content in tqdm(contents):
             response = model_caller(content)
+            # print(response) # 打印输出
             captured_qa = capture_qa(response)
+            # print(captured_qa) # 打印QA对
             if captured_qa is None:
                 continue
             
@@ -64,4 +69,7 @@ def generate_qa(
 
 
 if __name__ == '__main__':
+
+    # 创建generated文件夹
+    os.makedirs('./data/generated', exist_ok=True)
     generate_qa()

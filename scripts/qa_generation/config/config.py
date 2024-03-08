@@ -25,4 +25,4 @@ system_prompt_file_path = os.path.join(base_dir, 'system_prompt_v2.md')     # sy
 环境变量
 """
 # api-keys
-DASHSCOPE_API_KEY = 'sk-xxxxxxxx'
+DASHSCOPE_API_KEY = ''
