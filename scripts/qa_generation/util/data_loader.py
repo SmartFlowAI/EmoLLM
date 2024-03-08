@@ -67,9 +67,14 @@ def capture_qa(content: str) -> List[Dict]:
     match = re.search(r'```json(.*?)```', content, re.DOTALL)
 
     if match:
+        parsed_data = None
         block = match.group(1)
-        parsed_data = json.loads(block)
-        return parsed_data
+        try:
+            parsed_data = json.loads(block)
+        except:
+            logger.warning('Unable to parse JSON properly.')
+        finally:
+            return parsed_data
     else:
         logger.warning("No JSON block found.")
         return None
