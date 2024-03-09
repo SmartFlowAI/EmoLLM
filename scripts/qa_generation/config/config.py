@@ -35,3 +35,4 @@ DASHSCOPE_API_KEY = ''
 storage_interval = 10
 window_size = 8
 overlap_size = 2
+multi_process_num = 3
