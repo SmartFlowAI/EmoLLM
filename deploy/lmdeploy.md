@@ -1,6 +1,16 @@
 ![](../assets/emoxlmdeploy.png)
 # LMDeploy本地部署
-## 1.环境配置
+## 0. LMDeploy简介
+LMDeploy 由 [MMDeploy](https://github.com/open-mmlab/mmdeploy) 和 [MMRazor](https://github.com/open-mmlab/mmrazor) 团队联合开发，是涵盖了 LLM 任务的全套轻量化、部署和服务解决方案。 这个强大的工具箱提供以下核心功能：
+
+- 高效的推理：LMDeploy 开发了 Persistent Batch(即 Continuous Batch)，Blocked K/V Cache，动态拆分和融合，张量并行，高效的计算 kernel等重要特性。推理性能是 vLLM 的 1.8 倍
+
+- 可靠的量化：LMDeploy 支持权重量化和 k/v 量化。4bit 模型推理效率是 FP16 下的 2.4 倍。量化模型的可靠性已通过 OpenCompass 评测得到充分验证。
+
+- 便捷的服务：通过请求分发服务，LMDeploy 支持多模型在多机、多卡上的推理服务。
+
+- 有状态推理：通过缓存多轮对话过程中 attention 的 k/v，记住对话历史，从而避免重复处理历史会话。显著提升长文本多轮对话场景中的效率。
+## 1. 环境配置
 <details>
   
 <summary>具体部署环境</summary>
@@ -168,17 +178,19 @@ pip install /root/share/wheels/flash_attn-2.4.2+cu118torch2.0cxx11abiTRUE-cp310-
 ```
 pip install 'lmdeploy[all]==v0.1.0'
 ```
-但是lmdeploy的0.1.0版本并不支持InternLM2-7B-chat的Turbomind转化  
+EMOLLM 是由 InternLM2 训练而来，但是lmdeploy的0.1.0版本并不支持InternLM2-7B-chat的Turbomind转化  
 注意lmdeploy的版本要要进行更新:  
 ```
 # 我们使用的是0.2.4版本的lmdeploy
 pip install --upgrade lmdeploy
 ```
 
-## 2.模型转化
-使用 TurboMind 推理模型需要先将模型转化为 TurboMind 的格式，目前支持在线转换和离线转换两种形式。在线转换可以直接加载 Huggingface 模型，离线转换需需要先保存模型再加载。
+## 2. 模型转化
+使用 LMDeploy 中的推理引擎 TurboMind 推理模型需要先将模型转化为 TurboMind 的格式，目前支持在线转换和离线转换两种形式。在线转换可以直接加载 Huggingface 模型，离线转换需需要先保存模型再加载。
 
 TurboMind 是一款关于 LLM 推理的高效推理引擎，基于英伟达的 FasterTransformer 研发而成。它的主要功能包括：LLaMa 结构模型的支持，persistent batch 推理模式和可扩展的 KV 缓存管理器。
+TurboMind结构如下：
+![turbomind结构](../assets/turbomind结构.png)
 ### 2.1 在线转化
 lmdeploy 支持直接读取 Huggingface 模型权重，目前共支持三种类型：
 
@@ -200,7 +212,7 @@ lmdeploy chat turbomind /EmoLLM  --model-name internlm2-chat-7b
 ### 2.2 离线转化
 离线转换需要在启动服务之前，将模型转为 lmdeploy TurboMind 的格式，如下所示。
 ```
-#  转换模型（FastTransformer格式） TurboMind
+# 转换模型（FastTransformer格式） TurboMind
 lmdeploy convert internlm2-chat-7b /EmoLLM
 ```
 执行完成后将会在当前目录生成一个```workspace```的文件夹。这里面包含的就是 TurboMind 和 Triton “模型推理”需要到的文件。
@@ -225,3 +237,164 @@ lmdeploy chat turbomind ./workspace
 lmdeploy serve api_server ./workspace --server-name 0.0.0.0 --server-port ${server_port} --tp 1
 ```
 详细内容请见[文档](https://lmdeploy.readthedocs.io/zh-cn/stable/serving/restful_api.html)
+
+## 4. 模型量化
+
+模型量化主要包括 KV Cache 量化和模型参数量化。量化是一种以参数或计算中间结果精度下降换空间节省（以及同时带来的性能提升）的策略。
+
+前置概念：
+
+- 计算密集（compute-bound）: 指推理过程中，绝大部分时间消耗在数值计算上；针对计算密集型场景，可以通过使用更快的硬件计算单元来提升计算速。
+- 访存密集（memory-bound）: 指推理过程中，绝大部分时间消耗在数据读取上；针对访存密集型场景，一般通过减少访存次数、提高计算访存比或降低访存量来优化。
+
+常见的 LLM 模型由于 Decoder Only 架构的特性，实际推理时大多数的时间都消耗在了逐 Token 生成阶段（Decoding 阶段），是典型的访存密集型场景。
+
+对于优化 LLM 模型推理中的访存密集问题，我们可以使用 **KV Cache 量化**和 **4bit Weight Only 量化（W4A16）**。KV Cache 量化是指将逐 Token（Decoding）生成过程中的上下文 K 和 V 中间结果进行 INT8 量化（计算时再反量化），以降低生成过程中的显存占用。4bit Weight 量化，将 FP16 的模型权重量化为 INT4，Kernel 计算时，访存量直接降为 FP16 模型的 1/4，大幅降低了访存成本。Weight Only 是指仅量化权重，数值计算依然采用 FP16（需要将 INT4 权重反量化）。
+
+### 4.1 KV Cache 量化
+
+#### 4.1.1 量化步骤
+
+KV Cache 量化是将已经生成序列的 KV 变成 Int8，使用过程一共包括三步：
+
+第一步：计算 minmax。主要思路是通过计算给定输入样本在每一层不同位置处计算结果的统计情况。
+
+- 对于 Attention 的 K 和 V：取每个 Head 各自维度在所有Token的最大、最小和绝对值最大值。对每一层来说，上面三组值都是 `(num_heads, head_dim)` 的矩阵。这里的统计结果将用于本小节的 KV Cache。
+- 对于模型每层的输入：取对应维度的最大、最小、均值、绝对值最大和绝对值均值。每一层每个位置的输入都有对应的统计值，它们大多是 `(hidden_dim, )` 的一维向量，当然在 FFN 层由于结构是先变宽后恢复，因此恢复的位置维度并不相同。这里的统计结果用于下个小节的模型参数量化，主要用在缩放环节。
+
+第一步执行命令如下：
+
+```bash
+# 计算 minmax
+lmdeploy lite calibrate \
+  --model  /EmoLLM \
+  --calib_dataset "c4" \
+  --calib_samples 128 \
+  --calib_seqlen 2048 \
+  --work_dir ./quant_output
+```
+
+在这个命令行中，会选择 128 条输入样本，每条样本长度为 2048，数据集选择 C4，输入模型后就会得到上面的各种统计值。值得说明的是，如果显存不足，可以适当调小 samples 的数量或 sample 的长度。
+
+> 这一步需要从 Huggingface 下载 "c4" 数据集，国内经常不成功。对于在InternStudio 上的用户，需要对读取数据集的代码文件做一下替换。共包括两步：
+>
+> - 第一步：复制 `calib_dataloader.py` 到安装目录替换该文件：`cp /root/share/temp/datasets/c4/calib_dataloader.py  /root/.conda/envs/lmdeploy/lib/python3.10/site-packages/lmdeploy/lite/utils/`
+> - 第二步：将用到的数据集（c4）复制到下面的目录：`cp -r /root/share/temp/datasets/c4/ /root/.cache/huggingface/datasets/` 
+
+第二步：通过 minmax 获取量化参数。主要就是利用下面这个公式，获取每一层的 K V 中心值（zp）和缩放值（scale）。
+
+```bash
+zp = (min+max) / 2
+scale = (max-min) / 255
+quant: q = round( (f-zp) / scale)
+dequant: f = q * scale + zp
+```
+
+有这两个值就可以进行量化和解量化操作了。具体来说，就是对历史的 K 和 V 存储 quant 后的值，使用时在 dequant。
+
+第二步的执行命令如下：
+
+```bash
+# 通过 minmax 获取量化参数
+lmdeploy lite kv_qparams \
+  --work_dir ./quant_output  \
+  --turbomind_dir workspace/triton_models/weights/ \
+  --kv_sym False \
+  --num_tp 1
+```
+
+在这个命令中，`num_tp` 的含义前面介绍过，表示 Tensor 的并行数。每一层的中心值和缩放值会存储到 `workspace` 的参数目录中以便后续使用。`kv_sym` 为 `True` 时会使用另一种（对称）量化方法，它用到了第一步存储的绝对值最大值，而不是最大值和最小值。
+
+第三步：修改配置。也就是修改 `weights/config.ini` 文件（KV int8 开关），只需要把 `quant_policy` 改为 4 即可。
+
+这一步需要额外说明的是，如果用的是 TurboMind1.0，还需要修改参数 `use_context_fmha`，将其改为 0。
+
+接下来就可以正常运行前面的各种服务了，只不过咱们现在可是用上了 KV Cache 量化，能更省（运行时）显存了。
+
+### 4.2 W4A16 量化
+
+#### 4.2.1 量化步骤
+
+W4A16中的A是指Activation，保持FP16，只对参数进行 4bit 量化。使用过程也可以看作是三步。
+
+第一步：同 4.1.1，不再赘述。
+
+第二步：量化权重模型。利用第一步得到的统计值对参数进行量化，具体又包括两小步：
+
+- 缩放参数。
+- 整体量化。
+
+第二步的执行命令如下：
+
+```bash
+# 量化权重模型
+lmdeploy lite auto_awq \
+  --model  /EmoLLM \
+  --w_bits 4 \
+  --w_group_size 128 \
+  --work_dir ./quant_output 
+```
+
+命令中 `w_bits` 表示量化的位数，`w_group_size` 表示量化分组统计的尺寸，`work_dir` 是量化后模型输出的位置。这里需要特别说明的是，因为没有 `torch.int4`，所以实际存储时，8个 4bit 权重会被打包到一个 int32 值中。所以，如果你把这部分量化后的参数加载进来就会发现它们是 int32 类型的。
+
+最后一步：转换成 TurboMind 格式。
+
+```bash
+# 转换模型的layout，存放在默认路径 ./workspace 下
+lmdeploy convert  internlm2-chat-7b ./quant_output \
+    --model-format awq \
+    --group-size 128
+```
+
+这个 `group-size` 就是上一步的那个 `w_group_size`。如果不想和之前的 `workspace` 重复，可以指定输出目录：`--dst_path`，比如：
+
+```bash
+lmdeploy convert  internlm2-chat-7b ./quant_output \
+    --model-format awq \
+    --group-size 128 \
+    --dst_path ./workspace_quant
+```
+
+接下来和上一节一样，可以正常运行前面的各种服务了，不过咱们现在用的是量化后的模型。
+
+最后再补充一点，量化模型和 KV Cache 量化也可以一起使用，以达到最大限度节省显存。
+
+
+### 4.3 最佳实践
+
+首先我们需要明白一点，服务部署和量化是没有直接关联的，量化的最主要目的是降低显存占用，主要包括两方面的显存：模型参数和中间过程计算结果。前者对应 W4A16 量化，后者对应 KV Cache 量化。
+
+量化在降低显存的同时，一般还能带来性能的提升，因为更小精度的浮点数要比高精度的浮点数计算效率高，而整型要比浮点数高很多。
+
+所以我们的建议是：在各种配置下尝试，看效果能否满足需要。这一般需要在自己的数据集上进行测试。具体步骤如下。
+
+- Step1：优先尝试正常（非量化）版本，评估效果。
+    - 如果效果不行，需要尝试更大参数模型或者微调。
+    - 如果效果可以，跳到下一步。
+- Step2：尝试正常版本+KV Cache 量化，评估效果。
+    - 如果效果不行，回到上一步。
+    - 如果效果可以，跳到下一步。
+- Step3：尝试量化版本，评估效果。
+    - 如果效果不行，回到上一步。
+    - 如果效果可以，跳到下一步。
+- Step4：尝试量化版本+ KV Cache 量化，评估效果。
+    - 如果效果不行，回到上一步。
+    - 如果效果可以，使用方案。
+
+
+另外需要补充说明的是，使用哪种量化版本、开启哪些功能，除了上述流程外，**还需要考虑框架、显卡的支持情况**，比如有些框架可能不支持 W4A16 的推理，那即便转换好了也用不了。
+
+根据实践经验，一般情况下：
+
+- 精度越高，显存占用越多，推理效率越低，但一般效果较好。
+- Server 端推理一般用非量化版本或半精度、BF16、Int8 等精度的量化版本，比较少使用更低精度的量化版本。
+- 端侧推理一般都使用量化版本，且大多是低精度的量化版本。这主要是因为计算资源所限。
+
+以上是针对项目开发情况，如果是自己尝试（玩儿）的话：
+
+- 如果资源足够（有GPU卡很重要），那就用非量化的正常版本。
+- 如果没有 GPU 卡，只有 CPU（不管什么芯片），那还是尝试量化版本。
+- 如果生成文本长度很长，显存不够，就开启 KV Cache。
+
+建议大家根据实际情况灵活选择方案。
+更多细节查看 [LMDeploy 官方文档](https://lmdeploy.readthedocs.io/zh-cn/latest/quantization/w4a16.html)
