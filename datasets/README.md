@@ -26,3 +26,17 @@
 | *Role-play* |       SoulStar        |      QA      | 11200+  |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
 |     ……      |          ……           |      ……      |   ……    |
+
+## 数据集来源
+**General**：
+* 数据集 data 来自本项目
+* 数据集 data_pro 来自本项目
+* 数据集 multi_turn_dataset_1 来源 [Smile](https://github.com/qiuhuachuan/smile)
+* 数据集 multi_turn_dataset_2 来源 [CPsyCounD](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+* 数据集 single_turn_dataset_1 来自本项目
+* 数据集 single_turn_dataset_2 来自本项目
+
+**Role-play**：
+* 数据集 aiwei 来自本项目
+* 数据集 tiangou 来自本项目
+* 数据集 SoulStar 来源 [SoulStar](https://github.com/Nobody-ML/SoulStar)
