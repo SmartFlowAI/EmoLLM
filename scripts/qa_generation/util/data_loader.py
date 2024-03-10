@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import glob
 from typing import List, Dict
 
 from config.config import data_dir
@@ -78,3 +79,28 @@ def capture_qa(content: str) -> List[Dict]:
     else:
         logger.warning("No JSON block found.")
         return None
+
+"""
+将 storage_list 存入到 storage_jsonl_path
+"""
+def save_to_file(storage_jsonl_path, storage_list):
+    with open(storage_jsonl_path, 'a', encoding='utf-8') as f:
+        for item in storage_list:
+            f.write(json.dumps(item, ensure_ascii=False) + '\n')
+
+"""
+将并发产生的文件合并成为一个文件
+"""
+def merge_sub_qa_generation(directory, storage_jsonl_path):
+
+    # 查找以指定前缀开始的所有文件
+    matching_files = glob.glob(os.path.join(directory, storage_jsonl_path + "*"))
+    
+    file_contents = []
+    for file_path in matching_files:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                file_contents.append(json.loads(line))
+            os.remove(file_path)
+    save_to_file(storage_jsonl_path, file_contents)
+
