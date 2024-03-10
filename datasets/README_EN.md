@@ -26,3 +26,18 @@
 | *Role-play* |       SoulStar        |      QA      | 11200+  |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
 |     ……      |          ……           |      ……      |   ……    |
+
+
+## Source
+**General**：
+* dataset `data` from this repo
+* dataset `data_pro` from this repo
+* dataset `multi_turn_dataset_1` from [Smile](https://github.com/qiuhuachuan/smile)
+* dataset `multi_turn_dataset_2` from [CPsyCounD](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+* dataset `single_turn_dataset_1` from this repo
+* dataset `single_turn_dataset_2` from this repo
+
+**Role-play**：
+* dataset `aiwei` from this repo
+* dataset `tiangou` from this repo
+* dataset `SoulStar` from [SoulStar](https://github.com/Nobody-ML/SoulStar)
