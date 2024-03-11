@@ -1,4 +1,4 @@
-# EmoLLM - Large Languge Model for Mental Health
+# EmoLLM - Large Language Model for Mental Health
 
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
@@ -35,15 +35,15 @@
 <!-- 本篇README.md面向开发者 -->
 
 
-**EmoLLM** is a series of large language models designed to understand, support and help customers in mental health counseling. It is fine-tuned from the LLM instructions. We really appreciate it if you can give it a star~⭐⭐. The open-sourced configuration is as follows:
+**EmoLLM** is a series of large language models designed to understand, support and help customers in mental health counseling. It is fine-tuned from the LLM instructions. We really appreciate it if you could give it a star~⭐⭐. The open-sourced configuration is as follows:
 
 |         model          |   type   |
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  qlora   |
-|  InternLM2_7B_chat  | full finetuning |
-|  InternLM2_1_8B_chat  | full finetuning |
+|    InternLM2_7B_chat  | full fine-tuning |
+|  InternLM2_1_8B_chat  | full fine-tuning |
 |     Qwen_7b_chat      |  qlora   |
-|   Qwen1_5-0_5B-Chat   | full finetuning |
+|   Qwen1_5-0_5B-Chat   | full fine-tuning |
 |  Baichuan2_13B_chat   |  qlora   |
 |      ChatGLM3_6B      |   lora   |
 | DeepSeek MoE_16B_chat |  qlora   |
@@ -52,7 +52,7 @@
 Everyone is welcome to contribute to this project ~
 ---
 
-The Model is aimed at fully understanding and promoting the mental health of individuals, groups, and society. This model typically includes the following key components:
+The Model aims to fully understand and promote the mental health of individuals, groups, and society. This model typically includes the following key components:
 
 -  Cognitive factors: Involving an individual's thought patterns, belief systems, cognitive biases, and problem-solving abilities. Cognitive factors significantly impact mental health as they affect how individuals interpret and respond to life events.
 - Emotional factors: Including emotion regulation, emotional expression, and emotional experiences. Emotional health is a crucial part of mental health, involving how individuals manage and express their emotions and how they recover from negative emotions.
@@ -63,8 +63,9 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 ### Recent Updates
-- 【2024.3.9】New concurrency feature speeds up QA pair generation
-- 【2024.3.3】 [Based on InternLM2-7B-chat full amount of fine-tuned version of open source](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full), need two A100*80G, update professional evaluation, see [evaluate](./evaluate/), update PaddleOCR-based PDF to txt tool scripts, see [scripts](./scripts/).
+- 【2024.3.11】 **EmoLLM V2.0 is greatly improved in all scores compared to EmoLLM V1.0. Surpasses the performance of Role-playing ChatGPT on counseling tasks!**
+- 【2024.3.9】 New concurrency feature speeds up QA pair generation
+- 【2024.3.3】 [Based on InternLM2-7B-chat full fine-tuned version EmoLLM V2.0 open sourced](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full), need two A100*80G, update professional evaluation, see [evaluate](./evaluate/), update PaddleOCR-based PDF to txt tool scripts, see [scripts](./scripts/).
 - 【2024.2.29】 Updated objective assessment calculations, see [evaluate](./evaluate/) for details. A series of datasets have also been updated, see [datasets](./datasets/) for details.
 - 【2024.2.27】 Updated English README and a series of datasets (licking dogs and one-round dialogue)
 - 【2024.2.23】The "Gentle Lady Psychologist Ai Wei" based on InternLM2_7B_chat_qlora was launched. [Click here to obtain the model weights](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei), [configuration file](xtuner_config/aiwei-internlm2_chat_7b_qlora.py), [online experience link](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
@@ -91,7 +92,7 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 
 - 【2024.2.3】 [Project Vedio](https://www.bilibili.com/video/BV1N7421N76X/) at bilibili 😊
 - 【2024.1.27】 Complete data construction documentation, fine-tuning guide, deployment guide, Readme, and other related documents 👏
-- 【2024.1.25】 Complete the first version of EmoLLM and deploy it online https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
+- 【2024.1.25】 EmoLLM V1.0 has deployed online https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
 
 </details>
 
@@ -104,7 +105,7 @@ The Model is aimed at fully understanding and promoting the mental health of ind
 
 ## Contents
 
-- [EmoLLM - Large Languge Model for Mental Health](#emollm---large-languge-model-for-mental-health)
+- [EmoLLM - Large Language Model for Mental Health](#emollm---large-language-model-for-mental-health)
   - [Everyone is welcome to contribute to this project ~](#everyone-is-welcome-to-contribute-to-this-project-)
     - [Recent Updates](#recent-updates)
   - [Contents](#contents)
@@ -147,12 +148,12 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ### File Directory Explanation
 
 ```
-├─assets：Image Resources
-├─datasets：Dataset
-├─demo：demo scripts
-├─generate_data：Data Generation Guide
+├─assets: Image Resources
+├─datasets: Dataset
+├─demo: demo scripts
+├─generate_data: Data Generation Guide
 │  └─xinghuo
-├─scripts：Some Available Tools
+├─scripts: Some Available Tools
 └─xtuner_config：Fine-tuning Guide
     └─images
 ```
@@ -193,7 +194,7 @@ Contributions make the open-source community an excellent place for learning, in
 
 ### Version control
 
-This project uses Git for version control. You can see the current available versions in the repository.
+This project uses Git for version control. You can see the currently available versions in the repository.
 
 </details>
 
@@ -209,7 +210,7 @@ This project uses Git for version control. You can see the current available ver
 
 [ZhouXinAo](https://github.com/zxazys)@Master's student at Nankai University
 
-[MING_X](https://github.com/MING-ZCH) @Undergraduate at Huazhong University of Science and Technology
+[MING_X](https://github.com/MING-ZCH) @Undergraduate student at Huazhong University of Science and Technology
 
 [Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
 
