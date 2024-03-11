@@ -15,8 +15,8 @@
 ## 评测结果
 
 * 评测模型:
-  * [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model)(InternLM2_7B_chat_qlora)
-  * [EmoLLM V1.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)(InternLM2_7B_chat_full)
+  * [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) (InternLM2_7B_chat_qlora)
+  * [EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0) (InternLM2_7B_chat_full)
 * 得分：
 
 |       Model       |    Comprehensiveness  |   Professionalism  |  Authenticity   | Safety  |
@@ -26,8 +26,8 @@
 
 ## 比较
 
-* [EmoLLM V1.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0) 相比 EmoLLM V1.0 在指标上全面提升！已超越 Role-playing ChatGPT 在心理咨询任务上的能力！
-* [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 在 InternLM2_7B_Chat 基础上提升较大；相比 Role-playing ChatGPT 在心理咨询任务上能力相近
+* EmoLLM V2.0 相比 EmoLLM V1.0 在指标上全面提升！已超越 Role-playing ChatGPT 在心理咨询任务上的能力！
+* EmoLLM V1.0 在 InternLM2_7B_Chat 基础上提升较大；相比 Role-playing ChatGPT 在心理咨询任务上能力相近
 
 * 对比结果图片来源于论文《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》
 ![image](https://github.com/MING-ZCH/EmoLLM/assets/119648793/abc9f626-11bc-4ec8-84a4-427c4600a720)
