@@ -40,10 +40,10 @@
 |         model          |   type   |
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  qlora   |
-|  InternLM2_7B_chat  | full finetuning |
-|  InternLM2_1_8B_chat  | full finetuning |
+|    InternLM2_7B_chat  | full fine-tuning |
+|  InternLM2_1_8B_chat  | full fine-tuning |
 |     Qwen_7b_chat      |  qlora   |
-|   Qwen1_5-0_5B-Chat   | full finetuning |
+|   Qwen1_5-0_5B-Chat   | full fine-tuning |
 |  Baichuan2_13B_chat   |  qlora   |
 |      ChatGLM3_6B      |   lora   |
 | DeepSeek MoE_16B_chat |  qlora   |
