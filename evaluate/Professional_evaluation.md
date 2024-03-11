@@ -19,6 +19,7 @@
   * [EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0) (InternLM2_7B_chat_full)
    
 * 得分：
+
 |       Model       |    Comprehensiveness  |   Professionalism  |  Authenticity   | Safety  |
 |-------------------|-----------------------|-------------------|-----------------|---------|
 | InternLM2_7B_chat_qlora |      1.32       |        2.20       |      2.10       | 1.00    |
