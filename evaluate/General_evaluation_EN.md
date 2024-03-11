@@ -39,7 +39,7 @@ The `eval.py` script is used to generate the doctor's response and evaluate it, 
 
 The `metric.py` script contains functions to calculate evaluation metrics, which can be set to evaluate by character level or word level, currently including BLEU and ROUGE scores.
 
-## Test results
+## Results
 
 Test the data in data.json with the following results:
 
