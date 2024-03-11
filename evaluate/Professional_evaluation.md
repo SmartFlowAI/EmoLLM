@@ -14,18 +14,19 @@
 
 ## 评测结果
 
-* 评测模型: [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model)(InternLM2_7B_chat_qlora)
+* 评测模型:
+  * [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model)(InternLM2_7B_chat_qlora)
+  * [EmoLLM V1.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)(InternLM2_7B_chat_full)
 * 得分：
 
-|       Metric      |    Value   |
-|-------------------|------------|
-| Comprehensiveness | 1.32       |
-| Professionalism   | 2.20       |
-| Authenticity      | 2.10       |
-| Safety            | 1.00       |
+|       Model       |    Comprehensiveness  |   Professionalism  |  Authenticity   | Safety  |
+|-------------------|-----------------------|-------------------|-----------------|---------|
+| InternLM2_7B_chat_qlora |      1.32       |        2.20       |      2.10       | 1.00    |
+| InternLM2_7B_chat_full  |      1.40       |        2.45       |      2.24       | 1.00    |
 
 ## 比较
 
+* [EmoLLM V1.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0) 相比 EmoLLM V1.0 在指标上全面提升！已超越 Role-playing ChatGPT 在心理咨询任务上的能力！
 * [EmoLLM V1.0](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 在 InternLM2_7B_Chat 基础上提升较大；相比 Role-playing ChatGPT 在心理咨询任务上能力相近
 
 * 对比结果图片来源于论文《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》
