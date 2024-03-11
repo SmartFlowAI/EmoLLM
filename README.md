@@ -17,7 +17,7 @@
 <h3 align="center">EmoLLM</h3>
 
   <p align="center">
-      简体中文| <a href="README_English_version.md" >English</a> 
+      简体中文| <a href="README_EN.md" >English</a> 
     <br />
     <br />
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
@@ -39,6 +39,7 @@
 |         模型          |   类型   |
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  qlora   |
+|   InternLM2_7B_chat   | 全量微调 |
 |  InternLM2_1_8B_chat  | 全量微调 |
 |     Qwen_7b_chat      |  qlora   |
 |   Qwen1_5-0_5B-Chat   | 全量微调 |
@@ -63,19 +64,22 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
 ### 最近更新
+- 【2024.3.9】 新增并发功能加速 QA 对生成
+- 【2024.3.3】 [基于InternLM2-7B-chat全量微调版本开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块A100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
 - 【2024.2.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)。
 - 【2024.2.27】更新英文readme和一系列数据集（舔狗和单轮对话）
 - 【2024.2.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
 - 【2024.2.23】更新[若干微调配置](/xtuner_config/)，新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
 - 【2024.2.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
+
+<details>
+<summary>查看更多</summary>
+
 - 【2024.2.6】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
 
 <p align="center"> 
   <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
-
-<details>
-<summary>查看更多</summary>
 
 - 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
 
@@ -88,6 +92,13 @@
 - 【2024.1.25】 完成EmoLLM第一版并部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
 
 </details>
+
+### 路线图
+
+<p align="center">
+  <a href="https://github.com/aJupyter/EmoLLM/">
+    <img src="assets/Roadmap_ZH.png" alt="Roadmap_ZH">
+  </a>
 
 ## 目录
 
@@ -128,8 +139,6 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [部署指南](#部署指南)
    - 查看更多详情
 
-<details>
-<summary>更多详情</summary>
 
 ### 文件目录说明
 
@@ -157,6 +166,9 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ### 部署指南
 
 详见[部署指南](demo/README.md)
+
+<details>
+<summary>更多详情</summary>
 
 ### 使用到的框架
 
@@ -189,7 +201,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 [Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@哈尔滨工业大学（威海）在读本科生
 
-[Farewell](https://github.com/8baby8)@
+[Farewell](https://github.com/8baby8)@飞桨领航团区域主管、文心大模型核心开发者
 
 [ZhouXinAo](https://github.com/zxazys)@南开大学在读硕士
 
@@ -200,6 +212,16 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [MrCatAI](https://github.com/MrCatAI)@AI搬用工
 
 [ZeyuBa](https://github.com/ZeyuBa)@自动化所在读硕士
+
+[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@宾夕法尼亚大学在读硕士
+
+[Nobody-ML](https://github.com/Nobody-ML)@中国石油大学（华东）在读本科生
+
+[chg0901](https://github.com/chg0901)@韩国光云大学博士生
+
+[Mxoder](https://github.com/Mxoder)@北京航空航天大学在读本科生
+
+[Anooyman](https://github.com/Anooyman) @南京理工大学硕士
 
 ### 版权说明
 
@@ -221,7 +243,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=aJupyter/EmoLLM&type=Date)](https://star-history.com/#aJupyter/EmoLLM&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=SmartFlowAI/EmoLLM&type=Date)](https://star-history.com/#SmartFlowAI/EmoLLM&Date)
 
 ## 🌟 Contributors
 
@@ -238,3 +260,13 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
+
+
+## 交流群
+- 如果失效，请移步Issue区
+
+<p align="center">
+  <img  width="30%" src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/55ecd0aa-4832-4269-ad57-4c26f9aa286b" alt="EmoLLM官方交流群">
+</p>
+
+
