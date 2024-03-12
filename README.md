@@ -1,6 +1,6 @@
 <div align="center"> 
 
-# EmoLLM-心理健康大模型 
+# EmoLLM-心理健康大模型
 
 </div>
 
@@ -23,7 +23,7 @@
 <h3 align="center">EmoLLM</h3>
 
   <p align="center">
-      简体中文| <a href="README_EN.md" >English</a> 
+      简体中文| <a href="README_EN.md" >English</a>
     <br />
     <br />
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
@@ -76,6 +76,7 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
 ### 🎇最近更新
+
 - 【2024.3.12】在百度飞浆平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
 - 【2024.3.11】 **EmoLLM V2.0 相比 EmoLLM V1.0 全面提升，已超越 Role-playing ChatGPT 在心理咨询任务上的能力！**，[点击体验EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)，更新[数据集统计及详细信息](./datasets/)、[路线图](./assets/Roadmap_ZH.png)
 - 【2024.3.9】 新增并发功能加速 [QA 对生成](./scripts/qa_generation/)、[RAG pipeline](./rag/)
@@ -117,22 +118,23 @@
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
-    - [最近更新](#最近更新)
+    - [🎇最近更新](#最近更新)
+    - [🎯路线图](#路线图)
   - [目录](#目录)
-    - [开发前的配置要求](#开发前的配置要求)
-    - [**使用指南**](#使用指南)
+          - [开发前的配置要求](#开发前的配置要求)
+          - [**使用指南**](#使用指南)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
     - [部署指南](#部署指南)
-    - [RAG](#rag检索增强生成pipeline)
+    - [RAG(检索增强生成)Pipeline](#rag检索增强生成pipeline)
     - [使用到的框架](#使用到的框架)
-    - [如何参与本项目](#如何参与本项目)
-    - [版本控制](#版本控制)
+      - [如何参与本项目](#如何参与本项目)
     - [作者（排名不分先后）](#作者排名不分先后)
     - [版权说明](#版权说明)
     - [特别鸣谢](#特别鸣谢)
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
+  - [交流群](#交流群)
 
 ###### 开发前的配置要求
 
@@ -153,8 +155,6 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [RAG](#rag检索增强生成pipeline)
    - 查看更多详情
 
-
-
 ### 数据构建
 
 - 请阅读[数据构建指南](generate_data/tutorial.md)查阅
@@ -171,6 +171,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](./deploy/lmdeploy.md)
 
 ### RAG(检索增强生成)Pipeline
+
 - 详见[RAG](./rag/)
 
 <details>
@@ -196,10 +197,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
 </details>
 
 ### 作者（排名不分先后）
+
 |   用户名   |       学校/组织        |       备注       |     贡献     |
 | :----------: | :--------------------: | :-------------------: | :----------: |
 | [aJupyter](https://github.com/aJupyter) | 南开大学在读硕士 | DataWhale成员 | 项目发起人 |
@@ -213,7 +214,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 | [ZeyuBa](https://github.com/ZeyuBa) | 自动化所在读硕士 |  |  |
 | [aiyinyuedejustin](https://github.com/aiyinyuedejustin) | 宾夕法尼亚大学在读硕士 |  |  |
 | [Nobody-ML](https://github.com/Nobody-ML) | 中国石油大学（华东）在读本科生 |  |  |
-| [chg0901](https://github.com/chg0901) | 韩国光云大学博士生 |  |  |
+| [chg0901](https://github.com/chg0901) | [MiniSora](https://github.com/mini-sora/minisora/) |MiniSora主要维护|数据清洗、文档翻译|
 | [Mxoder](https://github.com/Mxoder) | 北京航空航天大学在读本科生 |  |  |
 | [Anooyman](https://github.com/Anooyman) | 南京理工大学硕士 |  |  |
 | [Vicky-3021](https://github.com/Vicky-3021) | 西安电子科技大学硕士（研0） |  |  |
@@ -230,13 +231,11 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 - 阿布（北大心理学硕士）
 
-
 <!-- links -->
 
 <!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555 -->
 
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
-
 
 ## Star History
 
@@ -258,12 +257,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE
 
-
 ## 交流群
+
 - 如果失效，请移步Issue区
 
 <p align="center">
   <img  width="30%" src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/55ecd0aa-4832-4269-ad57-4c26f9aa286b" alt="EmoLLM官方交流群">
 </p>
-
-
