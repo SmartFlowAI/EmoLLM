@@ -1,4 +1,15 @@
+<div align="center"> 
+
 # EmoLLM - Large Language Model for Mental Health
+
+</div>
+
+<p align="center">
+  <a href="https://github.com/aJupyter/EmoLLM/">
+    <img src="assets/logo.jpeg" alt="Logo" width="30%">
+  </a>
+
+<div align="center">
 
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
@@ -6,13 +17,8 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![Stargazers][stars-shield]][stars-url]
-<br />
-<!-- PROJECT LOGO -->
 
-<p align="center">
-  <a href="https://github.com/aJupyter/EmoLLM/">
-    <img src="assets/logo.jpeg" alt="Logo" width="30%">
-  </a>
+</div>
 
 <h3 align="center">EmoLLM</h3>
 
@@ -37,19 +43,26 @@
 
 **EmoLLM** is a series of large language models designed to understand, support and help customers in mental health counseling. It is fine-tuned from the LLM instructions. We really appreciate it if you could give it a star~⭐⭐. The open-sourced configuration is as follows:
 
-|         model          |   type   |
+<div align="center">
+
+|         模型          |   类型   |
 | :-------------------: | :------: |
-|   InternLM2_7B_chat   |  qlora   |
-|    InternLM2_7B_chat  | full fine-tuning |
-|  InternLM2_1_8B_chat  | full fine-tuning |
-|     Qwen_7b_chat      |  qlora   |
-|   Qwen1_5-0_5B-Chat   | full fine-tuning |
-|  Baichuan2_13B_chat   |  qlora   |
-|      ChatGLM3_6B      |   lora   |
-| DeepSeek MoE_16B_chat |  qlora   |
-| Mixtral 8x7B_instruct |  qlora   |
+|   InternLM2_7B_chat   |  QLORA   |
+|   InternLM2_7B_chat   | 全量微调  |
+|  InternLM2_1_8B_chat  | 全量微调  |
+|  InternLM2_20B_chat  | LORA    |
+|     Qwen_7b_chat      |   QLORA   |
+|   Qwen1_5-0_5B-Chat   | 全量微调  |
+|  Baichuan2_13B_chat   |   QLORA   |
+|      ChatGLM3_6B      |   LORA    |
+| DeepSeek MoE_16B_chat |  QLORA   |
+| Mixtral 8x7B_instruct |  QLORA   |
 |          ……           |    ……    |
+
+</div>
+
 Everyone is welcome to contribute to this project ~
+
 ---
 
 The Model aims to fully understand and promote the mental health of individuals, groups, and society. This model typically includes the following key components:
@@ -63,8 +76,9 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 ### Recent Updates
-- 【2024.3.11】 **EmoLLM V2.0 is greatly improved in all scores compared to EmoLLM V1.0. Surpasses the performance of Role-playing ChatGPT on counseling tasks!**
-- 【2024.3.9】 New concurrency feature speeds up QA pair generation
+- 【2024.3.12】 Released on Baidu Flying Pulp Platform [aiwei](https://aistudio.baidu.com/community/app/63335)
+- 【2024.3.11】 **EmoLLM V2.0 is greatly improved in all scores compared to EmoLLM V1.0. Surpasses the performance of Role-playing ChatGPT on counseling tasks!**, [Click to experience EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0), update [dataset statistics and details](./datasets/), [Roadmap](./assets/Roadmap_ZH.png)
+- 【2024.3.9】 Add concurrency acceleration [QA pair generation](./scripts/qa_generation/), [RAG pipeline](./rag/)
 - 【2024.3.3】 [Based on InternLM2-7B-chat full fine-tuned version EmoLLM V2.0 open sourced](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full), need two A100*80G, update professional evaluation, see [evaluate](./evaluate/), update PaddleOCR-based PDF to txt tool scripts, see [scripts](./scripts/).
 - 【2024.2.29】 Updated objective assessment calculations, see [evaluate](./evaluate/) for details. A series of datasets have also been updated, see [datasets](./datasets/) for details.
 - 【2024.2.27】 Updated English README and a series of datasets (licking dogs and one-round dialogue)
@@ -109,14 +123,14 @@ The Model aims to fully understand and promote the mental health of individuals,
   - [Everyone is welcome to contribute to this project ~](#everyone-is-welcome-to-contribute-to-this-project-)
     - [Recent Updates](#recent-updates)
   - [Contents](#contents)
-          - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
-          - [**User Guide**](#user-guide)
-    - [File Directory Explanation](#file-directory-explanation)
+    - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
+    - [**User Guide**](#user-guide)
     - [Data Construction](#data-construction)
     - [Fine-tuning Guide](#fine-tuning-guide)
     - [Deployment Guide](#deployment-guide)
+    - [RAG]()
     - [Frameworks Used](#frameworks-used)
-      - [How to participate in this project](#how-to-participate-in-this-project)
+    - [How to participate in this project](#how-to-participate-in-this-project)
     - [Version control](#version-control)
     - [Authors (in no particular order)](#authors-in-no-particular-order)
     - [Copyright Notice](#copyright-notice)
@@ -160,9 +174,9 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### Data Construction
 
-Please read the [Data Construction Guide ](generate_data/tutorial.md)for reference.
+- Please read the [Data Construction Guide ](generate_data/tutorial.md)for reference.
 
-The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
+- The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
 ### Fine-tuning Guide
 
@@ -170,7 +184,12 @@ For details, see the [fine-tuning guide](xtuner_config/README.md)
 
 ### Deployment Guide
 
-For details, see the [deployment guide](demo/README.md)
+- Demo deployment: see [deployment guide](./demo/README.md) for details.
+- Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy.md)
+
+
+### RAG (Retrieval Augmented Generation) Pipeline
+- See [RAG](./rag/)
 
 <details>
 <summary>Additional Details</summary>
@@ -180,6 +199,9 @@ For details, see the [deployment guide](demo/README.md)
 - [Xtuner](https://github.com/InternLM/xtuner)
 - [Transformers](https://github.com/huggingface/transformers)
 - [Pytorch](https://pytorch.org/)
+- [LMDeploy](https://github.com/InternLM/lmdeploy/): for quantitative deployment
+- [Stremlit](https://streamlit.io/): for building demos
+- [DeepSpeed](https://github.com/microsoft/DeepSpeed): for parallel training
 - …
 
 #### How to participate in this project
@@ -200,33 +222,24 @@ This project uses Git for version control. You can see the currently available v
 
 ### Authors (in no particular order)
 
-[aJupyter](https://github.com/aJupyter)@Datawhale member, Master's student at Nankai University
+| Username | School/Organization | Remarks | Contributions |
+| :-------: | :-------------------: | :------------------: | :--------: |
+| [aJupyter](https://github.com/aJupyter) | Nankai University, Master's student | DataWhale member | Project initiator |
+| [jujimeizuo](https://github.com/jujimeizuo) | Jiangnan University, Master's student |  |  |
+| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) | Harbin Institute of Technology (Weihai), Undergraduate student |  |  |
+| [8baby8](https://github.com/8baby8) | PaddlePaddle Pilot Team Regional Director | Wenxin Large Model core developer |  |
+| [zxazys](https://github.com/zxazys) | Nankai University, Master's student |  |  |
+| [MING-ZCH](https://github.com/MING-ZCH) | Huazhong University of Science and Technology, Undergraduate student |  |  |
+| [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL) | SWUFE (Southwestern University of Finance and Economics) |  |  |
+| [MrCatAI](https://github.com/MrCatAI) | AI Mover |  |  |
+| [ZeyuBa](https://github.com/ZeyuBa) | Institute of Automation, Master's student |  |  |
+| [aiyinyuedejustin](https://github.com/aiyinyuedejustin) | University of Pennsylvania, Master's student |  |  |
+| [Nobody-ML](https://github.com/Nobody-ML) | China University of Petroleum (East China), Undergraduate student |  |  |
+| [chg0901](https://github.com/chg0901) | Kongju University, Doctoral student (South Korea) |  |  |
+| [Mxoder](https://github.com/Mxoder) | Beihang University, Undergraduate student |  |  |
+| [Anooyman](https://github.com/Anooyman) | Nanjing University of Science and Technology, Master's student |  |  |
+| [Vicky-3021](https://github.com/Vicky-3021) | Xidian University, Master's student (Research Year 0) |  |  |
 
-[jujimeizuo](https://github.com/jujimeizuo)@Master's student at Jiangnan University
-
-[Smiling&amp;Weeping](https://github.com/Smiling-Weeping-zhr)@Undergraduate student at Harbin Institute of Technology (Weihai)
-
-[Farewell](https://github.com/8baby8)@
-
-[ZhouXinAo](https://github.com/zxazys)@Master's student at Nankai University
-
-[MING_X](https://github.com/MING-ZCH) @Undergraduate student at Huazhong University of Science and Technology
-
-[Z_L](https://github.com/JasonLLLLLLLLLLL)@swufe
-
-[MrCatAI](https://github.com/MrCatAI)@AI Removal of Labour
-
-[ZeyuBa](https://github.com/ZeyuBa)@Master's student at Institute of Automation
-
-[aiyinyuedejustin](https://github.com/aiyinyuedejustin)@Master's student at University of Pennsylvania
-
-[Nobody-ML](https://github.com/Nobody-ML)@Undergraduate at China University of Petroleum (East China)
-
-[chg0901](https://github.com/chg0901)@PhD Candidate at Kwangwoon University
-
-[Mxoder](https://github.com/Mxoder)@Undergraduate at Beihang University
-
-[Anooyman](https://github.com/Anooyman) @Master of Nanjing University of Science and Technology
 
 ### Copyright Notice
 
@@ -239,6 +252,7 @@ The project is licensed under the MIT License. Please refer to the details
 - [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/)
 - [Vanin](https://github.com/vansin)
 - [Bloom up (WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- Abu (M.A. in Psychology, Peking University)
 
 <!-- links -->
 
