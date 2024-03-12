@@ -45,14 +45,14 @@
 
 <div align="center">
 
-|         模型          |   类型   |
+|         Model          |   Type   |
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  QLORA   |
-|   InternLM2_7B_chat   | 全量微调  |
-|  InternLM2_1_8B_chat  | 全量微调  |
+|   InternLM2_7B_chat   | full fine-tuning  |
+|  InternLM2_1_8B_chat  | full fine-tuning  |
 |  InternLM2_20B_chat  | LORA    |
 |     Qwen_7b_chat      |   QLORA   |
-|   Qwen1_5-0_5B-Chat   | 全量微调  |
+|   Qwen1_5-0_5B-Chat   | full fine-tuning  |
 |  Baichuan2_13B_chat   |   QLORA   |
 |      ChatGLM3_6B      |   LORA    |
 | DeepSeek MoE_16B_chat |  QLORA   |
@@ -120,23 +120,25 @@ The Model aims to fully understand and promote the mental health of individuals,
 ## Contents
 
 - [EmoLLM - Large Language Model for Mental Health](#emollm---large-language-model-for-mental-health)
-  - [Everyone is welcome to contribute to this project ~](#everyone-is-welcome-to-contribute-to-this-project-)
     - [Recent Updates](#recent-updates)
+    - [Roadmap](#roadmap)
   - [Contents](#contents)
-    - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
-    - [**User Guide**](#user-guide)
+          - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
+          - [**User Guide**](#user-guide)
+    - [File Directory Explanation](#file-directory-explanation)
     - [Data Construction](#data-construction)
     - [Fine-tuning Guide](#fine-tuning-guide)
     - [Deployment Guide](#deployment-guide)
-    - [RAG]()
+    - [RAG (Retrieval Augmented Generation) Pipeline](#rag-retrieval-augmented-generation-pipeline)
     - [Frameworks Used](#frameworks-used)
-    - [How to participate in this project](#how-to-participate-in-this-project)
+      - [How to participate in this project](#how-to-participate-in-this-project)
     - [Version control](#version-control)
     - [Authors (in no particular order)](#authors-in-no-particular-order)
     - [Copyright Notice](#copyright-notice)
     - [Acknowledgments](#acknowledgments)
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
+  - [Communication group](#communication-group)
 
 ###### Pre-development Configuration Requirements.
 
@@ -235,7 +237,7 @@ This project uses Git for version control. You can see the currently available v
 | [ZeyuBa](https://github.com/ZeyuBa) | Institute of Automation, Master's student |  |  |
 | [aiyinyuedejustin](https://github.com/aiyinyuedejustin) | University of Pennsylvania, Master's student |  |  |
 | [Nobody-ML](https://github.com/Nobody-ML) | China University of Petroleum (East China), Undergraduate student |  |  |
-| [chg0901](https://github.com/chg0901) | Kongju University, Doctoral student (South Korea) |  |  |
+| [chg0901](https://github.com/chg0901) | [MiniSora](https://github.com/mini-sora/minisora) |Maintainer and Admin|Data Cleaning and Docs Translation|
 | [Mxoder](https://github.com/Mxoder) | Beihang University, Undergraduate student |  |  |
 | [Anooyman](https://github.com/Anooyman) | Nanjing University of Science and Technology, Master's student |  |  |
 | [Vicky-3021](https://github.com/Vicky-3021) | Xidian University, Master's student (Research Year 0) |  |  |
