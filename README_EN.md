@@ -241,6 +241,7 @@ This project uses Git for version control. You can see the currently available v
 | [Mxoder](https://github.com/Mxoder) | Beihang University, Undergraduate student |  |  |
 | [Anooyman](https://github.com/Anooyman) | Nanjing University of Science and Technology, Master's student |  |  |
 | [Vicky-3021](https://github.com/Vicky-3021) | Xidian University, Master's student (Research Year 0) |  |  |
+| [SantiagoTOP](https://github.com/santiagoTOP) | Taiyuan University of Technology, Master's student | | |
 
 
 ### Copyright Notice
