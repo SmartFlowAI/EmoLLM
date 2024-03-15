@@ -16,6 +16,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url]
+[![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] 
 [![MIT License][license-shield]][license-url]
 [![Stargazers][stars-shield]][stars-url]
 
@@ -30,7 +31,7 @@
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0">体验EmoLLM 2.0 OpenXLab Demo</a>
+    <a href="https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0">体验EmoLLM 2.0</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">报告Bug</a>
     ·
@@ -261,6 +262,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
 [OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
 [OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0
+[OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full
 
 ## 交流群
 
