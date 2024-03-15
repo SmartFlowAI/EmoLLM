@@ -15,6 +15,8 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
+[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url]
+[![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] 
 [![MIT License][license-shield]][license-url]
 [![Stargazers][stars-shield]][stars-url]
 
@@ -22,21 +24,20 @@
 
 <h3 align="center">EmoLLM</h3>
 
-  <p align="center">
+  <div align="center">
       简体中文| <a href="README_EN.md" >English</a>
     <br />
     <br />
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aJupyter/EmoLLM/tree/main/demo">查看Demo</a>
+    <a href="https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0">体验EmoLLM 2.0</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">报告Bug</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">提出新特性</a>
-  </p>
+  </div>
 
-</p>
 
 <!-- 本篇README.md面向开发者 -->
 
@@ -257,6 +258,11 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE
+
+[OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
+[OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
+[OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0
+[OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full
 
 ## 交流群
 
