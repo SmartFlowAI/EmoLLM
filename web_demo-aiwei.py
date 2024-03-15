@@ -210,6 +210,8 @@ def combine_history(prompt):
 
 
 def main():
+    st.markdown("我在这里，准备好倾听你的心声了。", unsafe_allow_html=True)
+    
     # torch.cuda.empty_cache()
     print("load model begin.")
     model, tokenizer = load_model()
