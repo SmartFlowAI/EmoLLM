@@ -29,7 +29,7 @@
     <a href="https://github.com/aJupyter/EmoLLM"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aJupyter/EmoLLM/tree/main/demo">查看Demo</a>
+    <a href="https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0">体验EmoLLM 2.0 OpenXLab Demo</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">报告Bug</a>
     ·
