@@ -225,6 +225,18 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 该项目签署了 MIT 授权许可，详情请参阅 [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE)
 
+### 引用
+如果本项目对您的工作有所帮助，请使用以下格式引用：
+
+```bibtex
+@misc{EmoLLM,
+    title={EmoLLM},
+    author={EmoLLM},
+    url={https://github.com/SmartFlowAI/EmoLLM/},
+    year={2024}
+}
+```
+
 ### 特别鸣谢
 
 - [Sanbu](https://github.com/sanbuphy)
