@@ -73,8 +73,8 @@ if __name__ == '__main__':
     ai_tool = 'zhipuai'
 
     conversation_lis = []
-    for emo in emotions_lis:
-        for area in areas_of_life:
+    for area in areas_of_life:
+        for emo in emotions_lis:
             gen_path = f'./{ai_tool}/{area}/{emo}.jsonl'
 
             for i in tqdm(range(100), desc='{emo}, {area}'.format(emo=emo, area=area)):
