@@ -3,6 +3,8 @@ ESConv.json
 tmp/
 zhipuai/
 data/
+pdf/
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
