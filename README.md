@@ -225,6 +225,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 该项目签署了 MIT 授权许可，详情请参阅 [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE)
 
+
 ### 引用
 如果本项目对您的工作有所帮助，请使用以下格式引用：
 
@@ -275,6 +276,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
 [OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0
 [OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full
+
 
 ## 交流群
 
