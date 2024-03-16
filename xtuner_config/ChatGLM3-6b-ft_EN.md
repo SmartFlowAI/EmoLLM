@@ -5,9 +5,9 @@
 In practice, we have two platforms available for selection.
 
 * Rent a machine with a 3090 GPU and 24G memory on the [autodl](https://www.autodl.com/) platform. Select the image as shown: `PyTorch` --> `2.0.0` --> `3.8(ubuntu20.04)` --> `11.8`.
-![autodl](Images/autodl.png)
+![autodl](images/autodl.png)
 * On the [InternStudio](https://studio.intern-ai.org.cn/) platform, choose the configuration of A100(1/4). Select the image as shown: `Cuda11.7-conda`.
-![internstudio](Images/internstudio.png)
+![internstudio](images/internstudio.png)
 
 In the Terminal, update pip and install dependencies.
 
