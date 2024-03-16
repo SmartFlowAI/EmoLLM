@@ -4,10 +4,38 @@ import json
 import glob
 from typing import List, Dict
 
-from config.config import data_dir
+from config.config import data_dir, judge_dir
 from util.logger import get_logger
 
 logger = get_logger()
+
+
+"""
+递归获取 数据整合 下的所有 .jsonl 文件列表
+"""
+def get_jsonl_file_paths() -> List[str]:
+    json_file_paths = []
+
+    # 遍历根目录及其所有子目录
+    for dirpath, dirnames, filenames in os.walk(judge_dir):
+        # 对每个文件进行检查
+        for filename in filenames:
+            # 使用正则表达式匹配以.jsonl结尾的文件名
+            if re.search(r'\.jsonl$', filename):
+                # 构建完整的文件路径并添加到列表中
+                json_file_path = os.path.join(dirpath, filename)
+                json_file_paths.append(json_file_path)
+
+    return json_file_paths
+
+def get_QA_pairs(json_path):
+    with open(json_path, 'r', encoding='utf-8') as f:
+        content = f.read().strip()
+
+    # 按照换行符分割字符串
+    QA_Pairs = content.split('\n')
+
+    return QA_Pairs
 
 """
 递归获取 data_dir 下的所有 .txt 文件列表
@@ -47,7 +75,7 @@ def get_txt_content(
     res = []
     sentences_amount = len(sentences)
     start_index, end_index = 0, sentences_amount - window_size
-    ## check length
+    # check length
     if window_size < overlap_size:
         logger.error("window_size must be greater than or equal to overlap_size")
         return None
@@ -56,7 +84,7 @@ def get_txt_content(
         return ['\n'.join(sentences)]
     
     for i in range(start_index, end_index + 1, overlap_size):
-        res.append('\n'.join(sentences[i : i + window_size]))
+        res.append('\n'.join(sentences[i: i + window_size]))
     return res
 
 
@@ -80,6 +108,7 @@ def capture_qa(content: str) -> List[Dict]:
         logger.warning("No JSON block found.")
         return None
 
+
 """
 将 storage_list 存入到 storage_jsonl_path
 """
@@ -87,6 +116,7 @@ def save_to_file(storage_jsonl_path, storage_list):
     with open(storage_jsonl_path, 'a', encoding='utf-8') as f:
         for item in storage_list:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
+
 
 """
 将并发产生的文件合并成为一个文件
@@ -103,4 +133,3 @@ def merge_sub_qa_generation(directory, storage_jsonl_path):
                 file_contents.append(json.loads(line))
             os.remove(file_path)
     save_to_file(storage_jsonl_path, file_contents)
-
