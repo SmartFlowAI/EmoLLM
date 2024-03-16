@@ -15,6 +15,8 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
+[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url]
+[![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] 
 [![MIT License][license-shield]][license-url]
 [![Stargazers][stars-shield]][stars-url]
 
@@ -29,7 +31,7 @@
     <a href="https://github.com/aJupyter/EmoLLM"><strong>Explore the documentation of this project »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aJupyter/EmoLLM/tree/main/demo">View the Demo</a>
+    <a href="https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0">EmoLLM 2.0 Demo</a>
     ·
     <a href="https://github.com/aJupyter/EmoLLM/issues">Report a Bug</a>
     ·
@@ -284,6 +286,11 @@ The project is licensed under the MIT License. Please refer to the details
 [issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
 [license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
+
+[OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
+[OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
+[OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0
+[OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full
 
 ## Communication group
 - If it fails, go to the Issue section.
