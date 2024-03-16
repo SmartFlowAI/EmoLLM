@@ -1,11 +1,11 @@
-aistudio_token : '{your_token}' # 文心一言的token
+aistudio_token : '{your_token}'      # 文心一言的token
 dashscope_api_key : '{your_api_key}' # 通义千问的api_key
-zhiouai_api_key : '{your_api_key}' # 智谱AI的密钥
+zhiouai_api_key : '{your_api_key}'   # 智谱AI的密钥
 
 # 星火大模型配置
-appid : "{}"  # 填写控制台中获取的 APPID 信息
+appid : "{}"       # 填写控制台中获取的 APPID 信息
 api_secret : "{}"  # 填写控制台中获取的 APISecret 信息
-api_key : "{}"  # 填写控制台中获取的 APIKey 信息
+api_key : "{}"     # 填写控制台中获取的 APIKey 信息
 
 
 system : '现在你是一个心理专家，我有一些心理问题，请你用专业的知识帮我解决'
