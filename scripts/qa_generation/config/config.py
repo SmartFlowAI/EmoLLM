@@ -10,7 +10,9 @@ base_dir = os.path.dirname(cur_dir)                                         # ba
 model_dir = os.path.join(base_dir, 'model')                                 # model
 
 # data
-data_dir = os.path.join(base_dir, 'data')                                   # data
+data_dir = os.path.join(base_dir, 'data')  # /Users/wangyoufang/Downloads/EmoLLM/scripts/qa_generation/data
+clean_dir = os.path.join(data_dir, 'cleaned')
+judge_dir = os.path.join(data_dir, '数据整合')
 result_dir = os.path.join(data_dir, 'generated')                            # result
 
 # log
@@ -18,7 +20,9 @@ log_dir = os.path.join(base_dir, 'log')                                     # lo
 log_file_path = os.path.join(log_dir, 'log.log')                            # file
 
 # system prompt
+# Prompt内容
 system_prompt_file_path = os.path.join(base_dir, 'system_prompt_v2.md')     # system prompt
+wash_prompt_file_path = os.path.join(base_dir, 'choose_prompt.md')
 
 
 """
@@ -28,11 +32,11 @@ system_prompt_file_path = os.path.join(base_dir, 'system_prompt_v2.md')     # sy
 DASHSCOPE_API_KEY = ''
 
 
-
 """
 控制参数
 """
 storage_interval = 10
 window_size = 8
 overlap_size = 2
-multi_process_num = 3
+multi_process_num = 1
+
