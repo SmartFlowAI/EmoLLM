@@ -1,6 +1,6 @@
-aistudio _token : '{your_token}' # 文心一言的token
+aistudio_token : '{your_token}' # 文心一言的token
 dashscope_api_key : '{your_api_key}' #通义千问的api_key
-zhiouai_api_key : '{your_api_key}' # 智浦AI的密钥
+zhiouai_api_key : '{your_api_key}' # 智谱AI的密钥
 
 # 星火大模型配置
 appid : "{}"  # 填写控制台中获取的 APPID 信息
