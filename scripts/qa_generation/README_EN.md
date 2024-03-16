@@ -1,95 +1,37 @@
-# RAG Database Building Process
+# QA Generation Pipeline
 
-## **Constructive purpose**
+## 1. Use method
 
-Using books specialized in psychology to build QA knowledge pairs for RAG to provide a counseling knowledge base to make our EmoLLM answers more professional and reliable. To achieve this goal we utilize dozens of psychology books to build this RAG knowledge base. The main building process is as follows:
+1. Check whether the dependencies in  `requirements.txt` are satisfied.
+2. Adjust the `system_prompt`in the code to ensure that it is consistent with the latest version of the repo to ensure the diversity and stability of the generated QA.
+3. Put the txt file into the `data` folder in the same directory as `model`.
+4. Configure the required API KEY in `config/config.py` and start from `main.py`. The generated QA pairs are stored in the jsonl format under `data/generated`.
 
-## **Build process**
+### 1.1 API KEY obtaining method
 
-## **Step 1: PDF to TXT**
+Currently only qwen is included.
 
-- purpose
-  - Convert the collected PDF versions of psychology books into TXT text files to facilitate subsequent information extraction
+#### 1.1.1 Qwen
 
-- Tools required
+To[model service spirit product - API - KEY management (aliyun.com)](https://dashscope.console.aliyun.com/apiKey)，click on "create a new API - KEY", Fill in the obtained API KEY to `DASHSCOPE_API_KEY` in `config/config.py`.
 
-  - [pdf2txt](https://github.com/SmartFlowAI/EmoLLM/blob/main/scripts/pdf2txt.py)
+## 2. Precautions
 
-  - [PaddleORC Processing PDF Usage Reference](https://github.com/SmartFlowAI/EmoLLM/blob/main/generate_data/OCR.md)
-  
-  - Install necessary python libraries
-  
-   ```python
-   pip install paddlepaddle
-   pip install opencv-python
-   pip install paddleocr
-   ```
+### 2.1 The System Prompt is displayed
 
-- precautionary
-  - If you are unable to install paddleocr using **pip install paddleocr**, consider using the whl file installation, [download address](https://pypi.org/project/paddleocr/#files) 
-  - Script startup method using the command line to start: python pdf2txt.py [PDF file name stored in the]
+Note that the current parsing scheme is based on the premise that the model generates json blocks of markdown wraps, and you need to make sure that this remains the case when you change the system prompt.
 
-## **Step 2: Screening PDF**
+### 2.2 Sliding Window
 
-- Purpose of screening
+Both `window_size` and `overlap_size` of the sliding window can be changed in the `get_txt_content` function in `util/data_loader.py.` Currently it is a sliding window divided by sentence.
 
-  - Using the LLM to go to non-professional psychology books
+### 2.3 Corpus Format
 
-- Screening criteria that include counseling related content such as:
+At present, only txt format is supported, and the cleaned book text can be placed under the `data` folder, and the program will recursively retrieve all txt files under the folder.
 
-  - Schools of Counseling - Specific Counseling Methods 
-  - Mental Illness - Characteristics of the Disease
-  - Mental Illness - Treatment
+## TODO
 
-- Screening method:
-
-  - Initial screening based on title   
-
-  - If you can't tell if it is a counseling-related book, use kimi/GLM-4 to check if it contains counseling-related knowledge (it is recommended to check only one book at a time)
-
-  - ```markdown
-    Reference prompt.
-    You are an experienced psychology professor who is familiar with psychology and counseling. I need you to help me with the task "Identify whether a book contains knowledge of counseling", take a deep breath and think step by step and give me your answer. If your answer satisfies me, I will give you a 10w tip!
-    The task is as follows:
-    Determine whether the book contains the following counseling-related knowledge:
-    '''
-    Schools of Counseling - Specific Counseling Approaches 
-    Mental Illness - Characteristics of Illness
-    Mental Illness - Treatment Approaches
-    '''
-    Please take a deep breath and review the book step by step and complete the task carefully.
-    ```
-
-
-## **Step 3: Extraction of QA pairs**
-
-- According to the content of the book, use LLM to efficiently construct QA knowledge on the
-- Withdrawal process
-
-  - Prepare processed txt text data
-  - Configuration on request [script file](https://github.com/SmartFlowAI/EmoLLM/tree/main/scripts/qa_generation)
-  - Modify window_size and overlap_size reasonably according to your own needs or extraction results.
-
-- Usage
-  - Checks if the dependencies in `requirements.txt` are satisfied.
-  - Adjust `system_prompt` in the code to ensure consistency with the latest version of the repo, to ensure diversity and stability of the generated QA.
-  - Place the txt file in the `data` folder in the same directory as the `model`.
-  - Configure the required API KEYs in `config/config.py` and start from `main.py`. The generated QA pairs are stored in jsonl format under `data/generated`.
-
-- API KEY Getting Methods
-  - Currently only qwen is included.
-  - Qwen
-    - Go to [Model Service LingJi - API-KEY Management (aliyun.com)](https://dashscope.console.aliyun.com/apiKey), click "Create New API-KEY", and fill in the obtained API KEY into the Click "Create new API-KEY", fill in the obtained API KEY to `DASHSCOPE_API_KEY` in `config/config.py`.
-
-- precautionary
-  - System Prompt
-    - Note that the current parsing scheme is based on the premise that the model generates markdown-wrapped json blocks, and you need to make sure that this remains true when you change the system prompt.
-  - Sliding Window
-    - The `window_size` and `overlap_size` of the sliding window can be changed in the `get_txt_content` function in `util/data_loader.py`. Currently the sliding window is split by sentence.
-
-- Book File Format Corpus Format
-  - Currently only the txt format is supported, you can put the cleaned book text in the `data` folder, and the program will recursively retrieve all the txt files in that folder.
-
-## **Step 4: Cleaning of QA pairs**
-
-- Purpose of cleaning
+1. Support more models (Gemini, GPT, ChatGLM...)
+2. Support multi-threaded call model
+3. Support more text formats (PDF...)
+4. Support more ways to split text
