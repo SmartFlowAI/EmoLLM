@@ -23,7 +23,14 @@ def qwen_api(data, emo):
     病人：病人的咨询或陈述 
     医生：医生的安抚和建议
     '''
-    response = dashscope.Generation.call(
+    try:
+        response = dashscope.Generation.call(
+        model='qwen-max',
+        prompt=prompt,
+        history=[],
+    )
+    except:
+        response = dashscope.Generation.call(
         model='qwen-max',
         prompt=prompt,
         history=[],
