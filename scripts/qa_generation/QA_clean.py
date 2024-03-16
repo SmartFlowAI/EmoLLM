@@ -19,8 +19,11 @@ def single_thread_generate(thread_num, interval, model_caller, storage_jsonl_pat
     storage_counter = 0
     judge_list = []
     for content in tqdm(contents):
+        # print('content: ', content)
         try:
+            # model_caller 函数的作用是调用某个预训练的问答生成模型，传递输入内容 content 给模型，然后获取模型的输出 response
             response = model_caller(content)
+            # print('response: ', response)
 
             if response == '1':
                 content = json.loads(content)
@@ -29,6 +32,7 @@ def single_thread_generate(thread_num, interval, model_caller, storage_jsonl_pat
             else:
                 continue
 
+            # 在达到指定的 interval 后，将 storage_list 中的内容保存到指定的文件 storage_jsonl_path 中
             if storage_counter % interval == 0:
                 save_to_file(storage_jsonl_path, judge_list)
                 storage_counter = 0
@@ -69,6 +73,7 @@ def clean_qa(
     for file_path in file_lists:
         # 一个jsonl文件的所有QA Pairs
         contents = get_QA_pairs(file_path)
+        # print(contents)
 
         file_name = os.path.basename(file_path)
         print(file_name)
@@ -88,6 +93,7 @@ def clean_qa(
             )
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=multi_process_num) as executor:
+            # 循环调用 single_thread_generate 函数，每次赋予参数 parameters
             futures = [executor.submit(single_thread_generate, *parameters) for parameters in parameters_list]
 
             for future in concurrent.futures.as_completed(futures):
@@ -100,6 +106,6 @@ def clean_qa(
 
 
 if __name__ == '__main__':
-    # 创建cleaned文件夹
+    # 创建washed文件夹
     os.makedirs('./data/cleaned', exist_ok=True)
     clean_qa(interval=storage_interval)

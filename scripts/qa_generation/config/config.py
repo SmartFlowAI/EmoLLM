@@ -10,7 +10,7 @@ base_dir = os.path.dirname(cur_dir)                                         # ba
 model_dir = os.path.join(base_dir, 'model')                                 # model
 
 # data
-data_dir = os.path.join(base_dir, 'data')  # /Users/wangyoufang/Downloads/EmoLLM/scripts/qa_generation/data
+data_dir = os.path.join(base_dir, 'data')
 clean_dir = os.path.join(data_dir, 'cleaned')
 judge_dir = os.path.join(data_dir, '数据整合')
 result_dir = os.path.join(data_dir, 'generated')                            # result
@@ -38,5 +38,5 @@ DASHSCOPE_API_KEY = ''
 storage_interval = 10
 window_size = 8
 overlap_size = 2
-multi_process_num = 1
+multi_process_num = 3
 

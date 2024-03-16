@@ -17,7 +17,7 @@ def call_qwen_single_turn(query: str) -> str:
     messages = [
         {
             'role': Role.SYSTEM,
-            'content': load_system_prompt()  # 读取Prompt内容(system_prompt_vx_xx.md)
+            'content': load_system_prompt()
         },
         {
             'role': Role.USER,

@@ -28,7 +28,6 @@ def get_jsonl_file_paths() -> List[str]:
 
     return json_file_paths
 
-
 def get_QA_pairs(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
         content = f.read().strip()
@@ -37,7 +36,6 @@ def get_QA_pairs(json_path):
     QA_Pairs = content.split('\n')
 
     return QA_Pairs
-
 
 """
 递归获取 data_dir 下的所有 .txt 文件列表
@@ -55,14 +53,11 @@ def get_file_list() -> List[str]:
         logger.warning(f'No txt text found in {data_dir}, please check!')
     return txt_files
 
-
 """
 获取 txt 文本的所有内容，按句子返回 List
 file_path: txt 文本路径
 window_size: 滑窗大小，单位为句子数
 overlap_size: 重叠大小，单位为句子数
-
-处理txt内容并返回一组一组的句子，每组window_size个，相邻两组的重叠句子数是overlap_size
 """
 def get_txt_content(
     file_path: str,
@@ -138,8 +133,3 @@ def merge_sub_qa_generation(directory, storage_jsonl_path):
                 file_contents.append(json.loads(line))
             os.remove(file_path)
     save_to_file(storage_jsonl_path, file_contents)
-
-
-if __name__ == '__main_':
-    pass
-

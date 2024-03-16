@@ -24,7 +24,6 @@ def single_thread_generate(thread_num, interval, model_caller, storage_jsonl_pat
     for content in tqdm(contents):
         try:
             response = model_caller(content)
-
             captured_qa = capture_qa(response)
 
             if captured_qa is None:
@@ -71,7 +70,6 @@ def generate_qa(
     storage_list = []
     for file_path in file_list:
         contents = get_txt_content(file_path, window_size=window_size, overlap_size=overlap_size)
-
         storage_list = []
         
         _, file_name = os.path.split(file_path)
@@ -79,7 +77,7 @@ def generate_qa(
             result_dir, f'{current_time}-{file_name}-{model_name}.jsonl')
         logger.info(f'The generated QA will be stored in {storage_jsonl_path}.')
 
-
+        # 基于并发个数切分 contents 内容
         contents_array = np.array(contents)
         chunks = np.array_split(contents_array, multi_process_num)
 
@@ -91,9 +89,8 @@ def generate_qa(
             )
 
         # 并发生成 QA 对
-        # 使用 ThreadPoolExecutor 创建一个线程池，其中 max_workers=multi_process_num 指定了线程池中最大的线程数。
         with concurrent.futures.ThreadPoolExecutor(max_workers=multi_process_num) as executor:
-            # 循环调用 single_thread_generate 函数，每次赋予参数 parameters
+            # 创建一个Future列表，它们将对应每个worker_function的结果
             futures = [executor.submit(single_thread_generate, *parameters) for parameters in parameters_list]
         
             for future in concurrent.futures.as_completed(futures):
@@ -102,9 +99,7 @@ def generate_qa(
                 except Exception as exc:
                     logger.error("Thread generated an exception: %s" % (exc))
 
-        # 最后调用 merge_sub_qa_generation 函数，将各个子任务生成的 QA 对合并到一个文件中。汇总整个处理过程的结果。
         merge_sub_qa_generation(result_dir, storage_jsonl_path)
-
 
 if __name__ == '__main__':
 
