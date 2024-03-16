@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 aJupyter、MING-ZCH、Farewell、jujimeizuo
+Copyright (c) 2024 SmartFlowAI
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -11,11 +11,6 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
-For portions of the software that are derived from other repositories, the original licenses shall apply. 
-The specific portions are documented in the `./datasets/README.md` included with this distribution. 
-Users are responsible for complying with the terms and conditions of the original licenses 
-when using or distributing these portions of the software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
