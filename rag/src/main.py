@@ -5,8 +5,19 @@ import numpy as np
 from typing import Tuple
 from sentence_transformers import SentenceTransformer
 
-from config.config import knowledge_json_path, knowledge_pkl_path
+from config.config import knowledge_json_path, knowledge_pkl_path, model_repo
 from util.encode import load_embedding, encode_qa
+from util.pipeline import EmoLLMRAG
+
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch
+import streamlit as st
+from openxlab.model import download
+
+download(
+    model_repo=model_repo, 
+    output='model'
+)
 
 
 """
@@ -62,6 +73,19 @@ def main():
     ## 2. 将 contents 拼接为 prompt，传给 LLM，作为 {已知内容}
     ## 3. 要求 LLM 根据已知内容回复
 
+@st.cache_resource
+def load_model():
+    model = (
+        AutoModelForCausalLM.from_pretrained("model", trust_remote_code=True)
+        .to(torch.bfloat16)
+        .cuda()
+    )
+    tokenizer = AutoTokenizer.from_pretrained("model", trust_remote_code=True)
+    return model, tokenizer
 
 if __name__ == '__main__':
-    main()
+    #main()
+    query = ''
+    model, tokenizer = load_model()
+    rag_obj = EmoLLMRAG(model)
+    response = rag_obj.main(query)
