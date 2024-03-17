@@ -3,6 +3,7 @@ import os
 cur_dir = os.path.dirname(os.path.abspath(__file__))                # config
 src_dir = os.path.dirname(cur_dir)                                  # src
 base_dir = os.path.dirname(src_dir)                                 # base
+model_repo = 'ajupyter/EmoLLM_aiwei'
 
 # model
 model_dir = os.path.join(base_dir, 'model')                         # model
@@ -17,3 +18,6 @@ knowledge_pkl_path = os.path.join(data_dir, 'knowledge.pkl')        # pickle
 # log
 log_dir = os.path.join(base_dir, 'log')                             # log
 log_path = os.path.join(log_dir, 'log.log')                         # file
+
+select_num = 3
+retrieval_num = 10
