@@ -244,7 +244,7 @@ This project uses Git for version control. You can see the currently available v
 | [Anooyman](https://github.com/Anooyman) | Nanjing University of Science and Technology, Master's student |  |  |
 | [Vicky-3021](https://github.com/Vicky-3021) | Xidian University, Master's student (Research Year 0) |  |  |
 | [SantiagoTOP](https://github.com/santiagoTOP) | Taiyuan University of Technology, Master's student | | |
-
+| [zealot52099](https://github.com/zealot52099) | AI Mover | | |
 
 ### Copyright Notice
 
