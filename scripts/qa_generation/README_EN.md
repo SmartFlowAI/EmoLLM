@@ -93,3 +93,40 @@ Using books specialized in psychology to build QA knowledge pairs for RAG to pro
 ## **Step 4: Cleaning of QA pairs**
 
 - Purpose of cleaning
+  - Improve the quality of extracted QA data and clean out QA pairs that are not relevant to psychology
+
+- Cleaning Methods
+
+  - Use the Prompt method to drive the LLM to make a judgment on the given QA pairs
+
+  - **Reference to Prompt**
+
+  - ```markdown
+    You are an experienced counselor and are familiar with psychology. Based on the QA pair I have provided, determine if this QA pair is psychological in nature.
+    
+    The criteria are as follows:
+    
+    - If the current QA pair belongs to the category of psychology, then return 1
+    - If the current QA pair does not belong to the category of psychology, then return 0.
+    
+    
+    The following is the content of the given psychology QA pair:
+    ```
+
+- Cleaning Tools
+
+  - Configure `DASHSCOPE_API_KEY` in `config/config.py`, see step 3 for how to get `API_KEY`.
+
+  - Use the provided cleaning script [QA_Clear](https://github.com/SmartFlowAI/EmoLLM/blob/main/scripts/qa_generation/QA_clean.py)
+
+- How to use
+
+  - Prepare the QA pair data to be cleaned
+
+  - Put the data into the data folder of the same level as the model.
+
+  - Modify `judge_dir` in `config/config.py` according to the folder name.
+
+  - If the file name of the stored data is `xxx`, then `judge_dir` is `judge_dir = os.path.join(data_dir, 'xxx')`.
+
+  - The cleaned QA pairs are stored as `jsonl` under `data/cleaned`.
