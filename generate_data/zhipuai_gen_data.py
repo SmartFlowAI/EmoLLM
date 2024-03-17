@@ -34,11 +34,21 @@ def zhipu_api(data, emo):
     
     top_p = round(random.uniform(0.1, 0.9), 2)
     messages = getText('user', prompt)
-    response = client.chat.completions.create(
-        model='glm-4',
-        messages=messages,
-        top_p=top_p,
-    )
+    
+    # Error code: 400, with error text {"error":{"code":"1301","message":
+    # "系统检测到输入或生成内容可能包含不安全或敏感内容，请您避免输入易产生敏感内容的提示语，感谢您的配合。"}}
+    try:
+        response = client.chat.completions.create(
+            model='glm-4',
+            messages=messages,
+            top_p=top_p,
+        )
+    except:
+        response = client.chat.completions.create(
+            model='glm-4',
+            messages=messages,
+            top_p=top_p,
+        )
 
     return response.choices[0].message.content
 

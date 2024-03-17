@@ -1,5 +1,5 @@
-erniebot  #文心一言
-dashscope  # 通义千问
-zhipuai # 智浦
-python-dotenv # 智浦
-websocket #调用星火大模型的时候会使用 
+erniebot      # 文心一言
+dashscope     # 通义千问
+zhipuai       # 智谱
+python-dotenv # 智谱
+websocket     # 调用星火大模型的时候会使用 
