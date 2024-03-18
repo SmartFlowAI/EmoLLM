@@ -2,3 +2,5 @@ sentence_transformers
 transformers
 numpy
 loguru
+langchain
+torch

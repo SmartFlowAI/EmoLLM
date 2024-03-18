@@ -93,3 +93,34 @@
 ## **步骤四：清洗QA对**
 
 - 清洗目的
+
+  - 提高提取的QA数据质量，清理掉与心理学无关的QA对
+
+- 清洗方法
+
+  - 使用Prompt方法，驱动LLM对给出的QA对进行判断
+
+  - **参考Prompt**
+
+  - ```markdown
+    你是一名经验丰富的心理咨询师，熟悉心理学相关知识。根据我提供的 QA 对，来判断这个 QA 对是否属于心理学范畴。
+    
+    标准如下：
+    
+    - 若当前 QA 对属于心理学范畴，则返回1
+    - 若当前 QA 对不属于心理学范畴，则返回0
+    
+    
+    以下是给定的心理学 QA 对内容：
+    ```
+
+- 清洗工具
+  - 配置`config/config.py` 中的 `DASHSCOPE_API_KEY`,`API_KEY`获取方法见步骤三
+  - 使用提供的清洗脚本[QA_Clear](https://github.com/SmartFlowAI/EmoLLM/blob/main/scripts/qa_generation/QA_clean.py)
+
+- 使用方法
+  - 准备好需要清洗的 QA 对数据
+  - 将该数据放进 model 同级 data 文件夹下
+  - 根据文件夹名去修改 `config/config.py` 中的 `judge_dir`。
+  - 如存储数据的文件名为`xxx`，则`judge_dir`是 `judge_dir = os.path.join(data_dir, 'xxx')`
+  - 清洗完的 QA 对会以 `jsonl` 的格式存在 `data/cleaned` 下
