@@ -5,6 +5,7 @@ zhipuai/
 data/
 
 *.jsonl
+*.json
 # ./generate_data/*.josnl
 # ./generate_data/*/*/*.josnl
 
