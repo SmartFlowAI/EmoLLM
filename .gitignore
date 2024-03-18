@@ -8,6 +8,7 @@ pdf/
 
 *.jsonl
 *.json
+*.txt
 # ./generate_data/*.josnl
 # ./generate_data/*/*/*.josnl
 

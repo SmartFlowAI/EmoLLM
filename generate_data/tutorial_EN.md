@@ -22,7 +22,7 @@ In order to have a better representation of our large mental models, we must hav
 
 ## **III. Practical steps**
 
-1. **Initialize**
+### 1. **Initialize**
 
 * Install the required software and libraries
 
@@ -34,7 +34,7 @@ In order to have a better representation of our large mental models, we must hav
 
   See `config.yml` for annotations
 
-2. **Model selection and configuration**
+### 2. **Model selection and configuration**
 
 * Select the right model for your needs
   In order to enable everyone to play with the large model, we chose the InterLLM2-7B as our baseline model (consumer graphics cards can also be deployed fine-tuned oh).
@@ -42,40 +42,52 @@ In order to have a better representation of our large mental models, we must hav
 * Make necessary configurations and adjustments to the model
   Use XTuner for fine-tuning based on our dataset and configuration strategy.
 
-3. **Data generation**
+### 3. **Data generation**
 
-* Data generation using Tongyi Qianwen
+#### **Three original methods for data generation**
+
+* 1.Data generation using Tongyi Qianwen 
   
-  ```bash
+```bash
   # Terminal operation
   bash run_qwen.bash
+```
 
-  # Or just use python without bash
-  python qwen_gen_data_NoBash.py
-  ```
-
-* Data generation using Wenxin Yiyan
+* 2.Data generation using Wenxin Yiyan
   
-  ```bash
+```bash
   # Terminal operation
   python ernie_gen_data.py
-  ```
+```
 
-* Data generation using Zhipu GLM
+* 3.Data generation using IFlystar Fire
   
-  ```bash
-  # Terminal operation
-  python zhipuai_gen_data.py
-  ```
-
-* Data generation using IFlystar Fire
-  
-  ```bash
+```bash
   # Terminal operation
   python ./xinghuo/gen_data.py
-  ```
+```
 
-4. **Integration of self-cognition datasets**
+#### **Two improved methods for data generation**
+
+When generating multi-turn dialogues with these two improved methods, the first step is to define the value of the `ai_tool` variable, which represents the LLM model name (`qwen` or `zhipuai`). Based on the value of this `ai_tool` variable, a `{ai_tool}` folder is created. 
+
+Then, all `area` values are traversed, followed by different `emotion` values for generating multi-turn dialogues. The generated dialogues are written to the `./{ai_tool}/{area}/{emotion}.jsonl` file every `save_interval` iterations. This process is repeated `total_num_each_emo_area` times.
+
+* 1.Using the **improved** method for generating data with the Qwen model:
+  
+```bash
+  # Alternatively, you can run it directly without using bash
+  python qwen_gen_data_NoBash.py
+```
+
+* 2.Using the **improved** method for generating data with the Zhipuai GLM-4 model:
+
+```bash
+  # Alternatively, you can run it directly without using bash
+  python zhipuai_gen_data.py
+```
+
+### 4. **Integration of self-cognition datasets**
 
 * Self-cognition dataset this needs to be manually generated in accordance with the format, the following format can be
   
@@ -100,16 +112,27 @@ In order to have a better representation of our large mental models, we must hav
   ]
   ```
 
-5. **dataset integration**
+### 5. **Dataset Integration**
 
-Before dataset integration, we need to check whether the generated data has formatting errors, type mismatches, etc. We need check.py to check the data. Finally, merge_json.py is used to combine all the json into one overall json file.
+#### **Case 1**: Using `python ernie_gen_data.py`, `bash run_qwen.bash`, or `python ./xinghuo/gen_data.py`
 
-6. **Evaluation and optimization**
+* First, use `check.py` to check the data. Before integrating the dataset, we need to check whether the generated data has format errors or type mismatches.
+* Then, use `merge_json.py` to consolidate all json files (or use `merge_jsonl.py` to consolidate all jsonl files) into one overall json file.
+
+#### **Case 2**: Using improved generation method: `python qwen_gen_data_NoBash.py` or `python zhipuai_gen_data.py` 
+
+In this case, we need to merge all `{emotion}.jsonl` files in all `{area}` subfolders under the `{data_ai}` folder into `{data_ai}_final_merge.json` after we use two improved generation methods to generate multi-round conversations.
+
+* As we have adopted improved data generation methods and different storage generation dialog structures, we can avoid checking the dataset.
+* Then, use `merge_jsonl_r.py` to define `qwen` or `zhipuai` as the `data_ai` variable, and consolidate all jsonl files in all areas (`area`) into one overall json file named `{area}_merge.json`. Finally, generate `{data_ai}_final_merge.json` in the `{data_ai}` folder.
+* We can then manually merge `qwen_final_merge.json` and `zhipuai_final_merge.json` into `qwen_zhipuai_final_merge.json`. Note that in the merged json file, there is only one pair of `[]` on the outside, and the multi-round dialogues are wrapped in `{}`.
+
+### 6. **Evaluation and optimization**
 
 * Evaluate the generated dataset using appropriate evaluation metrics
 * Make necessary optimizations and adjustments based on the evaluation results
 
-7. **Testing and deployment**
+### 7. **Testing and deployment**
 
 * Evaluate the trained model using an independent test set
 * Make necessary adjustments and optimizations based on test results
