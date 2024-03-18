@@ -23,7 +23,14 @@ def qwen_api(data, emo):
     病人：病人的咨询或陈述 
     医生：医生的安抚和建议
     '''
-    response = dashscope.Generation.call(
+    try:
+        response = dashscope.Generation.call(
+        model='qwen-max',
+        prompt=prompt,
+        history=[],
+    )
+    except:
+        response = dashscope.Generation.call(
         model='qwen-max',
         prompt=prompt,
         history=[],
@@ -54,14 +61,17 @@ if __name__ == '__main__':
     emotions_lis = configs['emotions_list']
     areas_of_life = configs['areas_of_life']
     ai_tool = 'qwen'
+    
+    save_interval = 5
+    total_num_each_emo_area = 5
 
     conversation_lis = []
 
-    for emo in emotions_lis:
-        for area in areas_of_life:
+    for area in areas_of_life:
+        for emo in emotions_lis:
             gen_path = f'./{ai_tool}/{area}/{emo}.jsonl'
             
-            for i in tqdm(range(100), desc='{emo}, {area}'.format(emo=emo, area=area)):
+            for i in tqdm(range(total_num_each_emo_area), desc='{emo}, {area}'.format(emo=emo, area=area)):
                 one_conversation = {
                     "conversation": []
                 }
@@ -98,8 +108,7 @@ if __name__ == '__main__':
                         )
                 conversation_lis.append(one_conversation)
 
-                # 每生成10条数据存储一次
-                if ((i+1) % 10 == 0):
+                if ((i+1) % save_interval == 0):
                     save_jsonl(data_lis=conversation_lis, file_path=gen_path)
                     print(f'generate {gen_path}')
                     conversation_lis = []  # 清空

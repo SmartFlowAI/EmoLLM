@@ -82,12 +82,15 @@ if __name__ == '__main__':
     areas_of_life = configs['areas_of_life']
     ai_tool = 'zhipuai'
 
+    save_interval = 5
+    total_num_each_emo_area = 5
+
     conversation_lis = []
-    for emo in emotions_lis:
-        for area in areas_of_life:
+    for area in areas_of_life:
+        for emo in emotions_lis:
             gen_path = f'./{ai_tool}/{area}/{emo}.jsonl'
 
-            for i in tqdm(range(100), desc='{emo}, {area}'.format(emo=emo, area=area)):
+            for i in tqdm(range(total_num_each_emo_area), desc='{emo}, {area}'.format(emo=emo, area=area)):
                 res = zhipu_api(area, emo)
                 print(res)
                 if res == 'null':
@@ -95,7 +98,7 @@ if __name__ == '__main__':
                     continue
                 conversation_lis.append(convert(res))
                 
-                if ((i+1) % 10 == 0):
+                if ((i+1) % save_interval == 0):
                     # path = f'./{args.data}.jsonl'
                     save_jsonl(data_lis=conversation_lis, file_path=gen_path)
                     print(f'generate {gen_path}')

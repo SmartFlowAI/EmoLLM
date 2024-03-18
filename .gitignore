@@ -3,6 +3,8 @@ ESConv.json
 tmp/
 zhipuai/
 data/
+pdf/
+.idea/
 
 *.jsonl
 # ./generate_data/*.josnl
