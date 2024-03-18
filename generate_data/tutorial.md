@@ -118,7 +118,7 @@
 * 首先使用`check.py`进行数据检查。在进行数据集整合之前，我们要检查生成的数据是否存在格式错误，类型不符合等情况。
 * 然后使用`merge_json.py`将所有的json（或者使用`merge_jsonl.py`将所有的jsonl）文件整合为一个总的json文件。
 
-#### Case 2: 使用`python qwen_gen_data_NoBash.py`或者`python zhipuai_gen_data.py`
+#### Case 2: 使用改进的生成保存方法：`python qwen_gen_data_NoBash.py`或者`python zhipuai_gen_data.py`
 
 在这种情况下，我们需要在使用两种改进的生成方法生成多轮对话后，将`{data_ai}`文件夹下所有`{area}`子文件夹中的所有`{emotion}.jsonl`文件合并为`{data_ai}_final_merge.json`文件。
 

@@ -119,7 +119,7 @@ Then, all `area` values are traversed, followed by different `emotion` values fo
 * First, use `check.py` to check the data. Before integrating the dataset, we need to check whether the generated data has format errors or type mismatches.
 * Then, use `merge_json.py` to consolidate all json files (or use `merge_jsonl.py` to consolidate all jsonl files) into one overall json file.
 
-#### **Case 2**: Using `python qwen_gen_data_NoBash.py` or `python zhipuai_gen_data.py`
+#### **Case 2**: Using improved generation method: `python qwen_gen_data_NoBash.py` or `python zhipuai_gen_data.py` 
 
 In this case, we need to merge all `{emotion}.jsonl` files in all `{area}` subfolders under the `{data_ai}` folder into `{data_ai}_final_merge.json` after we use two improved generation methods to generate multi-round conversations.
 
