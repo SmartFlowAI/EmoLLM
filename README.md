@@ -116,11 +116,19 @@
     <img src="assets/Roadmap_ZH.png" alt="Roadmap_ZH">
   </a>
 
+### 🎯框架图
+
+<p align="center">
+  <a href="https://github.com/aJupyter/EmoLLM/">
+    <img src="assets/框架图.png" alt="Roadmap_ZH">
+  </a>
+
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
     - [🎇最近更新](#最近更新)
     - [🎯路线图](#路线图)
+    - [🎯框架图](#框架图)
   - [目录](#目录)
           - [开发前的配置要求](#开发前的配置要求)
           - [**使用指南**](#使用指南)
