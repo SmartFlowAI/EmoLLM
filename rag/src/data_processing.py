@@ -63,8 +63,8 @@ def split_document(data_path, chunk_size=1000, chunk_overlap=100):
                     # logger.info(f"splits type {type(splits[0])}")
                     # logger.info(f'splits size {len(splits)}')
                     split_docs += splits
-    elif file.endswith('.txt'): 
-        file_path = os.path.join(root, file)
+    elif data_path.endswith('.txt'): 
+        file_path = os.path.join(root, data_path)
         # logger.info(f'splitting file {file_path}')
         text_loader = TextLoader(file_path, encoding='utf-8')        
         text = text_loader.load()
