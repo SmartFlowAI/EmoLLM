@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-  
+
 import json
 import os
 
@@ -21,7 +23,7 @@ def get_all_file_paths(folder_path, file_type='.jsonl'):
 if __name__ == '__main__':
     conversion_lis = []
     
-    folder_path = r'./'
+    folder_path = r'./'  # python merge_jsonl.py > curr.txt
     
     merge_path = folder_path.split('/')[-1]
     try:
@@ -32,7 +34,7 @@ if __name__ == '__main__':
         
 
     for path in get_all_file_paths(folder_path):
-        print(path)
+        print(path.encode("utf-8"))
 
         with open(path, 'rt', encoding='utf-8') as file:
             for line in file:

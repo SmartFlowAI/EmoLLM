@@ -65,8 +65,7 @@ LLM 的微调一般指指令微调过程。所谓指令微调，是说我们使�
 def process_func(example):
     MAX_LENGTH = 512
     input_ids, labels = [], []
-    instruction = tokenizer.encode(text="\n".join(["<|system|>", "现在你是一个心理专家，我有一些心理问题，请你用专业的知识帮我解决。", "<|user|>", 
-                                    example["system"] + example["input"] + "<|assistant|>"]).strip() + "\n",
+    instruction = tokenizer.encode(text="\n".join(["<|system|>", example["system"], "<|user|>", example["input"] + "<|assistant|>"]).strip() + "\n",
                                     add_special_tokens=True, truncation=True, max_length=MAX_LENGTH)
 
     response = tokenizer.encode(text=example["output"], add_special_tokens=False, truncation=True,

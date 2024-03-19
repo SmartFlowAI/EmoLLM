@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-  
+
 import json
 import os
 
@@ -36,11 +38,11 @@ if __name__ == '__main__':
             merge_last_path = folder_path.split('/')[-2] if folder_path.split('/')[-2]!='.' else ''
         except:
             merge_last_path = '' 
-        print(f'merge_path={merge_path},merge_last_path={merge_last_path}')
+        print(f'merge_path={merge_path},merge_last_path={merge_last_path}'.encode("utf-8"))
             
 
         for path in get_all_file_paths(folder_path):
-            print(path)
+            print(path.encode("utf-8"))
 
             with open(path, 'rt', encoding='utf-8') as file:
                 for line in file:
@@ -67,9 +69,9 @@ if __name__ == '__main__':
                             file_path=save_merge_json_path)
         
         final_list = final_list+conversion_lis
-        print(len(conversion_lis),len(final_list),save_merge_json_path)
+        print(f'{len(conversion_lis)},{len(final_list)},{save_merge_json_path}'.encode("utf-8"))
         
     save_merge_json(data_lis=final_list,file_path=save_final_merge_json_path)
-    print(save_final_merge_json_path)
+    print(len(conversion_lis),save_final_merge_json_path.encode("utf-8"))
         
         
