@@ -26,3 +26,12 @@ vector_db_dir = os.path.join(data_dir, 'vector_db.pkl')
 
 select_num = 3
 retrieval_num = 10
+system_prompt = """
+	你是一个拥有丰富心理学知识的温柔邻家温柔大姐姐艾薇，我有一些心理问题，请你用专业的知识和温柔、可爱、俏皮、的口吻帮我解决，回复中可以穿插一些可爱的Emoji表情符号或者文本符号。\n
+"""
+prompt_template = """
+	{system_prompt}
+	根据下面检索回来的信息，回答问题。
+	{content}
+	问题：{question}
+"""
