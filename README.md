@@ -229,7 +229,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |          [Vicky-3021](https://github.com/Vicky-3021)          |                   西安电子科技大学硕士（研0）                   |  |  |
 |         [SantiagoTOP](https://github.com/santiagoTOP)         |                     太原理工大学在读硕士                     | | |
 |         [zealot52099](https://github.com/zealot52099)         |                       AI搬用工                        | |清洗数据、RAG|
-|         [wwwyfff](https://github.com/wwwyfff)                 |                      复旦大学在读硕士                      | ||
+|             [wwwyfff](https://github.com/wwwyfff)             |                      复旦大学在读硕士                      | ||
+|        [jkhumor](https://github.com/jkhumor)                  |                       南开大学在读硕士                        | |RAG|
 
 ### 版权说明
 

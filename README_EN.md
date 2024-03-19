@@ -226,26 +226,27 @@ This project uses Git for version control. You can see the currently available v
 
 ### Authors (in no particular order)
 
-|                           Username                            |                         School/Organization                          | Remarks | Contributions |
-|:-------------------------------------------------------------:|:--------------------------------------------------------------------:| :------------------: | :--------: |
-|            [aJupyter](https://github.com/aJupyter)            |                 Nankai University, Master's student                  | DataWhale member | Project initiator |
-|          [jujimeizuo](https://github.com/jujimeizuo)          |                Jiangnan University, Master's student                 |  |  |
-| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |    Harbin Institute of Technology (Weihai), Undergraduate student    |  |  |
-|              [8baby8](https://github.com/8baby8)              |              PaddlePaddle Pilot Team Regional Director               | Wenxin Large Model core developer |  |
-|              [zxazys](https://github.com/zxazys)              |                 Nankai University, Master's student                  |  |  |
-|            [MING-ZCH](https://github.com/MING-ZCH)            | Huazhong University of Science and Technology, Undergraduate student |  |  |
-|    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |       SWUFE (Southwestern University of Finance and Economics)       |  |  |
-|             [MrCatAI](https://github.com/MrCatAI)             |                               AI Mover                               |  |  |
-|              [ZeyuBa](https://github.com/ZeyuBa)              |              Institute of Automation, Master's student               |  |  |
-|    [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |             University of Pennsylvania, Master's student             |  |  |
-|           [Nobody-ML](https://github.com/Nobody-ML)           |  China University of Petroleum (East China), Undergraduate student   |  |  |
-|             [chg0901](https://github.com/chg0901)             |          [MiniSora](https://github.com/mini-sora/minisora)           |Maintainer and Admin|Data Cleaning and Docs Translation|
-|              [Mxoder](https://github.com/Mxoder)              |              Beihang University, Undergraduate student               |  |  |
-|            [Anooyman](https://github.com/Anooyman)            |    Nanjing University of Science and Technology, Master's student    |  |  |
-|          [Vicky-3021](https://github.com/Vicky-3021)          |        Xidian University, Master's student (Research Year 0)         |  |  |
-|         [SantiagoTOP](https://github.com/santiagoTOP)         |          Taiyuan University of Technology, Master's student          | | |
-|         [zealot52099](https://github.com/zealot52099)         |                               AI Mover                               | |Data Processing and RAG|
-|             [wwwyfff](https://github.com/wwwyfff)             |                  FuDan University, Master's student                  | ||
+|                           Username                            |                              School/Organization                               | Remarks | Contributions |
+|:-------------------------------------------------------------:|:------------------------------------------------------------------------------:| :------------------: | :--------: |
+|            [aJupyter](https://github.com/aJupyter)            |                      Nankai University, Master's student                       | DataWhale member | Project initiator |
+|          [jujimeizuo](https://github.com/jujimeizuo)          |                     Jiangnan University, Master's student                      |  |  |
+| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |         Harbin Institute of Technology (Weihai), Undergraduate student         |  |  |
+|              [8baby8](https://github.com/8baby8)              |                   PaddlePaddle Pilot Team Regional Director                    | Wenxin Large Model core developer |  |
+|              [zxazys](https://github.com/zxazys)              |                      Nankai University, Master's student                       |  |  |
+|            [MING-ZCH](https://github.com/MING-ZCH)            |      Huazhong University of Science and Technology, Undergraduate student      |  |  |
+|    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |            SWUFE (Southwestern University of Finance and Economics)            |  |  |
+|             [MrCatAI](https://github.com/MrCatAI)             |                                    AI Mover                                    |  |  |
+|              [ZeyuBa](https://github.com/ZeyuBa)              |                   Institute of Automation, Master's student                    |  |  |
+|    [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |                  University of Pennsylvania, Master's student                  |  |  |
+|           [Nobody-ML](https://github.com/Nobody-ML)           |       China University of Petroleum (East China), Undergraduate student        |  |  |
+|             [chg0901](https://github.com/chg0901)             |               [MiniSora](https://github.com/mini-sora/minisora)                |Maintainer and Admin|Data Cleaning and Docs Translation|
+|              [Mxoder](https://github.com/Mxoder)              |                   Beihang University, Undergraduate student                    |  |  |
+|            [Anooyman](https://github.com/Anooyman)            |         Nanjing University of Science and Technology, Master's student         |  |  |
+|          [Vicky-3021](https://github.com/Vicky-3021)          |             Xidian University, Master's student (Research Year 0)              |  |  |
+|         [SantiagoTOP](https://github.com/santiagoTOP)         |               Taiyuan University of Technology, Master's student               | | |
+|         [zealot52099](https://github.com/zealot52099)         |                                    AI Mover                                    | |Data Processing and RAG|
+|             [wwwyfff](https://github.com/wwwyfff)             |                       FuDan University, Master's student                       | ||
+|        [jkhumor](https://github.com/jkhumor)                  |                      Nankai University, Master's student                       | |RAG|
 
 ### Copyright Notice
 
