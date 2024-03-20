@@ -13,9 +13,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import streamlit as st
 from openxlab.model import download
-from data_processing import load_index_and_knowledge, create_index_cpu, create_index_gpu, find_top_k, rerank
 from config.config import embedding_path, doc_dir, qa_dir, knowledge_pkl_path, data_dir
-
+from data_processing import Data_process
 '''
 	1）构建完整的 RAG pipeline。输入为用户 query，输出为 answer
 	2）调用 embedding 提供的接口对 query 向量化
@@ -42,30 +41,23 @@ def load_model():
     tokenizer = AutoTokenizer.from_pretrained(model_dir, trust_remote_code=True)
     return model, tokenizer
 
-def get_prompt():
-    pass
-
-def get_prompt_template():
-    pass
-
-def main(query, system_prompt):
-    model, tokenizer = load_model()
-    model = model.eval()
+def main(query, system_prompt=''):
+    logger.info(data_dir)
     if not os.path.exists(data_dir):
-         os.mkdir(data_dir)
-    # 下载基于 FAISS 预构建的 vector DB 以及原始知识库
-    faiss_index, knowledge_chunks = load_index_and_knowledge()
-    distances, indices = find_top_k(query, faiss_index, 5)
-    rerank_results = rerank(query, indices, knowledge_chunks)
-    messages = [(system_prompt, rerank_results['rerank_passages'][0])]
-    logger.info(f'messages:{messages}')
-    response, history = model.chat(tokenizer, query, history=messages)
-    messages.append((query, response))
-    print(f"robot >>> {response}")  
-    
-if __name__ == '__main__':
-    # query = '你好' 
-    query = "心理咨询师，我觉得我的胸闷症状越来越严重了，这让我很害怕"
-    #TODO system_prompt = get_prompt()
-    system_prompt = "你是一个由aJupyter、Farewell、jujimeizuo、Smiling&Weeping研发（排名按字母顺序排序，不分先后）、散步提供技术支持、上海人工智能实验室提供支持开发的心理健康大模型。现在你是一个心理专家，我有一些心理问题，请你用专业的知识帮我解决。"
-    main(query, system_prompt)
+         os.mkdir(data_dir)   
+    dp = Data_process()
+    vector_db = dp.load_vector_db()
+    docs, retriever = dp.retrieve(query, vector_db, k=10)
+    logger.info(f'Query: {query}')
+    logger.info("Retrieve results===============================")
+    for i, doc in enumerate(docs):
+        logger.info(doc)
+    passages,scores = dp.rerank(query, docs)
+    logger.info("After reranking===============================")
+    for i in range(len(scores)):
+        logger.info(passages[i])
+        logger.info(f'score: {str(scores[i])}')
+
+if __name__ == "__main__":
+    query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想"
+    main(query)
