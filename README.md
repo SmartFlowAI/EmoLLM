@@ -46,7 +46,7 @@
 <div align="center">
 
 |         模型          |    类型    |
-| :-------------------: | :------*: |
+| :-------------------: | :--------: |
 |   InternLM2_7B_chat   |   QLORA   |
 |   InternLM2_7B_chat   |  全量微调  |
 |  InternLM2_1_8B_chat  |  全量微调  |
