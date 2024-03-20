@@ -229,11 +229,11 @@ This project uses Git for version control. You can see the currently available v
 |                           Username                            |                         School/Organization                          | Remarks | Contributions |
 |:-------------------------------------------------------------:|:--------------------------------------------------------------------:| :------------------: | :--------: |
 |            [aJupyter](https://github.com/aJupyter)            |                 Nankai University, Master's student                  | DataWhale member | Project initiator |
+|            [MING-ZCH](https://github.com/MING-ZCH)            | Huazhong University of Science and Technology, Undergraduate student | LLM X Psychology researcher | Project co-leader |
 |          [jujimeizuo](https://github.com/jujimeizuo)          |                Jiangnan University, Master's student                 |  |  |
 | [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |    Harbin Institute of Technology (Weihai), Undergraduate student    |  |  |
 |              [8baby8](https://github.com/8baby8)              |              PaddlePaddle Pilot Team Regional Director               | Wenxin Large Model core developer |  |
 |              [zxazys](https://github.com/zxazys)              |                 Nankai University, Master's student                  |  |  |
-|            [MING-ZCH](https://github.com/MING-ZCH)            | Huazhong University of Science and Technology, Undergraduate student |  |  |
 |    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |       SWUFE (Southwestern University of Finance and Economics)       |  |  |
 |             [MrCatAI](https://github.com/MrCatAI)             |                               AI Mover                               |  |  |
 |              [ZeyuBa](https://github.com/ZeyuBa)              |              Institute of Automation, Master's student               |  |  |
