@@ -48,6 +48,8 @@ def deduplicate_json(data_list, threshold=0.8):
     keep = []
     duplicate = []
     for item in data_list:
+        if not item['conversation']:
+            continue
         # min_hash = hash_dict(item)
         sim_hash = hash_dict(item)
         # print(f'min_hash: {min_hash}')
