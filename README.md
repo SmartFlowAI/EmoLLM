@@ -45,19 +45,19 @@
 
 <div align="center">
 
-|         模型          |   类型   |
-| :-------------------: | :------: |
-|   InternLM2_7B_chat   |  QLORA   |
-|   InternLM2_7B_chat   | 全量微调  |
-|  InternLM2_1_8B_chat  | 全量微调  |
-|  InternLM2_20B_chat  | LORA    |
+|         模型          |    类型    |
+| :-------------------: | :------*: |
+|   InternLM2_7B_chat   |   QLORA   |
+|   InternLM2_7B_chat   |  全量微调  |
+|  InternLM2_1_8B_chat  |  全量微调  |
+|  InternLM2_20B_chat   |   LORA    |
 |     Qwen_7b_chat      |   QLORA   |
-|   Qwen1_5-0_5B-Chat   | 全量微调  |
+|   Qwen1_5-0_5B-Chat   |  全量微调  |
 |  Baichuan2_13B_chat   |   QLORA   |
 |      ChatGLM3_6B      |   LORA    |
-| DeepSeek MoE_16B_chat |  QLORA   |
-| Mixtral 8x7B_instruct |  QLORA   |
-|          ……           |    ……    |
+| DeepSeek MoE_16B_chat |   QLORA   |
+| Mixtral 8x7B_instruct |   QLORA   |
+|          ……           |    ……     |
 
 </div>
 
@@ -213,11 +213,11 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |                              用户名                              |                       学校/组织                        |       备注       |     贡献     |
 |:-------------------------------------------------------------:|:--------------------------------------------------:| :-------------------: | :----------: |
 |            [aJupyter](https://github.com/aJupyter)            |                      南开大学在读硕士                      | DataWhale成员 | 项目发起人 |
+|            [MING-ZCH](https://github.com/MING-ZCH)            |                    华中科技大学在读本科生                   | LLM x Psychology 研究者 | 项目联合负责人 |
 |          [jujimeizuo](https://github.com/jujimeizuo)          |                      江南大学在读硕士                      |  |  |
 | [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |                  哈尔滨工业大学（威海）在读本科生                  |  |  |
 |              [8baby8](https://github.com/8baby8)              |                     飞桨领航团区域主管                      | 文心大模型核心开发者 |  |
 |              [zxazys](https://github.com/zxazys)              |                      南开大学在读硕士                      |  |  |
-|            [MING-ZCH](https://github.com/MING-ZCH)            |                    华中科技大学在读本科生                     |  |  |
 |    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |                       swufe                        |  |  |
 |             [MrCatAI](https://github.com/MrCatAI)             |                       AI搬用工                        |  |  |
 |              [ZeyuBa](https://github.com/ZeyuBa)              |                      自动化所在读硕士                      |  |  |
