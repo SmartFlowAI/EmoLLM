@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/aJupyter/EmoLLM/">
+  <a href="https://github.com/SmartFlowAI/EmoLLM/">
     <img src="assets/logo.jpeg" alt="Logo" width="30%">
   </a>
 
@@ -28,14 +28,14 @@
   <a href="README.md">简体中文</a> | English 
     <br />
     <br />
-    <a href="https://github.com/aJupyter/EmoLLM"><strong>Explore the documentation of this project »</strong></a>
+    <a href="https://github.com/SmartFlowAI/EmoLLM"><strong>Explore the documentation of this project »</strong></a>
     <br />
     <br />
     <a href="https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0">EmoLLM 2.0 Demo</a>
     ·
-    <a href="https://github.com/aJupyter/EmoLLM/issues">Report a Bug</a>
+    <a href="https://github.com/SmartFlowAI/EmoLLM/issues">Report a Bug</a>
     ·
-    <a href="https://github.com/aJupyter/EmoLLM/issues">Propose a New Feature</a>
+    <a href="https://github.com/SmartFlowAI/EmoLLM/issues">Propose a New Feature</a>
   </p>
 
 </p>
@@ -97,13 +97,13 @@ The Model aims to fully understand and promote the mental health of individuals,
 - 【2024.2.6】 [Open-sourced based on the Qwen1_5-0_5B-Chat full-scale fine-tuned version](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary), friends with limited computing power can start experimenting~
 
 <p align="center"> 
-  <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
+  <img src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
 
 - 【2024.2.5】 The project has been promoted by the official WeChat account NLP Engineering. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A) to the article. Welcome everyone to follow!! 🥳🥳
 
 <p align="center">
-  <img src="https://github.com/aJupyter/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
+  <img src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
 </p>
 
 - 【2024.2.3】 [Project Vedio](https://www.bilibili.com/video/BV1N7421N76X/) at bilibili 😊
@@ -112,10 +112,21 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 </details>
 
+### Honor
+
+- The project won the ***top50*** in the **2024 Puyuan Large Model Series Challenge Spring Competition held by the Shanghai Artificial Intelligence Laboratory**
+
+<p align="center">
+   <a href="https://github.com/SmartFlowAI/EmoLLM/">
+    <img src="assets/浦语挑战赛TOP50.jpg" alt="浦语挑战赛TOP50">
+</p>
+
+- The project has been promoted by the official WeChat account **NLP Engineering**. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A). 
+
 ### Roadmap
 
 <p align="center">
-  <a href="https://github.com/aJupyter/EmoLLM/">
+  <a href="https://github.com/SmartFlowAI/EmoLLM/">
     <img src="assets/Roadmap_EN.png" alt="Roadmap_EN">
   </a>
 
@@ -123,6 +134,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 - [EmoLLM - Large Language Model for Mental Health](#emollm---large-language-model-for-mental-health)
     - [Recent Updates](#recent-updates)
+    - [Honor](#honor)
     - [Roadmap](#roadmap)
   - [Contents](#contents)
           - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
@@ -251,7 +263,7 @@ This project uses Git for version control. You can see the currently available v
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details
- [LICENSE](https://github.com/aJupyter/EmoLLM/blob/master/LICENSE)
+ [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/master/LICENSE)
 
 ### Acknowledgments
 
