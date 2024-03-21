@@ -2,9 +2,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from transformers.utils import logging
 
-from data_processing import DataProcessing
-from config.config import retrieval_num, select_num, system_prompt, prompt_template
-
+from data_processing import Data_process
+from config.config import system_prompt, prompt_template 
 logger = logging.get_logger(__name__)
 
 
@@ -28,10 +27,8 @@ class EmoLLMRAG(object):
 
         """
         self.model = model
+        self.data_processing_obj = Data_process()
         self.vectorstores = self._load_vector_db()
-        self.system_prompt = self._get_system_prompt()
-        self.prompt_template = self._get_prompt_template()
-        self.data_processing_obj = DataProcessing()
         self.system_prompt = system_prompt
         self.prompt_template = prompt_template
         self.retrieval_num = retrieval_num
@@ -43,8 +40,6 @@ class EmoLLMRAG(object):
             调用 embedding 模块给出接口 load vector DB
         """
         vectorstores = self.data_processing_obj.load_vector_db()
-        if not vectorstores:
-            vectorstores = self.data_processing_obj.load_index_and_knowledge()
 
         return vectorstores 
 
@@ -57,13 +52,17 @@ class EmoLLMRAG(object):
         content = ''
         documents = self.vectorstores.similarity_search(query, k=self.retrieval_num)
 
-        # 如果需要rerank，调用接口对 documents 进行 rerank
-        if self.rerank_flag:
-            documents = self.data_processing_obj.rerank(documents, self.select_num)
-
         for doc in documents:
             content += doc.page_content
 
+        # 如果需要rerank，调用接口对 documents 进行 rerank
+        if self.rerank_flag:
+            documents, _ = self.data_processing_obj.rerank(documents, self.select_num)
+
+            content = ''
+            for doc in documents:
+                content += doc
+        logger.info(f'Retrieval data: {content}')
         return content
     
     def generate_answer(self, query, content) -> str:
