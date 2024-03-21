@@ -1,7 +1,7 @@
 import os
 import json
 
-# 设置目录路径，这里假设你的JSON文件都在当前目录下的json_files文件夹中
+# 设置目录路径，这里假设你的JSON文件都在当前目录下的directory_path文件夹中
 directory_path = './'
 
 # 初始化一个空列表，用于存储所有JSON文件的数据
@@ -26,7 +26,7 @@ for filename in os.listdir(directory_path):
             else:
                 combined_list.append(data)
 
-# 打印合并后的列表
+# 打印合并后的列表 very large and slow
 # print(combined_list)
 
 # 如果需要，可以将合并后的列表保存到一个新的JSON文件中
