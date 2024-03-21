@@ -1,11 +1,23 @@
 datasets==2.16.1
 deepspeed==0.13.1
 einops==0.7.0
-flash_attn==2.5.0
-mmengine==0.10.2
 openxlab==0.0.34
 peft==0.7.1
 sentencepiece==0.1.99
 torch==2.1.2
 transformers==4.36.2
-xtuner==0.1.11
+
+# modified version
+# xtuner==0.1.11
+# mmengine==0.10.2
+mmengine==0.10.3
+xtuner==0.1.15
+
+# flash_attn==2.5.0  # build is very slow about 2 hours?
+
+# method 1: https://github.com/Dao-AILab/flash-attention/releases
+# flash_attn-2.5.0+cu122torch2.1cxx11abiTRUE-cp310-cp310-linux_x86_64.whl
+# method 2:
+# pip install /root/share/wheels/flash_attn-2.4.2+cu118torch2.0cxx11abiTRUE-cp310-cp310-linux_x86_64.whl
+
+# mpi4py==3.1.5 # conda install mpi4py 
