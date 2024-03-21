@@ -41,3 +41,8 @@
 * dataset `aiwei` from this repo
 * dataset `tiangou` from this repo
 * dataset `SoulStar` from [SoulStar](https://github.com/Nobody-ML/SoulStar)
+
+**Dataset Deduplication**：
+Combine absolute matching with fuzzy matching (Simhash) algorithms to deduplicate the dataset, thereby enhancing the effectiveness of the fine-tuning model. While ensuring the high quality of the dataset, the risk of losing important data due to incorrect matches can be reduced via adjusting the threshold.
+
+https://algonotes.readthedocs.io/en/latest/Simhash.html
