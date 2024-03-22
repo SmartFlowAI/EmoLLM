@@ -12,7 +12,7 @@ from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.document_loaders import DirectoryLoader, TextLoader, JSONLoader
 from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTextSplitter, RecursiveJsonSplitter
 from BCEmbedding import EmbeddingModel, RerankerModel
-from util.pipeline import EmoLLMRAG
+# from util.pipeline import EmoLLMRAG
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from langchain.document_loaders.pdf import PyPDFDirectoryLoader
 from langchain.document_loaders import UnstructuredFileLoader,DirectoryLoader
@@ -254,7 +254,8 @@ if __name__ == "__main__":
     # query = "儿童心理学说明-内容提要-目录 《儿童心理学》1993年修订版说明 《儿童心理学》是1961年初全国高等学校文科教材会议指定朱智贤教授编 写的。1962年初版，1979年再版。"
     # query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想，我现在感到非常孤独、累和迷茫。您能给我提供一些建议吗？"
     # query = "这在一定程度上限制了其思维能力，特别是辩证 逻辑思维能力的发展。随着年龄的增长，初中三年级学生逐步克服了依赖性"
-    query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想"
+    # query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想"
+    query = "我现在心情非常差，有什么解决办法吗？"
     docs, retriever = dp.retrieve(query, vector_db, k=10)
     logger.info(f'Query: {query}')
     logger.info("Retrieve results:")
