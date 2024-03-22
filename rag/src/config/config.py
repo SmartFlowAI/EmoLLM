@@ -33,5 +33,5 @@ prompt_template = """
 	{system_prompt}
 	根据下面检索回来的信息，回答问题。
 	{content}
-	问题：{question}
+	问题：{query}
 """
