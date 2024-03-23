@@ -2,7 +2,7 @@
 
 ## OpenXLab浦源平台
 
-### 平台介绍
+### OpenXLab平台介绍
 
 <div align="center">
 <img src="./asserts/openxlab.png" width="600"/>
@@ -42,7 +42,7 @@ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域�
 - 使用该方法进行文件上传前，请您确认已安装Git
 - 由于上传需要进行权限校验，这里我们推荐使用VSCode远程ssh连接InternLM AI Studio, 获取XLab秘钥
 
-### 具体步骤
+### 创建具体步骤
 
 - 步骤1：点击“创建模型”按钮
 - 步骤2：填写仓库相关信息
@@ -52,7 +52,7 @@ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域�
 
 ## 上传模型
 
-### 具体步骤
+### 上传具体步骤
 
 - **步骤1：安装git lfs**
 - **步骤2：配置git和lfs**
@@ -181,3 +181,55 @@ git push
 git commit -m "commit EmoLLM-InternLM7B-base"
 git push
 ```
+
+## ModelScope
+
+### ModelScope平台介绍
+
+ModelScope旨在打造下一代开源的模型即服务共享平台，为泛AI开发者提供灵活、易用、低成本的一站式模型服务产品，让模型应用更简单！
+
+我们希望在汇集行业领先的预训练模型，减少开发者的重复研发成本，提供更加绿色环保、开源开放的AI开发环境和模型服务，助力绿色“数字经济”事业的建设。
+ModelScope平台将以开源的方式提供多类优质模型，开发者可在平台上免费体验与下载使用。
+
+### 模型创建
+
+ModelScope平台内的模型创建和OpenXLab, 这里不再赘述, 可以点击[ModelScope模型创建链接地址](https://modelscope.cn/models/create)自行填写.
+
+<div align="center">
+<img src="./asserts/ms_create.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+<div align="center">
+<img src="./asserts/ms_config.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+### 使用Python SDK上传模型
+
+可以使用modelscope modelhub来将已经训练好的模型上传到ModelScope平台, 
+
+ModelScope的上传比OpenXLab简单不少, 在ModelScope社区网页创建对应模型之后，只需要**配置访问令牌(请从ModelScope`个人中心->访问令牌获取`)**, 然后将本地模型目录通过push_model接口进行上传即可.
+
+需要注意的是, **ModelScope要求上传的模型目录含有`configuration.json`文件**, 我们训练的merge模型目录只有`config.json`, 因此可以复制这个文件然后修改文件名即可.
+
+```python
+from modelscope.hub.api import HubApi
+
+YOUR_ACCESS_TOKEN = '请从ModelScope个人中心->访问令牌获取'
+
+api = HubApi()
+api.login(YOUR_ACCESS_TOKEN)
+api.push_model(
+    model_id="yourname/your_model_id", 
+    model_dir="my_model_dir" # 本地模型目录，要求目录中必须包含configuration.json
+)
+```
+
+<div align="center">
+<img src="./asserts/ms_upload.png" width="900"/>
+  <div align="center">
+  </div>
+</div>
