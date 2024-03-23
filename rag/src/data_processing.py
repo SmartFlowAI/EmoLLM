@@ -7,12 +7,12 @@ import os
 from loguru import logger
 from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import FAISS
-from config.config import embedding_path, doc_dir, qa_dir, knowledge_pkl_path, data_dir, base_dir, vector_db_dir
+from config.config import embedding_path, doc_dir, qa_dir, knowledge_pkl_path, data_dir, vector_db_dir, rerank_path
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.document_loaders import DirectoryLoader, TextLoader, JSONLoader
 from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTextSplitter, RecursiveJsonSplitter
 from BCEmbedding import EmbeddingModel, RerankerModel
-from util.pipeline import EmoLLMRAG
+# from util.pipeline import EmoLLMRAG
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from langchain.document_loaders.pdf import PyPDFDirectoryLoader
 from langchain.document_loaders import UnstructuredFileLoader,DirectoryLoader
@@ -24,14 +24,10 @@ from FlagEmbedding import FlagReranker
 
 class Data_process():
     def __init__(self):
-        self.vector_db_dir = vector_db_dir
-        self.doc_dir = doc_dir
-        self.qa_dir = qa_dir
-        self.knowledge_pkl_path = knowledge_pkl_path
         self.chunk_size: int=1000
         self.chunk_overlap: int=100    
         
-    def load_embedding_model(self, model_name="BAAI/bge-small-zh-v1.5", device='cpu', normalize_embeddings=True):
+    def load_embedding_model(self, model_name='BAAI/bge-small-zh-v1.5', device='cpu', normalize_embeddings=True):
         """
         加载嵌入模型。
         
@@ -40,18 +36,29 @@ class Data_process():
         - device: 指定模型加载的设备，'cpu' 或 'cuda'，默认为'cpu'。
         - normalize_embeddings: 是否标准化嵌入向量，布尔类型，默认为 True。
         """
+        if not os.path.exists(embedding_path):
+            os.makedirs(embedding_path, exist_ok=True)
+        embedding_model_path = os.path.join(embedding_path,model_name.split('/')[1] + '.pkl')
         logger.info('Loading embedding model...')
+        if os.path.exists(embedding_model_path):
+            try:
+                with open(embedding_model_path , 'rb') as f:
+                    embeddings = pickle.load(f)
+                    logger.info('Embedding model loaded.')
+                    return embeddings
+            except Exception as e:
+                logger.error(f'Failed to load embedding model from {embedding_model_path}')
         try:
             embeddings = HuggingFaceBgeEmbeddings(
                 model_name=model_name,
                 model_kwargs={'device': device},
-                encode_kwargs={'normalize_embeddings': normalize_embeddings}
-            )
+                encode_kwargs={'normalize_embeddings': normalize_embeddings})
+            logger.info('Embedding model loaded.')    
+            with open(embedding_model_path, 'wb') as file:
+                pickle.dump(embeddings, file)
         except Exception as e:
             logger.error(f'Failed to load embedding model: {e}')
             return None
-        
-        logger.info('Embedding model loaded.')
         return embeddings
     
     def load_rerank_model(self, model_name='BAAI/bge-reranker-large'):
@@ -67,9 +74,25 @@ class Data_process():
         异常:
         - ValueError: 如果模型名称不在批准的模型列表中。
         - Exception: 如果模型加载过程中发生任何其他错误。
-        """
+        
+        """ 
+        if not os.path.exists(rerank_path):
+            os.makedirs(rerank_path, exist_ok=True)
+        rerank_model_path = os.path.join(rerank_path, model_name.split('/')[1] + '.pkl')   
+        logger.info('Loading rerank model...')
+        if os.path.exists(rerank_model_path):
+            try:
+                with open(rerank_model_path , 'rb') as f:
+                    reranker_model = pickle.load(f)
+                    logger.info('Rerank model loaded.')
+                    return reranker_model
+            except Exception as e:
+                logger.error(f'Failed to load embedding model from {rerank_model_path}') 
         try:
             reranker_model = FlagReranker(model_name, use_fp16=True)
+            logger.info('Rerank model loaded.')
+            with open(rerank_model_path, 'wb') as file:
+                pickle.dump(reranker_model, file)
         except Exception as e:
             logger.error(f'Failed to load rerank model: {e}')
             raise
@@ -91,13 +114,13 @@ class Data_process():
         if isinstance(obj, dict):
             for key, value in obj.items():
                 try:
-                    self.extract_text_from_json(value, content)
+                    content = self.extract_text_from_json(value, content)
                 except Exception as e:
                     print(f"Error processing value: {e}")
         elif isinstance(obj, list):
             for index, item in enumerate(obj):
                 try:
-                    self.extract_text_from_json(item, content)
+                    content = self.extract_text_from_json(item, content)
                 except Exception as e:
                     print(f"Error processing item: {e}")
         elif isinstance(obj, str):
@@ -157,7 +180,7 @@ class Data_process():
                         logger.info(f'splitting file {file_path}')
                         with open(file_path, 'r', encoding='utf-8') as f:
                             data = json.load(f)
-                            print(data)
+                            # print(data)
                             for conversation in data:
                                 # for dialog in conversation['conversation']:
                                     ##按qa对切分,将每一轮qa转换为langchain_core.documents.base.Document
@@ -165,6 +188,7 @@ class Data_process():
                                     # split_qa.append(Document(page_content = content))
                                 #按conversation块切分
                                 content = self.extract_text_from_json(conversation['conversation'], '')
+                                logger.info(f'content====={content}')
                                 split_qa.append(Document(page_content = content))    
             # logger.info(f'split_qa size====={len(split_qa)}')
         return split_qa
@@ -191,8 +215,8 @@ class Data_process():
         创建并保存向量库
         '''
         logger.info(f'Creating index...')
-        split_doc = self.split_document(self.doc_dir)
-        split_qa = self.split_conversation(self.qa_dir)
+        split_doc = self.split_document(doc_dir)
+        split_qa = self.split_conversation(qa_dir)
         # logger.info(f'split_doc == {len(split_doc)}')
         # logger.info(f'split_qa == {len(split_qa)}')
         # logger.info(f'split_doc type == {type(split_doc[0])}')
@@ -229,9 +253,8 @@ class Data_process():
     #     compression_retriever = ContextualCompressionRetriever(base_compressor=compressor, base_retriever=retriever)
     #     compressed_docs = compression_retriever.get_relevant_documents(query)
     #     return compressed_docs
-    
 
-    def rerank(self, query, docs):
+    def rerank(self, query, docs): 
         reranker = self.load_rerank_model()
         passages = []
         for doc in docs:
@@ -240,9 +263,41 @@ class Data_process():
         sorted_pairs = sorted(zip(passages, scores), key=lambda x: x[1], reverse=True)
         sorted_passages, sorted_scores = zip(*sorted_pairs)
         return sorted_passages, sorted_scores
+
+
+# def create_prompt(question, context):
+#     from langchain.prompts import PromptTemplate
+#     prompt_template = f"""请基于以下内容回答问题：
+
+#     {context}
+
+#     问题: {question}
+#     回答:"""
+#     prompt = PromptTemplate(
+#         template=prompt_template, input_variables=["context", "question"]
+#     )
+#     logger.info(f'Prompt: {prompt}')
+#     return prompt
+    
+def create_prompt(question, context):
+    prompt = f"""请基于以下内容: {context} 给出问题答案。问题如下: {question}。回答:"""
+    logger.info(f'Prompt: {prompt}')
+    return prompt
         
-    
-    
+def test_zhipu(prompt):
+    from zhipuai import ZhipuAI
+    api_key = "" # 填写您自己的APIKey
+    if api_key == "":
+        raise ValueError("请填写api_key")
+    client = ZhipuAI(api_key=api_key) 
+    response = client.chat.completions.create(
+    model="glm-4",  # 填写需要调用的模型名称
+    messages=[
+        {"role": "user", "content": prompt[:100]}
+    ],
+)
+    print(response.choices[0].message)
+
 if __name__ == "__main__":
     logger.info(data_dir)
     if not os.path.exists(data_dir):
@@ -254,7 +309,9 @@ if __name__ == "__main__":
     # query = "儿童心理学说明-内容提要-目录 《儿童心理学》1993年修订版说明 《儿童心理学》是1961年初全国高等学校文科教材会议指定朱智贤教授编 写的。1962年初版，1979年再版。"
     # query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想，我现在感到非常孤独、累和迷茫。您能给我提供一些建议吗？"
     # query = "这在一定程度上限制了其思维能力，特别是辩证 逻辑思维能力的发展。随着年龄的增长，初中三年级学生逐步克服了依赖性"
-    query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想"
+    # query = "我现在处于高三阶段，感到非常迷茫和害怕。我觉得自己从出生以来就是多余的，没有必要存在于这个世界。无论是在家庭、学校、朋友还是老师面前，我都感到被否定。我非常难过，对高考充满期望但成绩却不理想"
+    # query = "我现在心情非常差，有什么解决办法吗？"
+    query = "我最近总感觉胸口很闷，但医生检查过说身体没问题。可我就是觉得喘不过气来，尤其是看到那些旧照片，想起过去的日子"
     docs, retriever = dp.retrieve(query, vector_db, k=10)
     logger.info(f'Query: {query}')
     logger.info("Retrieve results:")
@@ -268,3 +325,5 @@ if __name__ == "__main__":
     for i in range(len(scores)):
         logger.info(str(scores[i]) + '\n')
         logger.info(passages[i])
+    prompt = create_prompt(query, passages[0])
+    test_zhipu(prompt) ## 如果显示'Server disconnected without sending a response.'可能是由于上下文窗口限制

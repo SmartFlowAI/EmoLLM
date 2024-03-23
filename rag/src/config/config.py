@@ -7,7 +7,8 @@ model_repo = 'ajupyter/EmoLLM_aiwei'
 
 # model
 model_dir = os.path.join(base_dir, 'model')                         # model
-embedding_path = os.path.join(model_dir, 'gte-small-zh')            # embedding
+embedding_path = os.path.join(model_dir, 'embedding_model')         # embedding
+rerank_path = os.path.join(model_dir, 'rerank_model')  	        	# embedding
 llm_path = os.path.join(model_dir, 'pythia-14m')                    # llm
 
 # data
@@ -33,5 +34,5 @@ prompt_template = """
 	{system_prompt}
 	根据下面检索回来的信息，回答问题。
 	{content}
-	问题：{question}
+	问题：{query}
 """
