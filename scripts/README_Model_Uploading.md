@@ -10,9 +10,11 @@
   </div>
 </div>
 
-​ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域的一站式服务平台，包含数据集中心、模型中心和应用中心。内容平台为 AI 研究员和开发者提供了所需的模型训练物料，同时也为他们提供了模型推理应用的托管服务。此外，内容平台致力于打造一个 AI 数据集、模型与应用的交流社区，为 AI 研究者提供一个分享和交流的平台。通过内容平台，AI 研究者可以更好地展示自己的模型能力，并激发创造力，助力 AI 生态的可持续发展。
+OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域的一站式服务平台，包含数据集中心、模型中心和应用中心。内容平台为 AI 研究员和开发者提供了所需的模型训练物料，同时也为他们提供了模型推理应用的托管服务。此外，内容平台致力于打造一个 AI 数据集、模型与应用的交流社区，为 AI 研究者提供一个分享和交流的平台。通过内容平台，AI 研究者可以更好地展示自己的模型能力，并激发创造力，助力 AI 生态的可持续发展。
 
-​ 应用中心：应用中心提供应用托管的服务，用户只需遵循平台规范，通过简单的前端封装组件（Gradio）即可构建模型推理应用演示 demo，应用中心提供免费应用部署的能力，普通用户也可在应用中心中交互式体验模型的能力，更好帮助用户寻找想要的学术模型或应用服务。通过前端封装组件和平台的 SDK 工具，帮助 AI 开发者简单快速构建人工智能应用。
+更多介绍请查看[OpenXLab浦源平台介绍](https://openxlab.org.cn/docs/intro.html)
+
+<!-- ​ 应用中心：应用中心提供应用托管的服务，用户只需遵循平台规范，通过简单的前端封装组件（Gradio）即可构建模型推理应用演示 demo，应用中心提供免费应用部署的能力，普通用户也可在应用中心中交互式体验模型的能力，更好帮助用户寻找想要的学术模型或应用服务。通过前端封装组件和平台的 SDK 工具，帮助 AI 开发者简单快速构建人工智能应用。
 
 ​ 模型中心：支持丰富模型管理方式，模型中心基于模型元信息标准规范，支持用户上传、存储、检索、评测各类模型。基于平台内的命令行工具，便于 AI 开发者上传和发布模型文件，搭建对象存储体系，提供大文件存储能力，快速上传下载功能，便于 AI 开发者进行模型存储。
 
@@ -30,7 +32,152 @@
 <img src="./asserts/GitHub与平台的关系.bee7809e.png" width="600"/>
   <div align="center">
   </div>
+</div> -->
+
+## 模型创建流程
+
+### 要点强调
+
+- 浦源-模型中心提供目前支持通过Git命令进行文件上传
+- 使用该方法进行文件上传前，请您确认已安装Git
+- 由于上传需要进行权限校验，这里我们推荐使用VSCode远程ssh连接InternLM AI Studio, 获取XLab秘钥
+
+### 具体步骤
+
+- 步骤1：点击“创建模型”按钮
+- 步骤2：填写仓库相关信息
+- **步骤3：上传模型相关文件**
+
+更多详情和操作步骤请查看, 请参考[**模型创建流程 **(步骤1和2)](https://openxlab.org.cn/docs/models/%E6%A8%A1%E5%9E%8B%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B.html)和[**上传模型**(步骤3)](https://openxlab.org.cn/docs/models/%E4%B8%8A%E4%BC%A0%E6%A8%A1%E5%9E%8B.html), 这里我们将给出所用到的基本步骤和需要注意的操作要点.
+
+## 上传模型
+
+### 具体步骤
+
+- **步骤1：安装git lfs**
+- **步骤2：配置git和lfs**
+- **步骤3：配置OpenXLab秘钥**
+- 步骤4：在本地的文件夹内调整文件
+- 步骤5：上传本地文件夹中的模型文件到OpenXLab
+- 步骤6：上传后查看和添加README.md
+
+这里展示最顺利的截图, 不包含下面的`安装git lfs`
+
+<div align="center">
+<img src="./asserts/full_upload.png" width="600"/>
+  <div align="center">
+  </div>
 </div>
 
+### 1. 安装git lfs
 
-### 
+```bash
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh
+apt install git-lfs
+```
+
+### 2. 配置git和lfs
+
+```bash
+git config --global user.name "your username"
+
+git lfs install # 这个很关键
+git clone https://code.openxlab.org.cn//chg0901/EmoLLM-InternLM7B-base.git  # 要上传的模型链接, 由步骤1和2创建
+
+```
+
+### 3. 配置OpenXLab秘钥
+
+- 详情请参考[**密钥管理**](https://openxlab.org.cn/security?tab=git), 获取您的 Git Access Token
+- 点击 “**添加令牌**” 按钮
+- 由于后续需要进行文件上传，所以请您在新建token时，选择 **“可写” 权限**
+
+### 4. 在本地的文件夹内调整文件（文件夹名同仓库同名）
+
+将merge后的模型文件复制到git clone后的文件夹中
+
+```bash
+cd ./merge
+cp ./* /root/EmoLLM-InternLM7B-base/
+```
+
+### 5. 上传本地文件夹中的模型文件到OpenXLab
+
+```bash
+git add -A
+git commit -m "commit EmoLLM-InternLM7B-base"
+git push
+```
+
+push的时候, 需要填写username和password三次,
+
+<div align="center">
+<img src="./asserts/username_password.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+### 6. 上传后查看和添加README.md
+
+上传完模型, 还可以复制之前上传的`README.md`文件到自己的仓库中.
+
+处理完之后, 就可以看到自己的模型Repo了.
+
+<div align="center">
+<img src="./asserts/result1.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+<div align="center">
+<img src="./asserts/result2.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+### 可能遇到的问题
+
+可以查看下面的截图, 查看bug和解决方法以及所用的bash命令. 
+
+出现这个问题的原因是因为上传不成功或者上传被打断.
+
+<div align="center">
+<img src="./asserts/upload_error.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+<div align="center">
+<img src="./asserts/upload_error_solution.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+<div align="center">
+<img src="./asserts/upload_error_solution2.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+bash命令如下:
+
+```bash
+git add -A
+git commit -m "commit EmoLLM-InternLM7B-base"
+git push  # 出现error
+
+# solution1
+git gc --prune=now
+git remote prune origin
+git push
+
+# solution2 (可能solution1无效)
+git update-ref -d refs/heads/main
+git fetch
+git merge origin/main
+
+# error 解决, 重新上传
+git push
+git commit -m "commit EmoLLM-InternLM7B-base"
+git push
+```
