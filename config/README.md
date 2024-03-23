@@ -1,5 +1,5 @@
 # EmoLLM_Scientist微调指南
-
+[EmoLLM_Scientist模型地址]https://modelscope.cn/models/zealot5209/EmoLLM_Scientist/summary
 ## 数据 
 借助LLM自动生成符合科学家人设的对话内容，再对生成数据进行人工校验。最终微调数据包含约3800段对话，每段对话包含5~10轮。
 #### 数据路径：
