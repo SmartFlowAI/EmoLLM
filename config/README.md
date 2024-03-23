@@ -1,33 +1,14 @@
-# 微调指南
+# EmoLLM_Scientist微调指南
 
+## 数据 
+微调数据共包含3800段对话，借助LLM自动生成，后续进行人工校验。数据路径：'datasets\scientist.json'
 
-##数据 
+## 基座 
+基座模型采用InternLM2-Chat-7B，模型介绍请见[InternLM](https://github.com/InternLM/InternLM)
 
-##基座 
-
-##训练方式 
-
-##配置文件
-
-## 一、基于xtuner的微调🎉🎉🎉🎉🎉
-
-### 环境准备
-
-```markdown
-datasets==2.16.1
-deepspeed==0.13.1
-einops==0.7.0
-flash_attn==2.5.0
-mmengine==0.10.2
-openxlab==0.0.34
-peft==0.7.1
-sentencepiece==0.1.99
-torch==2.1.2
-transformers==4.36.2
-xtuner==0.1.11
-```
-
-也可以一键安装
+## 训练方式 
+基于xtuner的微调，使用xtuner的train命令行工具，使用命令如下：
+### 安装依赖
 
 ```bash
 cd xtuner_config/
@@ -35,26 +16,23 @@ pip3 install -r requirements.txt
 ```
 
 ---
-
-### 微调
-
+### 运行微调脚本
 ```bash
 cd xtuner_config/
-xtuner train internlm2_7b_chat_qlora_e3.py --deepspeed deepspeed_zero2
+xtuner train internlm2_7b_chat_qlora_e3_scienctist.py --deepspeed deepspeed_zero2
 ```
 
 ---
+### 模型转换
 
-### 将得到的 PTH 模型转换为 HuggingFace 模型
-
-**即：生成 Adapter 文件夹**
+将得到的 PTH 模型转换为 HuggingFace 模型，生成 Adapter 文件夹
 
 ```bash
 cd xtuner_config/
 mkdir hf
 export MKL_SERVICE_FORCE_INTEL=1
-
-xtuner convert pth_to_hf internlm2_7b_chat_qlora_e3.py ./work_dirs/internlm_chat_7b_qlora_oasst1_e3_copy/epoch_3.pth ./hf
+#这里假设训练了3个epoch
+xtuner convert pth_to_hf internlm2_7b_chat_qlora_e3_scienctist.py ./work_dirs/internlm2_7b_chat_qlora_e3_scienctist/epoch_3.pth ./hf
 ```
 
 ---
@@ -76,16 +54,19 @@ xtuner convert merge ./internlm2-chat-7b ./hf ./merged --max-shard-size 2GB
 
 ```
 cd demo/
-python cli_internlm2.py
+python cli_internlm2_scientist.py
 ```
 
 ---
 
-## 二、基于Transformers的微调🎉🎉🎉🎉🎉
+## 模型上传
+完成测试后可将模型上传到ModelScope和Openxlab平台
+### ModelScope
+脚本：'scripts/upload_modelscope.py'
+[Openxlab模型上传](https://openxlab.org.cn/docs/models/%E4%B8%8A%E4%BC%A0%E6%A8%A1%E5%9E%8B.html)
 
-- 请查看[ChatGLM3-6b lora微调指南](ChatGLM3-6b-ft.md)
-
----
+### Openxlab
+[ModelScope模型上传](https://modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0)
 
 ## 其他
 
