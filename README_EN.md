@@ -80,8 +80,9 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 ### Recent Updates
 
-- 【March 24, 2024】 The InternLM2-Base-7B QLoRA fine-tuned model has been released on the OpenXLab and ModelScope platforms. For more details, please refer to [InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md).
-- 【2024.3.12】 Released on Baidu Flying Pulp Platform [aiwei](https://aistudio.baidu.com/community/app/63335)
+- 【2024.3.25】 [Daddy-like Boy-Friend] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/68787)
+- 【2024.3.24】 The InternLM2-Base-7B QLoRA fine-tuned model has been released on the OpenXLab and ModelScope platforms. For more details, please refer to [InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md).
+- 【2024.3.12】 [aiwei] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/63335)
 - 【2024.3.11】 **EmoLLM V2.0 is greatly improved in all scores compared to EmoLLM V1.0. Surpasses the performance of Role-playing ChatGPT on counseling tasks!** [Click to experience EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0), update [dataset statistics and details](./datasets/), [Roadmap](./assets/Roadmap_ZH.png)
 - 【2024.3.9】 Add concurrency acceleration [QA pair generation](./scripts/qa_generation/), [RAG pipeline](./rag/)
 - 【2024.3.3】 [Based on InternLM2-7B-chat full fine-tuned version EmoLLM V2.0 open sourced](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full), need two A100*80G, update professional evaluation, see [evaluate](./evaluate/), update PaddleOCR-based PDF to txt tool scripts, see [scripts](./scripts/).
