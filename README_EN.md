@@ -25,7 +25,7 @@
 <h3 align="center">EmoLLM</h3>
 
   <p align="center">
-  <a href="README.md">简体中文</a> | English 
+  <a href="README.md">简体中文</a> | English
     <br />
     <br />
     <a href="https://github.com/SmartFlowAI/EmoLLM"><strong>Explore the documentation of this project »</strong></a>
@@ -42,7 +42,6 @@
 
 <!-- 本篇README.md面向开发者 -->
 
-
 **EmoLLM** is a series of large language models designed to understand, support and help customers in mental health counseling. It is fine-tuned from the LLM instructions. We really appreciate it if you could give it a star~⭐⭐. The open-sourced configuration is as follows:
 
 <div align="center">
@@ -51,6 +50,7 @@
 | :-------------------: | :------: |
 |   InternLM2_7B_chat   |  QLORA   |
 |   InternLM2_7B_chat   | full fine-tuning  |
+|   InternLM2_7B_base   |   QLORA   |
 |  InternLM2_1_8B_chat  | full fine-tuning  |
 |  InternLM2_20B_chat  | LORA    |
 |     Qwen_7b_chat      |   QLORA   |
@@ -89,7 +89,6 @@ The Model aims to fully understand and promote the mental health of individuals,
 - 【2024.2.23】Updated [several fine-tuning configurations](/xtuner_config/), added [data_pro.json](/datasets/data_pro.json) (more quantity, more comprehensive scenarios, richer content) and [aiwei.json](/datasets/aiwei.json) (dedicated to the gentle lady role-play, featuring Emoji expressions), the "Gentle Lady Psychologist Ai Wei" is coming soon.
 
 - 【2024.2.18】 The full fine-tuned version based on Qwen1_5-0_5B-Chat has been [open-sourced](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary). Friends with limited computational resources can now dive in and explore it.
-
 
 <details>
 <summary>View More</summary>
@@ -173,8 +172,6 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [Deployment Guide](#deployment-guide)
    - View More Details
 
-
-
 ### File Directory Explanation
 
 ```
@@ -203,8 +200,8 @@ For details, see the [fine-tuning guide](xtuner_config/README.md)
 - Demo deployment: see [deployment guide](./demo/README.md) for details.
 - Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy.md)
 
-
 ### RAG (Retrieval Augmented Generation) Pipeline
+
 - See [RAG](./rag/)
 
 <details>
@@ -251,7 +248,7 @@ This project uses Git for version control. You can see the currently available v
 |                   [ZeyuBa](https://github.com/ZeyuBa)                   |              Institute of Automation, Master's student               |  |                                    |
 |         [aiyinyuedejustin](https://github.com/aiyinyuedejustin)         |             University of Pennsylvania, Master's student             |  |                                    |
 |                [Nobody-ML](https://github.com/Nobody-ML)                |  China University of Petroleum (East China), Undergraduate student   |  |                                    |
-|                  [chg0901](https://github.com/chg0901)                  |          [MiniSora](https://github.com/mini-sora/minisora)           |Maintainer and Admin| Data Cleaning and Docs Translation |
+|                  [chg0901](https://github.com/chg0901)                  |          [MiniSora](https://github.com/mini-sora/minisora)           |Maintainer and Admin of [MiniSora](https://github.com/mini-sora/minisora) | LLM Fine-Tuning, Data Cleaning and Docs Translation |
 |                   [Mxoder](https://github.com/Mxoder)                   |              Beihang University, Undergraduate student               |  |                                    |
 |                 [Anooyman](https://github.com/Anooyman)                 |    Nanjing University of Science and Technology, Master's student    |  |                                    |
 |               [Vicky-3021](https://github.com/Vicky-3021)               |        Xidian University, Master's student (Research Year 0)         |  |                                    |
@@ -308,6 +305,7 @@ The project is licensed under the MIT License. Please refer to the details
 [OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full
 
 ## Communication group
+
 - If it fails, go to the Issue section.
 
 <p align="center">
