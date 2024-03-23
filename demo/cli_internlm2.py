@@ -1,17 +1,23 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from openxlab.model import download
+from modelscope import snapshot_download
 
-download(model_repo='jujimeizuo/EmoLLM_Model', 
-        output='model')
+# download model in openxlab
+model_name_or_path =download(model_repo='ajupyter/EmoLLM_internlm2_7b_full', 
+        output='EmoLLM_internlm2_7b_full')
 
-model_name_or_path = "model"
+# download model in modelscope
+model_name_or_path = snapshot_download('chg0901/EmoLLM-InternLM7B-base')
+
+# offline model
+# model_name_or_path = "/root/StableCascade/emollm2/EmoLLM/xtuner_config/merged"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_name_or_path, trust_remote_code=True, torch_dtype=torch.bfloat16, device_map='auto')
 model = model.eval()
 
-system_prompt = "你是一个由aJupyter、Farewell、jujimeizuo、Smiling&Weeping研发（排名按字母顺序排序，不分先后）、散步提供技术支持、上海人工智能实验室提供支持开发的心理健康大模型。现在你是一个心理专家，我有一些心理问题，请你用专业的知识帮我解决。"
+system_prompt = '你是心理健康助手EmoLLM，由EmoLLM团队打造。你旨在通过专业心理咨询，协助来访者完成心理诊断。请充分利用专业心理学知识与咨询技术，一步步帮助来访者解决心理问题。'
 
 messages = [(system_prompt, '')]
 
