@@ -1,6 +1,3 @@
-import os
-from config.config import data_dir
-from data_processing import Data_process
 from pipeline import EmoLLMRAG
 from util.llm import get_glm
 from loguru import logger
@@ -13,23 +10,6 @@ from loguru import logger
 	6）拼接 prompt 并调用模型返回结果
 
 '''
-
-def main(query, system_prompt=''):
-    logger.info(data_dir)
-    if not os.path.exists(data_dir):
-         os.mkdir(data_dir)   
-    dp = Data_process()
-    vector_db = dp.load_vector_db()
-    docs, retriever = dp.retrieve(query, vector_db, k=10)
-    logger.info(f'Query: {query}')
-    logger.info("Retrieve results===============================")
-    for i, doc in enumerate(docs):
-        logger.info(doc)
-    passages,scores = dp.rerank(query, docs)
-    logger.info("After reranking===============================")
-    for i in range(len(scores)):
-        logger.info(passages[i])
-        logger.info(f'score: {str(scores[i])}')
 
 if __name__ == "__main__":
     query = """
