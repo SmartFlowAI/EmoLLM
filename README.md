@@ -38,7 +38,6 @@
     <a href="https://github.com/SmartFlowAI/EmoLLM/issues">提出新特性</a>
   </div>
 
-
 <!-- 本篇README.md面向开发者 -->
 
 **EmoLLM** 是一系列能够支持 **理解用户-支持用户-帮助用户** 心理健康辅导链路的心理健康大模型，由 `LLM`指令微调而来，欢迎大家star~⭐⭐。目前已经开源的 `LLM` 微调配置如下：
@@ -49,6 +48,7 @@
 | :-------------------: | :--------: |
 |   InternLM2_7B_chat   |   QLORA   |
 |   InternLM2_7B_chat   |  全量微调  |
+|   InternLM2_7B_base   |   QLORA   |
 |  InternLM2_1_8B_chat  |  全量微调  |
 |  InternLM2_20B_chat   |   LORA    |
 |     Qwen_7b_chat      |   QLORA   |
@@ -78,7 +78,9 @@
 
 ### 🎇最近更新
 
-- 【2024.3.12】在百度飞浆平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
+- 【2024.3.25】在百度飞桨平台发布[爹系男友心理咨询师](https://aistudio.baidu.com/community/app/68787)
+- 【2024.3.24】在OpenXLab和ModelScope平台发布InternLM2-Base-7B QLoRA微调模型, 具体请查看[InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md)
+- 【2024.3.12】在百度飞桨平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
 - 【2024.3.11】 **EmoLLM V2.0 相比 EmoLLM V1.0 全面提升，已超越 Role-playing ChatGPT 在心理咨询任务上的能力！**[点击体验EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)，更新[数据集统计及详细信息](./datasets/)、[路线图](./assets/Roadmap_ZH.png)
 - 【2024.3.9】 新增并发功能加速 [QA 对生成](./scripts/qa_generation/)、[RAG pipeline](./rag/)
 - 【2024.3.3】 [基于InternLM2-7B-chat全量微调版本EmoLLM V2.0开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块A100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
@@ -110,13 +112,14 @@
 </details>
 
 ### 🏆荣誉栏
+
 - 项目荣获上海人工智能实验室举办的**2024浦源大模型系列挑战赛春季赛*****50强***
   
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
     <img src="assets/浦语挑战赛TOP50.jpg" alt="浦语挑战赛TOP50">
 </p>
-     
+
 - 项目荣获公众号**NLP工程化**[推文宣传](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 
 ### 🎯路线图
@@ -151,9 +154,10 @@
       - [如何参与本项目](#如何参与本项目)
     - [作者（排名不分先后）](#作者排名不分先后)
     - [版权说明](#版权说明)
+    - [引用](#引用)
     - [特别鸣谢](#特别鸣谢)
   - [Star History](#star-history)
-  - [🌟Contributors](#-contributors)
+  - [🌟 Contributors](#-contributors)
   - [交流群](#交流群)
 
 ###### 开发前的配置要求
@@ -234,7 +238,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |                 [ZeyuBa](https://github.com/ZeyuBa)                  |                      自动化所在读硕士                      |  |           |
 |       [aiyinyuedejustin](https://github.com/aiyinyuedejustin)        |                    宾夕法尼亚大学在读硕士                     |  |           |
 |              [Nobody-ML](https://github.com/Nobody-ML)               |                  中国石油大学（华东）在读本科生                   |  |           |
-|                [chg0901](https://github.com/chg0901)                 | [MiniSora](https://github.com/mini-sora/minisora/) |MiniSora主要维护| 数据清洗、文档翻译 |
+|                [chg0901](https://github.com/chg0901)                 | [MiniSora](https://github.com/mini-sora/minisora/) |[MiniSora](https://github.com/mini-sora/minisora/)主要维护者，管理员| LLM预训练和微调、模型上传、数据清洗、文档翻译 |
 |                 [Mxoder](https://github.com/Mxoder)                  |                   北京航空航天大学在读本科生                    |  |           |
 |               [Anooyman](https://github.com/Anooyman)                |                      南京理工大学硕士                      |  |           |
 |             [Vicky-3021](https://github.com/Vicky-3021)              |                   西安电子科技大学硕士（研0）                   |  |           |
@@ -248,8 +252,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 该项目签署了 MIT 授权许可，详情请参阅 [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE)
 
-
 ### 引用
+
 如果本项目对您的工作有所帮助，请使用以下格式引用：
 
 ```bibtex
@@ -300,7 +304,6 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 [OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0
 [OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full
 
-  
 ## 交流群
 
 - 如果失效，请移步Issue区

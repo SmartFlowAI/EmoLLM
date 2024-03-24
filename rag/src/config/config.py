@@ -7,7 +7,8 @@ model_repo = 'ajupyter/EmoLLM_aiwei'
 
 # model
 model_dir = os.path.join(base_dir, 'model')                         # model
-embedding_path = os.path.join(model_dir, 'gte-small-zh')            # embedding
+embedding_path = os.path.join(model_dir, 'embedding_model')         # embedding
+rerank_path = os.path.join(model_dir, 'rerank_model')  	        	# embedding
 llm_path = os.path.join(model_dir, 'pythia-14m')                    # llm
 
 # data
