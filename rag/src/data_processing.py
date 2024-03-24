@@ -1,33 +1,24 @@
 import json
 import pickle
-import faiss
-import pickle
 import os
 
 from loguru import logger
-from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import FAISS
-from config.config import embedding_path, doc_dir, qa_dir, knowledge_pkl_path, data_dir, vector_db_dir, rerank_path
+from config.config import embedding_path, embedding_model_name, doc_dir, qa_dir, knowledge_pkl_path, data_dir, vector_db_dir, rerank_path, rerank_model_name
 from langchain.embeddings import HuggingFaceBgeEmbeddings
-from langchain_community.document_loaders import DirectoryLoader, TextLoader, JSONLoader
-from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTextSplitter, RecursiveJsonSplitter
-from BCEmbedding import EmbeddingModel, RerankerModel
-# from util.pipeline import EmoLLMRAG
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from langchain.document_loaders.pdf import PyPDFDirectoryLoader
-from langchain.document_loaders import UnstructuredFileLoader,DirectoryLoader
-from langchain_community.llms import Cohere
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import FlashrankRerank
+from langchain_community.document_loaders import DirectoryLoader, TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.document_loaders import DirectoryLoader
 from langchain_core.documents.base import Document
 from FlagEmbedding import FlagReranker
 
 class Data_process():
+
     def __init__(self):
         self.chunk_size: int=1000
         self.chunk_overlap: int=100    
         
-    def load_embedding_model(self, model_name='BAAI/bge-small-zh-v1.5', device='cpu', normalize_embeddings=True):
+    def load_embedding_model(self, model_name=embedding_model_name, device='cpu', normalize_embeddings=True):
         """
         加载嵌入模型。
         
@@ -61,7 +52,8 @@ class Data_process():
             return None
         return embeddings
     
-    def load_rerank_model(self, model_name='BAAI/bge-reranker-large'):
+    def load_rerank_model(self, model_name=rerank_model_name):
+
         """
         加载重排名模型。
         
@@ -99,7 +91,6 @@ class Data_process():
 
         return reranker_model
     
-
     def extract_text_from_json(self, obj, content=None):
         """
         抽取json中的文本，用于向量库构建
@@ -128,7 +119,8 @@ class Data_process():
         return content
     
 
-    def split_document(self, data_path, chunk_size=500, chunk_overlap=100):
+    def split_document(self, data_path):
+
         """
         切分data_path文件夹下的所有txt文件
         
@@ -143,7 +135,7 @@ class Data_process():
         
         
         # text_spliter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-        text_spliter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap) 
+        text_spliter = RecursiveCharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap) 
         split_docs = []
         logger.info(f'Loading txt files from {data_path}')
         if os.path.isdir(data_path):
@@ -188,7 +180,7 @@ class Data_process():
                                     # split_qa.append(Document(page_content = content))
                                 #按conversation块切分
                                 content = self.extract_text_from_json(conversation['conversation'], '')
-                                logger.info(f'content====={content}')
+                                #logger.info(f'content====={content}')
                                 split_qa.append(Document(page_content = content))    
             # logger.info(f'split_qa size====={len(split_qa)}')
         return split_qa
