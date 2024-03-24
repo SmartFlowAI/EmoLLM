@@ -18,22 +18,47 @@ langchain_core==0.1.33
 langchain_openai==0.0.8
 langchain_text_splitters==0.0.1
 FlagEmbedding==1.2.8
-
+unstructured==0.12.6
 ```
 
 ```python
-cd rag
 
+cd rag
 pip3 install -r requirements.txt
+
 ```
 
 ## **使用指南** 
+
+### 准备数据
+
+- txt数据：放入到 src.data.txt 目录下
+- json 数据：放入到 src.data.json 目录下
+
+会根据准备的数据构建vector DB，最终会在 data 文件夹下产生名为 vector_db 的文件夹包含 index.faiss 和 index.pkl
+
+如果已经有 vector DB 则会直接加载对应数据库
+
 
 ### 配置 config 文件
 
 根据需要改写 config.config 文件：
 
 ```python
+
+# 存放所有 model
+model_dir = os.path.join(base_dir, 'model')
+
+# embedding model 路径以及 model name
+embedding_path = os.path.join(model_dir, 'embedding_model')
+embedding_model_name = 'BAAI/bge-small-zh-v1.5'
+
+
+# rerank model 路径以及 model name
+rerank_path = os.path.join(model_dir, 'rerank_model')
+rerank_model_name = 'BAAI/bge-reranker-large'
+
+
 # select num: 代表rerank 之后选取多少个 documents 进入 LLM
 select_num = 3
 
@@ -52,7 +77,7 @@ prompt_template = """
 	{content}
 
 	问题：{query}
-"
+"""
 ```
 
 ### 调用
