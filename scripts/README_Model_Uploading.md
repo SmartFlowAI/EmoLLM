@@ -61,7 +61,7 @@ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域�
 - 步骤5：上传本地文件夹中的模型文件到OpenXLab
 - 步骤6：上传后查看和添加README.md
 
-这里展示最顺利的截图, 不包含下面的`安装git lfs`
+这里展示最顺利的截图
 
 <div align="center">
 <img src="./asserts/full_upload.png" width="600"/>
@@ -81,8 +81,9 @@ apt install git-lfs
 ```bash
 git lfs install # 这个很关键
 git clone https://code.openxlab.org.cn//chg0901/EmoLLM-InternLM7B-base.git  # 要上传的模型链接, 由步骤1和2创建
-
 ```
+
+`git lfs install`会出现一个Error，请忽略，这是因为这条命令执行的
 
 ### 3. 配置OpenXLab秘钥
 
