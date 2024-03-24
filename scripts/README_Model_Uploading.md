@@ -61,7 +61,7 @@ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域�
 - 步骤5：上传本地文件夹中的模型文件到OpenXLab
 - 步骤6：上传后查看和添加README.md
 
-这里展示最顺利的截图, 不包含下面的`安装git lfs`
+这里展示最顺利的截图
 
 <div align="center">
 <img src="./asserts/full_upload.png" width="600"/>
@@ -79,26 +79,38 @@ apt install git-lfs
 ### 2. 配置git和lfs
 
 ```bash
-git config --global user.name "your username"
-
 git lfs install # 这个很关键
 git clone https://code.openxlab.org.cn//chg0901/EmoLLM-InternLM7B-base.git  # 要上传的模型链接, 由步骤1和2创建
-
 ```
+
+`git lfs install`会出现一个Error，请忽略，这是因为这条命令执行的
 
 ### 3. 配置OpenXLab秘钥
 
 - 详情请参考[**密钥管理**](https://openxlab.org.cn/security?tab=git), 获取您的 Git Access Token
 - 点击 “**添加令牌**” 按钮
 - 由于后续需要进行文件上传，所以请您在新建token时，选择 **“可写” 权限**
+- **注意：**最好是**重新创建**一个**新的令牌**，*旧的令牌*可能会导致***上传权限失败***
 
-### 4. 在本地的文件夹内调整文件（文件夹名同仓库同名）
+<div align="center">
+<img src="./asserts/unautheorized.png" width="600"/>
+  <div align="center">
+  </div>
+</div>
+
+### 4. 在本地的文件夹内调整文件（文件夹名同仓库同名）和配置Git信息
 
 将merge后的模型文件复制到git clone后的文件夹中
 
 ```bash
-cd ./merge
-cp ./* /root/EmoLLM-InternLM7B-base/
+cd ./merge  #  merge目录下为合并后的模型
+cp ./* /root/EmoLLM-InternLM7B-base/  # 复制模型到clone后的文件夹
+
+# 配置Git信息
+git config --global user.email "your email"
+git config --global user.name "your OpenXLab id"  # OpenXLab id
+git config --global user.password "your new key"  # 新的OpenXLab秘钥
+
 ```
 
 ### 5. 上传本地文件夹中的模型文件到OpenXLab
