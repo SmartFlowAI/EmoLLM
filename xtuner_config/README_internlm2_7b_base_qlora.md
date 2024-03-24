@@ -4,6 +4,54 @@
 
 - 本项目在[**internlm2_7b_chat_qlora_e3**模型](./internlm2_7b_chat_qlora_e3.py)微调[指南](./README.md)的基础上，更新了对[**internlm2_7b_base_qlora_e3（配置文件）**](./internlm2_7b_base_qlora_e10_M_1e4_32_64.py)**模型**的微调。
 
+## 模型公布和训练epoch数设置
+
+- 由于采用了合并后的数据集，我们对选用的internlm2_7b_base模型进行了**10 epoch**的训练，读者可以根据训练过程中的输出和loss变化，进行训练的终止和模型的挑选，也可以采用更加专业的评估方法，来对模型评测。
+
+- 在我们公布的internlm2_7b_base_qlora微调模型时，也分别在OpenXLab和ModelScope中提供了两个不同的权重版本供用户使用和测试，更多专业测评结果将会在近期更新， 敬请期待。
+
+- **OpenXLab**：
+  - [5 epoch 模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base)
+  - [10 epoch 模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base-10e)
+  
+- **ModelScope**：
+  - [5 epoch 模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base/files)
+  - [10 epoch 模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/files)
+
+### 超参数设置
+
+训练config设置详情，请查看[**internlm2_7b_base_qlora_e3（配置文件）**](./internlm2_7b_base_qlora_e10_M_1e4_32_64.py)，这里我们只列出了关键的超参数或者我们做过调整的超参数。
+
+```python
+prompt_template = PROMPT_TEMPLATE.internlm2_chat
+max_length = 2048
+pack_to_max_length = True
+
+batch_size = 16 # per_device
+accumulative_counts = 1
+
+max_epochs = 10
+lr = 1e-4
+evaluation_freq = 500
+
+SYSTEM = "你是心理健康助手EmoLLM，由EmoLLM团队打造。你旨在通过专业心理咨询，协助来访者完成心理诊断。请充分利用专业心理学知识与咨询技术，一步步帮助来访者解决心理问题。"
+evaluation_inputs = [
+    '我最近总是感到很焦虑，尤其是在学业上。我有个特别崇拜的同学，他好像在各方面都比我优秀，我总觉得自己怎么努力也追不上他，这让我压力特别大。', 
+    '我知道应该理性看待，但就是忍不住会去比较。我甚至晚上会因为这个睡不着觉，总想着怎样才能像他那样出色。',
+    '我今天心情不好，感觉不开心，很烦。']
+
+model = dict(
+    lora=dict(
+        type=LoraConfig,
+        r=32,
+        lora_alpha=64,  # lora_alpha=2*r
+        lora_dropout=0.1,
+        bias='none',
+        task_type='CAUSAL_LM'
+        )
+        )
+```
+
 ## 数据
 
 ### 数据集
@@ -18,6 +66,8 @@
 |  General  | multi_turn_dataset_2  | Conversation | 27,000+ |
 |  General  | single_turn_dataset_1 |      QA      | 14000+  |
 |  General  | single_turn_dataset_2 |      QA      | 18300+  |
+
+注意：此处的数据量计数是将多轮对话拆成单轮问答后的数据量，请注意联系区别，合并后总数据量为**51468**个对话（多轮对话算一个）。
 
 ### 数据集处理
 
@@ -75,20 +125,15 @@
 
 ### 数据处理
 
-  - 使用 `../datasets/process.py` 以处理 **multi_turn_dataset(1 和 2，QA数据转单轮对话)**， `data.json` 和 `data_pro.json` 文件（两个多轮对话），以添加或者调整 **`system` prompt**
-  - 使用 `../datasets/processed/process_single_turn_conversation_construction.py` 处理 **single-turn dataset** (1 和 2)，修改 (`input` 和 `ouput`) ，并在每次 **conversation** 中添加 **`system` prompt**
-  - 使用 `../datasets/processed/process_merge.py` 用于合并 `../datasets/processed/` 目录下**6个更新后的数据集**，生成一个合并后的数据集 `combined_data.json`用于最终训练
-
-### 数据量与训练epochs设置
-
-- 由于采用了更大的数据集，我们对模型进行了**10 epoch**的训练，读者可以根据训练过程中的输出和loss变化，进行训练的终止和模型的挑选，也可以采用更加专业的评估方法，来对模型评测。
-- 在我们公布的托管于OpenXlab微调后的 internlm2_7b_chat_qlora微调模型中，我们保留了两个版本，一个是[5 epoch模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base/tree/main)，另一个是[10 epoch模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base-10e/tree/main)版本（**ModelScope**模型：[5 epoch模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base/files)和[10 epoch模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/files)）。
+- 使用 `../datasets/process.py` 以处理 **multi_turn_dataset(1 和 2，QA数据转单轮对话)**， `data.json` 和 `data_pro.json` 文件（两个多轮对话），以添加或者调整 **`system` prompt**
+- 使用 `../datasets/processed/process_single_turn_conversation_construction.py` 处理 **single-turn dataset** (1 和 2)，修改 (`input` 和 `ouput`) ，并在每次 **conversation** 中添加 **`system` prompt**
+- 使用 `../datasets/processed/process_merge.py` 用于合并 `../datasets/processed/` 目录下**6个更新后的数据集**，生成一个合并后的数据集 `combined_data.json`用于最终训练
 
 ## 基于XTuner的微调🎉🎉🎉🎉🎉
 
 ### 环境准备
 
-```markdown
+```bash
 datasets==2.16.1
 deepspeed==0.13.1
 einops==0.7.0
@@ -98,9 +143,12 @@ peft==0.7.1
 sentencepiece==0.1.99
 torch==2.1.2
 transformers==4.36.2
+
+# 需要注意的几个库（版本调整或者安装较麻烦）
 mmengine==0.10.3
 xtuner==0.1.15
 flash_attn==2.5.0
+mpi4py==3.1.5 # conda install mpi4py 
 ```
 
 也可以一键安装
@@ -110,7 +158,7 @@ cd xtuner_config/
 pip install -r requirements.txt
 ```
 
-温馨提示：flash_attn的安装可能需要在本地编译，大约需要一到两小时，可以去[flash-attention](https://github.com/Dao-AILab/flash-attention/releases)中，查找和自己机器配置匹配的whl安装包或者采用InternLM AI studio提供的2.4.2版本whl安装包，自行安装，如：
+温馨提示：`flash_attn`的安装可能需要在本地编译，大约需要一到两小时，可以去[flash-attention](https://github.com/Dao-AILab/flash-attention/releases)中，查找和自己机器配置匹配的whl安装包或者采用InternLM AI studio提供的`2.4.2`版本whl安装包，自行安装，如：
 
 ```bash
 # from flash-attention
@@ -133,7 +181,7 @@ xtuner train internlm2_7b_base_qlora_e10_M_1e4_32_64.py --deepspeed deepspeed_ze
 
 ### 将得到的 PTH 模型转换为 HuggingFace 模型
 
-**即：生成 Adapter 文件夹**
+即：生成 HuggingFace Adapter 文件夹, 用于和原模型权重合并
 
 ```bash
 cd xtuner_config/
@@ -145,7 +193,7 @@ xtuner convert pth_to_hf internlm2_7b_base_qlora_e10_M_1e4_32_64.py ./work_dirs/
 
 ---
 
-### 将 HuggingFace adapter 合并到大语言模型
+### 将 HuggingFace Adapter QLoRA权重合并到大语言模型
 
 ```bash
 xtuner convert merge /root/share/model_repos/internlm2-base-7b ./hf ./merged --max-shard-size 2GB
