@@ -48,7 +48,7 @@ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域�
 - 步骤2：填写仓库相关信息
 - **步骤3：上传模型相关文件**
 
-更多详情和操作步骤请查看, 请参考[**模型创建流程 **(步骤1和2)](https://openxlab.org.cn/docs/models/%E6%A8%A1%E5%9E%8B%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B.html)和[**上传模型**(步骤3)](https://openxlab.org.cn/docs/models/%E4%B8%8A%E4%BC%A0%E6%A8%A1%E5%9E%8B.html), 这里我们将给出所用到的基本步骤和需要注意的操作要点.
+更多详情和操作步骤请查看, 请参考[**模型创建流程**(步骤1和2)](https://openxlab.org.cn/docs/models/%E6%A8%A1%E5%9E%8B%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B.html)和[**上传模型**(步骤3)](https://openxlab.org.cn/docs/models/%E4%B8%8A%E4%BC%A0%E6%A8%A1%E5%9E%8B.html), 这里我们将给出所用到的基本步骤和需要注意的操作要点.
 
 ## 上传模型
 
