@@ -53,6 +53,7 @@ class Data_process():
         return embeddings
     
     def load_rerank_model(self, model_name=rerank_model_name):
+
         """
         加载重排名模型。
         
@@ -119,6 +120,7 @@ class Data_process():
     
 
     def split_document(self, data_path):
+
         """
         切分data_path文件夹下的所有txt文件
         

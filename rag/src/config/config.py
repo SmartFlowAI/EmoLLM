@@ -9,8 +9,9 @@ model_repo = 'ajupyter/EmoLLM_aiwei'
 model_dir = os.path.join(base_dir, 'model')                         # model
 embedding_path = os.path.join(model_dir, 'embedding_model')         # embedding
 embedding_model_name = 'BAAI/bge-small-zh-v1.5'
-rerank_path = os.path.join(model_dir, 'rerank_model')  	        	# embedding
+rerank_path = os.path.join(model_dir, 'rerank_model')  	        	  # embedding
 rerank_model_name = 'BAAI/bge-reranker-large'
+
 llm_path = os.path.join(model_dir, 'pythia-14m')                    # llm
 
 # data
