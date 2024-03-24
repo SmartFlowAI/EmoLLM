@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from transformers.utils import logging
 
 from data_processing import Data_process
-from config.config import system_prompt, prompt_template 
+from config.config import prompt_template 
 logger = logging.get_logger(__name__)
 
 
@@ -16,7 +16,7 @@ class EmoLLMRAG(object):
             4. 将 query 和检索回来的 content 传入 LLM 中
     """
 
-    def __init__(self, model, retrieval_num, rerank_flag=False, select_num=3) -> None:
+    def __init__(self, model, retrieval_num=3, rerank_flag=False, select_num=3) -> None:
         """
             输入 Model 进行初始化 
 
@@ -29,7 +29,6 @@ class EmoLLMRAG(object):
         self.model = model
         self.data_processing_obj = Data_process()
         self.vectorstores = self._load_vector_db()
-        self.system_prompt = system_prompt
         self.prompt_template = prompt_template
         self.retrieval_num = retrieval_num
         self.rerank_flag = rerank_flag
@@ -75,7 +74,7 @@ class EmoLLMRAG(object):
         # 第一版不涉及 history 信息，因此将 system prompt 直接纳入到 template 之中
         prompt = PromptTemplate(
                 template=self.prompt_template,
-                input_variables=["query", "content", "system_prompt"],
+                input_variables=["query", "content"],
                 )
 
         # 定义 chain
@@ -87,7 +86,6 @@ class EmoLLMRAG(object):
                 {
                     "query": query,
                     "content": content,
-                    "system_prompt": self.system_prompt
                 }
             )
         return generation

@@ -8,6 +8,61 @@
 - 经典案例
 - 客户背景知识
 
+## **环境准备**
+
+```python
+
+langchain==0.1.13
+langchain_community==0.0.29
+langchain_core==0.1.33
+langchain_openai==0.0.8
+langchain_text_splitters==0.0.1
+FlagEmbedding==1.2.8
+
+```
+
+```python
+cd rag
+
+pip3 install -r requirements.txt
+```
+
+## **使用指南** 
+
+### 配置 config 文件
+
+根据需要改写 config.config 文件：
+
+```python
+# select num: 代表rerank 之后选取多少个 documents 进入 LLM
+select_num = 3
+
+# retrieval num： 代表从 vector db 中检索多少 documents。（retrieval num 应该大于等于 select num）
+retrieval_num = 10
+
+# 智谱 LLM 的 API key。目前 demo 仅支持智谱 AI api 作为最后生成
+glm_key = ''
+
+# Prompt template: 定义
+prompt_template = """
+	你是一个拥有丰富心理学知识的温柔邻家温柔大姐姐艾薇，我有一些心理问题，请你用专业的知识和温柔、可爱、俏皮、的口吻帮我解决，回复中可以穿插一些可爱的Emoji表情符号或者文本符号。\n
+
+	根据下面检索回来的信息，回答问题。
+
+	{content}
+
+	问题：{query}
+"
+```
+
+### 调用
+
+```python
+cd rag/src
+python main.py
+```
+
+
 ## **数据集**
 
 - 经过清洗的QA对: 每一个QA对作为一个样本进行 embedding
@@ -63,14 +118,5 @@ RAG的经典评估框架，通过以下三个方面进行评估:
 - 将RAGAS评判结果加入到生成流程中。例如，当生成结果无法解决用户问题时，需要重新生成
 - 增加web检索以处理vector DB中无法检索到对应信息的问题
 - 增加多路检索以增加召回率。即根据用户输入生成多个类似的query进行检索
-
-
-
-
-
-
-
-
-
 
 

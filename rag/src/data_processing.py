@@ -1,24 +1,14 @@
 import json
 import pickle
-import faiss
-import pickle
 import os
 
 from loguru import logger
-from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import FAISS
 from config.config import embedding_path, doc_dir, qa_dir, knowledge_pkl_path, data_dir, vector_db_dir, rerank_path
 from langchain.embeddings import HuggingFaceBgeEmbeddings
-from langchain_community.document_loaders import DirectoryLoader, TextLoader, JSONLoader
-from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTextSplitter, RecursiveJsonSplitter
-from BCEmbedding import EmbeddingModel, RerankerModel
-# from util.pipeline import EmoLLMRAG
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from langchain.document_loaders.pdf import PyPDFDirectoryLoader
-from langchain.document_loaders import UnstructuredFileLoader,DirectoryLoader
-from langchain_community.llms import Cohere
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import FlashrankRerank
+from langchain_community.document_loaders import DirectoryLoader, TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.document_loaders import DirectoryLoader
 from langchain_core.documents.base import Document
 from FlagEmbedding import FlagReranker
 
