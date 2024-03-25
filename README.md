@@ -247,6 +247,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |                [wwwyfff](https://github.com/wwwyfff)                 |                      复旦大学在读硕士                      | ||
 |                [jkhumor](https://github.com/jkhumor)                 |                      南开大学在读硕士                      | |    RAG    |
 |       [lll997150986](https://github.com/lll997150986)                |                      南开大学在读硕士                      | |    微调     |
+| [nln-maker](https://github.com/nln-maker) | 南开大学在读硕士 | |  |
 
 ### 版权说明
 
