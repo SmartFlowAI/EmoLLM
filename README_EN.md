@@ -261,6 +261,7 @@ This project uses Git for version control. You can see the currently available v
 |                  [wwwyfff](https://github.com/wwwyfff)                  |                  FuDan University, Master's student                  | ||
 |                  [jkhumor](https://github.com/jkhumor)                  |                 Nankai University, Master's student                  | |                RAG                 |
 |             [lll997150986](https://github.com/lll997150986)             |                 Nankai University, Master's student                  | |            Fine Tuning             |
+| [nln-maker](https://github.com/nln-maker) | Nankai University, Master's student | |  |
 
 ### Copyright Notice
 
