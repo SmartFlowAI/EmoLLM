@@ -5,6 +5,7 @@ zhipuai/
 data/
 pdf/
 .idea/
+logs/
 
 *.jsonl
 *.json
