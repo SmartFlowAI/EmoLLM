@@ -1,3 +1,5 @@
+git+https://gitee.com/jujimeizuo/meta-gpt-tianji.git
+
 transformers==4.36.2
 streamlit==1.24.0
 sentencepiece==0.1.99
