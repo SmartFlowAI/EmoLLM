@@ -113,11 +113,11 @@
 
 ### 🏆荣誉栏
 
-- 项目荣获上海人工智能实验室举办的**2024浦源大模型系列挑战赛春季赛*****50强***
+- 项目荣获上海人工智能实验室举办的**2024浦源大模型系列挑战赛春季赛*****创新创意奖***
   
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/浦语挑战赛TOP50.jpg" alt="浦语挑战赛TOP50">
+    <img src="assets/Shusheng.jpg" alt="浦语挑战赛创新创意奖">
 </p>
 
 - 项目荣获公众号**NLP工程化**[推文宣传](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
@@ -247,6 +247,9 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |                [wwwyfff](https://github.com/wwwyfff)                 |                      复旦大学在读硕士                      | ||
 |                [jkhumor](https://github.com/jkhumor)                 |                      南开大学在读硕士                      | |    RAG    |
 |       [lll997150986](https://github.com/lll997150986)                |                      南开大学在读硕士                      | |    微调     |
+| [nln-maker](https://github.com/nln-maker) | 南开大学在读硕士 | | 前后端开发 |   
+| [dream00001](https://github.com/dream00001) | 南开大学在读硕士 | | 前后端开发 | 
+
 
 ### 版权说明
 
