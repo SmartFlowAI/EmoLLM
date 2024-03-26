@@ -115,14 +115,15 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 </details>
 
-### Honor
+### Honors
 
-- The project won the ***top50*** in the **2024 Puyuan Large Model Series Challenge Spring Competition held by the Shanghai Artificial Intelligence Laboratory**
+- The project won the ***the Innovation and Creativity Award*** in the **2024 Puyuan Large Model Series Challenge Spring Competition held by the Shanghai Artificial Intelligence Laboratory**
 
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/浦语挑战赛TOP50.jpg" alt="浦语挑战赛TOP50">
+    <img src="assets/Shusheng.jpg" alt="Challenge Innovation and Creativity Award">
 </p>
+
 
 - The project has been promoted by the official WeChat account **NLP Engineering**. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A). 
 
@@ -261,6 +262,8 @@ This project uses Git for version control. You can see the currently available v
 |                  [wwwyfff](https://github.com/wwwyfff)                  |                  FuDan University, Master's student                  | ||
 |                  [jkhumor](https://github.com/jkhumor)                  |                 Nankai University, Master's student                  | |                RAG                 |
 |             [lll997150986](https://github.com/lll997150986)             |                 Nankai University, Master's student                  | |            Fine Tuning             |
+| [nln-maker](https://github.com/nln-maker) |  Nankai University, Master's student   | | Front-end and back-end development |   
+| [dream00001](https://github.com/dream00001) |  Nankai University, Master's student   | | Front-end and back-end development | 
 
 ### Copyright Notice
 
