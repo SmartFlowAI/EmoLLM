@@ -4,7 +4,18 @@ import os
 
 from loguru import logger
 from langchain_community.vectorstores import FAISS
-from config.config import embedding_path, embedding_model_name, doc_dir, qa_dir, knowledge_pkl_path, data_dir, vector_db_dir, rerank_path, rerank_model_name
+from config.config import (
+    embedding_path,
+    embedding_model_name,
+    doc_dir, qa_dir,
+    knowledge_pkl_path,
+    data_dir,
+    vector_db_dir,
+    rerank_path,
+    rerank_model_name,
+    chunk_size,
+    chunk_overlap
+)
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -15,8 +26,9 @@ from FlagEmbedding import FlagReranker
 class Data_process():
 
     def __init__(self):
-        self.chunk_size: int=1000
-        self.chunk_overlap: int=100    
+
+        self.chunk_size: int=chunk_size
+        self.chunk_overlap: int=chunk_overlap
         
     def load_embedding_model(self, model_name=embedding_model_name, device='cpu', normalize_embeddings=True):
         """
@@ -53,7 +65,6 @@ class Data_process():
         return embeddings
     
     def load_rerank_model(self, model_name=rerank_model_name):
-
         """
         加载重排名模型。
         
@@ -117,10 +128,8 @@ class Data_process():
         elif isinstance(obj, str):
             content += obj
         return content
-    
 
     def split_document(self, data_path):
-
         """
         切分data_path文件夹下的所有txt文件
         
@@ -132,8 +141,6 @@ class Data_process():
         返回：
         - split_docs: list
         """
-        
-        
         # text_spliter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         text_spliter = RecursiveCharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap) 
         split_docs = []
@@ -151,7 +158,6 @@ class Data_process():
             split_docs = splits
         logger.info(f'split_docs size {len(split_docs)}')
         return split_docs
-
   
     def split_conversation(self, path):
         """
@@ -171,43 +177,29 @@ class Data_process():
                         file_path = os.path.join(root, file)
                         logger.info(f'splitting file {file_path}')
                         with open(file_path, 'r', encoding='utf-8') as f:
-                            data = json.load(f)
-                            # print(data)
-                            for conversation in data:
-                                # for dialog in conversation['conversation']:
-                                    ##按qa对切分,将每一轮qa转换为langchain_core.documents.base.Document
-                                    # content = self.extract_text_from_json(dialog,'')
-                                    # split_qa.append(Document(page_content = content))
-                                #按conversation块切分
-                                content = self.extract_text_from_json(conversation['conversation'], '')
-                                #logger.info(f'content====={content}')
-                                split_qa.append(Document(page_content = content))    
+                            for line in f.readlines():
+                                content = self.extract_text_from_json(line,'')
+                                split_qa.append(Document(page_content = content))
+
+                            #data = json.load(f)
+                            #for conversation in data:
+                            #    #for dialog in conversation['conversation']:
+                            #    #    #按qa对切分,将每一轮qa转换为langchain_core.documents.base.Document
+                            #    #    content = self.extract_text_from_json(dialog,'')
+                            #    #    split_qa.append(Document(page_content = content))
+                            #    #按conversation块切分
+                            #    content = self.extract_text_from_json(conversation['conversation'], '')
+                            #    #logger.info(f'content====={content}')
+                            #    split_qa.append(Document(page_content = content))    
             # logger.info(f'split_qa size====={len(split_qa)}')
         return split_qa
 
-
-    def load_knowledge(self, knowledge_pkl_path):
-        '''
-        读取或创建知识.pkl
-        '''
-        if not os.path.exists(knowledge_pkl_path):
-            split_doc = self.split_document(doc_dir)
-            split_qa = self.split_conversation(qa_dir)
-            knowledge_chunks = split_doc + split_qa
-            with open(knowledge_pkl_path, 'wb') as file:
-                pickle.dump(knowledge_chunks, file)
-        else:
-            with open(knowledge_pkl_path , 'rb') as f:
-                knowledge_chunks = pickle.load(f)
-        return knowledge_chunks
-      
- 
     def create_vector_db(self, emb_model):
         '''
         创建并保存向量库
         '''
         logger.info(f'Creating index...')
-        split_doc = self.split_document(doc_dir)
+        #split_doc = self.split_document(doc_dir)
         split_qa = self.split_conversation(qa_dir)
         # logger.info(f'split_doc == {len(split_doc)}')
         # logger.info(f'split_qa == {len(split_qa)}')
@@ -217,7 +209,6 @@ class Data_process():
         db.save_local(vector_db_dir)
         return db
         
-  
     def load_vector_db(self, knowledge_pkl_path=knowledge_pkl_path, doc_dir=doc_dir, qa_dir=qa_dir):
         '''
         读取向量库
@@ -230,66 +221,6 @@ class Data_process():
             db = FAISS.load_local(vector_db_dir, emb_model, allow_dangerous_deserialization=True)
         return db
     
- 
-    def retrieve(self, query, vector_db, k=5):
-        '''
-        基于query对向量库进行检索
-        '''
-        retriever = vector_db.as_retriever(search_kwargs={"k": k})
-        docs = retriever.invoke(query)
-        return docs, retriever
-    
-    ##FlashrankRerank效果一般
-    # def rerank(self, query, retriever):
-    #     compressor = FlashrankRerank()
-    #     compression_retriever = ContextualCompressionRetriever(base_compressor=compressor, base_retriever=retriever)
-    #     compressed_docs = compression_retriever.get_relevant_documents(query)
-    #     return compressed_docs
-
-    def rerank(self, query, docs): 
-        reranker = self.load_rerank_model()
-        passages = []
-        for doc in docs:
-            passages.append(str(doc.page_content))
-        scores = reranker.compute_score([[query, passage] for passage in passages])
-        sorted_pairs = sorted(zip(passages, scores), key=lambda x: x[1], reverse=True)
-        sorted_passages, sorted_scores = zip(*sorted_pairs)
-        return sorted_passages, sorted_scores
-
-
-# def create_prompt(question, context):
-#     from langchain.prompts import PromptTemplate
-#     prompt_template = f"""请基于以下内容回答问题：
-
-#     {context}
-
-#     问题: {question}
-#     回答:"""
-#     prompt = PromptTemplate(
-#         template=prompt_template, input_variables=["context", "question"]
-#     )
-#     logger.info(f'Prompt: {prompt}')
-#     return prompt
-    
-def create_prompt(question, context):
-    prompt = f"""请基于以下内容: {context} 给出问题答案。问题如下: {question}。回答:"""
-    logger.info(f'Prompt: {prompt}')
-    return prompt
-        
-def test_zhipu(prompt):
-    from zhipuai import ZhipuAI
-    api_key = "" # 填写您自己的APIKey
-    if api_key == "":
-        raise ValueError("请填写api_key")
-    client = ZhipuAI(api_key=api_key) 
-    response = client.chat.completions.create(
-    model="glm-4",  # 填写需要调用的模型名称
-    messages=[
-        {"role": "user", "content": prompt[:100]}
-    ],
-)
-    print(response.choices[0].message)
-
 if __name__ == "__main__":
     logger.info(data_dir)
     if not os.path.exists(data_dir):
@@ -317,5 +248,3 @@ if __name__ == "__main__":
     for i in range(len(scores)):
         logger.info(str(scores[i]) + '\n')
         logger.info(passages[i])
-    prompt = create_prompt(query, passages[0])
-    test_zhipu(prompt) ## 如果显示'Server disconnected without sending a response.'可能是由于上下文窗口限制
