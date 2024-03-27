@@ -25,6 +25,10 @@ qa_dir = os.path.join(data_dir, 'json')
 log_dir = os.path.join(base_dir, 'log')                             # log
 log_path = os.path.join(log_dir, 'log.log')                         # file
 
+# txt embedding 切分参数     
+chunk_size=1000
+chunk_overlap=100
+
 # vector DB
 vector_db_dir = os.path.join(data_dir, 'vector_db')
 
