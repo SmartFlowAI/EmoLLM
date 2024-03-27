@@ -8,7 +8,6 @@ from zhipuai import ZhipuAI
 from metagpt.logs import logger
 
 
-
 class BaiduAPI:
     def __init__(self):
         pass
