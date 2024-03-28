@@ -12,7 +12,7 @@ model_dir = os.path.join(base_dir, 'model')                                 # mo
 # data
 data_dir = os.path.join(base_dir, 'data')
 clean_dir = os.path.join(data_dir, 'cleaned')
-judge_dir = os.path.join(data_dir, '数据整合')
+judge_dir = os.path.join(data_dir, 'generated')
 result_dir = os.path.join(data_dir, 'generated')                            # result
 
 # log
@@ -29,7 +29,7 @@ wash_prompt_file_path = os.path.join(base_dir, 'choose_prompt.md')
 环境变量
 """
 # api-keys
-DASHSCOPE_API_KEY = ''
+DASHSCOPE_API_KEY = 'sk-4295ec893e9c413abb0551b85e84f39f'
 
 
 """

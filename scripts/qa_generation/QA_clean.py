@@ -101,7 +101,7 @@ def clean_qa(
                     future.result()
                 except Exception as exc:
                     logger.error("Thread generated an exception: %s" % (exc))
-
+        
         merge_sub_qa_generation(result_dir, storage_jsonl_path)
 
 
