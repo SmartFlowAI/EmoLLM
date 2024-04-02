@@ -258,7 +258,7 @@ This project uses Git for version control. You can see the currently available v
 |                 [Anooyman](https://github.com/Anooyman)                 |    Nanjing University of Science and Technology, Master's student    |  |                                    |
 |               [Vicky-3021](https://github.com/Vicky-3021)               |        Xidian University, Master's student (Research Year 0)         |  |                                    |
 |              [SantiagoTOP](https://github.com/santiagoTOP)              |          Taiyuan University of Technology, Master's student          | |                                    |
-|              [zealot52099](https://github.com/zealot52099)              |                               AI Mover                               | |      Data Processing and RAG       |
+|              [zealot52099](https://github.com/zealot52099)              |                          Individual developer                   | |      Data Processing, LLM finetuning and RAG       |
 |                  [wwwyfff](https://github.com/wwwyfff)                  |                  FuDan University, Master's student                  | ||
 |                  [jkhumor](https://github.com/jkhumor)                  |                 Nankai University, Master's student                  | |                RAG                 |
 |             [lll997150986](https://github.com/lll997150986)             |                 Nankai University, Master's student                  | |            Fine Tuning             |

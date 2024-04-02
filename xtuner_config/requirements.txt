@@ -20,4 +20,4 @@ xtuner==0.1.15
 # method 2:
 # pip install /root/share/wheels/flash_attn-2.4.2+cu118torch2.0cxx11abiTRUE-cp310-cp310-linux_x86_64.whl
 
-# mpi4py==3.1.5 # conda install mpi4py 
+mpi4py==3.1.5 # conda install mpi4py # 如果安装不成功, 可以使用conda命令单独安装
