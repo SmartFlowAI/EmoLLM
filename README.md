@@ -250,7 +250,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 | [nln-maker](https://github.com/nln-maker) | 南开大学在读硕士 | | 前后端开发 |   
 | [dream00001](https://github.com/dream00001) | 南开大学在读硕士 | | 前后端开发 | 
 | [王几行XING](https://zhihu.com/people/brycewang1898) | 北京大学硕士毕业 | | 清洗数据、LLM微调、前后端开发 | 
-| [思在] | 北京大学硕士毕业 | | LLM微调、前后端开发 | 
+| [思在] | 北京大学硕士毕业（微软美国） | | LLM微调、前后端开发 | 
 
 ### 版权说明
 
