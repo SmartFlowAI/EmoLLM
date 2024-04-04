@@ -77,7 +77,7 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
 ### 🎇最近更新
-
+- 【2024.4.2】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】在百度飞桨平台发布[爹系男友心理咨询师](https://aistudio.baidu.com/community/app/68787)
 - 【2024.3.24】在OpenXLab和ModelScope平台发布InternLM2-Base-7B QLoRA微调模型, 具体请查看[InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md)
 - 【2024.3.12】在百度飞桨平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
