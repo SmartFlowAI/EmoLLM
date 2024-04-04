@@ -79,7 +79,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 
 ### Recent Updates
-
+- 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Daddy-like Boy-Friend] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/68787)
 - 【2024.3.24】 The InternLM2-Base-7B QLoRA fine-tuned model has been released on the OpenXLab and ModelScope platforms. For more details, please refer to [InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md).
 - 【2024.3.12】 [aiwei] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/63335)
