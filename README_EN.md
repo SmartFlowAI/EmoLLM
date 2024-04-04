@@ -263,7 +263,9 @@ This project uses Git for version control. You can see the currently available v
 |                  [jkhumor](https://github.com/jkhumor)                  |                 Nankai University, Master's student                  | |                RAG                 |
 |             [lll997150986](https://github.com/lll997150986)             |                 Nankai University, Master's student                  | |            Fine Tuning             |
 | [nln-maker](https://github.com/nln-maker) |  Nankai University, Master's student   | | Front-end and back-end development |   
-| [dream00001](https://github.com/dream00001) |  Nankai University, Master's student   | | Front-end and back-end development | 
+| [dream00001](https://github.com/dream00001) |  Nankai University, Master's student   | | Front-end and back-end development |
+| [王几行XING](zhihu.com/people/brycewang1898) |  Peking University, Master's graduate  | | Data Processing, LLM finetuning, Front-end and back-end development |
+| [思在] |  Peking University, Master's graduate  | | LLM finetuning, Front-end and back-end development |
 
 ### Copyright Notice
 
