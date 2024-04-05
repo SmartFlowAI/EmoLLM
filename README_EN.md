@@ -79,7 +79,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 
 ### Recent Updates
-
+- 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Daddy-like Boy-Friend] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/68787)
 - 【2024.3.24】 The InternLM2-Base-7B QLoRA fine-tuned model has been released on the OpenXLab and ModelScope platforms. For more details, please refer to [InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md).
 - 【2024.3.12】 [aiwei] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/63335)
@@ -263,7 +263,9 @@ This project uses Git for version control. You can see the currently available v
 |                  [jkhumor](https://github.com/jkhumor)                  |                 Nankai University, Master's student                  | |                RAG                 |
 |             [lll997150986](https://github.com/lll997150986)             |                 Nankai University, Master's student                  | |            Fine Tuning             |
 | [nln-maker](https://github.com/nln-maker) |  Nankai University, Master's student   | | Front-end and back-end development |   
-| [dream00001](https://github.com/dream00001) |  Nankai University, Master's student   | | Front-end and back-end development | 
+| [dream00001](https://github.com/dream00001) |  Nankai University, Master's student   | | Front-end and back-end development |
+| [王几行XING](zhihu.com/people/brycewang1898) |  Peking University, Master's graduate  | | Data Processing, LLM finetuning, Front-end and back-end development |
+| [思在] |  Peking University, Master's graduate (Microsoft)  | | LLM finetuning, Front-end and back-end development |
 
 ### Copyright Notice
 
