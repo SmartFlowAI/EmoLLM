@@ -78,20 +78,33 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
  
- <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 30px; margin: 50px;">
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo1.gif" alt="艾薇演示1">
-        </div>
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo2.gif" alt="艾薇演示2">
-        </div>
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo3.gif" alt="艾薇演示3">
-        </div>
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo4.gif" alt="艾薇演示4">
-        </div>
-  </div>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ### Recent Updates
 - 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
