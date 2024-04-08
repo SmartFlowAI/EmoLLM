@@ -88,19 +88,19 @@ The Model aims to fully understand and promote the mental health of individuals,
     </td>
     <td align="center">
       <a href="#">
-        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+        <img src="assets/aiwei_demo2.gif" width="80%;" hight="80%;" alt="placeholder-image">
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+        <img src="assets/aiwei_demo3.gif" width="80%;" hight="80%;" alt="placeholder-image">
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+        <img src="assets/aiwei_demo4.gif" width="80%;" hight="80%;" alt="placeholder-image">
       </a>
     </td>
   </tr>
