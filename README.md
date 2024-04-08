@@ -77,7 +77,7 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
   
 
- <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 30px; margin: 50px;">
+ <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; margin: 10px;">
         <div style="background-color: transparent; padding: 10px;">
             <img class="image" src="assets/aiwei_demo1.gif" alt="艾薇演示1">
         </div>
