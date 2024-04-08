@@ -77,20 +77,32 @@
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
   
 
- <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; margin: 10px;">
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo1.gif" alt="艾薇演示1">
-        </div>
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo2.gif" alt="艾薇演示2">
-        </div>
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo3.gif" alt="艾薇演示3">
-        </div>
-        <div style="background-color: transparent; padding: 10px;">
-            <img class="image" src="assets/aiwei_demo4.gif" alt="艾薇演示4">
-        </div>
-  </div>
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ### 🎇最近更新
 - 【2024.4.2】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
