@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/logo.jpeg" alt="Logo" width="30%">
+    <img src="assets/EmoLLM_transparent.png" alt="Logo" width="50%">
   </a>
 
 <div align="center">
@@ -46,20 +46,20 @@
 
 <div align="center">
 
-|         Model          |   Type   |
-| :-------------------: | :------: |
-|   InternLM2_7B_chat   |  QLORA   |
-|   InternLM2_7B_chat   | full fine-tuning  |
-|   InternLM2_7B_base   |   QLORA   |
-|  InternLM2_1_8B_chat  | full fine-tuning  |
-|  InternLM2_20B_chat  | LORA    |
-|     Qwen_7b_chat      |   QLORA   |
-|   Qwen1_5-0_5B-Chat   | full fine-tuning  |
-|  Baichuan2_13B_chat   |   QLORA   |
-|      ChatGLM3_6B      |   LORA    |
-| DeepSeek MoE_16B_chat |  QLORA   |
-| Mixtral 8x7B_instruct |  QLORA   |
-|          ……           |    ……    |
+|         Model         |       Type       | link  |
+| :-------------------: | :--------------: | :---: |
+|   InternLM2_7B_chat   |      QLORA       |       |
+|   InternLM2_7B_chat   | full fine-tuning |       |
+|   InternLM2_7B_base   |      QLORA       |       |
+|  InternLM2_1_8B_chat  | full fine-tuning |       |
+|  InternLM2_20B_chat   |       LORA       |       |
+|     Qwen_7b_chat      |      QLORA       |       |
+|   Qwen1_5-0_5B-Chat   | full fine-tuning |       |
+|  Baichuan2_13B_chat   |      QLORA       |       |
+|      ChatGLM3_6B      |       LORA       |       |
+| DeepSeek MoE_16B_chat |      QLORA       |       |
+| Mixtral 8x7B_instruct |      QLORA       |       |
+|          ……           |        ……        |  ……   |
 
 </div>
 
@@ -77,6 +77,21 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Psychological resilience: Refers to an individual's ability to recover from adversity and adapt. Those with strong psychological resilience can bounce back from challenges and learn and grow from them.
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
+ 
+ <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 30px; margin: 50px;">
+        <div style="background-color: transparent; padding: 10px;">
+            <img class="image" src="assets/aiwei_demo1.gif" alt="艾薇演示1">
+        </div>
+        <div style="background-color: transparent; padding: 10px;">
+            <img class="image" src="assets/aiwei_demo2.gif" alt="艾薇演示2">
+        </div>
+        <div style="background-color: transparent; padding: 10px;">
+            <img class="image" src="assets/aiwei_demo3.gif" alt="艾薇演示3">
+        </div>
+        <div style="background-color: transparent; padding: 10px;">
+            <img class="image" src="assets/aiwei_demo4.gif" alt="艾薇演示4">
+        </div>
+  </div>
 
 ### Recent Updates
 - 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
@@ -121,7 +136,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/Shusheng.jpg" alt="Challenge Innovation and Creativity Award">
+    <img src="assets/Shusheng.png" alt="Challenge Innovation and Creativity Award">
 </p>
 
 
@@ -138,7 +153,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 - [EmoLLM - Large Language Model for Mental Health](#emollm---large-language-model-for-mental-health)
     - [Recent Updates](#recent-updates)
-    - [Honor](#honor)
+    - [Honors](#honors)
     - [Roadmap](#roadmap)
   - [Contents](#contents)
           - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
@@ -192,18 +207,18 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### Data Construction
 
-- Please read the [Data Construction Guide ](generate_data/tutorial.md)for reference.
+- Please read the [Data Construction Guide ](generate_data/tutorial_EN.md)for reference.
 
 - The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
 ### Fine-tuning Guide
 
-For details, see the [fine-tuning guide](xtuner_config/README.md)
+For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 
 ### Deployment Guide
 
-- Demo deployment: see [deployment guide](./demo/README.md) for details.
-- Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy.md)
+- Demo deployment: see [deployment guide](./demo/README_EN.md) for details.
+- Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy_EN.md)
 
 ### RAG (Retrieval Augmented Generation) Pipeline
 
@@ -240,32 +255,32 @@ This project uses Git for version control. You can see the currently available v
 
 ### Authors (in no particular order)
 
-|                                Username                                 |                         School/Organization                          | Remarks |           Contributions            |
-|:-----------------------------------------------------------------------:|:--------------------------------------------------------------------:| :------------------: |:----------------------------------:|
-|                 [aJupyter](https://github.com/aJupyter)                 |                 Nankai University, Master's student                  | DataWhale member |         Project initiator          |
-|                 [MING-ZCH](https://github.com/MING-ZCH)                 | Huazhong University of Science and Technology, Undergraduate student | LLM X Psychology researcher |         Project co-leader          |
-|               [jujimeizuo](https://github.com/jujimeizuo)               |                Jiangnan University, Master's student                 |  |                                    |
-|      [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr)      |    Harbin Institute of Technology (Weihai), Undergraduate student    |  |                                    |
-|                   [8baby8](https://github.com/8baby8)                   |              PaddlePaddle Pilot Team Regional Director               | Wenxin Large Model core developer |                                    |
-|                   [zxazys](https://github.com/zxazys)                   |                 Nankai University, Master's student                  |  |                                    |
-|         [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)         |       SWUFE (Southwestern University of Finance and Economics)       |  |                                    |
-|                  [MrCatAI](https://github.com/MrCatAI)                  |                               AI Mover                               |  |                                    |
-|                   [ZeyuBa](https://github.com/ZeyuBa)                   |              Institute of Automation, Master's student               |  |                                    |
-|         [aiyinyuedejustin](https://github.com/aiyinyuedejustin)         |             University of Pennsylvania, Master's student             |  |                                    |
-|                [Nobody-ML](https://github.com/Nobody-ML)                |  China University of Petroleum (East China), Undergraduate student   |  |                                    |
-|                  [chg0901](https://github.com/chg0901)                  |          [MiniSora](https://github.com/mini-sora/minisora)           |Maintainer and Admin of [MiniSora](https://github.com/mini-sora/minisora) | LLM Pre-Training and Fine-Tuning, Model Uploading, Data Cleaning and Docs Translation |
-|                   [Mxoder](https://github.com/Mxoder)                   |              Beihang University, Undergraduate student               |  |                                    |
-|                 [Anooyman](https://github.com/Anooyman)                 |    Nanjing University of Science and Technology, Master's student    |  |                                    |
-|               [Vicky-3021](https://github.com/Vicky-3021)               |        Xidian University, Master's student (Research Year 0)         |  |                                    |
-|              [SantiagoTOP](https://github.com/santiagoTOP)              |          Taiyuan University of Technology, Master's student          | |                                    |
-|              [zealot52099](https://github.com/zealot52099)              |                          Individual developer                   | |      Data Processing, LLM finetuning and RAG       |
-|                  [wwwyfff](https://github.com/wwwyfff)                  |                  FuDan University, Master's student                  | ||
-|                  [jkhumor](https://github.com/jkhumor)                  |                 Nankai University, Master's student                  | |                RAG                 |
-|             [lll997150986](https://github.com/lll997150986)             |                 Nankai University, Master's student                  | |            Fine Tuning             |
-| [nln-maker](https://github.com/nln-maker) |  Nankai University, Master's student   | | Front-end and back-end development |   
-| [dream00001](https://github.com/dream00001) |  Nankai University, Master's student   | | Front-end and back-end development |
-| [王几行XING](zhihu.com/people/brycewang1898) |  Peking University, Master's graduate  | | Data Processing, LLM finetuning, Front-end and back-end development |
-| [思在] |  Peking University, Master's graduate (Microsoft)  | | LLM finetuning, Front-end and back-end development |
+|                           Username                            |                         School/Organization                          |                                  Remarks                                  |                                     Contributions                                     |
+| :-----------------------------------------------------------: | :------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+|            [aJupyter](https://github.com/aJupyter)            |                 Nankai University, Master's student                  |                             DataWhale member                              |                                   Project initiator                                   |
+|            [MING-ZCH](https://github.com/MING-ZCH)            | Huazhong University of Science and Technology, Undergraduate student |                        LLM X Psychology researcher                        |                                   Project co-leader                                   |
+|          [jujimeizuo](https://github.com/jujimeizuo)          |                Jiangnan University, Master's student                 |                                                                           |                                                                                       |
+| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |    Harbin Institute of Technology (Weihai), Undergraduate student    |                                                                           |                                                                                       |
+|              [8baby8](https://github.com/8baby8)              |              PaddlePaddle Pilot Team Regional Director               |                     Wenxin Large Model core developer                     |                                                                                       |
+|              [zxazys](https://github.com/zxazys)              |                 Nankai University, Master's student                  |                                                                           |                                                                                       |
+|    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |       SWUFE (Southwestern University of Finance and Economics)       |                                                                           |                                                                                       |
+|             [MrCatAI](https://github.com/MrCatAI)             |                               AI Mover                               |                                                                           |                                                                                       |
+|              [ZeyuBa](https://github.com/ZeyuBa)              |              Institute of Automation, Master's student               |                                                                           |                                                                                       |
+|    [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |             University of Pennsylvania, Master's student             |                                                                           |                                                                                       |
+|           [Nobody-ML](https://github.com/Nobody-ML)           |  China University of Petroleum (East China), Undergraduate student   |                                                                           |                                                                                       |
+|             [chg0901](https://github.com/chg0901)             |          [MiniSora](https://github.com/mini-sora/minisora)           | Maintainer and Admin of [MiniSora](https://github.com/mini-sora/minisora) | LLM Pre-Training and Fine-Tuning, Model Uploading, Data Cleaning and Docs Translation |
+|              [Mxoder](https://github.com/Mxoder)              |              Beihang University, Undergraduate student               |                                                                           |                                                                                       |
+|            [Anooyman](https://github.com/Anooyman)            |    Nanjing University of Science and Technology, Master's student    |                                                                           |                                                                                       |
+|          [Vicky-3021](https://github.com/Vicky-3021)          |        Xidian University, Master's student (Research Year 0)         |                                                                           |                                                                                       |
+|         [SantiagoTOP](https://github.com/santiagoTOP)         |          Taiyuan University of Technology, Master's student          |                                                                           |                                                                                       |
+|         [zealot52099](https://github.com/zealot52099)         |                         Individual developer                         |                                                                           |                        Data Processing, LLM finetuning and RAG                        |
+|             [wwwyfff](https://github.com/wwwyfff)             |                  FuDan University, Master's student                  |                                                                           |                                                                                       |
+|             [jkhumor](https://github.com/jkhumor)             |                 Nankai University, Master's student                  |                                                                           |                                          RAG                                          |
+|        [lll997150986](https://github.com/lll997150986)        |                 Nankai University, Master's student                  |                                                                           |                                      Fine Tuning                                      |
+|           [nln-maker](https://github.com/nln-maker)           |                 Nankai University, Master's student                  |                                                                           |                          Front-end and back-end development                           |
+|          [dream00001](https://github.com/dream00001)          |                 Nankai University, Master's student                  |                                                                           |                          Front-end and back-end development                           |
+|         [王几行XING](zhihu.com/people/brycewang1898)          |                 Peking University, Master's graduate                 |                                                                           |          Data Processing, LLM finetuning, Front-end and back-end development          |
+|                            [思在]                             |           Peking University, Master's graduate (Microsoft)           |                                                                           |                  LLM finetuning, Front-end and back-end development                   |
 
 ### Copyright Notice
 
