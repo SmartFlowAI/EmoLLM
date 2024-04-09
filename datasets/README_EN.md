@@ -17,15 +17,15 @@
 |   Category  |        Dataset        |     Type     |  Total  |
 | :---------: | :-------------------: | :----------: | :-----: |
 |  *General*  |         data          | Conversation |  5600+  |
-|  *General*  |       data_pro        | Conversation | 36500+  |
+|  *General*  |       data_pro        | Conversation | 36,500+ |
 |  *General*  | multi_turn_dataset_1  | Conversation | 36,000+ |
 |  *General*  | multi_turn_dataset_2  | Conversation | 27,000+ |
-|  *General*  | single_turn_dataset_1 |      QA      | 14000+  |
-|  *General*  | single_turn_dataset_2 |      QA      | 18300+  |
+|  *General*  | single_turn_dataset_1 |      QA      | 14,000+ |
+|  *General*  | single_turn_dataset_2 |      QA      | 18,300+ |
 | *Role-play* |         aiwei         | Conversation |  4000+  |
-| *Role-play* |       SoulStar        |      QA      | 11200+  |
+| *Role-play* |       SoulStar        |      QA      | 11,200+ |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
-| *Role-play* |        mother         | Conversation | 24,500+ |
+| *Role-play* |        mother         | Conversation | 40,300+ |
 | *Role-play* |       scientist       | Conversation | 28,400+ |
 |     ……      |          ……           |      ……      |   ……    |
 
