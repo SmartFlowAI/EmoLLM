@@ -199,24 +199,16 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
 
 1. Read in sequence or read sections you're interested in：
-   - [File Directory Explanation](#file-directory-explanation)
+   - [Quick Start](#quick-start)
    - [Data Construction](#data-construction)
    - [Fine-tuning Guide](#fine-tuning-guide)
    - [Deployment Guide](#deployment-guide)
+   - [RAG][]
    - View More Details
 
-### File Directory Explanation
 
-```
-├─assets: Image Resources
-├─datasets: Dataset
-├─demo: demo scripts
-├─generate_data: Data Generation Guide
-│  └─xinghuo
-├─scripts: Some Available Tools
-└─xtuner_config：Fine-tuning Guide
-    └─images
-```
+### Quick start
+- Please read [Quick Start](docs/quick_start_EN.md) to see.
 
 ### Data Construction
 
