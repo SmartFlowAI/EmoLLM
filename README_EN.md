@@ -199,41 +199,33 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
 
 1. Read in sequence or read sections you're interested in：
-   - [File Directory Explanation](#file-directory-explanation)
+   - [Quick Start](#quick-start)
    - [Data Construction](#data-construction)
    - [Fine-tuning Guide](#fine-tuning-guide)
    - [Deployment Guide](#deployment-guide)
+   - [RAG](#rag-retrieval-augmented-generation-pipeline)
    - View More Details
 
-### File Directory Explanation
 
-```
-├─assets: Image Resources
-├─datasets: Dataset
-├─demo: demo scripts
-├─generate_data: Data Generation Guide
-│  └─xinghuo
-├─scripts: Some Available Tools
-└─xtuner_config：Fine-tuning Guide
-    └─images
-```
+### 🍪Quick start
+- Please read [Quick Start](docs/quick_start_EN.md) to see.
 
-### Data Construction
+### 📌Data Construction
 
 - Please read the [Data Construction Guide ](generate_data/tutorial_EN.md)for reference.
 
 - The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
-### Fine-tuning Guide
+### 🎨Fine-tuning Guide
 
 For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 
-### Deployment Guide
+### 🔧Deployment Guide
 
 - Demo deployment: see [deployment guide](./demo/README_EN.md) for details.
 - Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy_EN.md)
 
-### RAG (Retrieval Augmented Generation) Pipeline
+### ⚙RAG (Retrieval Augmented Generation) Pipeline
 
 - See [RAG](./rag/)
 
@@ -307,6 +299,7 @@ The project is licensed under the MIT License. Please refer to the details
 - [Vanin](https://github.com/vansin)
 - [Bloom up (WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 - Abu (M.A. in Psychology, Peking University)
+- [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
 

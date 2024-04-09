@@ -157,7 +157,7 @@
     <img src="assets/Roadmap_ZH.png" alt="Roadmap_ZH">
   </a>
 
-### 🎯框架图
+### 🔗框架图
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
@@ -170,10 +170,11 @@
     - [🎇最近更新](#最近更新)
     - [🏆荣誉栏](#荣誉栏)
     - [🎯路线图](#路线图)
-    - [🎯框架图](#框架图)
+    - [🔗框架图](#框架图)
   - [目录](#目录)
           - [开发前的配置要求](#开发前的配置要求)
           - [**使用指南**](#使用指南)
+    - [快速体验](#快速体验)
     - [数据构建](#数据构建)
     - [微调指南](#微调指南)
     - [部署指南](#部署指南)
@@ -201,28 +202,35 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
 
 2. 依次阅读或者选择感兴趣的部分阅读：
+   - [快速体验](#快速体验)
    - [数据构建](#数据构建)
    - [微调指南](#微调指南)
    - [部署指南](#部署指南)
    - [RAG](#rag检索增强生成pipeline)
    - 查看更多详情
 
-### 数据构建
+
+### 🍪快速体验
+
+- 请阅读[快速体验](docs/quick_start.md)查阅
+
+
+### 📌数据构建
 
 - 请阅读[数据构建指南](generate_data/tutorial.md)查阅
 
 - 微调用到的数据集见[datasets](datasets/data.json)
 
-### 微调指南
+### 🎨微调指南
 
 详见[微调指南](xtuner_config/README.md)
 
-### 部署指南
+### 🔧部署指南
 
 - Demo部署：详见[部署指南](demo/README.md)
 - 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](./deploy/lmdeploy.md)
 
-### RAG(检索增强生成)Pipeline
+### ⚙RAG(检索增强生成)Pipeline
 
 - 详见[RAG](./rag/)
 
@@ -304,6 +312,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - [闻星大佬（小助手）](https://github.com/vansin)
 - [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 - 阿布（北大心理学硕士）
+- [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
 
