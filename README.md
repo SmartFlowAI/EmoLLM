@@ -210,27 +210,27 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - 查看更多详情
 
 
-### 快速体验
+### 🍪快速体验
 
 - 请阅读[快速体验](docs/quick_start.md)查阅
 
 
-### 数据构建
+### 📌数据构建
 
 - 请阅读[数据构建指南](generate_data/tutorial.md)查阅
 
 - 微调用到的数据集见[datasets](datasets/data.json)
 
-### 微调指南
+### 🎨微调指南
 
 详见[微调指南](xtuner_config/README.md)
 
-### 部署指南
+### 🔧部署指南
 
 - Demo部署：详见[部署指南](demo/README.md)
 - 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](./deploy/lmdeploy.md)
 
-### RAG(检索增强生成)Pipeline
+### ⚙RAG(检索增强生成)Pipeline
 
 - 详见[RAG](./rag/)
 
@@ -312,6 +312,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - [闻星大佬（小助手）](https://github.com/vansin)
 - [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 - 阿布（北大心理学硕士）
+- [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
 
