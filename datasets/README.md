@@ -2,7 +2,7 @@
 
 * 数据集按用处分为两种类型：**General** 和 **Role-play**
 * 数据按格式分为两种类型：**QA** 和 **Conversation**
-* 数据汇总：General（**6个数据集**）；Role-play（**3个数据集**）
+* 数据汇总：General（**6个数据集**）；Role-play（**5个数据集**）
 
 ## 数据集类型
 
@@ -27,6 +27,8 @@
 | *Role-play* |         aiwei         | Conversation |  4000+  |
 | *Role-play* |       SoulStar        |      QA      | 11200+  |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
+| *Role-play* |        mother         | Conversation | 24,500+ |
+| *Role-play* |       scientist       | Conversation | 28,400+ |
 |     ……      |          ……           |      ……      |   ……    |
 
 ## 数据集来源
@@ -45,6 +47,8 @@
 * 数据集 aiwei 来自本项目
 * 数据集 tiangou 来自本项目
 * 数据集 SoulStar 来源 [SoulStar](https://github.com/Nobody-ML/SoulStar)
+* 数据集 mother 来自本项目
+* 数据集 scientist 来自本项目
 
 ## 数据集去重
 

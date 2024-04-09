@@ -2,7 +2,7 @@
 
 * Category of dataset: **General** and **Role-play**
 * Type of data: **QA** and **Conversation**
-* Summary: General(**6 datasets**), Role-play(**3 datasets**)
+* Summary: General(**6 datasets**), Role-play(**5 datasets**)
 
  ## Category
 * **General**: generic dataset, including psychological Knowledge, counseling technology, etc.
@@ -25,6 +25,8 @@
 | *Role-play* |         aiwei         | Conversation |  4000+  |
 | *Role-play* |       SoulStar        |      QA      | 11200+  |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
+| *Role-play* |        mother         | Conversation | 24,500+ |
+| *Role-play* |       scientist       | Conversation | 28,400+ |
 |     ……      |          ……           |      ……      |   ……    |
 
 
@@ -41,6 +43,8 @@
 * dataset `aiwei` from this repo
 * dataset `tiangou` from this repo
 * dataset `SoulStar` from [SoulStar](https://github.com/Nobody-ML/SoulStar)
+* dataset `mother` from this repo
+* dataset `scientist` from this repo
 
 **Dataset Deduplication**：
 Combine absolute matching with fuzzy matching (Simhash) algorithms to deduplicate the dataset, thereby enhancing the effectiveness of the fine-tuning model. While ensuring the high quality of the dataset, the risk of losing important data due to incorrect matches can be reduced via adjusting the threshold.
