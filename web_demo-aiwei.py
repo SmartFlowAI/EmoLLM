@@ -9,6 +9,7 @@ Please run with the command `streamlit run path/to/web_demo.py --server.address=
 Using `python path/to/web_demo.py` may cause unknown problems.
 """
 import copy
+import os
 import warnings
 from dataclasses import asdict, dataclass
 from typing import Callable, List, Optional
@@ -24,8 +25,10 @@ from openxlab.model import download
 
 logger = logging.get_logger(__name__)
 
-download(model_repo='ajupyter/EmoLLM_aiwei', 
-        output='model')
+if not os.path.isdir("model"):
+    print("[ERROR] not find model dir")
+    exit(0)
+
 
 @dataclass
 class GenerationConfig:

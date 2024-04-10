@@ -8,3 +8,5 @@ transformers_stream_generator==0.0.4
 openxlab
 tiktoken
 einops
+oss2
+requests
