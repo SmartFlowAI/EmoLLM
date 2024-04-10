@@ -145,7 +145,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 ### Honors
 
-- The project won the ***the Innovation and Creativity Award*** in the **2024 Puyuan Large Model Series Challenge Spring Competition held by the Shanghai Artificial Intelligence Laboratory**
+- The project won ***the Innovation and Creativity Award*** in the **2024 Puyuan Large Model Series Challenge Spring Competition held by the Shanghai Artificial Intelligence Laboratory**
 
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
