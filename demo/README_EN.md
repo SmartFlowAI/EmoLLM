@@ -1,44 +1,7 @@
 # Deploying Guide for EmoLLM
 
 ## Local Deployment
-
-- Clone repo
-
-```bash
-git clone https://github.com/aJupyter/EmoLLM.git
-```
-
-- Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-- Download the model
-  - Model weights：https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model
-  - Download via openxlab.model.download, see [cli_internlm2](./cli_internlm2.py) for details
-
-    ```bash
-    from openxlab.model import download
-
-    download(model_repo='jujimeizuo/EmoLLM_Model', output='model')
-    ```
-
-  - You can also download manually and place it in the `./model` directory, then delete the above code.
-
-- cli_demo
-
-```bash
-python ./demo/cli_internlm2.py
-```
-
-- web_demo
-
-```bash
-python ./app.py
-```
-
-If deploying on a server, you need to configure local port mapping.
+- Please read [Quick Start](../docs/quick_start_EN.md) to see.
 
 ## Deploy on OpenXLab
 
