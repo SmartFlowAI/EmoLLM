@@ -14,23 +14,24 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 # cd EmoLLM
 # pip install -r requirements.txt
 ```
-- 3. Install the oss2 library for automatic model download (missing from the requirements.txt file):
+- 3. Download the model files, either manually or by running the download_model.py script.
+- 3.1. Automatically download the model file and run the script:
 ```
-# pip install oss2
+# python download_model.py <model_repo>
+
+# Run the web_demo-aiwei.py script to run the model repository at ajupyter/EmoLLM_aiwei, ie:
+# python download_model.py ajupyter/EmoLLM_aiwei
+
+# Run the web_internlm2.py script to run the model repository at jujimeizuo/EmoLLM_Mode, ie:
+# python download_model.py jujimeizuo/EmoLLM_Model
+
+# This script can also be used to automatically download other models. This script only supports automatic download of models from openxlab platform, models from other platforms need to be downloaded manually. After successful download, you can see a new model directory under EmoLLM directory, i.e. the model file directory.
 ```
-- 4. Important:Download the model catalog, select the model you want to use, to download the model catalog manually, go to openxlab (like [EmoLLM_Model](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model)) or Huggingface or other platforms, Place all files in the `EmoLLM/model` directory. Note that this step is mandatory, otherwise the automatic download will report an error, The package download does not download the full LFS (like pytorch_model-00001-of-00008.bin) file, just a reference to it.
-- 5. Download the model, specifically the pytorch_model-XXX.bin file in the model,  
-models can be downloaded manually or automatically. 
-- 5.1. Models can be downloaded manually from openxlab or other platforms, put all the files in the `EmoLLM/model` directory, and then modify the web_demo-aiwei.py or web_internlm2.py files (whichever one is called by app.py) by commenting out the following code at the beginning, to prevent the script from automatically re-downloading the model： 
+- 3.2. To download the model file directory manually, go to openxlab, Huggingface, etc. to download the complete model directory file, and put all the files in the `EmoLLM/model` directory. Note that the LFS file (e.g. pytorch_model-00001-of-00008.bin) is not downloaded when the model file directory is packaged for download, so you need to download the full LFS file one by one.
+![model](../assets/model.png)
+- 4. Run the script, app.py is only used to call web_demo-aiwei.py or web_internlm2.py file, you can download the model file of the corresponding script for whichever script you want to run, and then comment the other script in app.py. Then run the script:
 ```
-# download(model_repo='ajupyter/EmoLLM_aiwei',
-#        output='model')
+python app.py
 ```
-- 5.2. Automatic model download, There are three files in the EmoLLM directory, app.py、web_demo-aiwei.py、web_internlm2.py, app.py calls the last two scripts. Comment out the other script if you want to call it. Run:
-```
-# python ./app.py
-```
-- Note: By default, web_demo-aiwei.py automatically downloads the ajupyter/EmoLLM_aiwei model of openxlab platform, and web_internlm2.py downloads the jujimeizuo/EmoLLM_Model model. The script will automatically download the model to EmoLLM/model directory, after the download is completed and run successfully, follow the manual download operation in 5.1 to modify the web_demo-aiwei.py or web_internlm2.py file to comment out the download code, so as to prevent re-downloading in the next run.
-6、 Run app.py and wait for the model to download and load. Then access the model web page through your browser by going to: http://0.0.0.0:7860 address. You can modify the app.py file to change the web page access port.
-7. Use of other models,  EmoLLM offers several versions of the open source model, uploaded to openxlab、Huggingface, and other platforms. There are roles such as the [father's boyfriend counselor](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_Daddy-like_BF), [the old mother's counselor](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main), and [the gentle royal psychiatrist](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei). There are several models to choose from such as EmoLLM_internlm2_7b_full, EmoLLM-InternLM7B-base-10e and so on.
-Current review [EmoLLM_internlm2_7b_ful] (https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full) model works better. You can repeat steps 4 and 5 to download the model manually or automatically in the `EmoLLM/model` directory or modify the download function in web_demo-aiwei.py or web_internlm2.py to download the model automatically.
+- 5. After running app.py, you can access the model's web page through your browser at the following address: http://0.0.0.0:7860. You can modify the app.py file to change the web page access port to experience the model normally. If you are deploying on a server, you need to configure local port mapping.
+- 6. Use of other models,  EmoLLM offers several versions of the open source model, uploaded to openxlab、Huggingface, and other platforms. There are roles such as the [father's boyfriend counselor](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_Daddy-like_BF), [the old mother's counselor](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main), and [the gentle royal psychiatrist](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei). There are several models to choose from such as EmoLLM_internlm2_7b_full, EmoLLM-InternLM7B-base-10e and so on. Repeat steps 3 and 4 to manually or automatically download the model in the `EmoLLM/model` directory and run the experience.
