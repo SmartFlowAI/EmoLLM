@@ -79,24 +79,24 @@
 <table>
     <tr>
         <td align="center">
-            <a href=" ">
+            <a href=" "  style="background-color: transparent;">
                 <img src="assets\aiwei_demo.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
             </a >
         </td>
         <td align="center">
-            <a href="#">
+            <a href=" "  style="background-color: transparent;">
                 <img src="assets\aiwei_demo2.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
             </a >
         </td>
     </tr>
     <tr>
         <td align="center">
-            <a href="#">
+            <a href=" "  style="background-color: transparent;">
                 <img src="assets\aiwei_demo3.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
             </a >
         </td>
         <td align="center">
-            <a href="#">
+            <a href=" "  style="background-color: transparent;">
                 <img src="assets\aiwei_demo4.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
             </a >
         </td>
