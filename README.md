@@ -79,18 +79,18 @@
 <table>
     <tr>
         <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+            <img src="assets\aiwei_demo.gif" alt="占位图">
         </td>
         <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo2.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+            <img src="assets\aiwei_demo2.gif" alt="占位图">
         </td>
     </tr>
     <tr>
         <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo3.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+            <img src="assets\aiwei_demo3.gif" alt="占位图">
         </td>
         <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo4.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+            <img src="assets\aiwei_demo4.gif" alt="占位图">
         </td>
     </tr>
 </table>
