@@ -44,20 +44,20 @@
 
 <div align="center">
 
-|         模型          |   类型   | 链接  |
-| :-------------------: | :------: | :---: |
-|   InternLM2_7B_chat   |  QLORA   |       |
-|   InternLM2_7B_chat   | 全量微调 |       |
+|         模型          |   类型   |                                                   链接                                                   |
+| :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |
+|   InternLM2_7B_chat   |  QLORA   |                                                                                                          |
+|   InternLM2_7B_chat   | 全量微调 |                                                                                                          |
 |   InternLM2_7B_base   |  QLORA   | [internlm2_7b_base_qlora_e10_M_1e4_32_64.py](./xtuner_config/internlm2_7b_base_qlora_e10_M_1e4_32_64.py) |
-|  InternLM2_1_8B_chat  | 全量微调 |       |
-|  InternLM2_20B_chat   |   LORA   |       |
-|     Qwen_7b_chat      |  QLORA   |       |
-|   Qwen1_5-0_5B-Chat   | 全量微调 |       |
-|  Baichuan2_13B_chat   |  QLORA   |       |
-|      ChatGLM3_6B      |   LORA   |       |
-| DeepSeek MoE_16B_chat |  QLORA   |       |
-| Mixtral 8x7B_instruct |  QLORA   |       |
-|          ……           |    ……    |  ……   |
+|  InternLM2_1_8B_chat  | 全量微调 |                                                                                                          |
+|  InternLM2_20B_chat   |   LORA   |                                                                                                          |
+|     Qwen_7b_chat      |  QLORA   |                                                                                                          |
+|   Qwen1_5-0_5B-Chat   | 全量微调 |                                                                                                          |
+|  Baichuan2_13B_chat   |  QLORA   |                                                                                                          |
+|      ChatGLM3_6B      |   LORA   |                                                                                                          |
+| DeepSeek MoE_16B_chat |  QLORA   |                                                                                                          |
+| Mixtral 8x7B_instruct |  QLORA   |                                                                                                          |
+|          ……           |    ……    |                                                    ……                                                    |
 
 </div>
 
@@ -76,32 +76,23 @@
 - 预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
-<table>
-    <tr>
-        <td align="center">
-            <a href=" ">
-                <img src="assets\aiwei_demo.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
-            </a >
-        </td>
-        <td align="center">
-            <a href=" ">
-                <img src="assets\aiwei_demo3.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
-            </a >
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <a href=" ">
-                <img src="assets\aiwei_demo2.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
-            </a >
-        </td>
-        <td align="center">
-            <a href=" ">
-                <img src="assets\aiwei_demo4.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
-            </a >
-        </td>
-    </tr>
-</table>
+<div style="display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;">
+    <div style="border: 1px solid #ccc;">
+        <img src="assets\aiwei_demo.gif" alt="占位图" style="display: block">
+    </div>
+    <div style="border: 1px solid #ccc;">
+        <img src="assets\aiwei_demo2.gif" alt="占位图" style="display: block">
+    </div>
+    <div style="border: 1px solid #ccc;">
+        <img src="assets\aiwei_demo3.gif" alt="占位图" style="display: block">
+    </div>
+    <div style="border: 1px solid #ccc;">
+        <img src="assets\aiwei_demo4.gif" alt="占位图" style="display: block">
+    </div>
+</div>
 
 ### 🎇最近更新
 
