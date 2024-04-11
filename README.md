@@ -79,18 +79,26 @@
 <div style="display: grid; 
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            gap: 10px;">
-    <div style="border: 1px solid #ccc;">
-        <img src="assets\aiwei_demo.gif" alt="占位图" style="display: block">
+            gap: 5px;">
+    <div style="display: flex;
+                align-items: center;
+                justify-content: center;">
+        <img src="assets\aiwei_demo.gif" alt="占位图" style="max-height: 70%; max-width: 70%">
     </div>
-    <div style="border: 1px solid #ccc;">
-        <img src="assets\aiwei_demo2.gif" alt="占位图" style="display: block">
+    <div style="display: flex;
+                align-items: center;
+                justify-content: center;">
+        <img src="assets\aiwei_demo2.gif" alt="占位图" style="max-height:70%; max-width: 70%">
     </div>
-    <div style="border: 1px solid #ccc;">
-        <img src="assets\aiwei_demo3.gif" alt="占位图" style="display: block">
+    <div style="display: flex;
+                align-items: center;
+                justify-content: center;">
+        <img src="assets\aiwei_demo3.gif" alt="占位图" style="max-height:70%; max-width: 70%">
     </div>
-    <div style="border: 1px solid #ccc;">
-        <img src="assets\aiwei_demo4.gif" alt="占位图" style="display: block">
+    <div style="display: flex;
+                align-items: center;
+                justify-content: center;">
+        <img src="assets\aiwei_demo4.gif" alt="占位图" style="max-height:70%; max-width: 70%">
     </div>
 </div>
 
