@@ -50,7 +50,7 @@
 | :-------------------: | :--------------: | :---: |
 |   InternLM2_7B_chat   |      QLORA       |       |
 |   InternLM2_7B_chat   | full fine-tuning |       |
-|   InternLM2_7B_base   |      QLORA       |       |
+|   InternLM2_7B_base   |      QLORA       |[internlm2_7b_base_qlora_e10_M_1e4_32_64.py](./xtuner_config/internlm2_7b_base_qlora_e10_M_1e4_32_64.py)|
 |  InternLM2_1_8B_chat  | full fine-tuning |       |
 |  InternLM2_20B_chat   |       LORA       |       |
 |     Qwen_7b_chat      |      QLORA       |       |
@@ -109,7 +109,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 ### Recent Updates
 - 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Daddy-like Boy-Friend] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/68787)
-- 【2024.3.24】 The InternLM2-Base-7B QLoRA fine-tuned model has been released on the OpenXLab and ModelScope platforms. For more details, please refer to [InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md).
+- 【2024.3.24】 The **InternLM2-Base-7B QLoRA fine-tuned model** has been released on the **OpenXLab** and **ModelScope** platforms. For more details, please refer to [**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md).
 - 【2024.3.12】 [aiwei] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/63335)
 - 【2024.3.11】 **EmoLLM V2.0 is greatly improved in all scores compared to EmoLLM V1.0. Surpasses the performance of Role-playing ChatGPT on counseling tasks!** [Click to experience EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0), update [dataset statistics and details](./datasets/), [Roadmap](./assets/Roadmap_ZH.png)
 - 【2024.3.9】 Add concurrency acceleration [QA pair generation](./scripts/qa_generation/), [RAG pipeline](./rag/)
@@ -171,11 +171,11 @@ The Model aims to fully understand and promote the mental health of individuals,
   - [Contents](#contents)
           - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
           - [**User Guide**](#user-guide)
-    - [File Directory Explanation](#file-directory-explanation)
-    - [Data Construction](#data-construction)
-    - [Fine-tuning Guide](#fine-tuning-guide)
-    - [Deployment Guide](#deployment-guide)
-    - [RAG (Retrieval Augmented Generation) Pipeline](#rag-retrieval-augmented-generation-pipeline)
+    - [🍪Quick start](#quick-start)
+    - [📌Data Construction](#data-construction)
+    - [🎨Fine-tuning Guide](#fine-tuning-guide)
+    - [🔧Deployment Guide](#deployment-guide)
+    - [⚙RAG (Retrieval Augmented Generation) Pipeline](#rag-retrieval-augmented-generation-pipeline)
     - [Frameworks Used](#frameworks-used)
       - [How to participate in this project](#how-to-participate-in-this-project)
     - [Version control](#version-control)
@@ -199,41 +199,33 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
 
 1. Read in sequence or read sections you're interested in：
-   - [File Directory Explanation](#file-directory-explanation)
+   - [Quick Start](#quick-start)
    - [Data Construction](#data-construction)
    - [Fine-tuning Guide](#fine-tuning-guide)
    - [Deployment Guide](#deployment-guide)
+   - [RAG](#rag-retrieval-augmented-generation-pipeline)
    - View More Details
 
-### File Directory Explanation
 
-```
-├─assets: Image Resources
-├─datasets: Dataset
-├─demo: demo scripts
-├─generate_data: Data Generation Guide
-│  └─xinghuo
-├─scripts: Some Available Tools
-└─xtuner_config：Fine-tuning Guide
-    └─images
-```
+### 🍪Quick start
+- Please read [Quick Start](docs/quick_start_EN.md) to see.
 
-### Data Construction
+### 📌Data Construction
 
 - Please read the [Data Construction Guide ](generate_data/tutorial_EN.md)for reference.
 
 - The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
-### Fine-tuning Guide
+### 🎨Fine-tuning Guide
 
 For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 
-### Deployment Guide
+### 🔧Deployment Guide
 
 - Demo deployment: see [deployment guide](./demo/README_EN.md) for details.
 - Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy_EN.md)
 
-### RAG (Retrieval Augmented Generation) Pipeline
+### ⚙RAG (Retrieval Augmented Generation) Pipeline
 
 - See [RAG](./rag/)
 
@@ -307,6 +299,7 @@ The project is licensed under the MIT License. Please refer to the details
 - [Vanin](https://github.com/vansin)
 - [Bloom up (WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 - Abu (M.A. in Psychology, Peking University)
+- [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
 

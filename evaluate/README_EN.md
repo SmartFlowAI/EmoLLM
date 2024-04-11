@@ -19,3 +19,5 @@
 |       Model       |    Comprehensiveness  |   rofessionalism  |  Authenticity   | Safety  |
 |-------------------|-----------------------|-------------------|-----------------|---------|
 | InternLM2_7B_chat_qlora |      1.32       |        2.20       |      2.10       | 1.00    |
+| InternLM2_7B_chat_full  |      1.40       |        2.45       |      2.24       | 1.00    |
+| InternLM2_20B_chat_lora |      1.42       |        2.39       |      2.22       | 1.00    |

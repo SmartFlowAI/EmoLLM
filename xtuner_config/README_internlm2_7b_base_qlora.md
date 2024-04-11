@@ -2,25 +2,37 @@
 
 ## 模型基座与配置文件
 
-- 本项目在[**internlm2_7b_chat_qlora_e3**模型](./internlm2_7b_chat_qlora_e3.py)微调[指南](./README.md)的基础上，更新了对[**internlm2_7b_base_qlora_e3（配置文件）**](./internlm2_7b_base_qlora_e10_M_1e4_32_64.py)**模型**的微调。
+- 本项目在XTuner项目所提供的[**internlm2_7b_chat_qlora_e3**模型配置文件](./internlm2_7b_chat_qlora_e3.py)和在[EmoLLM模型微调指南](./README.md)的基础上，创建和更新了对**InternLM2_7B_base模型**在[EmoLLM通用数据集](../datasets/README.md)上进行QLoRA微调训练，配置文件详见[**internlm2_7b_base_qlora_e10_M_1e4_32_64.py**](./internlm2_7b_base_qlora_e10_M_1e4_32_64.py)。
+- 为了用户可以根据自己不同的硬件配置进行复现和微调训练，EmoLLM也提供了其他的配置文件以满足不同的配置需求。
+  - [internlm2_7b_base_qlora_e10_b8_16_32.py](./internlm2_7b_base_qlora_e10_b8_16_32.py)
+  - [internlm2_7b_base_qlora_e3_M_1e4_32_64.py](./internlm2_7b_base_qlora_e3_M_1e4_32_64.py)
 
 ## 模型公布和训练epoch数设置
 
-- 由于采用了合并后的数据集，我们对选用的internlm2_7b_base模型进行了**10 epoch**的训练，读者可以根据训练过程中的输出和loss变化，进行训练的终止和模型的挑选，也可以采用更加专业的评估方法，来对模型评测。
+- 由于采用了合并后的数据集，我们对选用的InternLM2_7B_base模型进行了**10 epoch**的训练，读者可以根据训练过程中的输出和loss变化，进行训练的终止和模型的挑选，也可以采用更加专业的评估方法，来对模型评测。
 
-- 在我们公布的internlm2_7b_base_qlora微调模型时，也分别在OpenXLab和ModelScope中提供了两个不同的权重版本供用户使用和测试，更多专业测评结果将会在近期更新， 敬请期待。
+- 在我们公布的InternLM2_7B_base QLoRA微调模型时，也分别在OpenXLab和ModelScope中提供了两个不同的权重版本供用户使用和测试，更多专业测评结果将会在近期更新，敬请期待。
 
-- **OpenXLab**：
-  - [5 epoch 模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base)
-  - [10 epoch 模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base-10e)
-  
-- **ModelScope**：
-  - [5 epoch 模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base/files)
-  - [10 epoch 模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/files)
+  - **OpenXLab**：
+    - [5 epoch 模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base)
+    - [10 epoch 模型](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base-10e)
+  - **ModelScope**：
+    - [5 epoch 模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base/files)
+    - [10 epoch 模型](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/files)
+
+- 目前EmoLLM团队已经采用**通用指标**评估了QLoRA微调训练的InternLM2_7B_base模型（包括5 epoch 模型和10 epoch 模型），结果如下表所示，可以看到10 epoch QLoRA微调训练的InternLM2_7B_base模型通用指标已经超过其他模型，我们将近期更新在心理咨询专业指标上的评测结果。更多评测详情请查看[通用测评结果页面（General_evaluation.md）](../evaluate/General_evaluation.md)和[测评目录README](../evaluate/README.md).
+
+| Model    | ROUGE-1 | ROUGE-2 | ROUGE-L | BLEU-1  | BLEU-2  | BLEU-3  | BLEU-4  |
+|----------|---------|---------|---------|---------|---------|---------|---------|
+| Qwen1_5-0_5B-chat | 27.23%  | 8.55%   | 17.05%  | 26.65%  | 13.11%  | 7.19%   | 4.05%   |
+| InternLM2_7B_chat_qlora | 37.86%  | 15.23%   | 24.34%  | 39.71%  | 22.66%  | 14.26%   | 9.21%   |
+| InternLM2_7B_chat_full  | 32.45%  | 10.82%   | 20.17%  | 30.48%  | 15.67%  | 8.84%   | 5.02%   |
+| InternLM2_7B_base_qlora_5epoch  | 41.94%  | 20.21%   | 29.67%  | 42.98%  | 27.07%  | 19.33%   | 14.62%   |
+| **InternLM2_7B_base_qlora_10epoch** | **43.47%** | **22.06%**   | **31.4%**  | **44.81%**  | **29.15%**  | **21.44%**   | **16.72%**   |
 
 ### 超参数设置
 
-训练config设置详情，请查看[**internlm2_7b_base_qlora_e3（配置文件）**](./internlm2_7b_base_qlora_e10_M_1e4_32_64.py)，这里我们只列出了关键的超参数或者我们做过调整的超参数。
+训练config设置详情，请查看[**`internlm2_7b_base_qlora_e10_M_1e4_32_64.py`（配置文件）**](./internlm2_7b_base_qlora_e10_M_1e4_32_64.py)，这里我们只列出了关键的超参数或者我们做过调整的超参数。
 
 ```python
 prompt_template = PROMPT_TEMPLATE.internlm2_chat
