@@ -76,31 +76,24 @@
 - 预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
-<div style="display: grid; 
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 5px;">
-    <div style="display: flex;
-                align-items: center;
-                justify-content: center;">
-        <img src="assets\aiwei_demo.gif" alt="占位图" style="max-height: 70%; max-width: 70%">
-    </div>
-    <div style="display: flex;
-                align-items: center;
-                justify-content: center;">
-        <img src="assets\aiwei_demo2.gif" alt="占位图" style="max-height:70%; max-width: 70%">
-    </div>
-    <div style="display: flex;
-                align-items: center;
-                justify-content: center;">
-        <img src="assets\aiwei_demo3.gif" alt="占位图" style="max-height:70%; max-width: 70%">
-    </div>
-    <div style="display: flex;
-                align-items: center;
-                justify-content: center;">
-        <img src="assets\aiwei_demo4.gif" alt="占位图" style="max-height:70%; max-width: 70%">
-    </div>
-</div>
+<table>
+    <tr>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+        </td>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo2.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo3.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+        </td>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo4.gif" alt="占位图" style="max-height:70%; max-width: 70%">
+        </td>
+    </tr>
+</table>
 
 ### 🎇最近更新
 
