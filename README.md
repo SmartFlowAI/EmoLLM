@@ -75,33 +75,32 @@
 - 心理韧性：指个体在面对逆境时的恢复力和适应能力。心理韧性强的人更能够从挑战中恢复，并从中学习和成长。
 - 预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
-  
 
 <table>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="assets/aiwei_demo1.gif" width="80%;" hight="80%;" alt="placeholder-image">
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="assets/aiwei_demo2.gif" width="80%;" hight="80%;" alt="placeholder-image">
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="assets/aiwei_demo3.gif" width="80%;" hight="80%;" alt="placeholder-image">
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="assets/aiwei_demo4.gif" width="80%;" hight="80%;" alt="placeholder-image">
-      </a>
-    </td>
-  </tr>
+    <tr>
+        <td align="center">
+            <a href=" ">
+                <img src="assets\aiwei_demo.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
+            </a >
+        </td>
+        <td align="center">
+            <a href="#">
+                <img src="assets\aiwei_demo2.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
+            </a >
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="#">
+                <img src="assets\aiwei_demo3.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
+            </a >
+        </td>
+        <td align="center">
+            <a href="#">
+                <img src="assets\aiwei_demo4.gif" width="80%" height="80%" alt="占位图" style="border: none; outline: none;">
+            </a >
+        </td>
+    </tr>
 </table>
 
 ### 🎇最近更新
@@ -273,6 +272,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |         [SantiagoTOP](https://github.com/santiagoTOP)         |                太原理工大学在读硕士                |                                                                      |                                               |
 |         [zealot52099](https://github.com/zealot52099)         |                     个人开发者                     |                                                                      |            清洗数据、LLM微调、RAG             |
 |             [wwwyfff](https://github.com/wwwyfff)             |                  复旦大学在读硕士                  |                                                                      |                                               |
+|            [Yicooong](https://github.com/Yicooong)            |                  南开大学在读硕士                  |                                                                      |                                               |
 |             [jkhumor](https://github.com/jkhumor)             |                  南开大学在读硕士                  |                                                                      |                      RAG                      |
 |        [lll997150986](https://github.com/lll997150986)        |                  南开大学在读硕士                  |                                                                      |                     微调                      |
 |           [nln-maker](https://github.com/nln-maker)           |                  南开大学在读硕士                  |                                                                      |                  前后端开发                   |
