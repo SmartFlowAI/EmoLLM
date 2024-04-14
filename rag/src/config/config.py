@@ -20,6 +20,7 @@ knowledge_json_path = os.path.join(data_dir, 'knowledge.json')      # json
 knowledge_pkl_path = os.path.join(data_dir, 'knowledge.pkl')        # pkl
 doc_dir = os.path.join(data_dir, 'txt')   
 qa_dir = os.path.join(data_dir, 'json')   
+cloud_vector_db_dir = os.path.join(base_dir, 'EmoLLMRAGTXT')
 
 # log
 log_dir = os.path.join(base_dir, 'log')                             # log
@@ -30,13 +31,13 @@ chunk_size=1000
 chunk_overlap=100
 
 # vector DB
-vector_db_dir = os.path.join(data_dir, 'vector_db')
+vector_db_dir = os.path.join(cloud_vector_db_dir, 'vector_db')
 
 # RAG related
 # select num: 代表rerank 之后选取多少个 documents 进入 LLM
 # retrieval num： 代表从 vector db 中检索多少 documents。（retrieval num 应该大于等于 select num）
 select_num = 3
-retrieval_num = 10
+retrieval_num = 3
 
 # LLM key
 glm_key = ''

@@ -4,7 +4,7 @@ import os
 
 from loguru import logger
 from langchain_community.vectorstores import FAISS
-from config.config import (
+from rag.src.config.config import (
     embedding_path,
     embedding_model_name,
     doc_dir, qa_dir,
@@ -19,7 +19,6 @@ from config.config import (
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.document_loaders import DirectoryLoader
 from langchain_core.documents.base import Document
 from FlagEmbedding import FlagReranker
 
@@ -199,7 +198,7 @@ class Data_process():
         创建并保存向量库
         '''
         logger.info(f'Creating index...')
-        #split_doc = self.split_document(doc_dir)
+        split_doc = self.split_document(doc_dir)
         split_qa = self.split_conversation(qa_dir)
         # logger.info(f'split_doc == {len(split_doc)}')
         # logger.info(f'split_qa == {len(split_qa)}')
@@ -218,7 +217,7 @@ class Data_process():
         if not os.path.exists(vector_db_dir) or not os.listdir(vector_db_dir):
             db = self.create_vector_db(emb_model)
         else:
-            db = FAISS.load_local(vector_db_dir, emb_model, allow_dangerous_deserialization=True)
+            db = FAISS.load_local(vector_db_dir, emb_model)
         return db
     
 if __name__ == "__main__":

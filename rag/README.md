@@ -56,6 +56,12 @@ JSON 数据格式如下
 会根据准备的数据构建vector DB，最终会在 data 文件夹下产生名为 vector_db 的文件夹包含 index.faiss 和 index.pkl
 
 如果已经有 vector DB 则会直接加载对应数据库
+**注意**: 可以直接从 xlab 下载对应 DB（请在rag文件目录下执行对应 code）
+```python
+# https://openxlab.org.cn/models/detail/Anooyman/EmoLLMRAGTXT/tree/main
+git lfs install
+git clone https://code.openxlab.org.cn/Anooyman/EmoLLMRAGTXT.git
+```
 
 
 ### 配置 config 文件
