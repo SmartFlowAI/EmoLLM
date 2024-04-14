@@ -10,6 +10,7 @@ logs/
 *.jsonl
 *.json
 *.txt
+localFile/
 # ./generate_data/*.josnl
 # ./generate_data/*/*/*.josnl
 

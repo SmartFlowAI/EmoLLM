@@ -2,7 +2,7 @@
 
 * Category of dataset: **General** and **Role-play**
 * Type of data: **QA** and **Conversation**
-* Summary: General(**6 datasets**), Role-play(**3 datasets**)
+* Summary: General(**6 datasets**), Role-play(**5 datasets**)
 
  ## Category
 * **General**: generic dataset, including psychological Knowledge, counseling technology, etc.
@@ -17,14 +17,16 @@
 |   Category  |        Dataset        |     Type     |  Total  |
 | :---------: | :-------------------: | :----------: | :-----: |
 |  *General*  |         data          | Conversation |  5600+  |
-|  *General*  |       data_pro        | Conversation | 36500+  |
+|  *General*  |       data_pro        | Conversation | 36,500+ |
 |  *General*  | multi_turn_dataset_1  | Conversation | 36,000+ |
 |  *General*  | multi_turn_dataset_2  | Conversation | 27,000+ |
-|  *General*  | single_turn_dataset_1 |      QA      | 14000+  |
-|  *General*  | single_turn_dataset_2 |      QA      | 18300+  |
+|  *General*  | single_turn_dataset_1 |      QA      | 14,000+ |
+|  *General*  | single_turn_dataset_2 |      QA      | 18,300+ |
 | *Role-play* |         aiwei         | Conversation |  4000+  |
-| *Role-play* |       SoulStar        |      QA      | 11200+  |
+| *Role-play* |       SoulStar        |      QA      | 11,200+ |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
+| *Role-play* |        mother         | Conversation | 40,300+ |
+| *Role-play* |       scientist       | Conversation | 28,400+ |
 |     ……      |          ……           |      ……      |   ……    |
 
 
@@ -41,6 +43,8 @@
 * dataset `aiwei` from this repo
 * dataset `tiangou` from this repo
 * dataset `SoulStar` from [SoulStar](https://github.com/Nobody-ML/SoulStar)
+* dataset `mother` from this repo
+* dataset `scientist` from this repo
 
 **Dataset Deduplication**：
 Combine absolute matching with fuzzy matching (Simhash) algorithms to deduplicate the dataset, thereby enhancing the effectiveness of the fine-tuning model. While ensuring the high quality of the dataset, the risk of losing important data due to incorrect matches can be reduced via adjusting the threshold.

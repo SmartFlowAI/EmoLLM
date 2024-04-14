@@ -117,6 +117,20 @@ def save_to_file(storage_jsonl_path, storage_list):
         for item in storage_list:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
 
+import time
+import os
+
+def safe_remove(file_path, max_attempts=5, delay=1):
+    for attempt in range(max_attempts):
+        try:
+            os.remove(file_path)
+            print(f"File {file_path} successfully deleted.")
+            break
+        except PermissionError as e:
+            print(f"Attempt {attempt+1}: Unable to delete {file_path} - {str(e)}")
+            time.sleep(delay)
+    else:
+        print(f"Failed to delete {file_path} after {max_attempts} attempts.")
 
 """
 将并发产生的文件合并成为一个文件
@@ -131,5 +145,5 @@ def merge_sub_qa_generation(directory, storage_jsonl_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             for line in f:
                 file_contents.append(json.loads(line))
-            os.remove(file_path)
+            # safe_remove(file_path)
     save_to_file(storage_jsonl_path, file_contents)

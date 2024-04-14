@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/logo.jpeg" alt="Logo" width="30%">
+    <img src="assets/EmoLLM_transparent.png" alt="Logo" width="50%">
   </a>
 
 <div align="center">
@@ -44,20 +44,20 @@
 
 <div align="center">
 
-|         模型          |    类型    |
-| :-------------------: | :--------: |
-|   InternLM2_7B_chat   |   QLORA   |
-|   InternLM2_7B_chat   |  全量微调  |
-|   InternLM2_7B_base   |   QLORA   |
-|  InternLM2_1_8B_chat  |  全量微调  |
-|  InternLM2_20B_chat   |   LORA    |
-|     Qwen_7b_chat      |   QLORA   |
-|   Qwen1_5-0_5B-Chat   |  全量微调  |
-|  Baichuan2_13B_chat   |   QLORA   |
-|      ChatGLM3_6B      |   LORA    |
-| DeepSeek MoE_16B_chat |   QLORA   |
-| Mixtral 8x7B_instruct |   QLORA   |
-|          ……           |    ……     |
+|         模型          |   类型   |                                                   链接                                                   |
+| :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |
+|   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) |
+|   InternLM2_7B_chat   | 全量微调 | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  |
+|   InternLM2_7B_base   |  QLORA   | [internlm2_7b_base_qlora_e10_M_1e4_32_64.py](./xtuner_config/internlm2_7b_base_qlora_e10_M_1e4_32_64.py) |
+|  InternLM2_1_8B_chat  | 全量微调 |  [internlm2_1_8b_full_alpaca_e3.py](./xtuner_config/internlm2_1_8b_full_alpaca_e3.py)  |
+|  InternLM2_20B_chat   |   LORA   |      |
+|     Qwen_7b_chat      |  QLORA   |  [qwen_7b_chat_qlora_e3.py](./xtuner_config/qwen_7b_chat_qlora_e3.py) |
+|   Qwen1_5-0_5B-Chat   | 全量微调 |   [qwen1_5_0_5_B_full.py](./xtuner_config/qwen1_5_0_5_B_full.py) |
+|  Baichuan2_13B_chat   |  QLORA   |   [baichuan2_13b_chat_qlora_alpaca_e3.py](./xtuner_config/baichuan2_13b_chat_qlora_alpaca_e3.py) |
+|      ChatGLM3_6B      |   LORA   |   [chatglm3_6b_lora_alpaca_e3.py](./xtuner_config/chatglm3_6b_lora_alpaca_e3.py)  |
+| DeepSeek MoE_16B_chat |  QLORA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    |
+| Mixtral 8x7B_instruct |  QLORA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    |
+|          ……           |    ……    |                                                    ……                                                    |
 
 </div>
 
@@ -76,10 +76,30 @@
 - 预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
+<table>
+    <tr>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo.gif" alt="占位图">
+        </td>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo2.gif" alt="占位图">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo3.gif" alt="占位图">
+        </td>
+        <td align="center" style="background-color: transparent">
+            <img src="assets\aiwei_demo4.gif" alt="占位图">
+        </td>
+    </tr>
+</table>
+
 ### 🎇最近更新
 
+- 【2024.4.2】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】在百度飞桨平台发布[爹系男友心理咨询师](https://aistudio.baidu.com/community/app/68787)
-- 【2024.3.24】在OpenXLab和ModelScope平台发布InternLM2-Base-7B QLoRA微调模型, 具体请查看[InternLM2-Base-7B QLoRA](./xtuner_config/README_internlm2_7b_base_qlora.md)
+- 【2024.3.24】在**OpenXLab**和**ModelScope**平台发布**InternLM2-Base-7B QLoRA微调模型**, 具体请查看[**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md)
 - 【2024.3.12】在百度飞桨平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
 - 【2024.3.11】 **EmoLLM V2.0 相比 EmoLLM V1.0 全面提升，已超越 Role-playing ChatGPT 在心理咨询任务上的能力！**[点击体验EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)，更新[数据集统计及详细信息](./datasets/)、[路线图](./assets/Roadmap_ZH.png)
 - 【2024.3.9】 新增并发功能加速 [QA 对生成](./scripts/qa_generation/)、[RAG pipeline](./rag/)
@@ -117,7 +137,7 @@
   
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/Shusheng.jpg" alt="浦语挑战赛创新创意奖">
+    <img src="assets/Shusheng.png" alt="浦语挑战赛创新创意奖">
 </p>
 
 - 项目荣获公众号**NLP工程化**[推文宣传](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
@@ -129,7 +149,7 @@
     <img src="assets/Roadmap_ZH.png" alt="Roadmap_ZH">
   </a>
 
-### 🎯框架图
+### 🔗框架图
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
@@ -142,14 +162,15 @@
     - [🎇最近更新](#最近更新)
     - [🏆荣誉栏](#荣誉栏)
     - [🎯路线图](#路线图)
-    - [🎯框架图](#框架图)
+    - [🔗框架图](#框架图)
   - [目录](#目录)
           - [开发前的配置要求](#开发前的配置要求)
           - [**使用指南**](#使用指南)
-    - [数据构建](#数据构建)
-    - [微调指南](#微调指南)
-    - [部署指南](#部署指南)
-    - [RAG(检索增强生成)Pipeline](#rag检索增强生成pipeline)
+    - [🍪快速体验](#快速体验)
+    - [📌数据构建](#数据构建)
+    - [🎨微调指南](#微调指南)
+    - [🔧部署指南](#部署指南)
+    - [⚙RAG(检索增强生成)Pipeline](#rag检索增强生成pipeline)
     - [使用到的框架](#使用到的框架)
       - [如何参与本项目](#如何参与本项目)
     - [作者（排名不分先后）](#作者排名不分先后)
@@ -173,28 +194,35 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ```
 
 2. 依次阅读或者选择感兴趣的部分阅读：
+   - [快速体验](#快速体验)
    - [数据构建](#数据构建)
    - [微调指南](#微调指南)
    - [部署指南](#部署指南)
    - [RAG](#rag检索增强生成pipeline)
    - 查看更多详情
 
-### 数据构建
+
+### 🍪快速体验
+
+- 请阅读[快速体验](docs/quick_start.md)查阅
+
+
+### 📌数据构建
 
 - 请阅读[数据构建指南](generate_data/tutorial.md)查阅
 
 - 微调用到的数据集见[datasets](datasets/data.json)
 
-### 微调指南
+### 🎨微调指南
 
 详见[微调指南](xtuner_config/README.md)
 
-### 部署指南
+### 🔧部署指南
 
 - Demo部署：详见[部署指南](demo/README.md)
 - 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](./deploy/lmdeploy.md)
 
-### RAG(检索增强生成)Pipeline
+### ⚙RAG(检索增强生成)Pipeline
 
 - 详见[RAG](./rag/)
 
@@ -225,31 +253,33 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 作者（排名不分先后）
 
-|                                 用户名                                  |                       学校/组织                        |       备注       |    贡献     |
-|:--------------------------------------------------------------------:|:--------------------------------------------------:| :-------------------: |:---------:|
-|               [aJupyter](https://github.com/aJupyter)                |                      南开大学在读硕士                      | DataWhale成员 |   项目发起人   |
-|               [MING-ZCH](https://github.com/MING-ZCH)                |                    华中科技大学在读本科生                   | LLM x Psychology 研究者 |  项目联合负责人  |
-|             [jujimeizuo](https://github.com/jujimeizuo)              |                      江南大学在读硕士                      |  |           |
-|    [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr)     |                  哈尔滨工业大学（威海）在读本科生                  |  |           |
-|                 [8baby8](https://github.com/8baby8)                  |                     飞桨领航团区域主管                      | 文心大模型核心开发者 |           |
-|                 [zxazys](https://github.com/zxazys)                  |                      南开大学在读硕士                      |  |           |
-|       [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)        |                       swufe                        |  |           |
-|                [MrCatAI](https://github.com/MrCatAI)                 |                       AI搬用工                        |  |           |
-|                 [ZeyuBa](https://github.com/ZeyuBa)                  |                      自动化所在读硕士                      |  |           |
-|       [aiyinyuedejustin](https://github.com/aiyinyuedejustin)        |                    宾夕法尼亚大学在读硕士                     |  |           |
-|              [Nobody-ML](https://github.com/Nobody-ML)               |                  中国石油大学（华东）在读本科生                   |  |           |
-|                [chg0901](https://github.com/chg0901)                 | [MiniSora](https://github.com/mini-sora/minisora/) |[MiniSora](https://github.com/mini-sora/minisora/)主要维护者，管理员| LLM预训练和微调、模型上传、数据清洗、文档翻译 |
-|                 [Mxoder](https://github.com/Mxoder)                  |                   北京航空航天大学在读本科生                    |  |           |
-|               [Anooyman](https://github.com/Anooyman)                |                      南京理工大学硕士                      |  |           |
-|             [Vicky-3021](https://github.com/Vicky-3021)              |                   西安电子科技大学硕士（研0）                   |  |           |
-|            [SantiagoTOP](https://github.com/santiagoTOP)             |                     太原理工大学在读硕士                     | |           |
-|            [zealot52099](https://github.com/zealot52099)             |                       AI搬用工                        | | 清洗数据、RAG  |
-|                [wwwyfff](https://github.com/wwwyfff)                 |                      复旦大学在读硕士                      | ||
-|                [jkhumor](https://github.com/jkhumor)                 |                      南开大学在读硕士                      | |    RAG    |
-|       [lll997150986](https://github.com/lll997150986)                |                      南开大学在读硕士                      | |    微调     |
-| [nln-maker](https://github.com/nln-maker) | 南开大学在读硕士 | | 前后端开发 |   
-| [dream00001](https://github.com/dream00001) | 南开大学在读硕士 | | 前后端开发 | 
-
+|                            用户名                             |                     学校/组织                      |                                 备注                                 |                     贡献                      |
+| :-----------------------------------------------------------: | :------------------------------------------------: | :------------------------------------------------------------------: | :-------------------------------------------: |
+|            [aJupyter](https://github.com/aJupyter)            |                  南开大学在读硕士                  |                            DataWhale成员                             |                  项目发起人                   |
+|            [MING-ZCH](https://github.com/MING-ZCH)            |               华中科技大学在读本科生               |                       LLM x Psychology 研究者                        |                项目联合负责人                 |
+|          [jujimeizuo](https://github.com/jujimeizuo)          |                  江南大学在读硕士                  |                                                                      |                                               |
+| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |          哈尔滨工业大学（威海）在读本科生          |                                                                      |                                               |
+|              [8baby8](https://github.com/8baby8)              |                 飞桨领航团区域主管                 |                         文心大模型核心开发者                         |                                               |
+|              [zxazys](https://github.com/zxazys)              |                  南开大学在读硕士                  |                                                                      |                                               |
+|    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |                       swufe                        |                                                                      |                                               |
+|             [MrCatAI](https://github.com/MrCatAI)             |                      AI搬用工                      |                                                                      |                                               |
+|              [ZeyuBa](https://github.com/ZeyuBa)              |                  自动化所在读硕士                  |                                                                      |                                               |
+|    [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |               宾夕法尼亚大学在读硕士               |                                                                      |                                               |
+|           [Nobody-ML](https://github.com/Nobody-ML)           |           中国石油大学（华东）在读本科生           |                                                                      |                                               |
+|             [chg0901](https://github.com/chg0901)             | [MiniSora](https://github.com/mini-sora/minisora/) | [MiniSora](https://github.com/mini-sora/minisora/)主要维护者，管理员 | LLM预训练和微调、模型上传、数据清洗、文档翻译 |
+|              [Mxoder](https://github.com/Mxoder)              |             北京航空航天大学在读本科生             |                                                                      |                                               |
+|            [Anooyman](https://github.com/Anooyman)            |                  南京理工大学硕士                  |                                                                      |                                               |
+|          [Vicky-3021](https://github.com/Vicky-3021)          |            西安电子科技大学硕士（研0）             |                                                                      |                                               |
+|         [SantiagoTOP](https://github.com/santiagoTOP)         |                太原理工大学在读硕士                |                                                                      |                                               |
+|         [zealot52099](https://github.com/zealot52099)         |                     个人开发者                     |                                                                      |            清洗数据、LLM微调、RAG             |
+|             [wwwyfff](https://github.com/wwwyfff)             |                  复旦大学在读硕士                  |                                                                      |                                               |
+|            [Yicooong](https://github.com/Yicooong)            |                  南开大学在读硕士                  |                                                                      |                                               |
+|             [jkhumor](https://github.com/jkhumor)             |                  南开大学在读硕士                  |                                                                      |                      RAG                      |
+|        [lll997150986](https://github.com/lll997150986)        |                  南开大学在读硕士                  |                                                                      |                     微调                      |
+|           [nln-maker](https://github.com/nln-maker)           |                  南开大学在读硕士                  |                                                                      |                  前后端开发                   |
+|          [dream00001](https://github.com/dream00001)          |                  南开大学在读硕士                  |                                                                      |                  前后端开发                   |
+|     [王几行XING](https://zhihu.com/people/brycewang1898)      |                  北京大学硕士毕业                  |                                                                      |         清洗数据、LLM微调、前后端开发         |
+|                            [思在]                             |            北京大学硕士毕业（微软美国）            |                                                                      |              LLM微调、前后端开发              |
 
 ### 版权说明
 
@@ -275,6 +305,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - [闻星大佬（小助手）](https://github.com/vansin)
 - [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
 - 阿布（北大心理学硕士）
+- [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
 
