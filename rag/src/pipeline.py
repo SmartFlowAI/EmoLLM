@@ -2,8 +2,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from transformers.utils import logging
 
-from data_processing import Data_process
-from config.config import prompt_template 
+from rag.src.data_processing import Data_process
+from rag.src.config.config import prompt_template 
 logger = logging.get_logger(__name__)
 
 
@@ -48,19 +48,19 @@ class EmoLLMRAG(object):
             ouput: 检索后并且 rerank 的内容        
         """
     
-        content = ''
+        content = []
         documents = self.vectorstores.similarity_search(query, k=self.retrieval_num)
 
         for doc in documents:
-            content += doc.page_content
+            content.append(doc.page_content)
 
         # 如果需要rerank，调用接口对 documents 进行 rerank
         if self.rerank_flag:
             documents, _ = self.data_processing_obj.rerank(documents, self.select_num)
 
-            content = ''
+            content = []
             for doc in documents:
-                content += doc
+                content.append(doc)
         logger.info(f'Retrieval data: {content}')
         return content
     
