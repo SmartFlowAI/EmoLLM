@@ -11,4 +11,3 @@ elif model == "EmoLLM_Model":
     os.system('streamlit run web_internlm2.py --server.address=0.0.0.0 --server.port 7860')
 else:
     print("Please select one model")
-
