@@ -12,6 +12,7 @@ import copy
 import os
 import warnings
 from dataclasses import asdict, dataclass
+from rag.src.pipeline import EmoLLMRAG
 from typing import Callable, List, Optional
 
 import streamlit as st
@@ -188,8 +189,9 @@ robot_prompt = "<|im_start|>assistant\n{robot}<|im_end|>\n"
 cur_query_prompt = "<|im_start|>user\n{user}<|im_end|>\n<|im_start|>assistant\n"
 
 
-def combine_history(prompt):
+def combine_history(prompt, retrieval_content=''):
     messages = st.session_state.messages
+    prompt = f"你需要根据以下从书本中检索到的专业知识:`{retrieval_content}`。从一个心理专家的专业角度来回答后续提问：{prompt}"
     meta_instruction = (
         "你是一个由aJupyter、Farewell、jujimeizuo、Smiling&Weeping研发（排名按字母顺序排序，不分先后）、散步提供技术支持、上海人工智能实验室提供支持开发的心理健康大模型。现在你是一个心理专家，我有一些心理问题，请你用专业的知识帮我解决。"
     )
@@ -211,6 +213,7 @@ def main():
     # torch.cuda.empty_cache()
     print("load model begin.")
     model, tokenizer = load_model()
+    rag_obj = EmoLLMRAG(model)
     print("load model end.")
 
     user_avator = "assets/user.png"
@@ -232,9 +235,12 @@ def main():
     # Accept user input
     if prompt := st.chat_input("What is up?"):
         # Display user message in chat message container
+        retrieval_content = rag_obj.get_retrieval_content(prompt)
         with st.chat_message("user", avatar=user_avator):
             st.markdown(prompt)
-        real_prompt = combine_history(prompt)
+            #st.markdown(retrieval_content)
+
+        real_prompt = combine_history(prompt, retrieval_content)
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt, "avatar": user_avator})
 

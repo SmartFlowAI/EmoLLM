@@ -58,6 +58,14 @@ JSON 数据格式如下
 如果已经有 vector DB 则会直接加载对应数据库
 
 
+**注意**: 可以直接从 xlab 下载对应 DB（请在rag文件目录下执行对应 code）
+```python
+# https://openxlab.org.cn/models/detail/Anooyman/EmoLLMRAGTXT/tree/main
+git lfs install
+git clone https://code.openxlab.org.cn/Anooyman/EmoLLMRAGTXT.git
+```
+
+
 ### 配置 config 文件
 
 根据需要改写 config.config 文件：
