@@ -231,9 +231,11 @@ xtuner train llama3_8b_instruct_qlora_alpaca_e3_M.py --deepspeed deepspeed_zero2
 
 ### 500step打印
 
-![](https://cdn.nlark.com/yuque/0/2024/png/43035260/1713539298145-001f7e4d-ff2a-480a-8343-479dec79ae0a.png#averageHue=%230d131a&clientId=uc3565ceb-1d40-4&from=paste&id=ud6b548b1&originHeight=426&originWidth=720&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2d75814e-53d3-4abb-b01a-7479a26ebb1&title=)<br />添加图片注释，不超过 140 字（可选）
+![](https://cdn.nlark.com/yuque/0/2024/png/43035260/1713539298145-001f7e4d-ff2a-480a-8343-479dec79ae0a.png#averageHue=%230d131a&clientId=uc3565ceb-1d40-4&from=paste&id=ud6b548b1&originHeight=426&originWidth=720&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2d75814e-53d3-4abb-b01a-7479a26ebb1&title=)
 
 ### 训练完一个epoch之后
+
+![](https://cdn.nlark.com/yuque/0/2024/png/43035260/1713544767972-23325390-9c8c-4131-aa88-db100543ec26.png?x-oss-process=image%2Fformat%2Cwebp)
 
 ## 将得到的 PTH 模型转换为 HuggingFace 模型
 
