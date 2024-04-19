@@ -40,7 +40,7 @@ pack_to_max_length = True
 
 # batch_size = 8 # per_device
 # accumulative_counts = 2
-batch_size = 4 # per_device
+batch_size = 16 # per_device
 accumulative_counts = 1
 
 dataloader_num_workers = 0
