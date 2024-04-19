@@ -28,7 +28,7 @@ pretrained_model_name_or_path = '/root/models/LLM-Research/Meta-Llama-3-8B-Instr
 use_varlen_attn = False  # new
 
 # Data
-data_path = '/root/StableCascade/emollm2/EmoLLM/datasets/processed/combined_data.json'
+data_path = '../datasets/multi_turn_dataset_2.json'
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = 2048
 pack_to_max_length = True
