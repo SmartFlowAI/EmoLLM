@@ -269,13 +269,14 @@ from modelscope import snapshot_download
 import os
 
 # download model in openxlab
-download(model_repo='ajupyter/EmoLLM_internlm2_7b_full', 
-        output='ajupyter/EmoLLM_internlm2_7b_full')
-model_name_or_path = 'ajupyter/EmoLLM_internlm2_7b_full'
+# download(model_repo='MrCat/Meta-Llama-3-8B-Instruct', 
+#        output='MrCat/Meta-Llama-3-8B-Instruct')
+# model_name_or_path = 'MrCat/Meta-Llama-3-8B-Instruct'
 
 # # download model in modelscope
-# model_name_or_path = snapshot_download('ajupyter/EmoLLM_internlm2_7b_full', 
-#                                        cache_dir='EmoLLM_internlm2_7b_full')
+# model_name_or_path = snapshot_download('LLM-Research/Meta-Llama-3-8B-Instruct', 
+#                                        cache_dir='LLM-Research/Meta-Llama-3-8B-Instruct')
+
 
 # offline model
 model_name_or_path = "/root/EmoLLM/xtuner_config/merged_Llama"
@@ -295,7 +296,7 @@ while True:
     input_text.replace(' ', '')
     if input_text == "exit":
         break
-    response, history = model.chat(tokenizer, input_text, history=messages)
+    response, history = model.generate(tokenizer, input_text, history=messages)
     messages.append((input_text, response))
     print(f"robot >>> {response}")
 ```
