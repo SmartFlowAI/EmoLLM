@@ -261,7 +261,7 @@ xtuner convert merge /root/models/LLM-Research/Meta-Llama-3-8B-Instruct ./hf_lla
 
 ## 测试
 
-在EmoLLM的demo文件夹下，创建`cli_Llama3.py`，注意，这里我们采用本地离线测试（offline model），在线测试可以上传模型到有关平台后，再下载测试
+在EmoLLM的demo文件夹下，创建`cli_Llama3.py`(文件修改自[社区分享](https://github.com/CrazyBoyM/llama3-Chinese-chat),感谢~)，注意，这里我们采用本地离线测试（offline model），在线测试可以上传模型到有关平台后，再下载测试
 
 ```python
 from transformers import AutoTokenizer, AutoConfig, AddedToken, AutoModelForCausalLM, BitsAndBytesConfig
