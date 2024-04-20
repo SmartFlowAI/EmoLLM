@@ -84,7 +84,7 @@ pip install -e '.[all]'
 
 ### 修改配置文件
 
-我们这里可以参照[EmoLLM](https://link.zhihu.com/?target=https%3A//github.com/SmartFlowAI/EmoLLM)的[README_internlm2_7b_base_qlora.md](https://link.zhihu.com/?target=https%3A//github.com/SmartFlowAI/EmoLLM/blob/main/xtuner_config/README_internlm2_7b_base_qlora.md)来进行修改
+我们这里可以参照[EmoLLM](https://link.zhihu.com/?target=https%3A//github.com/SmartFlowAI/EmoLLM)的[README_internlm2_7b_base_qlora.md](xtuner_config/README_internlm2_7b_base_qlora.md)来进行修改
 这里主要修改模型路径`pretrained_model_name_or_path` 和对话模板`prompt_template` ，将我们下载的Llama模型路径`Meta-Llama-3-8B-Instruct`和修改后的对话模板`llama3_chatM` 改到对应的位置即可
 
 ```python
@@ -164,7 +164,7 @@ SYSTEM = "你由EmoLLM团队打造的中文领域心理健康助手, 是一个�
 
 数据集介绍详见[EmoLLM](https://link.zhihu.com/?target=https%3A//github.com/SmartFlowAI/EmoLLM/)的[README_internlm2_7b_base_qlora.md](https://link.zhihu.com/?target=https%3A//github.com/SmartFlowAI/EmoLLM/blob/main/xtuner_config/README_internlm2_7b_base_qlora.md)和[datasets](https://link.zhihu.com/?target=https%3A//github.com/SmartFlowAI/EmoLLM/tree/main/datasets)
 
-训练用的数据来自[single_turn_dataset_2.json](datasets/single_turn_dataset_2.json)，被处理成多轮对话的形式，如
+训练用的数据与[README_internlm2_7b_base_qlora.md](xtuner_config/README_internlm2_7b_base_qlora.md)中使用的数据集完全相同, 用户可以只选择[multi_turn_dataset_2.json](datasets/multi_turn_dataset_2.json)外加自我认知数据集(待更新)才尝试训练, 或者采用[processed](datasets\processed)文件夹中的处理函数进行额外处理. 最终的训练数据是是对话的形式(可以包含多轮或者单轮)，如
 
 ```python
 [
