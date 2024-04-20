@@ -59,6 +59,7 @@
 |      ChatGLM3_6B      |   LORA   |   [chatglm3_6b_lora_alpaca_e3.py](./xtuner_config/chatglm3_6b_lora_alpaca_e3.py)  |
 | DeepSeek MoE_16B_chat |  QLORA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    |
 | Mixtral 8x7B_instruct |  QLORA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    |
+| LLaMA3_8b_instruct |  QLORA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py)    |
 |
 |          ……           |        ……        |  ……   |
 
@@ -100,6 +101,9 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ### Recent Updates
+ - [2024.4.20] [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) and based on [LLaMA3_8b_instruct's aiwei](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei) open source
+- [2023.4.14] Added [Quick Start](docs/quick_start_EN.md) and Nanny level tutorial [BabyEmoLLM](Baby_EmoLLM.ipynb)
+- [2024.4.2] Uploaded at Huggingface [Old Mother Counsellor](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Daddy-like Boy-Friend] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/68787)
 - 【2024.3.24】 The **InternLM2-Base-7B QLoRA fine-tuned model** has been released on the **OpenXLab** and **ModelScope** platforms. For more details, please refer to [**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md).
