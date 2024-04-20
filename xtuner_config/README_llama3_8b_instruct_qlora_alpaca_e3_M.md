@@ -101,7 +101,7 @@ prompt_template = PROMPT_TEMPLATE.llama3_chatM  # there is No internlm2_base
 #    type=process_hf_dataset,
 #    dataset=dict(type=load_dataset, path=alpaca_en_path),）
 
-data_path = '/root/StableCascade/emollm2/EmoLLM/datasets/processed/combined_data.json'
+data_path = '../datasets/multi_turn_dataset_2.json'
 alpaca_en = dict(
     type=process_hf_dataset,
     dataset=dict(type=load_dataset, path='json', data_files=dict(train=data_path)),）
