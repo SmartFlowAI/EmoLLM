@@ -29,8 +29,8 @@
 | *Role-play* |       scientist       | Conversation | 28,400+ |
 |     ……      |          ……           |      ……      |   ……    |
 
-
 ## Source
+
 **General**：
 * dataset `data` from this repo
 * dataset `data_pro` from this repo
@@ -46,7 +46,23 @@
 * dataset `mother` from this repo
 * dataset `scientist` from this repo
 
-**Dataset Deduplication**：
-Combine absolute matching with fuzzy matching (Simhash) algorithms to deduplicate the dataset, thereby enhancing the effectiveness of the fine-tuning model. While ensuring the high quality of the dataset, the risk of losing important data due to incorrect matches can be reduced via adjusting the threshold.
+## Dataset Deduplication
 
-https://algonotes.readthedocs.io/en/latest/Simhash.html
+Combine absolute matching with fuzzy matching (Simhash) algorithms to deduplicate the dataset, thereby enhancing the effectiveness of the fine-tuning model. While ensuring the high quality of the dataset, the risk of losing important data due to incorrect matches can be reduced by adjusting the threshold.
+
+### Simhash Algorithm Introduction
+
+Simhash is an algorithm used to detect similar or duplicate items in large amounts of data. It works by converting text into a set of numerical fingerprints that have a high degree of similarity for similar text. The Simhash algorithm is particularly effective for processing text data, especially when dealing with large amounts of data. Detailed introduction can be found in[Simhash](https://algonotes.readthedocs.io/en/latest/Simhash.html).
+
+### Simhash realization steps
+
+* Text preprocessing: Convert text data into a format suitable for Simhash processing. This may include word segmentation, stop word removal, stemming, etc.
+* Generate Simhash fingerprints: Apply the Simhash algorithm to the preprocessed text to generate a set of numerical fingerprints. Each fingerprint represents a hash of the text content.
+* Compare fingerprints: Identify duplicate or similar records by comparing the similarity of hash values. The characteristic of Simhash is that the generated hash values have a high degree of similarity even when the text has a small amount of difference.
+* Determine threshold: Set a similarity threshold. Only when the similarity of two fingerprints exceeds this threshold, they are considered to represent similar or duplicate records.
+* Process similar records: Records marked as similar can be further manually reviewed or automatically merged to eliminate duplication.
+
+### `deduplicate.py` Usage
+
+`deduplicate.py` is used to deduplicate the .json data named after the model in datasets (for example: 'datasets/qwen'), and output the deduplicated data to the `datasets/qwen/dedup` folder. See the code in the `datasets/processed` folder.
+
