@@ -57,6 +57,7 @@
 |      ChatGLM3_6B      |   LORA   |   [chatglm3_6b_lora_alpaca_e3.py](./xtuner_config/chatglm3_6b_lora_alpaca_e3.py)  |
 | DeepSeek MoE_16B_chat |  QLORA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    |
 | Mixtral 8x7B_instruct |  QLORA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    |
+| LLaMA3_8b_instruct |  QLORA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py)    |
 |          ……           |    ……    |                                                    ……                                                    |
 
 </div>
@@ -96,7 +97,8 @@
 </table>
 
 ### 🎇最近更新
-
+- 【2024.4.20】[LLAMA3微调指南](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)及基于[LLaMA3_8b_instruct的艾薇](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei)开源
+- 【2023.4.14】新增[快速开始](docs/quick_start.md)和保姆级教程[BabyEmoLLM](Baby_EmoLLM.ipynb)
 - 【2024.4.2】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】在百度飞桨平台发布[爹系男友心理咨询师](https://aistudio.baidu.com/community/app/68787)
 - 【2024.3.24】在**OpenXLab**和**ModelScope**平台发布**InternLM2-Base-7B QLoRA微调模型**, 具体请查看[**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md)
