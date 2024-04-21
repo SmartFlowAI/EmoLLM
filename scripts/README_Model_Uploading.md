@@ -72,8 +72,12 @@ OpenXLab浦源 内容平台 是面向 AI 研究员和开发者提供 AI 领域�
 ### 1. 安装git lfs
 
 ```bash
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh
-apt install git-lfs
+# 更好的方法
+conda install git-lfs
+
+# 旧方法
+# curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh
+# apt install git-lfs
 ```
 
 ### 2. 配置git和lfs
