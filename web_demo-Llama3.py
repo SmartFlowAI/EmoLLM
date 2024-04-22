@@ -25,14 +25,6 @@ if not os.path.isdir("model"):
     print("[ERROR] not find model dir")
     exit(0)
 
-online = True
-
-## running on local to test online function
-# if online:
-#     from openxlab.model import download
-#     download(model_repo='chg0901/EmoLLM-Llama3-8B-Instruct2.0', 
-#             output='model')
-
 @dataclass
 class GenerationConfig:
     # this config is used for chat to provide more diversity
@@ -188,8 +180,20 @@ def on_btn_click():
 
   
 #     return model, tokenizer
+
 @st.cache_resource
-def load_model(model_name_or_path, load_in_4bit=False, adapter_name_or_path=None):
+def load_model():
+    model = AutoModelForCausalLM.from_pretrained("model", 
+                                                 device_map="auto", 
+                                                 trust_remote_code=True, 
+                                                 torch_dtype=torch.float16)
+    model = model.eval()
+    tokenizer = AutoTokenizer.from_pretrained("model", trust_remote_code=True)
+    return model, tokenizer
+
+
+@st.cache_resource
+def load_model0(model_name_or_path, load_in_4bit=False, adapter_name_or_path=None):
     if load_in_4bit:
         quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -281,33 +285,27 @@ def combine_history(prompt):
     return total_prompt
 
 
-def main(arg1=None):
+def main():
     
+    st.markdown("我在这里，准备好倾听你的心声了。", unsafe_allow_html=True)
+    model_name_or_path = 'model'
+    adapter_name_or_path = None
 
-    if online:
-        model_name_or_path = 'model'
-        adapter_name_or_path = None
-    else:
-        # model_name_or_path = "./xtuner_config/merged_Llama3_8b_instruct_e3"
-        # adapter_name_or_path = './xtuner_config/hf_llama3_e1_sc2'
-    
-        model_name_or_path = "./xtuner_config/merged_Llama3_8b_instruct_e1_sc"
-        adapter_name_or_path = None
-
-    # 若开启4bit推理能够节省很多显存，但效果可能下降
-    load_in_4bit = False # True  # 6291MiB
-    
     # torch.cuda.empty_cache()
     print('load model begin.')
     # 加载模型
     print(f'Loading model from: {model_name_or_path}')
     print(f'adapter_name_or_path: {adapter_name_or_path}')
     # model, tokenizer = load_model(arg1)
-    model, tokenizer = load_model(
-        arg1 if arg1 is not None else model_name_or_path,
-        load_in_4bit=load_in_4bit,
-        adapter_name_or_path=adapter_name_or_path
-        )
+    
+    model, tokenizer = load_model()
+    
+    # model, tokenizer = load_model(
+    #     # arg1 if arg1 is not None else model_name_or_path,
+    #     model_name_or_path,
+    #     load_in_4bit=load_in_4bit,
+    #     adapter_name_or_path=adapter_name_or_path
+    #     )
     model.eval()
     print('load model end.')
     
@@ -340,10 +338,6 @@ def main(arg1=None):
             'avatar': user_avator
         })
 
-    
-        # stop_token_id = tokenizer.encode('<|eot_id|>', add_special_tokens=True)
-        # assert len(stop_token_id) == 1
-        # stop_token_id = stop_token_id[0]
 
         with st.chat_message('robot', avatar=robot_avator):
             message_placeholder = st.empty()
@@ -368,11 +362,5 @@ def main(arg1=None):
         torch.cuda.empty_cache()
 
 
-if __name__ == '__main__':
-
-    if online:
-        main()
-    else:
-        import sys
-        arg1 = sys.argv[1]
-        main(arg1)
+if __name__ == "__main__":
+    main()
