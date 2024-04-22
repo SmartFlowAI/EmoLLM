@@ -13,6 +13,6 @@ elif model == "EmoLLM_Model":
 elif model == "Llama3_Model":
     os.system("python download_model.py chg0901/EmoLLM-Llama3-8B-Instruct2.0")
     # os.system('streamlit run web_demo-Llama3_online.py --server.address=0.0.0.0 --server.port 7860')
-    os.system('streamlit run web_demo-Llama3_online.py --server.address=0.0.0.0 --server.port 7968')
+    os.system('streamlit run web_demo-Llama3.py --server.address=0.0.0.0 --server.port 7968')
 else:
     print("Please select one model")

@@ -25,14 +25,6 @@ if not os.path.isdir("model"):
     print("[ERROR] not find model dir")
     exit(0)
 
-# online = True
-
-## running on local to test online function
-# if online:
-#     from openxlab.model import download
-#     download(model_repo='chg0901/EmoLLM-Llama3-8B-Instruct2.0', 
-#             output='model')
-
 @dataclass
 class GenerationConfig:
     # this config is used for chat to provide more diversity
@@ -298,19 +290,7 @@ def main():
     st.markdown("我在这里，准备好倾听你的心声了。", unsafe_allow_html=True)
     model_name_or_path = 'model'
     adapter_name_or_path = None
-    # if online:
-    #     model_name_or_path = 'model'
-    #     adapter_name_or_path = None
-    # else:
-    #     # model_name_or_path = "./xtuner_config/merged_Llama3_8b_instruct_e3"
-    #     # adapter_name_or_path = './xtuner_config/hf_llama3_e1_sc2'
-    
-    #     model_name_or_path = "./xtuner_config/merged_Llama3_8b_instruct_e1_sc"
-    #     adapter_name_or_path = None
 
-    # 若开启4bit推理能够节省很多显存，但效果可能下降
-    load_in_4bit = False # True  # 6291MiB
-    
     # torch.cuda.empty_cache()
     print('load model begin.')
     # 加载模型
