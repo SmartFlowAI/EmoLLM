@@ -346,5 +346,5 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - 如果失效，请移步Issue区
 
 <p align="center">
-  <img  width="30%" src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/55ecd0aa-4832-4269-ad57-4c26f9aa286b" alt="EmoLLM官方交流群">
+  <img  width="30%" src="https://private-user-images.githubusercontent.com/8240984/324394775-c8e83dac-9ed9-4a19-bb7f-b6bbedc109d9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM3NzYyOTIsIm5iZiI6MTcxMzc3NTk5MiwicGF0aCI6Ii84MjQwOTg0LzMyNDM5NDc3NS1jOGU4M2RhYy05ZWQ5LTRhMTktYmI3Zi1iNmJiZWRjMTA5ZDkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDQyMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDA0MjJUMDg1MzEyWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZTI4Y2E3MzI5YmJmZTUzYTFiNDU3YmNiZjZjMDgxYTMzZjQxMTJjMzU2MDQ3YjI1YzgyY2MzMjJhZmQ2ODgyYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.yfBwgthq3zvmWD2givTJl5w3SMm4O5BeEFwidgG1WpY" alt="EmoLLM官方交流群">
 </p>
