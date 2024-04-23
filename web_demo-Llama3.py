@@ -154,8 +154,8 @@ def load_model():
     model_name = "./EmoLLM-Llama3-8B-Instruct2.0"
     print(model_name)
 
-    print('pip install modelscope')
-    os.system(f'pip install modelscope')
+    print('pip install modelscope websockets')
+    os.system(f'pip install modelscope websockets==11.0.3')
     from modelscope import snapshot_download
 
     #模型下载
