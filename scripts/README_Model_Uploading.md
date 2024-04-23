@@ -225,7 +225,7 @@ ModelScope平台内的模型创建和OpenXLab, 这里不再赘述, 可以点击[
 
 ### 使用Python SDK上传模型
 
-可以使用modelscope modelhub来将已经训练好的模型上传到ModelScope平台, 
+可以使用modelscope HubApi来将已经训练好的模型上传到ModelScope平台,
 
 ModelScope的上传比OpenXLab简单不少, 在ModelScope社区网页创建对应模型之后，只需要**配置访问令牌(请从ModelScope`个人中心->访问令牌获取`)**, 然后将本地模型目录通过push_model接口进行上传即可.
 
@@ -234,13 +234,13 @@ ModelScope的上传比OpenXLab简单不少, 在ModelScope社区网页创建对�
 ```python
 from modelscope.hub.api import HubApi
 
-YOUR_ACCESS_TOKEN = '请从ModelScope个人中心->访问令牌获取'
+YOUR_ACCESS_TOKEN = '请从ModelScope个人中心->访问令牌获取(SDK 令牌)'
 
 api = HubApi()
 api.login(YOUR_ACCESS_TOKEN)
 api.push_model(
-    model_id="yourname/your_model_id", 
-    model_dir="my_model_dir" # 本地模型目录，要求目录中必须包含configuration.json
+    model_id="your_name/your_model_id", 
+    model_dir="your_model_model_dir" # 本地模型目录，要求目录中必须包含configuration.json
 )
 ```
 
