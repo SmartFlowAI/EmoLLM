@@ -10,4 +10,3 @@ tiktoken
 einops
 oss2
 requests
-websockets==11.0.3
