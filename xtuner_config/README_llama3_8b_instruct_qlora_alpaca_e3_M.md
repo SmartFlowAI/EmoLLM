@@ -11,16 +11,23 @@
 
 ## 更新
 
+|         模型          |训练方式|                                                   链接                                                   | 模型链接   |
+| :-------------------: | :----------: | :------------------------------------------------------------------------------------------------------: |:------: |
+| LLaMA3_8b_instruct2.0 |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct2.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct2.0/summary) |
+| LLaMA3_8b_instruct3.0 |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) |
+
 已经上传了最新的训练配置文件, 进行了些许改动, 训练数据中添加了85条自我认知数据和240条弱智吧数据.
 
 ### 更新的文件
 
-- 配置文件[llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM](./llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)
-- [弱智吧原始数据**ruozhiba_raw.jsonl**](../datasets/ruozhiba_raw.jsonl)
-- [弱智吧原始数据的Python处理文件**ruozhiba_raw_data_process.py**](../datasets/ruozhiba_raw_data_process.py)
-- [ruozhiba_raw_data_process.py处理之后的弱智吧数据**ruozhiba_format_emo.jsonl**](../datasets/processed/ruozhiba_format_emo.jsonl)
-- [数据集划分工具代码**split_dataset.py**](../datasets/split_dataset.py)
-- [调用split_dataset.py的示例代码**split_shuffle.py**](../datasets/split_shuffle.py)
+- 原始自我认知数据 [**self_cognition_EmoLLM.json**](../datasets/self_cognition_EmoLLM.json)(修改自[ChatGLM-Efficient-Tuning](https://github.com/hiyouga/ChatGLM-Efficient-Tuning/blob/main/data/self_cognition.json))
+- 处理后的符合对话格式的自我认知数据 [**processed_self_cognition_EmoLLM.json**](../datasets/processed/processed_self_cognition_EmoLLM.json)
+- 配置文件 [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)
+- 弱智吧原始数据 [**ruozhiba_raw.jsonl**](../datasets/ruozhiba_raw.jsonl)
+- 弱智吧原始数据的Python处理文件 [**ruozhiba_raw_data_process.py**](../datasets/ruozhiba_raw_data_process.py)
+- ruozhiba_raw_data_process.py处理之后的弱智吧数据 [**ruozhiba_format_emo.jsonl**](../datasets/processed/ruozhiba_format_emo.jsonl)
+- 数据集划分工具代码 [**split_dataset.py**](../datasets/split_dataset.py)
+- 调用split_dataset.py的示例代码 [**split_shuffle.py**](../datasets/split_shuffle.py)
 
 ### 更新的有关参考教程
 
