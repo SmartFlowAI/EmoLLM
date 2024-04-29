@@ -13,7 +13,7 @@ from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 
 
-warnings.filterwarnings("ignore")
+# warnings.filterwarnings("ignore")
 logger = logging.get_logger(__name__)
 
 
@@ -151,7 +151,7 @@ def on_btn_click():
 @st.cache_resource
 def load_model():
     
-    model_name = "./EmoLLM-Llama3-8B-Instruct2.0"
+    model_name = "./EmoLLM-Llama3-8B-Instruct3.0"
     print(model_name)
 
     print('pip install modelscope websockets')
@@ -159,7 +159,7 @@ def load_model():
     from modelscope import snapshot_download
 
     #模型下载
-    model_name = snapshot_download('chg0901/EmoLLM-Llama3-8B-Instruct2.0',cache_dir=model_name)
+    model_name = snapshot_download('chg0901/EmoLLM-Llama3-8B-Instruct3.0',cache_dir=model_name)
     print(model_name)
 
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", trust_remote_code=True, torch_dtype=torch.float16).eval()
