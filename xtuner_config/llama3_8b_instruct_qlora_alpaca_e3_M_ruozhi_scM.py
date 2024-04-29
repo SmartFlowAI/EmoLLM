@@ -28,7 +28,7 @@ pretrained_model_name_or_path = '/root/share/new_models/meta-llama/Meta-Llama-3-
 use_varlen_attn = True  # new
 
 # Data
-data_path = '/root/StableCascade/emollm2/EmoLLM/datasets/processed/combined_sc_ruozhi.jsonl'
+data_path = '../datasets/processed/combined_sc_ruozhi.jsonl'
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = 4096
 pack_to_max_length = True
