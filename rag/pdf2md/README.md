@@ -1,10 +1,12 @@
-## RAG pdf2md
+# PDF2MD for RAG
+
+## 使用api_key使用PDF2MD
 
 通过使用doc2x的库，实现将pdf文件转换为结构化md文档。
 
 通过代码调用(需要提供api_key)：
 
-~~~
+~~~python
 import requests as rq
 import json
 import os
@@ -87,6 +89,6 @@ if __name__ == "__main__":
     main()
 ~~~
 
-通过网页直接在线转：
+## 通过网页使用在线PDF2MD服务：
 
-在线网页地址：https://doc2x.noedgeai.com
+doc2x在线服务地址：https://doc2x.noedgeai.com
