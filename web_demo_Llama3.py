@@ -151,15 +151,15 @@ def on_btn_click():
 @st.cache_resource
 def load_model():
     
-    model_name = "./EmoLLM-Llama3-8B-Instruct3.0"
-    print(model_name)
+    model_name0 = "./EmoLLM-Llama3-8B-Instruct3.0"
+    print(model_name0)
 
     print('pip install modelscope websockets')
     os.system(f'pip install modelscope websockets==11.0.3')
     from modelscope import snapshot_download
 
     #模型下载
-    model_name = snapshot_download('chg0901/EmoLLM-Llama3-8B-Instruct3.0',cache_dir=model_name)
+    model_name = snapshot_download('chg0901/EmoLLM-Llama3-8B-Instruct3.0',cache_dir=model_name0)
     print(model_name)
 
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", trust_remote_code=True, torch_dtype=torch.float16).eval()
