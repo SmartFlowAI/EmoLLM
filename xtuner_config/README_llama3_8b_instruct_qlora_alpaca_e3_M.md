@@ -9,6 +9,27 @@
 - 修改Xtuner模型配置文件
 - 在EmoLLM项目上进行基于Xtuner进行QLoRA微调
 
+## 更新
+
+已经上传了最新的训练配置文件, 进行了些许改动, 训练数据中添加了85条自我认知数据和240条弱智吧数据.
+
+### 更新的文件
+
+- 配置文件[llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM](./llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)
+- [弱智吧原始数据**ruozhiba_raw.jsonl**](../datasets/ruozhiba_raw.jsonl)
+- [弱智吧原始数据的Python处理文件**ruozhiba_raw_data_process.py**](../datasets/ruozhiba_raw_data_process.py)
+- [ruozhiba_raw_data_process.py处理之后的弱智吧数据**ruozhiba_format_emo.jsonl**](../datasets/processed/ruozhiba_format_emo.jsonl)
+- [数据集划分工具代码**split_dataset.py**](../datasets/split_dataset.py)
+- [调用split_dataset.py的示例代码**split_shuffle.py**](../datasets/split_shuffle.py)
+
+### 更新的有关参考教程
+
+请参考以下知乎链接进行训练和测评
+
+- [[Llama3][InternLM2][RuoZhiBa][EmoLLM]**使用弱智吧数据微调Llama3-Instruct-8B模型**](https://zhuanlan.zhihu.com/p/694818596)
+- [[Llama3][EmoLLM][Minisora]**Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型**【V1】](https://zhuanlan.zhihu.com/p/693454096)
+- [[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B有关模型**](https://zhuanlan.zhihu.com/p/694922988)
+
 ## 模型和有关GitHub项目下载
 
 ### Llama-3-8B-Instruct模型下载
@@ -41,7 +62,7 @@ conda create -n llama python=3.10
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 
-### git clone xtuner-0.1.18.dev0
+### git clone XTuner-0.1.18
 
 ```python
 git clone https://github.com/InternLM/xtuner
@@ -68,7 +89,7 @@ llama3_chat=dict(
   3. 在双换行 \n\n 之后，消息的内容随之而来。每条消息的结尾由 <|eot_id|> 令牌标记。
 - Ref： [ArtificialZeng/llama3_explained](https://github.com/ArtificialZeng/llama3_explained)
 
-### 安装xtuner-0.1.18.dev0
+### 安装XTuner-0.1.18
 
 ```python
 # 进入源码目录
@@ -498,5 +519,4 @@ python cli_Llama3.py
 
 ### **知乎原文**
 
-1. [Llama3][EmoLLM][Minisora]Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型【V0】 - 知乎 https://zhuanlan.zhihu.com/p/693321573
-2. [Llama3][EmoLLM][Minisora]Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型【V1】 - 知乎 https://zhuanlan.zhihu.com/p/693454096
+1. [Llama3][EmoLLM][Minisora]Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型【V1】 - 知乎 https://zhuanlan.zhihu.com/p/693454096
