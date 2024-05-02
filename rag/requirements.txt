@@ -11,3 +11,4 @@ langchain_text_splitters==0.0.1
 FlagEmbedding==1.2.8
 unstructured==0.12.6
 PyJWT
+faiss-gpu  # faiss-cpu for device without gpu
