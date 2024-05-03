@@ -6,7 +6,6 @@ from rag.src.data_processing import Data_process
 from rag.src.config.config import prompt_template 
 logger = logging.get_logger(__name__)
 
-
 class EmoLLMRAG(object):
     """
         EmoLLM RAG Pipeline

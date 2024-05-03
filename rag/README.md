@@ -19,6 +19,8 @@ langchain_openai==0.0.8
 langchain_text_splitters==0.0.1
 FlagEmbedding==1.2.8
 unstructured==0.12.6
+PyJWT
+faiss-gpu  # faiss-cpu for device without gpu
 ```
 
 ```python
@@ -32,10 +34,15 @@ pip3 install -r requirements.txt
 
 ### 准备数据
 
-- txt数据：放入到 src.data.txt 目录下
-- json 数据：放入到 src.data.json 目录下
+#### 搭建自己的 Vector DB
 
-JSON 数据格式如下
+##### TXT 数据
+将需要构建的知识库转化为 Txt 文件放入到 src.data.txt 目录下
+
+##### JSON 数据
+构建 QA 对并生成 JSON 文件（多轮对话），放入到 src.data.json 目录下
+
+数据格式如下
 ```python
 [
     {
@@ -53,16 +60,21 @@ JSON 数据格式如下
 ] 
 ```
 
-会根据准备的数据构建vector DB，最终会在 data 文件夹下产生名为 vector_db 的文件夹包含 index.faiss 和 index.pkl
+会根据准备的数据构建 vector DB，最终会在 data 文件夹下产生名为 vector_db 的文件夹包含 index.faiss 和 index.pkl。如果已经有 vector DB 则会直接加载对应数据库
 
-如果已经有 vector DB 则会直接加载对应数据库
+#### 利用已构建好的数据库
 
-
-**注意**: 可以直接从 xlab 下载对应 DB（请在rag文件目录下执行对应 code）
+- 可以直接从 xlab 下载对应 DB（请在rag文件目录下执行对应 code）
 ```python
 # https://openxlab.org.cn/models/detail/Anooyman/EmoLLMRAGTXT/tree/main
 git lfs install
 git clone https://code.openxlab.org.cn/Anooyman/EmoLLMRAGTXT.git
+```
+
+- 也可以从魔塔社区下载对应数据集
+```python
+# https://www.modelscope.cn/datasets/Anooyman/EmoLLMRAGTXT/summary
+git clone https://www.modelscope.cn/datasets/Anooyman/EmoLLMRAGTXT.git
 ```
 
 
@@ -106,7 +118,50 @@ prompt_template = """
 """
 ```
 
-### 调用
+### 本地调用
+
+*注意*
+由于 RAG code 已经集成到 `web_internlm2.py` 中，import 路径不再适用于本地调用
+因此需要如下调整对应 import 路径
+
+- src/data_processing.py
+```python
+#from rag.src.config.config import (
+#    embedding_path,
+#    embedding_model_name,
+#    doc_dir, qa_dir,
+#    knowledge_pkl_path,
+#    data_dir,
+#    vector_db_dir,
+#    rerank_path,
+#    rerank_model_name,
+#    chunk_size,
+#    chunk_overlap
+#)
+from config.config import (
+    embedding_path,
+    embedding_model_name,
+    doc_dir, qa_dir,
+    knowledge_pkl_path,
+    data_dir,
+    vector_db_dir,
+    rerank_path,
+    rerank_model_name,
+    chunk_size,
+    chunk_overlap
+)
+```
+
+- src/pipeline.py
+```python
+#from rag.src.data_processing import Data_process
+#from rag.src.config.config import prompt_template 
+
+from data_processing import Data_process
+from config.config import prompt_template 
+```
+
+修改 import 路径之后通过以下 code 执行
 
 ```python
 cd rag/src
@@ -128,10 +183,10 @@ python main.py
 
 ## **相关组件**
 
-### [BCEmbedding](https://github.com/netease-youdao/BCEmbedding?tab=readme-ov-file)
+### [BGE Github](https://github.com/FlagOpen/FlagEmbedding)
 
-- [bce-embedding-base_v1](https://hf-mirror.com/maidalun1020/bce-embedding-base_v1): embedding 模型，用于构建 vector DB
-- [bce-reranker-base_v1](https://hf-mirror.com/maidalun1020/bce-reranker-base_v1): rerank 模型，用于对检索回来的文章段落重排
+- [BAAI/bge-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5): embedding 模型，用于构建 vector DB
+- [BAAI/bge-reranker-large](https://huggingface.co/BAAI/bge-reranker-large): rerank 模型，用于对检索回来的文章段落重排
 
 ### [Langchain](https://python.langchain.com/docs/get_started)
 
@@ -157,9 +212,9 @@ RAG的经典评估框架，通过以下三个方面进行评估:
 
 ### RAG具体流程
 
-- 根据数据集构建vector DB
-- 对用户输入的问题进行embedding
-- 基于embedding结果在向量数据库中进行检索
+- 根据数据集构建 vector DB
+- 对用户输入的问题进行 embedding
+- 基于 embedding 结果在向量数据库中进行检索
 - 对召回数据重排序
 - 依据用户问题和召回数据生成最后的结果
 

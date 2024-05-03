@@ -145,9 +145,9 @@ class Data_process():
         split_docs = []
         logger.info(f'Loading txt files from {data_path}')
         if os.path.isdir(data_path):
-                loader = DirectoryLoader(data_path, glob="**/*.txt",show_progress=True)
-                docs = loader.load()
-                split_docs = text_spliter.split_documents(docs)
+            loader = DirectoryLoader(data_path, glob="**/*.txt",show_progress=True)
+            docs = loader.load()
+            split_docs = text_spliter.split_documents(docs)
         elif data_path.endswith('.txt'): 
             file_path = data_path
             logger.info(f'splitting file {file_path}')

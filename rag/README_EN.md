@@ -23,10 +23,10 @@ For details on data collection construction, please refer to [qa_generation_READ
 
 ## **Components**
 
-### [BCEmbedding](https://github.com/netease-youdao/BCEmbedding?tab=readme-ov-file)
+### [BGE Github](https://github.com/FlagOpen/FlagEmbedding)
 
-- [bce-embedding-base_v1](https://hf-mirror.com/maidalun1020/bce-embedding-base_v1): embedding model, used to build vector DB
-- [bce-reranker-base_v1](https://hf-mirror.com/maidalun1020/bce-reranker-base_v1): rerank model, used to rerank retrieved documents 
+- [BAAI/bge-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5): embedding model, used to build vector DB
+- [BAAI/bge-reranker-large](https://huggingface.co/BAAI/bge-reranker-large): rerank model, used to rerank retrieved documents 
 
 ### [Langchain](https://python.langchain.com/docs/get_started)
 
