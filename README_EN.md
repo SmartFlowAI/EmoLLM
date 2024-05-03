@@ -46,21 +46,22 @@
 
 <div align="center">
 
-|         Model         |       Type       | link  |
-| :-------------------: | :--------------: | :---: |
-|   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) |
-|   InternLM2_7B_chat   | full fine-tuning | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  |
-|   InternLM2_7B_base   |  QLORA   | [internlm2_7b_base_qlora_e10_M_1e4_32_64.py](./xtuner_config/internlm2_7b_base_qlora_e10_M_1e4_32_64.py) |
-|  InternLM2_1_8B_chat  | full fine-tuning |  [internlm2_1_8b_full_alpaca_e3.py](./xtuner_config/internlm2_1_8b_full_alpaca_e3.py)  |
-|  InternLM2_20B_chat   |   LORA   |[internlm2_20b_chat_lora_alpaca_e3.py](./xtuner_config/internlm2_20b_chat_lora_alpaca_e3.py)|
-|     Qwen_7b_chat      |  QLORA   |  [qwen_7b_chat_qlora_e3.py](./xtuner_config/qwen_7b_chat_qlora_e3.py) |
-|   Qwen1_5-0_5B-Chat   | full fine-tuning |   [qwen1_5_0_5_B_full.py](./xtuner_config/qwen1_5_0_5_B_full.py) |
-|  Baichuan2_13B_chat   |  QLORA   |   [baichuan2_13b_chat_qlora_alpaca_e3.py](./xtuner_config/baichuan2_13b_chat_qlora_alpaca_e3.py) |
-|      ChatGLM3_6B      |   LORA   |   [chatglm3_6b_lora_alpaca_e3.py](./xtuner_config/chatglm3_6b_lora_alpaca_e3.py)  |
-| DeepSeek MoE_16B_chat |  QLORA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    |
-| Mixtral 8x7B_instruct |  QLORA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    |
-|
-|          ……           |        ……        |  ……   |
+|         Model         |       Type       | File Links  | Model Links  |
+| :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | |
+|   InternLM2_7B_chat   | full fine-tuning | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  | |
+|   InternLM2_7B_base   |  QLORA   | [internlm2_7b_base_qlora_e10_M_1e4_32_64.py](./xtuner_config/internlm2_7b_base_qlora_e10_M_1e4_32_64.py) |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base-10e), [ModelScope](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/summary) |
+|  InternLM2_1_8B_chat  | full fine-tuning |  [internlm2_1_8b_full_alpaca_e3.py](./xtuner_config/internlm2_1_8b_full_alpaca_e3.py)  | |
+|  InternLM2_20B_chat   |   LORA   |[internlm2_20b_chat_lora_alpaca_e3.py](./xtuner_config/internlm2_20b_chat_lora_alpaca_e3.py)| |
+|     Qwen_7b_chat      |  QLORA   |  [qwen_7b_chat_qlora_e3.py](./xtuner_config/qwen_7b_chat_qlora_e3.py) | |
+|   Qwen1_5-0_5B-Chat   | full fine-tuning |   [qwen1_5_0_5_B_full.py](./xtuner_config/qwen1_5_0_5_B_full.py) | |
+|  Baichuan2_13B_chat   |  QLORA   |   [baichuan2_13b_chat_qlora_alpaca_e3.py](./xtuner_config/baichuan2_13b_chat_qlora_alpaca_e3.py) | |
+|      ChatGLM3_6B      |   LORA   |   [chatglm3_6b_lora_alpaca_e3.py](./xtuner_config/chatglm3_6b_lora_alpaca_e3.py)  | |
+| DeepSeek MoE_16B_chat |  QLORA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    | |
+| Mixtral 8x7B_instruct |  QLORA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    | |
+| LLaMA3_8b_instruct |  QLORA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py) | |
+| LLaMA3_8b_instruct |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct2.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct2.0/summary) |
+|          ……           |    ……    |                                                    ……                                                    | …… |
 
 </div>
 
@@ -78,7 +79,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Psychological resilience: Refers to an individual's ability to recover from adversity and adapt. Those with strong psychological resilience can bounce back from challenges and learn and grow from them.
 - Prevention and intervention measures: The Mental Health Grand Model also includes strategies for preventing psychological issues and promoting mental health, such as psychological education, counseling, therapy, and social support systems.
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
- 
+
 
 <table>
     <tr>
@@ -100,6 +101,9 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ### Recent Updates
+ - [2024.4.20] [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) and based on [LLaMA3_8b_instruct's aiwei](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei) open source
+- [2023.4.14] Added [Quick Start](docs/quick_start_EN.md) and Nanny level tutorial [BabyEmoLLM](Baby_EmoLLM.ipynb)
+- [2024.4.2] Uploaded at Huggingface [Old Mother Counsellor](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Mother-like Therapist] is released on Huggingface (https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
 - 【2024.3.25】 [Daddy-like Boy-Friend] is released on Baidu Paddle-Paddle AI Studio Platform (https://aistudio.baidu.com/community/app/68787)
 - 【2024.3.24】 The **InternLM2-Base-7B QLoRA fine-tuned model** has been released on the **OpenXLab** and **ModelScope** platforms. For more details, please refer to [**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md).
@@ -253,32 +257,32 @@ This project uses Git for version control. You can see the currently available v
 
 ### Authors (in no particular order)
 
-|                           Username                            |                         School/Organization                          |                                  Remarks                                  |                                     Contributions                                     |
-| :-----------------------------------------------------------: | :------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
-|            [aJupyter](https://github.com/aJupyter)            |                 Nankai University, Master's student                  |                             DataWhale member                              |                                   Project initiator                                   |
-|            [MING-ZCH](https://github.com/MING-ZCH)            | Huazhong University of Science and Technology, Undergraduate student |                        LLM X Psychology researcher                        |                                   Project co-leader                                   |
-|          [jujimeizuo](https://github.com/jujimeizuo)          |                Jiangnan University, Master's student                 |                                                                           |                                                                                       |
-| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |    Harbin Institute of Technology (Weihai), Undergraduate student    |                                                                           |                                                                                       |
-|              [8baby8](https://github.com/8baby8)              |              PaddlePaddle Pilot Team Regional Director               |                     Wenxin Large Model core developer                     |                                                                                       |
-|              [zxazys](https://github.com/zxazys)              |                 Nankai University, Master's student                  |                                                                           |                                                                                       |
-|    [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |       SWUFE (Southwestern University of Finance and Economics)       |                                                                           |                                                                                       |
-|             [MrCatAI](https://github.com/MrCatAI)             |                               AI Mover                               |                                                                           |                                                                                       |
-|              [ZeyuBa](https://github.com/ZeyuBa)              |              Institute of Automation, Master's student               |                                                                           |                                                                                       |
-|    [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |             University of Pennsylvania, Master's student             |                                                                           |                                                                                       |
-|           [Nobody-ML](https://github.com/Nobody-ML)           |  China University of Petroleum (East China), Undergraduate student   |                                                                           |                                                                                       |
-|             [chg0901](https://github.com/chg0901)             |          [MiniSora](https://github.com/mini-sora/minisora)           | Maintainer and Admin of [MiniSora](https://github.com/mini-sora/minisora) | LLM Pre-Training and Fine-Tuning, Model Uploading, Data Cleaning and Docs Translation |
-|              [Mxoder](https://github.com/Mxoder)              |              Beihang University, Undergraduate student               |                                                                           |                                                                                       |
-|            [Anooyman](https://github.com/Anooyman)            |    Nanjing University of Science and Technology, Master's student    |                                                                           |                                                                                       |
-|          [Vicky-3021](https://github.com/Vicky-3021)          |        Xidian University, Master's student (Research Year 0)         |                                                                           |                                                                                       |
-|         [SantiagoTOP](https://github.com/santiagoTOP)         |          Taiyuan University of Technology, Master's student          |                                                                           |                                                                                       |
-|         [zealot52099](https://github.com/zealot52099)         |                         Individual developer                         |                                                                           |                        Data Processing, LLM finetuning and RAG                        |
-|             [wwwyfff](https://github.com/wwwyfff)             |                  FuDan University, Master's student                  |                                                                           |                                                                                       |
-|             [jkhumor](https://github.com/jkhumor)             |                 Nankai University, Master's student                  |                                                                           |                                          RAG                                          |
-|        [lll997150986](https://github.com/lll997150986)        |                 Nankai University, Master's student                  |                                                                           |                                      Fine Tuning                                      |
-|           [nln-maker](https://github.com/nln-maker)           |                 Nankai University, Master's student                  |                                                                           |                          Front-end and back-end development                           |
-|          [dream00001](https://github.com/dream00001)          |                 Nankai University, Master's student                  |                                                                           |                          Front-end and back-end development                           |
-|         [王几行XING](zhihu.com/people/brycewang1898)          |                 Peking University, Master's graduate                 |                                                                           |          Data Processing, LLM finetuning, Front-end and back-end development          |
-|                            [思在]                             |           Peking University, Master's graduate (Microsoft)           |                                                                           |                  LLM finetuning, Front-end and back-end development                   |
+|                           Username                           |                     School/Organization                      |                           Remarks                            |                        Contributions                         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|           [aJupyter](https://github.com/aJupyter)            |             Nankai University, Master's student              |                       DataWhale member                       |                      Project initiator                       |
+|           [MING-ZCH](https://github.com/MING-ZCH)            | Huazhong University of Science and Technology, Undergraduate student |                 LLM X Psychology researcher                  |                      Project co-leader                       |
+|         [jujimeizuo](https://github.com/jujimeizuo)          |            Jiangnan University, Master's student             |                                                              |                                                              |
+| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) | Harbin Institute of Technology (Weihai), Undergraduate student |                                                              |                                                              |
+|             [8baby8](https://github.com/8baby8)              |          PaddlePaddle Pilot Team Regional Director           |              Wenxin Large Model core developer               |                                                              |
+|             [zxazys](https://github.com/zxazys)              |             Nankai University, Master's student              |                                                              |                                                              |
+|   [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |   SWUFE (Southwestern University of Finance and Economics)   |                                                              |                                                              |
+|            [MrCatAI](https://github.com/MrCatAI)             |                           AI Mover                           |                                                              |                                                              |
+|             [ZeyuBa](https://github.com/ZeyuBa)              |          Institute of Automation, Master's student           |                                                              |                                                              |
+|   [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |         University of Pennsylvania, Master's student         |                                                              |                                                              |
+|          [Nobody-ML](https://github.com/Nobody-ML)           | China University of Petroleum (East China), Undergraduate student |                                                              |                                                              |
+|            [chg0901](https://github.com/chg0901)             |      [MiniSora](https://github.com/mini-sora/minisora)       | Maintainer and Admin of [MiniSora](https://github.com/mini-sora/minisora) | LLM Pre-Training and Fine-Tuning, Model Uploading, Data Cleaning and Docs Translation |
+|             [Mxoder](https://github.com/Mxoder)              |          Beihang University, Undergraduate student           |                                                              |                                                              |
+|           [Anooyman](https://github.com/Anooyman)            | Nanjing University of Science and Technology, Master's student |                                                              |                                                              |
+|         [Vicky-3021](https://github.com/Vicky-3021)          |    Xidian University, Master's student (Research Year 0)     |                                                              |                                                              |
+|        [SantiagoTOP](https://github.com/santiagoTOP)         |      Taiyuan University of Technology, Master's student      |                                                              | Data cleansing, document management, Baby EmoLLM maintenance |
+|        [zealot52099](https://github.com/zealot52099)         |                     Individual developer                     |                                                              |           Data Processing, LLM finetuning and RAG            |
+|            [wwwyfff](https://github.com/wwwyfff)             |              FuDan University, Master's student              |                                                              |                                                              |
+|            [jkhumor](https://github.com/jkhumor)             |             Nankai University, Master's student              |                                                              |                             RAG                              |
+|       [lll997150986](https://github.com/lll997150986)        |             Nankai University, Master's student              |                                                              |                         Fine Tuning                          |
+|          [nln-maker](https://github.com/nln-maker)           |             Nankai University, Master's student              |                                                              |              Front-end and back-end development              |
+|         [dream00001](https://github.com/dream00001)          |             Nankai University, Master's student              |                                                              |              Front-end and back-end development              |
+|         [王几行XING](zhihu.com/people/brycewang1898)         |             Peking University, Master's graduate             |                                                              | Data Processing, LLM finetuning, Front-end and back-end development |
+|                            [思在]                            |       Peking University, Master's graduate (Microsoft)       |                                                              |      LLM finetuning, Front-end and back-end development      |
 
 ### Copyright Notice
 

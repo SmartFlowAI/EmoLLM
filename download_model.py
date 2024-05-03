@@ -58,6 +58,6 @@ os.rmdir(temp_dir)
 
 os.remove(output_filename)
 
-download(model_repo='jujimeizuo/EmoLLM_Model', output='model')
+download(model_repo=model_repo, output='model')
 
 print("Model bin file download complete")
