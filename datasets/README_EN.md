@@ -22,6 +22,8 @@
 |  *General*  | multi_turn_dataset_2  | Conversation | 27,000+ |
 |  *General*  | single_turn_dataset_1 |      QA      | 14,000+ |
 |  *General*  | single_turn_dataset_2 |      QA      | 18,300+ |
+|  *General*  | self_cognition_EmoLLM |      QA      |   85+   |
+|  *General*  |      ruozhiba_raw     |      QA      |   240+  |
 | *Role-play* |         aiwei         | Conversation |  4000+  |
 | *Role-play* |       SoulStar        |      QA      | 11,200+ |
 | *Role-play* |        tiangou        | Conversation |  3900+  |
@@ -38,6 +40,8 @@
 * dataset `multi_turn_dataset_2` from [CPsyCounD](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
 * dataset `single_turn_dataset_1` from this repo
 * dataset `single_turn_dataset_2` from this repo
+* dataset `self_cognition_EmoLLM` from this repo
+* dataset `ruozhiba_raw` from [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA/viewer/ruozhiba)
 
 **Role-play**：
 * dataset `aiwei` from this repo
