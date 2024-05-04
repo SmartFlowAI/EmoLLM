@@ -7,9 +7,11 @@ pdf/
 .idea/
 logs/
 
-*.jsonl
-*.json
-*.txt
+# *.jsonl
+# *.json
+# *.txt
+combined_sc_ruozhi.jsonl
+t*_emo.jsonl
 localFile/
 # ./generate_data/*.josnl
 # ./generate_data/*/*/*.josnl
