@@ -122,12 +122,6 @@
   <img src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
 
-- 【2024.2.5】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
-
-<p align="center">
-  <img src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
-</p>
-
 - 【2024.2.3】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
 - 【2024.1.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
 - 【2024.1.25】 EmoLLM V1.0 已部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
@@ -143,7 +137,9 @@
     <img src="assets/Shusheng.png" alt="浦语挑战赛创新创意奖">
 </p>
 
-- 项目荣获公众号**NLP工程化**[推文宣传](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- 🎉感谢以下媒体及公众号朋友对本项目的报道和支持(以下排名不分先后! 若有遗漏、十分抱歉, 一并感激! 欢迎补充!): [NLP工程化](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A), [机智流](https://mp.weixin.qq.com/s/_wMCmssRMGd0Oz5OVVkjAA), [爱可可爱生活](https://mp.weixin.qq.com/s/4WaCg4OpkCWXEuWHuV4r3w), [阿郎小哥](https://mp.weixin.qq.com/s/_MSMeL1XHP0v5lDi3YaPVw), [大模型日知路](https://mp.weixin.qq.com/s/FYYibsCXtfU6FFM9TuKILA), [AI Code](https://mp.weixin.qq.com/s/yDWGY3S4CwCi6U_irsFmqA) 等!
+
+- 项目宣传视频 [EmoLLM](https://www.bilibili.com/video/BV1N7421N76X/) 已发布，欢迎大家围观 😀
 
 ### 🎯路线图
 

@@ -149,9 +149,10 @@ The Model aims to fully understand and promote the mental health of individuals,
     <img src="assets/Shusheng.png" alt="Challenge Innovation and Creativity Award">
 </p>
 
+- 🎉 Thanks to the following media and friends for their coverage and support of our project(Listed below in no particular order! Sorry for any omissions, we appreciate it! Feel free to add!): [NLP工程化](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A), [机智流](https://mp.weixin.qq.com/s/_wMCmssRMGd0Oz5OVVkjAA), [爱可可爱生活](https://mp.weixin.qq.com/s/4WaCg4OpkCWXEuWHuV4r3w), [阿郎小哥](https://mp.weixin.qq.com/s/_MSMeL1XHP0v5lDi3YaPVw), [大模型日知路](https://mp.weixin.qq.com/s/FYYibsCXtfU6FFM9TuKILA), [AI Code](https://mp.weixin.qq.com/s/yDWGY3S4CwCi6U_irsFmqA), etc!
 
-- The project has been promoted by the official WeChat account **NLP Engineering**. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A). 
-
+- Project Vedio [EmoLLM](https://www.bilibili.com/video/BV1N7421N76X/) has been released for viewing! 😀
+  
 ### Roadmap
 
 <p align="center">
