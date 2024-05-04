@@ -1,6 +1,6 @@
 import os
 
-os.system('streamlit run web_demo_Llama3.py --server.address=0.0.0.0 --server.port 7860')
+os.system('streamlit run web_demo-Llama3.py --server.address=0.0.0.0 --server.port 7860')
 
 # #model = "EmoLLM_aiwei"
 # # model = "EmoLLM_Model"
