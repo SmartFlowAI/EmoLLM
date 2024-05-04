@@ -23,6 +23,13 @@ For details on data collection construction, please refer to [qa_generation_READ
 
 ## **Components**
 
+There are two sets of embedding and rerank solutions, i.e., the BGE and BCE, we recommend to use the more powerful **BGE** !
+
+### [BGE Github](https://github.com/FlagOpen/FlagEmbedding)
+
+- [BAAI/bge-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5): embedding model, used to build vector DB
+- [BAAI/bge-reranker-large](https://huggingface.co/BAAI/bge-reranker-large): rerank model, used to rerank retrieved documents 
+
 ### [BCEmbedding](https://github.com/netease-youdao/BCEmbedding?tab=readme-ov-file)
 
 - [bce-embedding-base_v1](https://hf-mirror.com/maidalun1020/bce-embedding-base_v1): embedding model, used to build vector DB
