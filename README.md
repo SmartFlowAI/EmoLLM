@@ -98,6 +98,7 @@
 </table>
 
 ### 🎇最近更新
+- 【2024.5.7】[增量预训练指南](xtuner_config/pt/README.md)
 - 【2024.4.20】[LLAMA3微调指南](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)及基于[LLaMA3_8b_instruct的艾薇](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei)开源
 - 【2023.4.14】新增[快速开始](docs/quick_start.md)和保姆级教程[BabyEmoLLM](Baby_EmoLLM.ipynb)
 - 【2024.4.2】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)

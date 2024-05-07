@@ -101,6 +101,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ### Recent Updates
+- [2024.5.7][Incremental Pre-training Guide](xtuner_config/pt/README.md)
  - [2024.4.20] [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) and based on [LLaMA3_8b_instruct's aiwei](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei) open source
 - [2023.4.14] Added [Quick Start](docs/quick_start_EN.md) and Nanny level tutorial [BabyEmoLLM](Baby_EmoLLM.ipynb)
 - [2024.4.2] Uploaded at Huggingface [Old Mother Counsellor](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
