@@ -172,12 +172,12 @@
   - [🔗框架图](#框架图)
   - [目录](#目录)
           - [开发前的配置要求](#开发前的配置要求)
-          - [**使用指南**](#使用指南)
+          - [使用指南](#使用指南)
     - [🍪快速体验](#快速体验)
     - [📌数据构建](#数据构建)
     - [🎨微调指南](#微调指南)
     - [🔧部署指南](#部署指南)
-    - [⚙RAG(检索增强生成)Pipeline](#rag检索增强生成pipeline)
+    - [⚙RAG(检索增强生成)](#rag检索增强生成)
     - [使用到的框架](#使用到的框架)
       - [如何参与本项目](#如何参与本项目)
     - [作者（排名不分先后）](#作者排名不分先后)
@@ -192,7 +192,7 @@
 
 - 硬件：A100 40G（仅针对InternLM2_7B_chat+qlora微调+deepspeed zero2优化）
 
-###### **使用指南**
+###### 使用指南
 
 1. Clone the repo
 
@@ -211,7 +211,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 🍪快速体验
 
-- 请阅读[快速体验](docs/quick_start.md)查阅
+- 请阅读[快速体验](quick_start/quick_start.md)查阅
+- 快速上手：[Baby EmoLLM](quick_start/Baby_EmoLLM.ipynb)
 
 
 ### 📌数据构建
@@ -229,9 +230,9 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - Demo部署：详见[部署指南](demo/README.md)
 - 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](./deploy/lmdeploy.md)
 
-### ⚙RAG(检索增强生成)Pipeline
+### ⚙RAG(检索增强生成)
 
-- 详见[RAG](./rag/)
+- 详见[RAG](rag/README.md)
 
 <details>
 <summary>更多详情</summary>
@@ -307,11 +308,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 特别鸣谢
 
-- [Sanbu](https://github.com/sanbuphy)
 - [上海人工智能实验室](https://www.shlab.org.cn/)
-- [闻星大佬（小助手）](https://github.com/vansin)
-- [扫地升（公众号宣传）](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- [闻星（浦语小助手）](https://github.com/vansin)
 - 阿布（北大心理学硕士）
+- [Sanbu](https://github.com/sanbuphy)
 - [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
