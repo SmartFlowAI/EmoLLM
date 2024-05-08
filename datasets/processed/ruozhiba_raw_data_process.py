@@ -2,7 +2,7 @@ import json
 
 # 打开JSON文件并读取其内容
 
-file_name = 'ruozhiba_raw.jsonl' 
+file_name = '../ruozhiba_raw.jsonl' 
 
 # with open(f'data/{file_name}', 'r', encoding='utf-8') as file:
 #     data = json.load(file)
