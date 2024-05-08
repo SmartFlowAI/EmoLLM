@@ -13,7 +13,7 @@ from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 
 
-# warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore")
 logger = logging.get_logger(__name__)
 
 
@@ -151,11 +151,13 @@ def on_btn_click():
 @st.cache_resource
 def load_model():
     
+    print('pip install modelscope websockets')
+    os.system(f'pip install modelscope websockets==11.0.3')
+    
+    ######## old model downloading method with modelscope ########
     # model_name0 = "./EmoLLM-Llama3-8B-Instruct3.0"
     # print(model_name0)
-
-    # print('pip install modelscope websockets')
-    # os.system(f'pip install modelscope websockets==11.0.3')
+    
     # from modelscope import snapshot_download
 
     # #模型下载
@@ -166,11 +168,11 @@ def load_model():
     # # model.eval()
     # tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     
+    ######## new model downloading method with openxlab ########
     base_path = './EmoLLM-Llama3-8B-Instruct3.0'
     os.system(f'git clone https://code.openxlab.org.cn/chg0901/EmoLLM-Llama3-8B-Instruct3.0.git {base_path}')
     os.system(f'cd {base_path} && git lfs pull')
     
-
     model = AutoModelForCausalLM.from_pretrained(base_path, device_map="auto", trust_remote_code=True, torch_dtype=torch.float16).eval()
     # model.eval()
     tokenizer = AutoTokenizer.from_pretrained(base_path, trust_remote_code=True)
@@ -221,61 +223,56 @@ def combine_history(prompt):
     return total_prompt
 
 
-def main():
 
-    # torch.cuda.empty_cache()
-    print("load model begin.")
-    model, tokenizer = load_model()
-    print("load model end.")
+# torch.cuda.empty_cache()
+print("load model begin.")
+model, tokenizer = load_model()
+print("load model end.")
 
-    user_avator = "assets/user.png"
-    robot_avator = "assets/EmoLLM.png"
+user_avator = "assets/user.png"
+robot_avator = "assets/EmoLLM.png"
 
-    st.title("EmoLLM Llama3心理咨询室V3.0")
+st.title("EmoLLM Llama3心理咨询室V3.0")
 
-    generation_config = prepare_generation_config()
+generation_config = prepare_generation_config()
 
-    # Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+# Initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-    # Display chat messages from history on app rerun
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"], avatar=message.get("avatar")):
-            st.markdown(message["content"])
+# Display chat messages from history on app rerun
+for message in st.session_state.messages:
+    with st.chat_message(message["role"], avatar=message.get("avatar")):
+        st.markdown(message["content"])
 
-    # Accept user input
-    if prompt := st.chat_input("我在这里，准备好倾听你的心声了。"):
-        # Display user message in chat message container
-        with st.chat_message("user", avatar=user_avator):
-            st.markdown(prompt)
-            
-        real_prompt = combine_history(prompt)
-        # Add user message to chat history
-        st.session_state.messages.append({"role": "user", "content": prompt, "avatar": user_avator})
+# Accept user input
+if prompt := st.chat_input("我在这里，准备好倾听你的心声了。"):
+    # Display user message in chat message container
+    with st.chat_message("user", avatar=user_avator):
+        st.markdown(prompt)
+        
+    real_prompt = combine_history(prompt)
+    # Add user message to chat history
+    st.session_state.messages.append({"role": "user", "content": prompt, "avatar": user_avator})
 
-        with st.chat_message("robot", avatar=robot_avator):
-            message_placeholder = st.empty()
-            for cur_response in generate_interactive(
-                model=model,
-                tokenizer=tokenizer,
-                prompt=real_prompt,
-                additional_eos_token_id=128009, 
-                **asdict(generation_config),
-            ):
-                # Display robot response in chat message container
-                message_placeholder.markdown(cur_response + "▌")
-            message_placeholder.markdown(cur_response)  # pylint: disable=undefined-loop-variable
-        # Add robot response to chat history
-        st.session_state.messages.append(
-            {
-                "role": "robot",
-                "content": cur_response,  # pylint: disable=undefined-loop-variable
-                "avatar": robot_avator,
-            }
-        )
-        torch.cuda.empty_cache()
-
-
-if __name__ == '__main__':
-    main()
+    with st.chat_message("robot", avatar=robot_avator):
+        message_placeholder = st.empty()
+        for cur_response in generate_interactive(
+            model=model,
+            tokenizer=tokenizer,
+            prompt=real_prompt,
+            additional_eos_token_id=128009, 
+            **asdict(generation_config),
+        ):
+            # Display robot response in chat message container
+            message_placeholder.markdown(cur_response + "▌")
+        message_placeholder.markdown(cur_response)  # pylint: disable=undefined-loop-variable
+    # Add robot response to chat history
+    st.session_state.messages.append(
+        {
+            "role": "robot",
+            "content": cur_response,  # pylint: disable=undefined-loop-variable
+            "avatar": robot_avator,
+        }
+    )
+    torch.cuda.empty_cache()

@@ -58,7 +58,7 @@
 | DeepSeek MoE_16B_chat |  QLORA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    | |
 | Mixtral 8x7B_instruct |  QLORA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    | |
 | LLaMA3_8b_instruct |  QLORA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py) | |
-| LLaMA3_8b_instruct |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct2.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct2.0/summary) |
+| LLaMA3_8b_instruct |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) |
 |          ……           |    ……    |                                                    ……                                                    | …… |
 
 </div>
@@ -97,39 +97,46 @@
     </tr>
 </table>
 
-### 🎇最近更新
-- 【2024.5.7】[增量预训练指南](xtuner_config/pt/README.md)
-- 【2024.4.20】[LLAMA3微调指南](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)及基于[LLaMA3_8b_instruct的艾薇](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei)开源
-- 【2023.4.14】新增[快速开始](docs/quick_start.md)和保姆级教程[BabyEmoLLM](Baby_EmoLLM.ipynb)
-- 【2024.4.2】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
-- 【2024.3.25】在百度飞桨平台发布[爹系男友心理咨询师](https://aistudio.baidu.com/community/app/68787)
-- 【2024.3.24】在**OpenXLab**和**ModelScope**平台发布**InternLM2-Base-7B QLoRA微调模型**, 具体请查看[**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md)
-- 【2024.3.12】在百度飞桨平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
-- 【2024.3.11】 **EmoLLM V2.0 相比 EmoLLM V1.0 全面提升，已超越 Role-playing ChatGPT 在心理咨询任务上的能力！**[点击体验EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)，更新[数据集统计及详细信息](./datasets/)、[路线图](./assets/Roadmap_ZH.png)
-- 【2024.3.9】 新增并发功能加速 [QA 对生成](./scripts/qa_generation/)、[RAG pipeline](./rag/)
-- 【2024.3.3】 [基于InternLM2-7B-chat全量微调版本EmoLLM V2.0开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块A100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
-- 【2024.2.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)
-- 【2024.2.27】更新英文readme和一系列数据集（舔狗和单轮对话）
-- 【2024.2.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
-- 【2024.2.23】更新[若干微调配置](/xtuner_config/)，新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
-- 【2024.2.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
+## 🎇最近更新
+- 【2024.05.07】[增量预训练指南](xtuner_config/pt/README.md)
+- 【2024.05.04】基于LLaMA3_8b_instruct的[EmoLLM3.0 OpenXLab Demo](https://st-app-center-006861-9746-jlroxvg.openxlab.space/)上线（[重启链接](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)）, [**LLAMA3微调指南**](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)**更新**，在[**OpenXLab**](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)和[**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary)平台发布**LLaMA3_8b_instruct-8B QLoRA微调模型 EmoLLM3.0权重**
+- 【2024.04.20】[LLAMA3微调指南](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)及基于[LLaMA3_8b_instruct的艾薇](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei)开源
+- 【2023.04.14】新增[快速开始](docs/quick_start.md)和保姆级教程[BabyEmoLLM](Baby_EmoLLM.ipynb)
+- 【2024.04.02】在 Huggingface 上传[老母亲心理咨询师](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)
+- 【2024.03.25】在百度飞桨平台发布[爹系男友心理咨询师](https://aistudio.baidu.com/community/app/68787)
+- 【2024.03.24】在**OpenXLab**和**ModelScope**平台发布**InternLM2-Base-7B QLoRA微调模型**, 具体请查看[**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md)
+- 【2024.03.12】在百度飞桨平台发布[艾薇](https://aistudio.baidu.com/community/app/63335)
+- 【2024.03.11】 **EmoLLM V2.0 相比 EmoLLM V1.0 全面提升，已超越 Role-playing ChatGPT 在心理咨询任务上的能力！**[点击体验EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)，更新[数据集统计及详细信息](./datasets/)、[路线图](./assets/Roadmap_ZH.png)
+- 【2024.03.09】 新增并发功能加速 [QA 对生成](./scripts/qa_generation/)、[RAG pipeline](./rag/)
+- 【2024.03.03】 [基于InternLM2-7B-chat全量微调版本EmoLLM V2.0开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块A100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
+- 【2024.02.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)
+- 【2024.02.27】更新英文readme和一系列数据集（舔狗和单轮对话）
+- 【2024.02.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
+- 【2024.02.23】更新[若干微调配置](/xtuner_config/)，新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
+- 【2024.02.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
 
 <details>
 <summary>查看更多</summary>
 
-- 【2024.2.6】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
+- 【2024.02.06】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
 
 <p align="center"> 
   <img src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/7e931682-c54d-4ded-bc67-79130c68d744" alt="模型下载量">
 </p>
 
-- 【2024.2.3】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
-- 【2024.1.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
-- 【2024.1.25】 EmoLLM V1.0 已部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
+- 【2024.02.05】 项目荣获公众号**NLP工程化**推文宣传[推文链接](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)，为博主推广一波，欢迎大家关注！！🥳🥳
+
+<p align="center">
+  <img src="https://github.com/SmartFlowAI/EmoLLM/assets/62385492/47868d6a-2e91-4aa9-a630-e594c14295b4" alt="公众号二维码">
+</p>
+
+- 【2024.02.03】 [项目宣传视频](https://www.bilibili.com/video/BV1N7421N76X/)完成 😊
+- 【2024.01.27】 完善数据构建文档、微调指南、部署指南、Readme等相关文档 👏
+- 【2024.01.25】 EmoLLM V1.0 已部署上线 https://openxlab.org.cn/apps/detail/jujimeizuo/EmoLLM 😀
 
 </details>
 
-### 🏆荣誉栏
+## 🏆荣誉栏
 
 - 项目荣获上海人工智能实验室举办的**2024浦源大模型系列挑战赛春季赛*****创新创意奖***
   
@@ -142,14 +149,14 @@
 
 - 项目宣传视频 [EmoLLM](https://www.bilibili.com/video/BV1N7421N76X/) 已发布，欢迎大家围观 😀
 
-### 🎯路线图
+## 🎯路线图
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
     <img src="assets/Roadmap_ZH.png" alt="Roadmap_ZH">
   </a>
 
-### 🔗框架图
+## 🔗框架图
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
@@ -159,10 +166,10 @@
 ## 目录
 
 - [EmoLLM-心理健康大模型](#emollm-心理健康大模型)
-    - [🎇最近更新](#最近更新)
-    - [🏆荣誉栏](#荣誉栏)
-    - [🎯路线图](#路线图)
-    - [🔗框架图](#框架图)
+  - [🎇最近更新](#最近更新)
+  - [🏆荣誉栏](#荣誉栏)
+  - [🎯路线图](#路线图)
+  - [🔗框架图](#框架图)
   - [目录](#目录)
           - [开发前的配置要求](#开发前的配置要求)
           - [**使用指南**](#使用指南)

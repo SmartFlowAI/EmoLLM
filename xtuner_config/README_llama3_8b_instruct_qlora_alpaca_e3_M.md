@@ -9,6 +9,52 @@
 - 修改Xtuner模型配置文件
 - 在EmoLLM项目上进行基于Xtuner进行QLoRA微调
 
+## 更新
+
+|         模型          |训练方式|                                                   链接                                                   | 模型链接   |
+| :-------------------: | :----------: | :------------------------------------------------------------------------------------------------------: |:------: |
+| LLaMA3_8b_instruct2.0 |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct2.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct2.0/summary) |
+| LLaMA3_8b_instruct3.0 |  QLORA   | [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) |
+
+已经上传了最新的训练配置文件, 进行了些许改动, 训练数据中添加了85条自我认知数据和240条弱智吧数据.
+
+### 简评
+
+Llama3 由于中文训练数据较少，因此微调后，部分中文逻辑能力会稍弱一些，后续会继续更新对基于中文对齐后的Llama3模型的EmoLLM模型微调训练。
+
+### 更新的文件
+
+- 原始自我认知数据 [**self_cognition_EmoLLM.json**](../datasets/self_cognition_EmoLLM.json) (修改自[ChatGLM-Efficient-Tuning](https://github.com/hiyouga/ChatGLM-Efficient-Tuning/blob/main/data/self_cognition.json))
+- 处理后的符合对话格式的自我认知数据 [**processed_self_cognition_EmoLLM.json**](../datasets/processed/processed_self_cognition_EmoLLM.json)
+- 配置文件 [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)
+- 弱智吧原始数据 [**ruozhiba_raw.jsonl**](../datasets/ruozhiba_raw.jsonl)
+- 弱智吧原始数据的Python处理文件 [**ruozhiba_raw_data_process.py**](../datasets/ruozhiba_raw_data_process.py)
+- ruozhiba_raw_data_process.py处理之后的弱智吧数据 [**ruozhiba_format_emo.jsonl**](../datasets/processed/ruozhiba_format_emo.jsonl)
+- 数据集划分工具代码 [**split_dataset.py**](../datasets/split_dataset.py)
+- 调用split_dataset.py的示例代码 [**split_shuffle.py**](../datasets/split_shuffle.py)
+- [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) **OpenXLab**部署文件及说明  
+  - 目前OpenXLab采用了新的模型下载方式
+  
+  ```Python
+  base_path = './EmoLLM-Llama3-8B-Instruct3.0'
+  os.system(f'git clone https://code.openxlab.org.cn/chg0901/EmoLLM-Llama3-8B-Instruct3.0.git {base_path}')
+  os.system(f'cd {base_path} && git lfs pull')
+  ```
+
+  - 启动文件 [app_web_demo-Llama3.py](../app_web_demo-Llama3.py)
+  - git lfs 依赖文件 [packages.txt](../packages.txt)
+  - 部署时注意其他设置和具体细节，请参照[openxlab-deploy](https://github.com/InternLM/Tutorial/tree/camp2/tools/openxlab-deploy)
+  ![](../assets/new_openxlab_app_demo.png)
+  - 在线体验链接 [EmoLLM Llama3心理咨询室V3.0](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) ，或者前往[OpenXLab EmoLLM3.0-Llama3](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)启动
+
+### 更新的有关参考教程
+
+请参考以下知乎链接进行训练和测评
+
+- [[Llama3][InternLM2][RuoZhiBa][EmoLLM]**使用弱智吧数据微调Llama3-Instruct-8B模型**](https://zhuanlan.zhihu.com/p/694818596)
+- [[Llama3][EmoLLM][Minisora]**Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型**【V1】](https://zhuanlan.zhihu.com/p/693454096)
+- [[Llama3][InternLM2]**OpenCompass 大模型评测Llama3-instruct-8B有关模型**](https://zhuanlan.zhihu.com/p/694922988)
+
 ## 模型和有关GitHub项目下载
 
 ### Llama-3-8B-Instruct模型下载
@@ -41,7 +87,7 @@ conda create -n llama python=3.10
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 
-### git clone xtuner-0.1.18.dev0
+### git clone XTuner-0.1.18
 
 ```python
 git clone https://github.com/InternLM/xtuner
@@ -63,12 +109,12 @@ llama3_chat=dict(
 
 - 微调模型是为对话应用训练的。
 - 为了获得它们的预期特性和性能，需要遵循 [ChatFormat](https://github.com/meta-llama/llama3/blob/main/llama/tokenizer.py#L202) 中定义的特定格式：
-  1. 提示以特殊令牌 <|begin_of_text|> 开始，之后跟随一个或多个消息。
-  2. 每条消息以标签 <|start_header_id|> 开始，角色为 system、user 或 assistant，并以标签 <|end_header_id|> 结束。
-  3. 在双换行 \n\n 之后，消息的内容随之而来。每条消息的结尾由 <|eot_id|> 令牌标记。
+  1. 提示以特殊令牌 `<|begin_of_text|>` 开始，之后跟随一个或多个消息。
+  2. 每条消息以标签 `<|start_header_id|>` 开始，角色为 `system`、`user` 或 `assistant`，并以标签 `<|end_header_id|>` 结束。
+  3. 在双换行 `\n\n` 之后，消息的内容随之而来。每条消息的结尾由 `<|eot_id|>` 令牌标记。
 - Ref： [ArtificialZeng/llama3_explained](https://github.com/ArtificialZeng/llama3_explained)
 
-### 安装xtuner-0.1.18.dev0
+### 安装XTuner-0.1.18
 
 ```python
 # 进入源码目录
@@ -498,5 +544,4 @@ python cli_Llama3.py
 
 ### **知乎原文**
 
-1. [Llama3][EmoLLM][Minisora]Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型【V0】 - 知乎 https://zhuanlan.zhihu.com/p/693321573
-2. [Llama3][EmoLLM][Minisora]Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型【V1】 - 知乎 https://zhuanlan.zhihu.com/p/693454096
+1. [Llama3][EmoLLM][Minisora]Meta Llama 3快速上手：用EmoLLM数据基于Xtuner采用QLoRA微调Meta-Llama-3-8B-Instruct模型【V1】 - 知乎 https://zhuanlan.zhihu.com/p/693454096
