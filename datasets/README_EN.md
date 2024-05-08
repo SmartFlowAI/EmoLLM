@@ -2,7 +2,7 @@
 
 * Category of dataset: **General** and **Role-play**
 * Type of data: **QA** and **Conversation**
-* Summary: General(**6 datasets**), Role-play(**5 datasets**)
+* Summary: General(**8 datasets**), Role-play(**5 datasets**)
 
  ## Category
 * **General**: generic dataset, including psychological Knowledge, counseling technology, etc.

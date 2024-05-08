@@ -173,12 +173,12 @@ The Model aims to fully understand and promote the mental health of individuals,
   - [Roadmap](#roadmap)
   - [Contents](#contents)
           - [Pre-development Configuration Requirements.](#pre-development-configuration-requirements)
-          - [**User Guide**](#user-guide)
+          - [User Guide](#user-guide)
     - [🍪Quick start](#quick-start)
     - [📌Data Construction](#data-construction)
     - [🎨Fine-tuning Guide](#fine-tuning-guide)
     - [🔧Deployment Guide](#deployment-guide)
-    - [⚙RAG (Retrieval Augmented Generation) Pipeline](#rag-retrieval-augmented-generation-pipeline)
+    - [⚙RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation)
     - [Frameworks Used](#frameworks-used)
       - [How to participate in this project](#how-to-participate-in-this-project)
     - [Version control](#version-control)
@@ -193,7 +193,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 - A100 40G (specifically for InternLM2_7B_chat + qlora fine-tuning + deepspeed zero2 optimization)
 
-###### **User Guide**
+###### User Guide
 
 1. Clone the repo
 
@@ -211,7 +211,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 
 ### 🍪Quick start
-- Please read [Quick Start](docs/quick_start_EN.md) to see.
+- Please read [Quick Start](quick_start/quick_start_EN.md) to see.
+- Quick coding: [Baby EmoLLM](quick_start/Baby_EmoLLM.ipynb)
 
 ### 📌Data Construction
 
@@ -228,9 +229,9 @@ For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 - Demo deployment: see [deployment guide](./demo/README_EN.md) for details.
 - Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy_EN.md)
 
-### ⚙RAG (Retrieval Augmented Generation) Pipeline
+### ⚙RAG (Retrieval Augmented Generation)
 
-- See [RAG](./rag/)
+- See [RAG](rag/README_EN.md)
 
 <details>
 <summary>Additional Details</summary>
@@ -297,11 +298,10 @@ The project is licensed under the MIT License. Please refer to the details
 
 ### Acknowledgments
 
-- [Sanbu](https://github.com/sanbuphy)
 - [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/)
-- [Vanin](https://github.com/vansin)
-- [Bloom up (WeChat Official Account Promotion)](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
-- Abu (M.A. in Psychology, Peking University)
+- [Vansin](https://github.com/vansin)
+- A.bu (M.A. in Psychology, Peking University)
+- [Sanbuphy](https://github.com/sanbuphy)
 - [HatBoy](https://github.com/hatboy)
 
 <!-- links -->
