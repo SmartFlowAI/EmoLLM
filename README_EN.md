@@ -101,7 +101,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
-
+- [2024.05.07][Incremental Pre-training Guide](xtuner_config/pt/README.md)
 - [2024.05.04] [EmoLLM3.0 OpenXLab Demo](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) based on LLaMA3_8b_instruct is available now ([restart link]((https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0))), [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) is updated, LLaMA3_8b_instruct-8B QLoRA fine-tuning model EmoLLM3.0 weights are released on [**OpenXLab**](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) and [**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) platforms
 - [2024.04.20] [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) and based on [LLaMA3_8b_instruct's aiwei](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei) open source
 - [2023.04.14] Added [Quick Start](docs/quick_start_EN.md) and Nanny level tutorial [BabyEmoLLM](Baby_EmoLLM.ipynb)
@@ -120,6 +120,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 - [2024.02.23]Updated [several fine-tuning configurations](/xtuner_config/), added [data_pro.json](/datasets/data_pro.json) (more quantity, more comprehensive scenarios, richer content) and [aiwei.json](/datasets/aiwei.json) (dedicated to the gentle lady role-play, featuring Emoji expressions), the "Gentle Lady Psychologist Ai Wei" is coming soon.
 
 - [2024.02.18] The full fine-tuned version based on Qwen1_5-0_5B-Chat has been [open-sourced](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary). Friends with limited computational resources can now dive in and explore it.
+
 
 <details>
 <summary>View More</summary>
@@ -154,6 +155,10 @@ The Model aims to fully understand and promote the mental health of individuals,
 - The project has been promoted by the official WeChat account **NLP Engineering**. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A). 
 
 ## Roadmap
+
+- 🎉 Thanks to the following media and friends for their coverage and support of our project(Listed below in no particular order! Sorry for any omissions, we appreciate it! Feel free to add!): [NLP工程化](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A), [机智流](https://mp.weixin.qq.com/s/_wMCmssRMGd0Oz5OVVkjAA), [爱可可爱生活](https://mp.weixin.qq.com/s/4WaCg4OpkCWXEuWHuV4r3w), [阿郎小哥](https://mp.weixin.qq.com/s/_MSMeL1XHP0v5lDi3YaPVw), [大模型日知路](https://mp.weixin.qq.com/s/FYYibsCXtfU6FFM9TuKILA), [AI Code](https://mp.weixin.qq.com/s/yDWGY3S4CwCi6U_irsFmqA), etc!
+
+- Project Vedio [EmoLLM](https://www.bilibili.com/video/BV1N7421N76X/) has been released for viewing! 😀
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">

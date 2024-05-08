@@ -98,7 +98,7 @@
 </table>
 
 ## 🎇最近更新
-
+- 【2024.05.07】[增量预训练指南](xtuner_config/pt/README.md)
 - 【2024.05.04】基于LLaMA3_8b_instruct的[EmoLLM3.0 OpenXLab Demo](https://st-app-center-006861-9746-jlroxvg.openxlab.space/)上线（[重启链接](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)）, [**LLAMA3微调指南**](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)**更新**，在[**OpenXLab**](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)和[**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary)平台发布**LLaMA3_8b_instruct-8B QLoRA微调模型 EmoLLM3.0权重**
 - 【2024.04.20】[LLAMA3微调指南](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)及基于[LLaMA3_8b_instruct的艾薇](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei)开源
 - 【2023.04.14】新增[快速开始](docs/quick_start.md)和保姆级教程[BabyEmoLLM](Baby_EmoLLM.ipynb)
@@ -145,7 +145,9 @@
     <img src="assets/Shusheng.png" alt="浦语挑战赛创新创意奖">
 </p>
 
-- 项目荣获公众号**NLP工程化**[推文宣传](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A)
+- 🎉感谢以下媒体及公众号朋友对本项目的报道和支持(以下排名不分先后! 若有遗漏、十分抱歉, 一并感激! 欢迎补充!): [NLP工程化](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A), [机智流](https://mp.weixin.qq.com/s/_wMCmssRMGd0Oz5OVVkjAA), [爱可可爱生活](https://mp.weixin.qq.com/s/4WaCg4OpkCWXEuWHuV4r3w), [阿郎小哥](https://mp.weixin.qq.com/s/_MSMeL1XHP0v5lDi3YaPVw), [大模型日知路](https://mp.weixin.qq.com/s/FYYibsCXtfU6FFM9TuKILA), [AI Code](https://mp.weixin.qq.com/s/yDWGY3S4CwCi6U_irsFmqA) 等!
+
+- 项目宣传视频 [EmoLLM](https://www.bilibili.com/video/BV1N7421N76X/) 已发布，欢迎大家围观 😀
 
 ## 🎯路线图
 
