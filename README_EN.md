@@ -206,7 +206,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [Data Construction](#data-construction)
    - [Fine-tuning Guide](#fine-tuning-guide)
    - [Deployment Guide](#deployment-guide)
-   - [RAG](#rag-retrieval-augmented-generation-pipeline)
+   - [RAG](#rag-retrieval-augmented-generation)
    - View More Details
 
 

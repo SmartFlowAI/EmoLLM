@@ -205,7 +205,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [数据构建](#数据构建)
    - [微调指南](#微调指南)
    - [部署指南](#部署指南)
-   - [RAG](#rag检索增强生成pipeline)
+   - [RAG](#rag检索增强生成)
    - 查看更多详情
 
 
