@@ -180,6 +180,7 @@
     - [🎨微调指南](#微调指南)
     - [🔧部署指南](#部署指南)
     - [⚙RAG(检索增强生成)](#rag检索增强生成)
+    - [🎓评测指南](#评测指南)
     - [使用到的框架](#使用到的框架)
       - [如何参与本项目](#如何参与本项目)
     - [作者（排名不分先后）](#作者排名不分先后)
@@ -207,7 +208,8 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [数据构建](#数据构建)
    - [微调指南](#微调指南)
    - [部署指南](#部署指南)
-   - [RAG](#rag检索增强生成pipeline)
+   - [RAG](#rag检索增强生成)
+   - [评测指南](#评测指南)
    - 查看更多详情
 
 
@@ -235,6 +237,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 ### ⚙RAG(检索增强生成)
 
 - 详见[RAG](rag/README.md)
+
+### 🎓评测指南
+
+- 本模型评测分为通用评测和专业评测，请阅读[评测指南](evaluate/README.md)查阅
 
 <details>
 <summary>更多详情</summary>
