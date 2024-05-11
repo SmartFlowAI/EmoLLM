@@ -179,6 +179,7 @@ The Model aims to fully understand and promote the mental health of individuals,
     - [🎨Fine-tuning Guide](#fine-tuning-guide)
     - [🔧Deployment Guide](#deployment-guide)
     - [⚙RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation)
+    - [🎓Evaluation Guide](#evaluation-guide)
     - [Frameworks Used](#frameworks-used)
       - [How to participate in this project](#how-to-participate-in-this-project)
     - [Version control](#version-control)
@@ -207,6 +208,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
    - [Fine-tuning Guide](#fine-tuning-guide)
    - [Deployment Guide](#deployment-guide)
    - [RAG](#rag-retrieval-augmented-generation)
+   - [Evaluation Guide](#evaluation-guide)
    - View More Details
 
 
@@ -216,7 +218,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 📌Data Construction
 
-- Please read the [Data Construction Guide ](generate_data/tutorial_EN.md)for reference.
+- Please read the [Data Construction Guide ](generate_data/tutorial_EN.md) for reference.
 
 - The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
@@ -232,6 +234,10 @@ For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 ### ⚙RAG (Retrieval Augmented Generation)
 
 - See [RAG](rag/README_EN.md)
+
+### 🎓Evaluation Guide
+
+- The model evaluation is divided into **General Metrics Evaluation** and **Professional Metrics Evaluation**，Please read the [evaluation guide](evaluate/README.md) for reference.
 
 <details>
 <summary>Additional Details</summary>
