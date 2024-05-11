@@ -101,7 +101,9 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
-- [2024.05.07][Incremental Pre-training Guide](xtuner_config/pt/README.md)
+
+- [2024.05.08] EmoLLM**Daddy-like BF V0.1** is public now in [1. **Baidu AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) and [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), welcome to like and add it to your collections!
+- [2024.05.07] [Incremental Pre-training Guide](xtuner_config/pt/README.md)
 - [2024.05.04] [EmoLLM3.0 OpenXLab Demo](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) based on LLaMA3_8b_instruct is available now ([restart link]((https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0))), [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) is updated, LLaMA3_8b_instruct-8B QLoRA fine-tuning model EmoLLM3.0 weights are released on [**OpenXLab**](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) and [**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) platforms
 - [2024.04.20] [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) and based on [LLaMA3_8b_instruct's aiwei](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei) open source
 - [2023.04.14] Added [Quick Start](docs/quick_start_EN.md) and Nanny level tutorial [BabyEmoLLM](Baby_EmoLLM.ipynb)
