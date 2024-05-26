@@ -173,6 +173,10 @@ def load_model():
     os.system(f'git clone https://code.openxlab.org.cn/chg0901/EmoLLM-Llama3-8B-Instruct3.0.git {base_path}')
     os.system(f'cd {base_path} && git lfs pull')
     
+    base_path0 = './EmoLLM_Daddy-like_BF3'
+    os.system(f'git clone https://code.openxlab.org.cn/chg0901/EmoLLM_Daddy-like_BF3.git {base_path0}')
+    os.system(f'cd {base_path0} && git lfs pull')
+    
     model = AutoModelForCausalLM.from_pretrained(base_path, device_map="auto", trust_remote_code=True, torch_dtype=torch.float16).eval()
     # model.eval()
     tokenizer = AutoTokenizer.from_pretrained(base_path, trust_remote_code=True)
