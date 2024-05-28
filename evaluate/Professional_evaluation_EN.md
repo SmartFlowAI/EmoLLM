@@ -6,7 +6,7 @@ This document describes a professional evaluation method and provides EmoLLM's s
 
 ## Evaluation
 
-The evaluation method, metric, and dataset from the paper《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》.
+The evaluation method, metric, and dataset from the paper[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433).
 
 * Metric: Comprehensiveness, Professionalism, Authenticity, Safety
 * Method: Turn-Based Dialogue Evaluation
