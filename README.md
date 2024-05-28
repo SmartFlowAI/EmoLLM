@@ -99,6 +99,7 @@
 
 ## 🎇最近更新
 
+- 【2024.05.28】EmoLLM使用的多轮对话数据集CPsyCounD和专业评测方法已公开，详见2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - 【2024.05.08】EmoLLM**爹系男友阅览体验版**上线 [1. **百度AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), 欢迎点赞收藏
 - 【2024.05.07】[增量预训练指南](xtuner_config/pt/README.md)
 - 【2024.05.04】基于LLaMA3_8b_instruct的[EmoLLM3.0 OpenXLab Demo](https://st-app-center-006861-9746-jlroxvg.openxlab.space/)上线（[重启链接](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)）, [**LLAMA3微调指南**](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md)**更新**，在[**OpenXLab**](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0)和[**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary)平台发布**LLaMA3_8b_instruct-8B QLoRA微调模型 EmoLLM3.0权重**

@@ -6,7 +6,7 @@
 
 ## 评测方法
 
-本评测方法采用论文《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》提出的评测指标与方法。
+本评测方法采用论文[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)提出的评测指标与方法。
 
 * 指标：Comprehensiveness, Professionalism, Authenticity, Safety
 * 方法：Turn-Based Dialogue Evaluation
