@@ -1,4 +1,4 @@
-git+https://gitee.com/jujimeizuo/meta-gpt-tianji.git
+# git+https://gitee.com/jujimeizuo/meta-gpt-tianji.git
 
 transformers==4.36.2
 streamlit==1.24.0
