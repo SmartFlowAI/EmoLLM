@@ -22,6 +22,7 @@
 |  *General*  |       data_pro        | Conversation | 36,500+ |
 |  *General*  | multi_turn_dataset_1  | Conversation | 36,000+ |
 |  *General*  | multi_turn_dataset_2  | Conversation | 27,000+ |
+|  *General*  | multi_turn_dataset_3  | Conversation | 1,517,300+ |
 |  *General*  | single_turn_dataset_1 |      QA      | 14,000+ |
 |  *General*  | single_turn_dataset_2 |      QA      | 18,300+ |
 |  *General*  | self_cognition_EmoLLM |      QA      |   85+   |
@@ -40,7 +41,8 @@
 * 数据集 `data` 来自本项目
 * 数据集 `data_pro` 来自本项目
 * 数据集 `multi_turn_dataset_1` 来源 [Smile](https://github.com/qiuhuachuan/smile)
-* 数据集 `multi_turn_dataset_2` 来源 [CPsyCounD](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+* ⭐数据集 `multi_turn_dataset_2` 来源 [CPsyCounD](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+* 数据集 `multi_turn_dataset_3` 来源 [SoulChat](https://github.com/scutcyr/SoulChat)
 * 数据集 `single_turn_dataset_1` 来自本项目
 * 数据集 `single_turn_dataset_2` 来自本项目
 * 数据集 `self_cognition_EmoLLM` 来自本项目
