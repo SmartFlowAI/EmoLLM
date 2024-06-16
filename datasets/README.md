@@ -2,7 +2,7 @@
 
 * 数据集按用处分为两种类型：**General** 和 **Role-play**
 * 数据按格式分为两种类型：**QA** 和 **Conversation**
-* 数据汇总：General（**8个数据集**）；Role-play（**5个数据集**）
+* 数据汇总：General（**9个数据集**）；Role-play（**5个数据集**）
 
 ## 数据集类型
 
