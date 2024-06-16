@@ -2,7 +2,7 @@
 
 * Category of dataset: **General** and **Role-play**
 * Type of data: **QA** and **Conversation**
-* Summary: General(**8 datasets**), Role-play(**5 datasets**)
+* Summary: General(**9 datasets**), Role-play(**5 datasets**)
 
  ## Category
 * **General**: generic dataset, including psychological Knowledge, counseling technology, etc.
@@ -20,6 +20,7 @@
 |  *General*  |       data_pro        | Conversation | 36,500+ |
 |  *General*  | multi_turn_dataset_1  | Conversation | 36,000+ |
 |  *General*  | multi_turn_dataset_2  | Conversation | 27,000+ |
+|  *General*  | multi_turn_dataset_3  | Conversation | 1,517,300+ |
 |  *General*  | single_turn_dataset_1 |      QA      | 14,000+ |
 |  *General*  | single_turn_dataset_2 |      QA      | 18,300+ |
 |  *General*  | self_cognition_EmoLLM |      QA      |   85+   |
@@ -38,6 +39,7 @@
 * dataset `data_pro` from this repo
 * dataset `multi_turn_dataset_1` from [Smile](https://github.com/qiuhuachuan/smile)
 * dataset `multi_turn_dataset_2` from [CPsyCounD](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+* dataset `multi_turn_dataset_3` from [SoulChat](https://github.com/scutcyr/SoulChat)
 * dataset `single_turn_dataset_1` from this repo
 * dataset `single_turn_dataset_2` from this repo
 * dataset `self_cognition_EmoLLM` from this repo

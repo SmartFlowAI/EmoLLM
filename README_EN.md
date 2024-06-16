@@ -189,6 +189,8 @@ The Model aims to fully understand and promote the mental health of individuals,
     - [Authors (in no particular order)](#authors-in-no-particular-order)
     - [Copyright Notice](#copyright-notice)
     - [Acknowledgments](#acknowledgments)
+      - [Related Projects](#related-projects)
+      - [People](#people)
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
   - [Communication group](#communication-group)
@@ -307,10 +309,15 @@ The project is licensed under the MIT License. Please refer to the details
  [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/master/LICENSE)
 
 ### Acknowledgments
+#### Related Projects
+- [CPsyCoun](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+- [Smile](https://github.com/qiuhuachuan/smile)
+- [SoulChat](https://github.com/scutcyr/SoulChat)
 
+#### People
 - [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/)
 - [Vansin](https://github.com/vansin)
-- A.bu (M.A. in Psychology, Peking University)
+- A.bu (M.S. in Psychology, Peking University)
 - [Sanbuphy](https://github.com/sanbuphy)
 - [HatBoy](https://github.com/hatboy)
 

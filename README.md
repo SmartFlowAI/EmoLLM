@@ -188,6 +188,8 @@
     - [版权说明](#版权说明)
     - [引用](#引用)
     - [特别鸣谢](#特别鸣谢)
+      - [相关项目](#相关项目)
+      - [人员](#人员)
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
   - [交流群](#交流群)
@@ -317,6 +319,12 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 特别鸣谢
 
+#### 相关项目
+- [CPsyCoun](https://github.com/CAS-SIAT-XinHai/CPsyCoun)
+- [Smile](https://github.com/qiuhuachuan/smile)
+- [SoulChat](https://github.com/scutcyr/SoulChat)
+
+#### 人员
 - [上海人工智能实验室](https://www.shlab.org.cn/)
 - [闻星（浦语小助手）](https://github.com/vansin)
 - 阿布（北大心理学硕士）
