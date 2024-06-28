@@ -26,6 +26,8 @@ You can find it in the [Huggingface space](https://huggingface.co/spaces/tasteli
 
 GPU devices: A10, 3090, V100, A100 are acceptable.
 
+The project Swift fine-tuning uses free computing resources based on Intel CPUs provided by the Magic Community, and uses the GPU environment (8 cores, 32GB video memory, 24G);
+
 SWIFT runs in a Python environment. Please make sure your Python version is higher than 3.8.
 
 Here we install the experimental environment, which includes the creation of the virtual environment, ms-swift and the installation of related dependencies.

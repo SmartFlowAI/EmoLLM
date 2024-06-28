@@ -98,7 +98,7 @@
 </table>
 
 ## 🎇最近更新
-
+- 【2024.6】新增基于[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat微调指南](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)、新增[基于swift的微调指南](./swift/)、论文[ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952)引用了EmoLLM且EmoLLM取得了较好的效果。
 - 【2024.05.28】EmoLLM使用的多轮对话数据集CPsyCounD和专业评测方法已公开，详见2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - 【2024.05.08】EmoLLM**爹系男友阅览体验版**上线 [1. **百度AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), 欢迎点赞收藏
 - 【2024.05.07】[增量预训练指南](xtuner_config/pt/README.md)
@@ -142,11 +142,13 @@
 ## 🏆荣誉栏
 
 - 项目荣获上海人工智能实验室举办的**2024浦源大模型系列挑战赛春季赛*****创新创意奖***
-  
+
 <p align="center">
    <a href="https://github.com/SmartFlowAI/EmoLLM/">
     <img src="assets/Shusheng.png" alt="浦语挑战赛创新创意奖">
 </p>
+
+- 荣获[AI 赋能大学计划“全国高校行”](https://mp.weixin.qq.com/s/yyaulQ1wBzKq5cXaGl2Wag)一等奖
 
 - 🎉感谢以下媒体及公众号朋友对本项目的报道和支持(以下排名不分先后! 若有遗漏、十分抱歉, 一并感激! 欢迎补充!): [NLP工程化](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A), [机智流](https://mp.weixin.qq.com/s/_wMCmssRMGd0Oz5OVVkjAA), [爱可可爱生活](https://mp.weixin.qq.com/s/4WaCg4OpkCWXEuWHuV4r3w), [阿郎小哥](https://mp.weixin.qq.com/s/_MSMeL1XHP0v5lDi3YaPVw), [大模型日知路](https://mp.weixin.qq.com/s/FYYibsCXtfU6FFM9TuKILA), [AI Code](https://mp.weixin.qq.com/s/yDWGY3S4CwCi6U_irsFmqA) 等!
 
