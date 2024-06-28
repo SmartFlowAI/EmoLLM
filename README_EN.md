@@ -101,7 +101,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
-
+- 【2024.6】 Added [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat fine-tuning guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), added [swift-based fine-tuning guide](./swift/), the paper [ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952) cited EmoLLM and EmoLLM achieved good results.
 - 【2024.05.28】The multi-turn dialogue dataset **CPsyCunD** and **professional evaluation method** used by EmoLLM have been released. For details, please see the 2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - [2024.05.08] EmoLLM**Daddy-like BF V0.1** is public now in [1. **Baidu AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) and [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), welcome to like and add it to your collections!
 - [2024.05.07] [Incremental Pre-training Guide](xtuner_config/pt/README.md)
@@ -155,6 +155,8 @@ The Model aims to fully understand and promote the mental health of individuals,
     <img src="assets/Shusheng.png" alt="Challenge Innovation and Creativity Award">
 </p>
 
+
+- Won the first prize of [AI-enabled university programme "National College Tour"](https://mp.weixin.qq.com/s/yyaulQ1wBzKq5cXaGl2Wag).
 - The project has been promoted by the official WeChat account **NLP Engineering**. Here's the [link](https://mp.weixin.qq.com/s/78lrRl2tlXEKUfElnkVx4A). 
 
 ## Roadmap
