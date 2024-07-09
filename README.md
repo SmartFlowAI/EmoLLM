@@ -46,7 +46,7 @@
 
 |         模型          |   类型   |                                                   链接                                                   | 模型链接   |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
-|   InternLM2_5_7B_chat   |  QLORA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/summary)  |
+|   InternLM2_5_7B_chat   |  QLORA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2.5-7B-Chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | |
 |   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | |
 |   InternLM2_7B_chat   | 全量微调 | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  | |
