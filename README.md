@@ -100,6 +100,7 @@
 </table>
 
 ## 🎇最近更新
+- 【2024.7】新增基于InternLM2_5_7B_chat[微调配置](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、模型文件发布在 [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
 - 【2024.6】新增基于[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat微调指南](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)、新增[基于swift的微调指南](./swift/)、论文[ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952)引用了EmoLLM且EmoLLM取得了较好的效果。
 - 【2024.05.28】EmoLLM使用的多轮对话数据集CPsyCounD和专业评测方法已公开，详见2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - 【2024.05.08】EmoLLM**爹系男友阅览体验版**上线 [1. **百度AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), 欢迎点赞收藏
