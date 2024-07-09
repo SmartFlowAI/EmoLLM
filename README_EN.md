@@ -304,7 +304,7 @@ This project uses Git for version control. You can see the currently available v
 |         [王几行XING](zhihu.com/people/brycewang1898)         |             Peking University, Master's graduate             |                                                              | Data Processing, LLM finetuning, Front-end and back-end development |
 |                            [思在]                            |       Peking University, Master's graduate (Microsoft)       |                                                              |      LLM finetuning, Front-end and back-end development      |
 |       [TingWei](https://github.com/wwewwt)        |                  University Of Electronic Science And Technology Of China,Master's graduate                  |                                                                   |                     LLM finetuning                      |
-
+|       [PengYu](https://github.com/hi-pengyu)        |                  Shihezi University, Master's student                 |                                                                   |                     LLM finetuning                      |
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details
