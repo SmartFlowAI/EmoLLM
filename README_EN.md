@@ -48,6 +48,7 @@
 
 |         Model         |       Type       | File Links  | Model Links  |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   InternLM2_5_7B_chat   |  QLORA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | |
 |   InternLM2_7B_chat   | full fine-tuning | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  | |
 |   InternLM2_7B_base   |  QLORA   | [internlm2_7b_base_qlora_e10_M_1e4_32_64.py](./xtuner_config/internlm2_7b_base_qlora_e10_M_1e4_32_64.py) |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-InternLM7B-base-10e), [ModelScope](https://www.modelscope.cn/models/chg0901/EmoLLM-InternLM7B-base-10e/summary) |
@@ -101,6 +102,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
+- 【2024.7】Added InternLM2_5_7B_chat[fine-tuning configuration](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、model file [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
 - 【2024.6】 Added [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat fine-tuning guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), added [swift-based fine-tuning guide](./swift/), the paper [ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952) cited EmoLLM and EmoLLM achieved good results.
 - 【2024.05.28】The multi-turn dialogue dataset **CPsyCunD** and **professional evaluation method** used by EmoLLM have been released. For details, please see the 2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - [2024.05.08] EmoLLM**Daddy-like BF V0.1** is public now in [1. **Baidu AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) and [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), welcome to like and add it to your collections!
@@ -304,7 +306,7 @@ This project uses Git for version control. You can see the currently available v
 |         [王几行XING](zhihu.com/people/brycewang1898)         |             Peking University, Master's graduate             |                                                              | Data Processing, LLM finetuning, Front-end and back-end development |
 |                            [思在]                            |       Peking University, Master's graduate (Microsoft)       |                                                              |      LLM finetuning, Front-end and back-end development      |
 |       [TingWei](https://github.com/wwewwt)        |                  University Of Electronic Science And Technology Of China,Master's graduate                  |                                                                   |                     LLM finetuning                      |
-
+|       [PengYu](https://github.com/hi-pengyu)        |                  Shihezi University, Master's student                 |                                                                   |                     LLM finetuning                      |
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details
