@@ -303,7 +303,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |         [dream00001](https://github.com/dream00001)          |                  南开大学在读硕士                  |                                                              |                  前后端开发                   |
 |     [王几行XING](https://zhihu.com/people/brycewang1898)     |                  北京大学硕士毕业                  |                                                              |         清洗数据、LLM微调、前后端开发         |
 |                            [思在]                            |            北京大学硕士毕业（微软美国）            |                                                              |              LLM微调、前后端开发              |
-|       [TingWei](https://github.com/wwewwt)        |                  电子科技大学硕士毕业士                  |     微信公众号：AI大模型在手                                                         |                     微调                      |
+|       [TingWei](https://github.com/wwewwt)        |                  电子科技大学硕士毕业                  |     微信公众号：AI大模型在手                                                         |                     微调                      |
 |     [PengYu](https://github.com/hi-pengyu)     |                  石河子大学在读硕士                  |                                                              |         LLM微调         |
 ### 版权说明
 
