@@ -99,8 +99,9 @@
 </table>
 
 ## 🎇最近更新
-- 【2024.7】新增基于InternLM2_5_7B_chat[微调配置](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、模型文件发布在 [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
-- 【2024.6】新增基于[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat微调指南](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)、新增[基于swift的微调指南](./swift/)、论文[ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952)引用了EmoLLM且EmoLLM取得了较好的效果。
+- 【2024.07】欢迎大家使用稳定版 EmoLLM V2.0 进行日常使用和学术研究，模型权重链接：[OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main)。
+- 【2024.07】新增基于InternLM2_5_7B_chat[微调配置](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、模型文件发布在 [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
+- 【2024.06】新增基于[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat微调指南](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)、新增[基于swift的微调指南](./swift/)、论文[ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952)引用了EmoLLM且EmoLLM取得了较好的效果。
 - 【2024.05.28】EmoLLM使用的多轮对话数据集CPsyCounD和专业评测方法已公开，详见2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - 【2024.05.08】EmoLLM**爹系男友阅览体验版**上线 [1. **百度AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), 欢迎点赞收藏
 - 【2024.05.07】[增量预训练指南](xtuner_config/pt/README.md)
@@ -279,7 +280,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |                            用户名                            |                     学校/组织                      |                             备注                             |                     贡献                      |
 | :----------------------------------------------------------: | :------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------------: |
 |           [aJupyter](https://github.com/aJupyter)            |                  南开大学在读硕士                  |                        DataWhale成员                         |                  项目发起人                   |
-|           [MING-ZCH](https://github.com/MING-ZCH)            |               华中科技大学在读本科生               |                   LLM x Psychology 研究者                    |                项目联合负责人                 |
+|           [MING-ZCH](https://github.com/MING-ZCH)            |               华中科技大学在读本科生               |                   LLM x Mental health 研究者                  |                项目联合负责人                 |
 |         [jujimeizuo](https://github.com/jujimeizuo)          |                  江南大学在读硕士                  |                                                              |                                               |
 | [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |          哈尔滨工业大学（威海）在读本科生          |                                                              |                                               |
 |             [8baby8](https://github.com/8baby8)              |                 飞桨领航团区域主管                 |                     文心大模型核心开发者                     |                                               |
