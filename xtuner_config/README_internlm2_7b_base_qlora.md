@@ -138,7 +138,7 @@ model = dict(
 ### 数据处理
 
 - 使用 `../datasets/process.py` 以处理 **multi_turn_dataset(1 和 2，QA数据转单轮对话)**， `data.json` 和 `data_pro.json` 文件（两个多轮对话），以添加或者调整 **`system` prompt**
-- 使用 `../datasets/processed/process_single_turn_conversation_construction.py` 处理 **single-turn dataset** (1 和 2)，修改 (`input` 和 `ouput`) ，并在每次 **conversation** 中添加 **`system` prompt**
+- 使用 `../datasets/processed/process_single_turn_conversation_construction.py` 处理 **single-turn dataset** (1 和 2)，修改 (`input` 和 `output`) ，并在每次 **conversation** 中添加 **`system` prompt**
 - 使用 `../datasets/processed/process_merge.py` 用于合并 `../datasets/processed/` 目录下**6个更新后的数据集**，生成一个合并后的数据集 `combined_data.json`用于最终训练
 
 ## 基于XTuner的微调🎉🎉🎉🎉🎉
