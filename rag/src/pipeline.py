@@ -45,7 +45,7 @@ class EmoLLMRAG(object):
     def get_retrieval_content(self, query) -> str:
         """
             Input: 用户提问, 是否需要rerank
-            ouput: 检索后并且 rerank 的内容        
+            output: 检索后并且 rerank 的内容        
         """
     
         content = []
