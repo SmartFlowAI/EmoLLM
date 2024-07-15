@@ -281,6 +281,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 | :----------------------------------------------------------: | :------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------------: |
 |           [aJupyter](https://github.com/aJupyter)            |                  南开大学在读硕士                  |                        DataWhale成员                         |                  项目发起人                   |
 |           [MING-ZCH](https://github.com/MING-ZCH)            |               华中科技大学在读本科生               |                   LLM x Mental health 研究者                  |                项目联合负责人                 |
+|            [chg0901](https://github.com/chg0901)             | 韩国光云大学在读博士 [MiniSora](https://github.com/mini-sora/minisora/)          | DataWhale意向成员 DataWhale鲸英助教团成员          |                项目联合负责人                 |
 |         [jujimeizuo](https://github.com/jujimeizuo)          |                  江南大学在读硕士                  |                                                              |                                               |
 | [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |          哈尔滨工业大学（威海）在读本科生          |                                                              |                                               |
 |             [8baby8](https://github.com/8baby8)              |                 飞桨领航团区域主管                 |                     文心大模型核心开发者                     |                                               |
@@ -290,7 +291,6 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |             [ZeyuBa](https://github.com/ZeyuBa)              |                  自动化所在读硕士                  |                                                              |                                               |
 |   [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |               宾夕法尼亚大学在读硕士               |                                                              |                                               |
 |          [Nobody-ML](https://github.com/Nobody-ML)           |           中国石油大学（华东）在读本科生           |                                                              |                                               |
-|            [chg0901](https://github.com/chg0901)             | [MiniSora](https://github.com/mini-sora/minisora/) | [MiniSora](https://github.com/mini-sora/minisora/)主要维护者，管理员 | LLM预训练和微调、模型上传、数据清洗、文档翻译 |
 |             [Mxoder](https://github.com/Mxoder)              |             北京航空航天大学在读本科生             |                                                              |                                               |
 |           [Anooyman](https://github.com/Anooyman)            |                  南京理工大学硕士                  |                                                              |                                               |
 |         [Vicky-3021](https://github.com/Vicky-3021)          |            西安电子科技大学硕士（研0）             |                                                              |                                               |
