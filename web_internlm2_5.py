@@ -15,7 +15,7 @@ Please run with the command `streamlit run path/to/web_demo.py
 Using `python path/to/web_demo.py` may cause unknown problems.
 """
 # isort: skip_file
-import copy
+import copy, os
 import warnings
 from dataclasses import asdict, dataclass
 from typing import Callable, List, Optional
@@ -31,9 +31,14 @@ from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 
 logger = logging.get_logger(__name__)
 
-# local
-model_path = '/root/EmoLLM/xtuner_config/hf4'
+# # local
+# model_path = '/root/EmoLLM/xtuner_config/hf_safe'
+
 # Online downloading will be added later
+
+model_path = './EmoLLM_V3.0'
+os.system(f'git clone https://code.openxlab.org.cn/chg0901/EmoLLM_V3.0.git {model_path}')
+os.system(f'cd {model_path} && git lfs pull')
 
 @dataclass
 class GenerationConfig:
