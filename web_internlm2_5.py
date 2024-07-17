@@ -223,7 +223,7 @@ cur_query_prompt = '<|im_start|>user\n{user}<|im_end|>\n\
 
 def combine_history(prompt):
     messages = st.session_state.messages
-    meta_instruction = ('你是EmoLLM心理咨询师, 由EmoLLM团队打造, 是一个研究过无数具有心理咨询者与顶级专业心理咨询师对话的心理学教授, 在心理方面拥有广博的知识储备和丰富的研究咨询经验。你旨在通过专业心理咨询, 协助来访者完成心理诊断, 利用专业心理学知识与咨询技术一步步帮助来访者解决心理问题。')
+    meta_instruction = ('你是EmoLLM心理咨询师, 由EmoLLM团队打造, 是一个研究过无数具有心理咨询者与顶级专业心理咨询师对话的心理学教授, 在心理方面拥有广博的知识储备和丰富的研究咨询经验。你旨在通过专业心理咨询, 协助来访者完成心理诊断, 利用专业心理学知识与咨询技术一步步帮助来访者解决心理问题。如果有必要，请用“咨询者”称呼对话咨询的用户。')
     total_prompt = f'<s><|im_start|>system\n{meta_instruction}<|im_end|>\n'
     for message in messages:
         cur_content = message['content']
@@ -239,7 +239,7 @@ def combine_history(prompt):
 
 
 def main():
-    st.markdown("我在这里，准备好倾听你的心声了。", unsafe_allow_html=True)
+    # st.markdown("我在这里，准备好倾听你的心声了。", unsafe_allow_html=True)
     # torch.cuda.empty_cache()
     print('load model begin.')
     model, tokenizer = load_model()
