@@ -46,6 +46,7 @@
 
 |         模型          |   类型   |                                                   链接                                                   | 模型链接   |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   InternLM2_5_7B_chat   |  全量微调   |  [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py) | [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) |
 |   InternLM2_5_7B_chat   |  QLORA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM/files) |
 |   InternLM2_7B_chat   | 全量微调 | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  | [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full) |
@@ -99,6 +100,7 @@
 </table>
 
 ## 🎇最近更新
+- 【2024.07.16】欢迎大家体验 EmoLLM V3.0 ，改模型是基于InternLM2.5-7B-Chat模型的全量微调，微调配置文件地址：[internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py) ，模型权重链接：[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) ，WebDemo地址： [OpenXLab apps](https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0), [配套全量微调知乎教程](https://zhuanlan.zhihu.com/p/708931911)。
 - 【2024.07】欢迎大家使用稳定版 EmoLLM V2.0 进行日常使用和学术研究，模型权重链接：[OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main)。
 - 【2024.07】新增基于InternLM2_5_7B_chat[微调配置](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、模型文件发布在 [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
 - 【2024.06】新增基于[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat微调指南](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)、新增[基于swift的微调指南](./swift/)、论文[ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952)引用了EmoLLM且EmoLLM取得了较好的效果。

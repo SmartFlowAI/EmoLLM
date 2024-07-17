@@ -48,6 +48,7 @@
 
 |         Model         |       Type       | File Links  | Model Links  |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   InternLM2_5_7B_chat   |  全量微调   |  [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py) | [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) |
 |   InternLM2_5_7B_chat   |  QLORA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM/files) |
 |   InternLM2_7B_chat   | full fine-tuing | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  | [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full) |
@@ -103,9 +104,10 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
-- 【2024.7】Welcome to use the stable version of EmoLLM V2.0 for daily use and academic research. Model weight link: [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main).
-- 【2024.7】Added InternLM2_5_7B_chat[fine-tuning configuration](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、model file [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
-- 【2024.6】 Added [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat fine-tuning guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), added [swift-based fine-tuning guide](./swift/), the paper [ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952) cited EmoLLM and EmoLLM achieved good results.
+- 【2024.07.16】 Welcome everyone to experience EmoLLM V3.0. This model is a fully fine-tuned version based on the InternLM2.5-7B-Chat model. The fine-tuning configuration file can be found at: [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py). Model weights are available at: [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0). WebDemo is available at: [OpenXLab apps](https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0), [Full fine-tuning tutorial on Zhihu](https://zhuanlan.zhihu.com/p/708931911).
+- 【2024.07】Welcome to use the stable version of EmoLLM V2.0 for daily use and academic research. Model weight link: [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main).
+- 【2024.07】Added InternLM2_5_7B_chat[fine-tuning configuration](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、model file [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
+- 【2024.06】 Added [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat fine-tuning guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), added [swift-based fine-tuning guide](./swift/), the paper [ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952) cited EmoLLM and EmoLLM achieved good results.
 - 【2024.05.28】The multi-turn dialogue dataset **CPsyCunD** and **professional evaluation method** used by EmoLLM have been released. For details, please see the 2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - [2024.05.08] EmoLLM**Daddy-like BF V0.1** is public now in [1. **Baidu AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) and [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), welcome to like and add it to your collections!
 - [2024.05.07] [Incremental Pre-training Guide](xtuner_config/pt/README.md)
