@@ -25,7 +25,7 @@
 <h3 align="center">EmoLLM</h3>
 
   <p align="center">
-  <a href="README.md">简体中文</a> | English
+  <a href="README.md">简体中文</a> | English | <a href="README_JP.md">日本語</a>
     <br />
     <br />
     <a href="https://github.com/SmartFlowAI/EmoLLM"><strong>Explore the documentation of this project »</strong></a>
@@ -355,7 +355,7 @@ The project is licensed under the MIT License. Please refer to the details
 [issues-shield]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/SmartflowAI/EmoLLM.svg
 [license-shield]: https://img.shields.io/github/license/SmartflowAI/EmoLLM.svg?style=flat-square
-[license-url]: https://github.com/SmartflowAI/EmoLLM/blob/main/LICENSE
+[license-url]: https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE
 
 [OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
 [OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
