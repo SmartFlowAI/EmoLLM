@@ -25,7 +25,7 @@
 <h3 align="center">EmoLLM</h3>
 
   <div align="center">
-      简体中文| <a href="README_EN.md" >English</a>
+      简体中文| <a href="README_EN.md" >English</a> | <a href="README_JP.md" >日本語</a>
     <br />
     <br />
     <a href="https://github.com/SmartFlowAI/EmoLLM"><strong>探索本项目的文档 »</strong></a>
