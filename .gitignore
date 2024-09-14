@@ -6,6 +6,8 @@ data/
 pdf/
 .idea/
 logs/
+.vscode/
+work_dirs/
 
 # *.jsonl
 # *.json
