@@ -123,6 +123,7 @@
 
 <details>
 <summary>查看更多</summary>
+  
 - 【2024.02.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)
 - 【2024.02.27】更新英文readme和一系列数据集（舔狗和单轮对话）
 - 【2024.02.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
