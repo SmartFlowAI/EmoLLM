@@ -63,6 +63,7 @@
 | Mixtral 8x7B_instruct |  QLoRA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    | |
 | LLaMA3_8b_instruct    |  QLoRA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py) | [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei/tree/main), [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM-LLaMA3_8b_instruct_aiwei/files) |
 | LLaMA3_8b_instruct    |  QLoRA   | [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) |
+| Qwen2-7B-Instruct    |  LoRA   | [Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py)    |[ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/) |
 |          ……           |    ……    |                                                    ……                                                    | …… |
 
 
@@ -104,11 +105,13 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
-- 【2024.07.16】 Welcome everyone to experience EmoLLM V3.0. This model is a fully fine-tuned version based on the InternLM2.5-7B-Chat model. The fine-tuning configuration file can be found at: [internlm2_5_chat_7b_full.py](./xtuner_config/internlm2_5_chat_7b_full.py). Model weights are available at: [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0). WebDemo is available at: [OpenXLab apps](https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0), [Full fine-tuning tutorial on Zhihu](https://zhuanlan.zhihu.com/p/708931911).
-- 【2024.07】Welcome to use the stable version of EmoLLM V2.0 for daily use and academic research. Model weight link: [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main).
-- 【2024.07】Added InternLM2_5_7B_chat[fine-tuning configuration](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、model file [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
-- 【2024.06】 Added [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat fine-tuning guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), added [swift-based fine-tuning guide](./swift/), the paper [ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952) cited EmoLLM and EmoLLM achieved good results.
-- 【2024.05.28】The multi-turn dialogue dataset **CPsyCunD** and **professional evaluation method** used by EmoLLM have been released. For details, please see the 2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
+- [2024.09.14] The Lora fine-tuned model based on the Qwen2-7B-Instruct model is open-sourced. Fine-tuning configuration file address: [Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py), model weight link: [ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/)
+- [2024.08] The Lora fine-tuned model based on GLM4-9B-chat is open-sourced (based on Llama-factory). For details, see [Fine-tuning Tutorial](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), model weight link: [ModelScope](https://www.modelscope.cn/models/wwewwt/EmoLLM-glm-4-9b-chat/summary)
+- [2024.07.16] Welcome everyone to experience EmoLLM V3.0. This model is a fully fine-tuned version based on the InternLM2.5-7B-Chat model. The fine-tuning configuration file can be found at: [internlm2_5_chat_7b_full.py](./xtuner_config/internlm2_5_chat_7b_full.py). Model weights are available at: [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0). WebDemo is available at: [OpenXLab apps](https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0), [Full fine-tuning tutorial on Zhihu](https://zhuanlan.zhihu.com/p/708931911).
+- [2024.07] Welcome to use the stable version of EmoLLM V2.0 for daily use and academic research. Model weight link: [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main).
+- [2024.07] Added InternLM2_5_7B_chat[fine-tuning configuration](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、model file [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
+- [2024.06] Added [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)[GLM4-9B-chat fine-tuning guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md), added [swift-based fine-tuning guide](./swift/), the paper [ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952) cited EmoLLM and EmoLLM achieved good results.
+- [2024.05.28] The multi-turn dialogue dataset **CPsyCunD** and **professional evaluation method** used by EmoLLM have been released. For details, please see the 2024 ACL findings[《CPsyCoun: A Report-based Multi-turn Dialogue Reconstruction and Evaluation Framework for Chinese Psychological Counseling》](https://arxiv.org/abs/2405.16433)!
 - [2024.05.08] EmoLLM**Daddy-like BF V0.1** is public now in [1. **Baidu AppBuilder**](https://appbuilder.baidu.com/s/4cLyw) and [2. **OpenXLab**](https://openxlab.org.cn/apps/detail/chg0901/EmoLLM3.0_Gradio_Llama3-8B-Instruct3.0), welcome to like and add it to your collections!
 - [2024.05.07] [Incremental Pre-training Guide](xtuner_config/pt/README.md)
 - [2024.05.04] [EmoLLM3.0 OpenXLab Demo](https://st-app-center-006861-9746-jlroxvg.openxlab.space/) based on LLaMA3_8b_instruct is available now ([restart link]((https://openxlab.org.cn/apps/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0))), [LLAMA3 fine-tuning guide](xtuner_config/README_llama3_8b_instruct_qlora_alpaca_e3_M.md) is updated, LLaMA3_8b_instruct-8B QLoRA fine-tuning model EmoLLM3.0 weights are released on [**OpenXLab**](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0) and [**ModelScope**](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) platforms
@@ -122,6 +125,10 @@ The Model aims to fully understand and promote the mental health of individuals,
 - [2024.03.11] **EmoLLM V2.0 is greatly improved in all scores compared to EmoLLM V1.0. Surpasses the performance of Role-playing ChatGPT on counseling tasks!** [Click to experience EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0), update [dataset statistics and details](./datasets/), [Roadmap](./assets/Roadmap_ZH.png)
 - [2024.03.09] Add concurrency acceleration [QA pair generation](./scripts/qa_generation/), [RAG pipeline](./rag/)
 - [2024.03.03] [Based on InternLM2-7B-chat full fine-tuned version EmoLLM V2.0 open sourced](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full), need two A100*80G, update professional evaluation, see [evaluate](./evaluate/), update PaddleOCR-based PDF to txt tool scripts, see [scripts](./scripts/).
+
+
+<details>
+<summary>View More</summary>
 - [2024.02.29] Updated objective assessment calculations, see [evaluate](./evaluate/) for details. A series of datasets have also been updated, see [datasets](./datasets/) for details.
 - [2024.02.27] Updated English README and a series of datasets (licking dogs and one-round dialogue)
 - [2024.02.23]The "Gentle Lady Psychologist Ai Wei" based on InternLM2_7B_chat_qlora was launched. [Click here to obtain the model weights](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei), [configuration file](xtuner_config/aiwei-internlm2_chat_7b_qlora.py), [online experience link](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
@@ -129,11 +136,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 - [2024.02.23]Updated [several fine-tuning configurations](/xtuner_config/), added [data_pro.json](/datasets/data_pro.json) (more quantity, more comprehensive scenarios, richer content) and [aiwei.json](/datasets/aiwei.json) (dedicated to the gentle lady role-play, featuring Emoji expressions), the "Gentle Lady Psychologist Ai Wei" is coming soon.
 
 - [2024.02.18] The full fine-tuned version based on Qwen1_5-0_5B-Chat has been [open-sourced](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary). Friends with limited computational resources can now dive in and explore it.
-
-
-<details>
-<summary>View More</summary>
-
+  
 - [2024.02.06] [Open-sourced based on the Qwen1_5-0_5B-Chat full-scale fine-tuned version](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary), friends with limited computing power can start experimenting~
 
 <p align="center"> 
@@ -187,7 +190,7 @@ The Model aims to fully understand and promote the mental health of individuals,
           - [User Guide](#user-guide)
     - [🍪Quick start](#quick-start)
     - [📌Data Construction](#data-construction)
-    - [🎨Fine-tuning Guide](#fine-tuning-guide)
+    - [🎨Incremental Pre-training and Fine-tuning Guide](#incremental-pre-training-and-fine-tuning-guide)
     - [🔧Deployment Guide](#deployment-guide)
     - [⚙RAG (Retrieval Augmented Generation)](#rag-retrieval-augmented-generation)
     - [🎓Evaluation Guide](#evaluation-guide)
@@ -206,6 +209,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 ###### Pre-development Configuration Requirements.
 
 - A100 40G (specifically for InternLM2_7B_chat + qlora fine-tuning + deepspeed zero2 optimization)
+- **[TODO]**: Publish more details about hardware consumption.
 
 ###### User Guide
 
@@ -218,7 +222,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 1. Read in sequence or read sections you're interested in：
    - [Quick Start](#quick-start)
    - [Data Construction](#data-construction)
-   - [Fine-tuning Guide](#fine-tuning-guide)
+   - [Fine-tuning Guide](#incremental-pre-training-and-fine-tuning-guide)
    - [Deployment Guide](#deployment-guide)
    - [RAG](#rag-retrieval-augmented-generation)
    - [Evaluation Guide](#evaluation-guide)
@@ -230,19 +234,22 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 - Quick coding: [Baby EmoLLM](quick_start/Baby_EmoLLM.ipynb)
 
 ### 📌Data Construction
-
 - Please read the [Data Construction Guide ](generate_data/tutorial_EN.md) for reference.
-
 - The dataset used for this fine-tuning can be found at [datasets](datasets/data.json)
 
-### 🎨Fine-tuning Guide
+### 🎨Incremental Pre-training and Fine-tuning Guide
+- For details on incremental pre-training, see [Incremental Pre-training Guide](./xtuner_config/pt/README.md).
+- For full-scale, LoRA, and QLoRA fine-tuning based on **xtuner**, see [Fine-tuning Guide](./xtuner_config/README_EN.md).
+- For full-scale, LoRA, and QLoRA fine-tuning based on **ms-swift**, see [Fine-tuning Guide](./swift/README_EN.md).
+- For full-scale, LoRA, and QLoRA fine-tuning based on **LLaMA-Factory**, see [Fine-tuning Guide](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md).
+- **[TODO]**: Update DPO training.
 
-For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 
 ### 🔧Deployment Guide
 
 - Demo deployment: see [deployment guide](./demo/README_EN.md) for details.
 - Quantitative deployment based on [LMDeploy](https://github.com/InternLM/lmdeploy/): see [deploy](./deploy/lmdeploy_EN.md)
+- **[TODO]**: Deployment Guide for VLLM
 
 ### ⚙RAG (Retrieval Augmented Generation)
 
@@ -263,7 +270,8 @@ For details, see the [fine-tuning guide](xtuner_config/README_EN.md)
 - [LMDeploy](https://github.com/InternLM/lmdeploy/): for quantitative deployment
 - [Stremlit](https://streamlit.io/): for building demos
 - [DeepSpeed](https://github.com/microsoft/DeepSpeed): for parallel training
-- …
+- [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory/blob/main)
+- [ms-swift](https://github.com/modelscope/ms-swift)
 
 #### How to participate in this project
 

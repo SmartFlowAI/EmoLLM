@@ -59,8 +59,9 @@
 |      ChatGLM3_6B      |   LoRA   |   [chatglm3_6b_lora_alpaca_e3.py](./xtuner_config/chatglm3_6b_lora_alpaca_e3.py)  | |
 | DeepSeek MoE_16B_chat |  QLoRA   |  [deepseek_moe_16b_chat_qlora_oasst1_e3.py](./xtuner_config/deepseek_moe_16b_chat_qlora_oasst1_e3.py)    | |
 | Mixtral 8x7B_instruct |  QLoRA   | [mixtral_8x7b_instruct_qlora_oasst1_e3.py](./xtuner_config/mixtral_8x7b_instruct_qlora_oasst1_e3.py)    | |
-| LLaMA3_8b_instruct    |  QLoRA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py) | [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei/tree/main), [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM-LLaMA3_8b_instruct_aiwei/files) |
-| LLaMA3_8b_instruct    |  QLoRA   | [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) |
+| LLaMA3_8B_instruct    |  QLoRA   | [aiwei_llama3_8b_instruct_qlora_e3.py](./xtuner_config/aiwei_llama3_8b_instruct_qlora_e3.py) | [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM-LLaMA3_8b_instruct_aiwei/tree/main), [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM-LLaMA3_8b_instruct_aiwei/files) |
+| LLaMA3_8B_instruct    |  QLoRA   | [llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py](./xtuner_config/llama3_8b_instruct_qlora_alpaca_e3_M_ruozhi_scM.py)    |[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM-Llama3-8B-Instruct3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLM-Llama3-8B-Instruct3.0/summary) |
+| Qwen2-7B-Instruct    |  LoRA   | [Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py)    |[ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/) |
 |          ……           |    ……    |                                                    ……                                                    | …… |
 
 </div>
@@ -100,6 +101,8 @@
 </table>
 
 ## 🎇最近更新
+- 【2024.09.14】基于Qwen2-7B-Instruct模型的Lora微调模型开源，微调配置文件地址：[Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py) ，模型权重链接：[ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/)
+- 【2024.08】基于GLM4-9B-chat微调Lora模型开源（基于LLaMA-Factory），详情见[微调教程](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md) ，模型权重链接：[ModelScope](https://www.modelscope.cn/models/wwewwt/EmoLLM-glm-4-9b-chat/summary)
 - 【2024.07.16】欢迎大家体验 EmoLLM V3.0 ，该模型是基于InternLM2.5-7B-Chat模型的全量微调，微调配置文件地址：[internlm2_5_chat_7b_full.py](./xtuner_config/internlm2_5_chat_7b_full.py) ，模型权重链接：[OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) ，WebDemo地址： [OpenXLab apps](https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0), [配套全量微调知乎教程](https://zhuanlan.zhihu.com/p/708931911)。
 - 【2024.07】欢迎大家使用稳定版 EmoLLM V2.0 进行日常使用和学术研究，模型权重链接：[OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main)。
 - 【2024.07】新增基于InternLM2_5_7B_chat[微调配置](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py)、模型文件发布在 [ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
@@ -117,15 +120,14 @@
 - 【2024.03.11】 **EmoLLM V2.0 相比 EmoLLM V1.0 全面提升，已超越 Role-playing ChatGPT 在心理咨询任务上的能力！**[点击体验EmoLLM V2.0](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)，更新[数据集统计及详细信息](./datasets/)、[路线图](./assets/Roadmap_ZH.png)
 - 【2024.03.09】 新增并发功能加速 [QA 对生成](./scripts/qa_generation/)、[RAG pipeline](./rag/)
 - 【2024.03.03】 [基于InternLM2-7B-chat全量微调版本EmoLLM V2.0开源](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full)，需要两块A100*80G，更新专业评估，详见[evaluate](./evaluate/)，更新基于PaddleOCR的PDF转txt工具脚本，详见[scripts](./scripts/)
+
+<details>
+<summary>查看更多</summary>
 - 【2024.02.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)
 - 【2024.02.27】更新英文readme和一系列数据集（舔狗和单轮对话）
 - 【2024.02.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
 - 【2024.02.23】更新[若干微调配置](/xtuner_config/)，新增 [data_pro.json](/datasets/data_pro.json)（数量更多、场景更全、更丰富）和 [aiwei.json](/datasets/aiwei.json)（温柔御姐角色扮演专用，带有Emoji表情），即将推出 `温柔御姐心理医生艾薇`
 - 【2024.02.18】 [基于Qwen1_5-0_5B-Chat全量微调版本开源](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)，算力有限的道友可以玩起来~
-
-<details>
-<summary>查看更多</summary>
-
 - 【2024.02.06】 EmoLLM在[**Openxlab** ](https://openxlab.org.cn/models/detail/jujimeizuo/EmoLLM_Model) 平台下载量高达18.7k，欢迎大家体验！
 
 <p align="center"> 
@@ -185,7 +187,7 @@
           - [使用指南](#使用指南)
     - [🍪快速体验](#快速体验)
     - [📌数据构建](#数据构建)
-    - [🎨微调指南](#微调指南)
+    - [🎨增量预训练、微调指南](#增量预训练微调指南)
     - [🔧部署指南](#部署指南)
     - [⚙RAG(检索增强生成)](#rag检索增强生成)
     - [🎓评测指南](#评测指南)
@@ -204,6 +206,7 @@
 ###### 开发前的配置要求
 
 - 硬件：A100 40G（仅针对InternLM2_7B_chat+qlora微调+deepspeed zero2优化）
+- todo：发布更多硬件消耗细节
 
 ###### 使用指南
 
@@ -216,7 +219,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 2. 依次阅读或者选择感兴趣的部分阅读：
    - [快速体验](#快速体验)
    - [数据构建](#数据构建)
-   - [微调指南](#微调指南)
+   - [增量预训练、微调指南](#增量预训练微调指南)
    - [部署指南](#部署指南)
    - [RAG](#rag检索增强生成)
    - [评测指南](#评测指南)
@@ -230,19 +233,21 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 
 ### 📌数据构建
-
 - 请阅读[数据构建指南](generate_data/tutorial.md)查阅
-
 - 微调用到的数据集见[datasets](datasets/data.json)
 
-### 🎨微调指南
-
-详见[微调指南](xtuner_config/README.md)
+### 🎨增量预训练、微调指南
+- 增量预训练详见[增量预训练指南](./xtuner_config/pt/README.md)
+- 【基于xtuner】全量、LoRA、QLoRA微调详见[微调指南](./xtuner_config/README.md)
+- 【基于ms-swift】全量、LoRA、QLoRA微调详见[微调指南](./swift/README.md)
+- 【基于LLaMA-Factory】全量、LoRA、QLoRA微调详见[微调指南](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)
+- todo：待更新DPO训练
 
 ### 🔧部署指南
 
 - Demo部署：详见[部署指南](demo/README.md)
 - 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](./deploy/lmdeploy.md)
+- todo: 基于VLLM部署指南
 
 ### ⚙RAG(检索增强生成)
 
@@ -257,13 +262,14 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 使用到的框架
 
-- [Xtuner](https://github.com/InternLM/xtuner)：用于微调
+- [xtuner](https://github.com/InternLM/xtuner)：用于微调
 - [Transformers](https://github.com/huggingface/transformers)
 - [Pytorch](https://pytorch.org/)
 - [LMDeploy](https://github.com/InternLM/lmdeploy/)：用于量化部署
 - [Stremlit](https://streamlit.io/)：用于构建Demo
 - [DeepSpeed](https://github.com/microsoft/DeepSpeed)：并行训练
-- …
+- [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory/blob/main)：训练框架
+- [ms-swift](https://github.com/modelscope/ms-swift)：训练框架
 
 #### 如何参与本项目
 
