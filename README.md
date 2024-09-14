@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/SmartFlowAI/EmoLLM/">
-    <img src="assets/EmoLLM_transparent.png" alt="Logo" width="50%">
+    <img src="assets/EmoLLM_logo_L.png" alt="Logo" width="50%">
   </a>
 
 <div align="center">
