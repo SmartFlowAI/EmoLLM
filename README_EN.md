@@ -129,6 +129,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 
 <details>
 <summary>View More</summary>
+  
 - [2024.02.29] Updated objective assessment calculations, see [evaluate](./evaluate/) for details. A series of datasets have also been updated, see [datasets](./datasets/) for details.
 - [2024.02.27] Updated English README and a series of datasets (licking dogs and one-round dialogue)
 - [2024.02.23]The "Gentle Lady Psychologist Ai Wei" based on InternLM2_7B_chat_qlora was launched. [Click here to obtain the model weights](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei), [configuration file](xtuner_config/aiwei-internlm2_chat_7b_qlora.py), [online experience link](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
