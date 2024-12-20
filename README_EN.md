@@ -320,10 +320,24 @@ This project uses Git for version control. You can see the currently available v
 |                            [思在]                            |       Peking University, Master's graduate (Microsoft)       |                                                              |      LLM finetuning, Front-end and back-end development      |
 |       [TingWei](https://github.com/wwewwt)        |                  University Of Electronic Science And Technology Of China,Master's graduate                  |                                                                   |                     LLM finetuning                      |
 |       [PengYu](https://github.com/hi-pengyu)        |                  Shihezi University, Master's student                 |                                                                   |                     LLM finetuning                      |
+
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details
  [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/master/LICENSE)
+
+### Citation
+
+If this project is helpful in your work, please use the following citation format:
+
+```bibtex
+@misc{2024EmoLLM,
+    title={EmoLLM: Reinventing Mental Health Support with Large Language Models},
+    author={EmoLLM Team},
+    howpublished={\url{https://github.com/SmartFlowAI/EmoLLM}},
+    year={2024}
+}
+```
 
 ### Acknowledgments
 #### Related Projects
