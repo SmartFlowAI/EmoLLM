@@ -324,10 +324,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 如果本项目对您的工作有所帮助，请使用以下格式引用：
 
 ```bibtex
-@misc{EmoLLM,
-    title={EmoLLM},
-    author={EmoLLM},
-    url={https://github.com/SmartFlowAI/EmoLLM/},
+@misc{2024EmoLLM,
+    title={EmoLLM: Reinventing Mental Health Support with Large Language Models},
+    author={EmoLLM Team},
+    howpublished={\url{https://github.com/SmartFlowAI/EmoLLM}},
     year={2024}
 }
 ```
