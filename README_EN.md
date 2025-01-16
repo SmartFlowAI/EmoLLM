@@ -203,7 +203,7 @@ The Model aims to fully understand and promote the mental health of individuals,
     - [Acknowledgments](#acknowledgments)
       - [Related Projects](#related-projects)
       - [People](#people)
-  - [⚠️ Disclaimer](#-disclaimer) 
+  - [⚠️ Disclaimer](#%EF%B8%8F-disclaimer) 
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
   - [Communication group](#communication-group)
