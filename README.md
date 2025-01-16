@@ -200,6 +200,7 @@
     - [特别鸣谢](#特别鸣谢)
       - [相关项目](#相关项目)
       - [人员](#人员)
+  - [⚠️ 免责声明](#%EF%B8%8F-%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E)
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
   - [交流群](#交流群)
@@ -351,6 +352,15 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 <!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555 -->
 
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
+
+## ⚠️ 免责声明
+本仓库所有开源代码及模型均遵循 MIT 许可协议。当前开源的 EmoLLM 模型可能存在某些局限性，因此我们声明如下：
+
+EmoLLM 目前仅能提供情绪支持和相关建议服务，尚无法提供专业的心理咨询和心理治疗服务。EmoLLM 不能替代专业的心理医生或心理咨询师，可能存在固有局限性，并可能生成错误的、有害的、冒犯性的或其他不良输出。在关键或高风险场景中，用户需保持审慎，避免将 EmoLLM 的输出作为最终决策依据，以免造成个人伤害、财产损失或其他重大损失。
+
+在任何情况下，作者、贡献者或版权所有者均不对因 EmoLLM 软件使用或交易引发的任何索赔、损害赔偿或其他责任（无论基于合同、侵权行为或其他法律原因）承担责任。
+
+使用 EmoLLM 即表示您同意上述条款与条件，并承认了解其使用可能带来的潜在风险。您还同意赔偿并使作者、贡献者和版权所有者免受因您使用 EmoLLM 而引发的任何索赔、损害赔偿或责任的影响。
 
 ## Star History
 

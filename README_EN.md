@@ -203,6 +203,7 @@ The Model aims to fully understand and promote the mental health of individuals,
     - [Acknowledgments](#acknowledgments)
       - [Related Projects](#related-projects)
       - [People](#people)
+  - [⚠️ Disclaimer](#%EF%B8%8F-disclaimer) 
   - [Star History](#star-history)
   - [🌟 Contributors](#-contributors)
   - [Communication group](#communication-group)
@@ -359,6 +360,15 @@ If this project is helpful in your work, please use the following citation forma
 <!-- [linkedin-url]: https://linkedin.com/in/aJupyter -->
 
 <!-- 太少了，没必要放 -->
+
+## ⚠️ Disclaimer
+All source code and models in this repository are open-sourced under the MIT license. The currently released EmoLLM model has certain limitations, and we make the following statement:
+
+EmoLLM is designed to provide emotional support and related advice only; it does not offer professional psychological counseling or therapy services. EmoLLM is not a substitute for licensed psychologists or therapists, and it may have inherent limitations, potentially generating incorrect, harmful, offensive, or otherwise undesirable outputs. Users should exercise caution in critical or high-risk scenarios and refrain from relying on EmoLLM’s outputs as the sole basis for decisions to avoid personal harm, property damage, or other significant losses.
+
+Under no circumstances shall the authors, contributors, or copyright holders be liable for any claims, damages, or other liabilities arising from the use of EmoLLM or transactions involving the software, whether based on contract, tort, or other legal grounds.
+
+By using EmoLLM, you agree to these terms and conditions and acknowledge the potential risks associated with its use. You also agree to indemnify and hold the authors, contributors, and copyright holders harmless from any claims, damages, or liabilities resulting from your use of EmoLLM.
 
 ## Star History
 
