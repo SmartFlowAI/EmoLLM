@@ -1,8 +1,8 @@
 # EmoLLM's datasets
 
 * Category of dataset: **General** and **Role-play**
-* Type of data: **QA** and **Conversation**
-* Summary: General(**9 datasets**), Role-play(**5 datasets**)
+* Type of data: **QA** and **Conversation** and **Reasoning** 
+* Summary: General(**10 datasets**), Role-play(**5 datasets**)
 
  ## Category
 * **General**: generic dataset, including psychological Knowledge, counseling technology, etc.
@@ -11,6 +11,7 @@
 ## Type
 * **QA**: question-and-answer pair
 * **Conversation**: multi-turn consultation dialogue
+* **Reasoning**: reasoning chain 
 
 ## Summary
 
@@ -30,6 +31,7 @@
 | *Role-play* |        tiangou        | Conversation |  3900+  |
 | *Role-play* |        mother         | Conversation | 40,300+ |
 | *Role-play* |       scientist       | Conversation | 28,400+ |
+| *General* | psychology-10k-Deepseek-R1-zh | Reasoning | 10,000+ |
 |     ……      |          ……           |      ……      |   ……    |
 
 ## Source
@@ -44,8 +46,10 @@
 * dataset `single_turn_dataset_2` from this repo
 * dataset `self_cognition_EmoLLM` from this repo
 * dataset `ruozhiba_raw` from [COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA/viewer/ruozhiba)
+* dataset `psychology-10k-Deepseek-R1-zh` from [Xinjing-LM](https://github.com/Kedreamix/Xinjing-LM)
 
 **Role-play**：
+
 * dataset `aiwei` from this repo
 * dataset `tiangou` from this repo
 * dataset `SoulStar` from [SoulStar](https://github.com/Nobody-ML/SoulStar)

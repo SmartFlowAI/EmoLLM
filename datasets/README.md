@@ -1,8 +1,8 @@
 # EmoLLM数据集
 
 * 数据集按用处分为两种类型：**General** 和 **Role-play**
-* 数据按格式分为两种类型：**QA** 和 **Conversation**
-* 数据汇总：General（**9个数据集**）；Role-play（**5个数据集**）
+* 数据按格式分为三种类型：**QA** 和 **Conversation** 和 **Reasoning**
+* 数据汇总：General（**10个数据集**）；Role-play（**5个数据集**）
 
 ## 数据集类型
 
@@ -13,6 +13,7 @@
 
 * **QA**：问答对
 * **Conversation**：多轮对话
+* **Reasoning**：推理思维链
 
 ## 数据集汇总
 
@@ -32,6 +33,7 @@
 | *Role-play* |        tiangou        | Conversation |  3900+  |
 | *Role-play* |        mother         | Conversation | 40,300+ |
 | *Role-play* |       scientist       | Conversation | 28,400+ |
+| General | psychology-10k-Deepseek-R1-zh | Reasoning | 10,000+ |
 |     ……      |          ……           |      ……      |   ……    |
 
 ## 数据集来源
@@ -47,6 +49,7 @@
 * 数据集 `single_turn_dataset_2` 来自本项目
 * 数据集 `self_cognition_EmoLLM` 来自本项目
 * 数据集 `ruozhiba_raw` 来源[COIG-CQIA](https://huggingface.co/datasets/m-a-p/COIG-CQIA/viewer/ruozhiba)
+* 数据集`psychology-10k-Deepseek-R1-zh`来源[Xinjing-LM](https://github.com/Kedreamix/Xinjing-LM)
 
 ### **Role-play**
 
