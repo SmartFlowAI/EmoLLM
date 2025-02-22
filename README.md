@@ -123,7 +123,7 @@
 
 <details>
 <summary>查看更多</summary>
-  
+
 - 【2024.02.29】更新客观评估计算，详见[evaluate](./evaluate/)，更新一系列数据集，详见[datasets](./datasets/)
 - 【2024.02.27】更新英文readme和一系列数据集（舔狗和单轮对话）
 - 【2024.02.23】推出基于InternLM2_7B_chat_qlora的 `温柔御姐心理医生艾薇`，[点击获取模型权重](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)，[配置文件](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)，[在线体验链接](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)
@@ -287,35 +287,36 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 ### 作者（排名不分先后）
 
-|                            用户名                            |                     学校/组织                      |                             备注                             |                     贡献                      |
-| :----------------------------------------------------------: | :------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------------: |
-|           [aJupyter](https://github.com/aJupyter)            |                  南开大学在读硕士                  |                        DataWhale成员                         |                  项目发起人                   |
-|           [MING-ZCH](https://github.com/MING-ZCH)            |               华中科技大学在读本科生               |                   LLM x Mental health 研究者                  |                项目联合负责人                 |
-|            [chg0901](https://github.com/chg0901)             | 韩国光云大学在读博士 [MiniSora](https://github.com/mini-sora/minisora/)          | DataWhale意向成员 DataWhale鲸英助教团成员          |                项目联合负责人                 |
-|         [jujimeizuo](https://github.com/jujimeizuo)          |                  江南大学在读硕士                  |                                                              |                                               |
-| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |          哈尔滨工业大学（威海）在读本科生          |                                                              |                                               |
-|             [8baby8](https://github.com/8baby8)              |                 飞桨领航团区域主管                 |                     文心大模型核心开发者                     |                                               |
-|             [zxazys](https://github.com/zxazys)              |                  南开大学在读硕士                  |                                                              |                                               |
-|   [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |                       swufe                        |                                                              |                                               |
-|            [MrCatAI](https://github.com/MrCatAI)             |                      AI搬用工                      |                                                              |                                               |
-|             [ZeyuBa](https://github.com/ZeyuBa)              |                  自动化所在读硕士                  |                                                              |                                               |
-|   [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |               宾夕法尼亚大学在读硕士               |                                                              |                                               |
-|          [Nobody-ML](https://github.com/Nobody-ML)           |           中国石油大学（华东）在读本科生           |                                                              |                                               |
-|             [Mxoder](https://github.com/Mxoder)              |             北京航空航天大学在读本科生             |                                                              |                                               |
-|           [Anooyman](https://github.com/Anooyman)            |                  南京理工大学硕士                  |                                                              |                                               |
-|         [Vicky-3021](https://github.com/Vicky-3021)          |            西安电子科技大学硕士（研0）             |                                                              |                                               |
-|        [SantiagoTOP](https://github.com/santiagoTOP)         |                太原理工大学在读硕士                |                                                              |      数据清洗，文档管理、Baby EmoLLM维护      |
-|        [zealot52099](https://github.com/zealot52099)         |                     个人开发者                     |                                                              |            清洗数据、LLM微调、RAG             |
-|            [wwwyfff](https://github.com/wwwyfff)             |                  复旦大学在读硕士                  |                                                              |                                               |
-|           [Yicooong](https://github.com/Yicooong)            |                  南开大学在读硕士                  |                                                              |                                               |
-|            [jkhumor](https://github.com/jkhumor)             |                  南开大学在读硕士                  |                                                              |                      RAG                      |
-|       [lll997150986](https://github.com/lll997150986)        |                  南开大学在读硕士                  |                                                              |                     微调                      |
-|          [nln-maker](https://github.com/nln-maker)           |                  南开大学在读硕士                  |                                                              |                  前后端开发                   |
-|         [dream00001](https://github.com/dream00001)          |                  南开大学在读硕士                  |                                                              |                  前后端开发                   |
-|     [王几行XING](https://zhihu.com/people/brycewang1898)     |                  北京大学硕士毕业                  |                                                              |         清洗数据、LLM微调、前后端开发         |
-|                            [思在]                            |            北京大学硕士毕业（微软美国）            |                                                              |              LLM微调、前后端开发              |
-|       [TingWei](https://github.com/wwewwt)        |                  电子科技大学硕士毕业                  |     微信公众号：AI大模型在手                                                         |                     微调                      |
-|     [PengYu](https://github.com/hi-pengyu)     |                  石河子大学在读硕士                  |                                                              |         LLM微调         |
+|                            用户名                            |                          学校/组织                           |                   备注                    |                贡献                 |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :---------------------------------------: | :---------------------------------: |
+|           [aJupyter](https://github.com/aJupyter)            |                       南开大学在读硕士                       |               DataWhale成员               |             项目发起人              |
+|           [MING-ZCH](https://github.com/MING-ZCH)            |                    华中科技大学在读本科生                    |        LLM x Mental health 研究者         |           项目联合负责人            |
+|            [chg0901](https://github.com/chg0901)             | 韩国光云大学在读博士 [MiniSora](https://github.com/mini-sora/minisora/) | DataWhale意向成员 DataWhale鲸英助教团成员 |           项目联合负责人            |
+|         [jujimeizuo](https://github.com/jujimeizuo)          |                       江南大学在读硕士                       |                                           |                                     |
+| [Smiling-Weeping-zhr](https://github.com/Smiling-Weeping-zhr) |               哈尔滨工业大学（威海）在读本科生               |                                           |                                     |
+|             [8baby8](https://github.com/8baby8)              |                      飞桨领航团区域主管                      |           文心大模型核心开发者            |                                     |
+|             [zxazys](https://github.com/zxazys)              |                       南开大学在读硕士                       |                                           |                                     |
+|   [JasonLLLLLLLLLLL](https://github.com/JasonLLLLLLLLLLL)    |                            swufe                             |                                           |                                     |
+|            [MrCatAI](https://github.com/MrCatAI)             |                           AI搬用工                           |                                           |                                     |
+|             [ZeyuBa](https://github.com/ZeyuBa)              |                       自动化所在读硕士                       |                                           |                                     |
+|   [aiyinyuedejustin](https://github.com/aiyinyuedejustin)    |                    宾夕法尼亚大学在读硕士                    |                                           |                                     |
+|          [Nobody-ML](https://github.com/Nobody-ML)           |                中国石油大学（华东）在读本科生                |                                           |                                     |
+|             [Mxoder](https://github.com/Mxoder)              |                  北京航空航天大学在读本科生                  |                                           |                                     |
+|           [Anooyman](https://github.com/Anooyman)            |                       南京理工大学硕士                       |                                           |                                     |
+|         [Vicky-3021](https://github.com/Vicky-3021)          |                 西安电子科技大学硕士（研0）                  |                                           |                                     |
+|        [SantiagoTOP](https://github.com/santiagoTOP)         |                     太原理工大学在读硕士                     |                                           | 数据清洗，文档管理、Baby EmoLLM维护 |
+|        [zealot52099](https://github.com/zealot52099)         |                          个人开发者                          |                                           |       清洗数据、LLM微调、RAG        |
+|            [wwwyfff](https://github.com/wwwyfff)             |                       复旦大学在读硕士                       |                                           |                                     |
+|           [Yicooong](https://github.com/Yicooong)            |                       南开大学在读硕士                       |                                           |                                     |
+|            [jkhumor](https://github.com/jkhumor)             |                       南开大学在读硕士                       |                                           |                 RAG                 |
+|       [lll997150986](https://github.com/lll997150986)        |                       南开大学在读硕士                       |                                           |                微调                 |
+|          [nln-maker](https://github.com/nln-maker)           |                       南开大学在读硕士                       |                                           |             前后端开发              |
+|         [dream00001](https://github.com/dream00001)          |                       南开大学在读硕士                       |                                           |             前后端开发              |
+|     [王几行XING](https://zhihu.com/people/brycewang1898)     |                       北京大学硕士毕业                       |                                           |    清洗数据、LLM微调、前后端开发    |
+|                            [思在]                            |                 北京大学硕士毕业（微软美国）                 |                                           |         LLM微调、前后端开发         |
+|             [TingWei](https://github.com/wwewwt)             |                     电子科技大学硕士毕业                     |         微信公众号：AI大模型在手          |                微调                 |
+|            [PengYu](https://github.com/hi-pengyu)            |                      石河子大学在读硕士                      |                                           |               LLM微调               |
+|          [Kedreamix](https://github.com/Kedreamix)           |                       深圳大学在读硕士                       |               DataWhale成员               |      首个心理健康R1蒸馏数据集       |
 ### 版权说明
 
 该项目签署了 MIT 授权许可，详情请参阅 [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE)
