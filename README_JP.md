@@ -67,7 +67,9 @@
 
 </div>
 
-皆さんのこのプロジェクトへの貢献をお待ちしています~
+🎉このプロジェクトに貢献してくださる方を歓迎します！
+
+🔍LLMの原理や底层実装に興味がある方は、[ThinkLLM](https://github.com/aJupyter/ThinkLLM)に注目してください。大規模モデルの各種コンポーネントをゼロから実装することに注力しています。
 
 ---
 
@@ -102,6 +104,12 @@
 </table>
 
 ## 最近の更新
+
+- 【2025.3】 InternLM2.5-7B-chat のフルファインチューニングに基づいて、[EmoLLM (GGUF形式、fp16精度)](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) がリリースされました。操作方法については後日更新されます。@Rycen7822 @Slipstream-Max
+- 【2025.2】 最初のメンタルヘルス R1 スティルデータセットを更新しました。[psychology-10k-Deepseek-R1-zh.json](./datasets/psychology-10k-Deepseek-R1-zh.json) @Kedreamix
+- 【2024.09.14】 Qwen2-7B-Instruct モデルに基づく Lora ファインチューニングモデルがオープンソース化されました。ファインチューニング設定ファイルアドレス: [Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py)、モデルウェイトリンク: [ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/)
+- 【2024.08】 GLM4-9B-chat をベースにした Lora ファインチューニングモデルがオープンソース化されました（Llama-factory 基づく）。詳細は [Fine-tuning Tutorial](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md) をご覧ください。モデルウェイトリンク: [ModelScope](https://www.modelscope.cn/models/wwewwt/EmoLLM-glm-4-9b-chat/summary)
+- 【2024.07.16】 EmoLLM V3.0 を体験していただけます。このモデルは InternLM2.5-7B-Chat モデルに基づくフルファインチューニングバージョンです。ファインチューニング設定ファイルは [internlm2_5_chat_7b_full.py](./xtuner_config/internlm2_5_chat_7b_full.py) で見つけることができます。モデルウェイトは [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0)、[ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) でご利用いただけます。WebDemo は [OpenXLab apps](https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0)、[Zhihu 上のフルファインチューニングチュートリアル](https://zhuanlan.zhihu.com/p/708931911) でご利用いただけます。
 - 【2024.7】EmoLLM V2.0の安定版を日常使用および学術研究にご利用ください。モデルの重みリンク：[OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full/tree/main)。
 - 【2024.7】InternLM2_5_7B_chatの微調整構成を追加しました。[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)。
 - 【2024.6】[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)の[GLM4-9B-chat微調整ガイド](./doc/GLM-4-9B-chat%20Lora%20微调（llama-factory）.md)を追加しました。[swiftベースの微調整ガイド](./swift/)を追加しました。論文[ESC-Eval: Evaluating Emotion Support Conversations in Large Language Models](https://arxiv.org/abs/2406.14952)がEmoLLMを引用し、EmoLLMが良好な結果を達成しました。
@@ -114,6 +122,11 @@
 - [2024.04.02] Huggingfaceに[Old Mother Counsellor](https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main)をアップロードしました。
 - [2024.03.25] [Mother-like Therapist]がHuggingfaceで公開されました（https://huggingface.co/brycewang2018/EmoLLM-mother/tree/main）。
 - [2024.03.25] [Daddy-like Boy-Friend]がBaidu Paddle-Paddle AI Studioプラットフォームで公開されました（https://aistudio.baidu.com/community/app/68787）。
+
+
+<details>
+<summary>もっと見る</summary>
+
 - [2024.03.24] **InternLM2-Base-7B QLoRA微調整モデル**が**OpenXLab**と**ModelScope**プラットフォームで公開されました。詳細は[**InternLM2-Base-7B QLoRA**](./xtuner_config/README_internlm2_7b_base_qlora.md)をご覧ください。
 - [2024.03.12] [aiwei]がBaidu Paddle-Paddle AI Studioプラットフォームで公開されました（https://aistudio.baidu.com/community/app/63335）。
 - [2024.03.11] **EmoLLM V2.0はEmoLLM V1.0と比較して全体的に向上し、心理カウンセリングタスクにおいてRole-playing ChatGPTを上回る能力を持っています！** [EmoLLM V2.0を体験する](https://openxlab.org.cn/apps/detail/Farewell1/EmoLLMV2.0)、[データセットの統計と詳細情報](./datasets/)、[ロードマップ](./assets/Roadmap_ZH.png)を更新しました。
@@ -124,9 +137,6 @@
 - [2024.02.23] InternLM2_7B_chat_qloraベースの「優しいお姉さん心理カウンセラーAi Wei」をリリースしました。[モデルの重みを取得する](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_aiwei)、[構成ファイル](xtuner_config/aiwei-internlm2_chat_7b_qlora.py)、[オンライン体験リンク](https://openxlab.org.cn/apps/detail/ajupyter/EmoLLM-aiwei)。
 - [2024.02.23] [いくつかの微調整構成](/xtuner_config/)を更新しました。[data_pro.json](/datasets/data_pro.json)（より多くの量、より包括的なシナリオ、より豊富な内容）と[aiwei.json](/datasets/aiwei.json)（優しいお姉さんのロールプレイ専用、Emoji表現を含む）を追加しました。「優しいお姉さん心理カウンセラーAi Wei」が近日公開予定です。
 - [2024.02.18] [Qwen1_5-0_5B-Chat全量微調整バージョンがオープンソース化されました](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)。計算リソースが限られている方もぜひお試しください。
-
-<details>
-<summary>もっと見る</summary>
 
 - [2024.02.06] [Qwen1_5-0_5B-Chat全量微調整バージョンがオープンソース化されました](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen1_5-0_5B-Chat_full_sft/summary)。計算リソースが限られている方もぜひお試しください。
 
