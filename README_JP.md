@@ -104,7 +104,7 @@
 </table>
 
 ## 最近の更新
-
+- 【2025.4】 [ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM) は、大規模言語モデルの軽量で効率的な実装リポジトリであり、BPEトレーニングガイド（EmoLLMをサポート）を提供しています。
 - 【2025.3】 InternLM2.5-7B-chat のフルファインチューニングに基づいて、[EmoLLM (GGUF形式、fp16精度)](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) がリリースされました。操作方法については後日更新されます。@Rycen7822 @Slipstream-Max
 - 【2025.2】 最初のメンタルヘルス R1 スティルデータセットを更新しました。[psychology-10k-Deepseek-R1-zh.json](./datasets/psychology-10k-Deepseek-R1-zh.json) @Kedreamix
 - 【2024.09.14】 Qwen2-7B-Instruct モデルに基づく Lora ファインチューニングモデルがオープンソース化されました。ファインチューニング設定ファイルアドレス: [Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py)、モデルウェイトリンク: [ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/)

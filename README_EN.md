@@ -107,6 +107,7 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
+- [2025.4] [ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM ) is a lightweight and efficient implementation repository for large language models, providing a BPE training guide (supporting EmoLLM).
 - [2025.3] Based on the full fine-tuning of InternLM2.5-7B-chat, [EmoLLM (in GGUF format, fp16 precision)](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) has been released. Updates on how to operate it will be provided later. @Rycen7822 @Slipstream-Max
 - [2025.2] Updated the [first mental health R1 distillation dataset](./datasets/psychology-10k-Deepseek-R1-zh.json) @Kedreamix
 - [2024.09.14] The Lora fine-tuned model based on the Qwen2-7B-Instruct model is open-sourced. Fine-tuning configuration file address: [Qwen2-7B-Instruct_lora.py](./xtuner_config/Qwen2-7B-Instruct_lora.py), model weight link: [ModelScope](https://www.modelscope.cn/models/aJupyter/EmoLLM_Qwen2-7B-Instruct_lora/)
