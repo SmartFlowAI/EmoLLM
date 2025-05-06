@@ -103,6 +103,8 @@
 </table>
 
 ## 🎇最近更新
+- 【2025.5】[caryou](https://github.com/HaiyangPeng/careyou)：EmoLLM-心理数字人分项（开发完成&测试后会合并到EmoLLM），欢迎大家关注！
+- 【2025.5】[deepwiki-EmoLLM](https://deepwiki.com/SmartFlowAI/EmoLLM)：可以基于该项目进行更加智能化的项目&文档理解
 - 【2025.4】[ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM)是一个轻量、高效的大语言模型算法实现仓库，提供了BPE训练指南（支持EmoLLM）。
 - 【2025.3】基于InternLM2.5-7B-chat全量微调的[EmoLLM（GGUF格式，fp16精度）](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) ，如何操作后续会更新~ @Rycen7822 @Slipstream-Max
 - 【2025.2】更新[首个心理健康R1蒸馏数据集](./datasets/psychology-10k-Deepseek-R1-zh.json) @Kedreamix

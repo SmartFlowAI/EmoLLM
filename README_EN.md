@@ -107,6 +107,8 @@ The Model aims to fully understand and promote the mental health of individuals,
 </table>
 
 ## Recent Updates
+- [2025.5] [caryou](https://github.com/HaiyangPeng/careyou): EmoLLM-Psychological Digital Human subproject (will be merged into EmoLLM after development & testing completion), welcome everyone to follow!
+- [2025.5] [deepwiki-EmoLLM](https://deepwiki.com/SmartFlowAI/EmoLLM): can be used for more intelligent project & document understanding based on this project.
 - [2025.4] [ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM ) is a lightweight and efficient implementation repository for large language models, providing a BPE training guide (supporting EmoLLM).
 - [2025.3] Based on the full fine-tuning of InternLM2.5-7B-chat, [EmoLLM (in GGUF format, fp16 precision)](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) has been released. Updates on how to operate it will be provided later. @Rycen7822 @Slipstream-Max
 - [2025.2] Updated the [first mental health R1 distillation dataset](./datasets/psychology-10k-Deepseek-R1-zh.json) @Kedreamix
