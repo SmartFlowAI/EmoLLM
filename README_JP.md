@@ -48,6 +48,7 @@
 
 |         モデル         |       タイプ       | ファイルリンク  | モデルリンク  |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   Deepseek-R1_14b_int4   |  QLoRA   |  unsloth | [ModelScope](https://www.modelscope.cn/models/haiyangpengai/careyou_7b_16bit_v3_2_qwen14_4bit) |
 |   InternLM2_5_7B_chat   |  QLORA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2_7B_chat   |  QLORA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM/files) |
 |   InternLM2_7B_chat   | 全量微調整 | [internlm2_chat_7b_full.py](./xtuner_config/internlm2_chat_7b_full.py)  | [OpenXLab](https://openxlab.org.cn/models/detail/ajupyter/EmoLLM_internlm2_7b_full) |
@@ -84,27 +85,32 @@
 - 予防および介入措置：メンタルヘルスの大規模モデルには、心理的問題を予防し、メンタルヘルスを促進するための戦略も含まれます。これには、心理教育、カウンセリング、治療、社会的支援システムが含まれます。
 - 評価および診断ツール：メンタルヘルスを効果的に促進するためには、個人の心理状態を評価し、潜在的な心理的問題を診断するための科学的なツールが必要です。
 
-<table>
+<table style="width: 100%; border-collapse: collapse;">
     <tr>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo2.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo2.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
     </tr>
     <tr>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo3.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo3.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo4.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo4.gif" alt="占位图" style="width: 100%; height: auto;">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center" style="background-color: transparent;">
+            <img src="careyou\assets\careyou.png" alt="占位图" style="width: 100%; height: auto;">
         </td>
     </tr>
 </table>
 
 ## 最近の更新
-- 【2025.5】[caryou](https://github.com/HaiyangPeng/careyou): EmoLLM-心理デジタル人間のサブプロジェクト（開発完了後＆テスト後にEmoLLMに統合されます）、皆様のフォローを歓迎します！
+- 【2025.5】[AI心理アシスタント-ディープ思考版（Caryou）](https://github.com/HaiyangPeng/careyou)：EmoLLM-心理デジタルヒューマンセクション（現在は深い思考、Rag、web search、tts機能を完了）は、EmoLLMに統合されており、プロジェクトの最適化と改善にご参加ください。
 - 【2025.5】[deepwiki-EmoLLM](https://deepwiki.com/SmartFlowAI/EmoLLM): このプロジェクトに基づいてよりスマートなプロジェクト＆ドキュメント理解を行うことができます。
 - 【2025.4】 [ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM) は、大規模言語モデルの軽量で効率的な実装リポジトリであり、BPEトレーニングガイド（EmoLLMをサポート）を提供しています。
 - 【2025.3】 InternLM2.5-7B-chat のフルファインチューニングに基づいて、[EmoLLM (GGUF形式、fp16精度)](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) がリリースされました。操作方法については後日更新されます。@Rycen7822 @Slipstream-Max
@@ -318,6 +324,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |             [TingWei](https://github.com/wwewwt)             |            電子科技大学、修士課程卒業             |                                                              |                         LLMの微調整                          |
 |            [PengYu](https://github.com/hi-pengyu)            |             石河子大学、修士課程在籍              |                                                              |                         LLMの微調整                          |
 |          [Kedreamix](https://github.com/Kedreamix)           |              深圳大学、修士課程在籍               |                                                              |             初のメンタルヘルスR1蒸留データセット             |
+|          [HaiyangPeng](https://github.com/HaiyangPeng)           |                       AIアルゴリズムエンジニア师                       |                              |      AI心理アシスタントの開発-深思考版       |
 ### 著作権表示
 
 このプロジェクトはMITライセンスの下でライセンスされています。詳細については、[LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/master/LICENSE)を参照してください。

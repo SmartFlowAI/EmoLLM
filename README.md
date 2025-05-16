@@ -46,6 +46,7 @@
 
 |         模型          |   类型   |                                                   链接                                                   | 模型链接   |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   Deepseek-R1_14b_int4   |  QLoRA   |  unsloth | [ModelScope](https://www.modelscope.cn/models/haiyangpengai/careyou_7b_16bit_v3_2_qwen14_4bit) |
 |   InternLM2_5_7B_chat   |  全量微调   |  [internlm2_5_chat_7b_full.py](./xtuner_config/internlm2_5_chat_7b_full.py) | [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) |
 |   InternLM2_5_7B_chat   |  QLoRA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2_7B_chat   |  QLoRA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM/files) |
@@ -83,27 +84,32 @@
 - 预防和干预措施：心理健康大模型还包括预防心理问题和促进心理健康的策略，如心理教育、心理咨询、心理治疗和社会支持系统。
 - 评估和诊断工具：为了有效促进心理健康，需要有科学的工具来评估个体的心理状态，以及诊断可能存在的心理问题。
 
-<table>
+<table style="width: 100%; border-collapse: collapse;">
     <tr>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo2.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo2.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
     </tr>
     <tr>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo3.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo3.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo4.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo4.gif" alt="占位图" style="width: 100%; height: auto;">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center" style="background-color: transparent;">
+            <img src="careyou\assets\careyou.png" alt="占位图" style="width: 100%; height: auto;">
         </td>
     </tr>
 </table>
 
 ## 🎇最近更新
-- 【2025.5】[caryou](https://github.com/HaiyangPeng/careyou)：EmoLLM-心理数字人分项（开发完成&测试后会合并到EmoLLM），欢迎大家关注！
+- 【2025.5】[AI心理助手-深度思考版（Caryou）](https://github.com/HaiyangPeng/careyou)：EmoLLM-心理数字人分项（目前完成了深度思考、Rag、web search和tts功能），已合并到EmoLLM，欢迎大家参与项目的优化和完善！
 - 【2025.5】[deepwiki-EmoLLM](https://deepwiki.com/SmartFlowAI/EmoLLM)：可以基于该项目进行更加智能化的项目&文档理解
 - 【2025.4】[ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM)是一个轻量、高效的大语言模型算法实现仓库，提供了BPE训练指南（支持EmoLLM）。
 - 【2025.3】基于InternLM2.5-7B-chat全量微调的[EmoLLM（GGUF格式，fp16精度）](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) ，如何操作后续会更新~ @Rycen7822 @Slipstream-Max
@@ -325,6 +331,7 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 |             [TingWei](https://github.com/wwewwt)             |                     电子科技大学硕士毕业                     |         微信公众号：AI大模型在手          |                微调                 |
 |            [PengYu](https://github.com/hi-pengyu)            |                      石河子大学在读硕士                      |                                           |               LLM微调               |
 |          [Kedreamix](https://github.com/Kedreamix)           |                       深圳大学在读硕士                       |               DataWhale成员               |      首个心理健康R1蒸馏数据集       |
+|          [HaiyangPeng](https://github.com/HaiyangPeng)           |                       AI算法工程师                       |                              |      开发AI心理助手-深度思考版       |
 ### 版权说明
 
 该项目签署了 MIT 授权许可，详情请参阅 [LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/main/LICENSE)

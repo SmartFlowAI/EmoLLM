@@ -48,6 +48,7 @@
 
 |         Model         |       Type       | File Links  | Model Links  |
 | :-------------------: | :------: | :------------------------------------------------------------------------------------------------------: |:------: |
+|   Deepseek-R1_14b_int4   |  QLoRA   |  unsloth | [ModelScope](https://www.modelscope.cn/models/haiyangpengai/careyou_7b_16bit_v3_2_qwen14_4bit) |
 | InternLM2_5_7B_chat | full fine-tuning | [internlm2_5_chat_7b_full.py](./xtuner_config/internlm2_5_chat_7b_full.py)| [OpenXLab](https://openxlab.org.cn/models/detail/chg0901/EmoLLM_V3.0), [ModelScope](https://modelscope.cn/models/chg0901/EmoLLMV3.0) |
 |   InternLM2_5_7B_chat   |  QLoRA   |  [internlm2_5_chat_7b_qlora_oasst1_e3.py](./xtuner_config/internlm2_5_chat_7b_qlora_oasst1_e3.py) |[ModelScope](https://www.modelscope.cn/models/z342994309/emollm_interlm2_5/)  |
 |   InternLM2_7B_chat   |  QLoRA   |  [internlm2_7b_chat_qlora_e3.py](./xtuner_config/internlm2_7b_chat_qlora_e3.py) | [ModelScope](https://modelscope.cn/models/aJupyter/EmoLLM/files) |
@@ -87,27 +88,32 @@ The Model aims to fully understand and promote the mental health of individuals,
 - Assessment and diagnostic tools: Effective promotion of mental health requires scientific tools to assess individuals' psychological states and diagnose potential psychological issues.
 
 
-<table>
+<table style="width: 100%; border-collapse: collapse;">
     <tr>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo2.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo2.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
     </tr>
     <tr>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo3.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo3.gif" alt="占位图" style="width: 100%; height: auto;">
         </td>
-        <td align="center" style="background-color: transparent">
-            <img src="assets\aiwei_demo4.gif" alt="占位图">
+        <td align="center" style="background-color: transparent; width: 50%;">
+            <img src="assets\aiwei_demo4.gif" alt="占位图" style="width: 100%; height: auto;">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center" style="background-color: transparent;">
+            <img src="careyou\assets\careyou.png" alt="占位图" style="width: 100%; height: auto;">
         </td>
     </tr>
 </table>
 
 ## Recent Updates
-- [2025.5] [caryou](https://github.com/HaiyangPeng/careyou): EmoLLM-Psychological Digital Human subproject (will be merged into EmoLLM after development & testing completion), welcome everyone to follow!
+- [2025.5] [AI Psychological Assistant-Deep Thinking Version (Caryou)](https://github.com/HaiyangPeng/careyou): EmoLLM-Psychological Digital Person sub project (currently completed deep thinking, Rag, web search, and tts functions) has been merged into EmoLLM. Welcome everyone to participate in the optimization and improvement of the project!
 - [2025.5] [deepwiki-EmoLLM](https://deepwiki.com/SmartFlowAI/EmoLLM): can be used for more intelligent project & document understanding based on this project.
 - [2025.4] [ThinkLLM](https://github.com/aJupyter/ThinkLLM/tree/main/LLM ) is a lightweight and efficient implementation repository for large language models, providing a BPE training guide (supporting EmoLLM).
 - [2025.3] Based on the full fine-tuning of InternLM2.5-7B-chat, [EmoLLM (in GGUF format, fp16 precision)](https://huggingface.co/collections/L0ve1ace/psychology-llm-gguf-67cc766eaf0a3f01c6e39aa6) has been released. Updates on how to operate it will be provided later. @Rycen7822 @Slipstream-Max
@@ -331,7 +337,7 @@ This project uses Git for version control. You can see the currently available v
 |             [TingWei](https://github.com/wwewwt)             | University Of Electronic Science And Technology Of China,Master's graduate |                                                   |                        LLM finetuning                        |
 |            [PengYu](https://github.com/hi-pengyu)            |             Shihezi University, Master's student             |                                                   |                        LLM finetuning                        |
 |          [Kedreamix](https://github.com/Kedreamix)           |            Shenzhen University, Master’s student             |                                                   |       The First Mental Health R1 Distillation Dataset        |
-
+|          [HaiyangPeng](https://github.com/HaiyangPeng)           |                       AI Algorithm Engineer                       |                              |      Developed AI Psychological Assistant-Deep Thinking Version       |
 ### Copyright Notice
 
 The project is licensed under the MIT License. Please refer to the details
