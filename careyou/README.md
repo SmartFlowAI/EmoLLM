@@ -3,11 +3,9 @@
 ## 🚀 Overview
 This model is finetuned on deepseek-r1. If this repo helps you, star and share it ❤️. This repo will be continuously merged into EmoLLM.
 
-  <a href="careyou"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/careyou.png">
-    <source media="(prefers-color-scheme: light)" srcset="assets/careyou.png">
-    <img alt="careyou logo" src="assets/careyou.png" height="310" style="max-width: 100%;">
-  </picture></a>
+<td colspan="3" align="center" style="background-color: transparent;">
+    <img src="assets\careyou.png" alt="占位图" style="width: 100%; height: auto;">
+</td>
 
 ## ✨ Functions
 ✅Provide an interactive chat interface for psychological consultation seekers.
