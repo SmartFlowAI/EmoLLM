@@ -329,6 +329,28 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 
 このプロジェクトはMITライセンスの下でライセンスされています。詳細については、[LICENSE](https://github.com/SmartFlowAI/EmoLLM/blob/master/LICENSE)を参照してください。
 
+### いんよう
+
+もしこのプロジェクトがあなたの研究や仕事の助けになれば、以下の形式で引用してください：
+
+```bibtex
+@misc{2024EmoLLM,
+    title={EmoLLM: Reinventing Mental Health Support with Large Language Models},
+    author={EmoLLM Team},
+    howpublished={\url{https://github.com/SmartFlowAI/EmoLLM}},
+    year={2024}
+}
+```
+
+#### タスクリスト
+以下に EmoLLM を引用した研究・プロジェクトを記載します。（順不同。もし記載漏れがございましたら、ご報告いただけますと幸いです。）
+- Yin C, Li F, Zhang S, et al. Mdd-5k: A new diagnostic conversation dataset for mental disorders synthesized via neuro-symbolic llm agents[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2025, 39(24): 25715-25723.
+- Gu Q, Li S, Zheng T, et al. Steel-LLM: From Scratch to Open Source--A Personal Journey in Building a Chinese-Centric LLM[J]. arXiv preprint arXiv:2502.06635, 2025.
+- Dai C, Hu J, Shi H, et al. Psyche-R1: Towards Reliable Psychological LLMs through Unified Empathy, Expertise, and Reasoning[J]. arXiv preprint arXiv:2508.10848, 2025.
+- Wang M, Wang P, Wu L, et al. AnnaAgent: Dynamic Evolution Agent System with Multi-Session Memory for Realistic Seeker Simulation[J]. arXiv preprint arXiv:2506.00551, 2025.
+- Feng Y, Wang Q, Liu K, et al. AI PsyRoom: Artificial Intelligence Platform for Segmented Yearning and Reactive Outcome Optimization Method[J]. arXiv preprint arXiv:2506.06740, 2025.
+
+
 ### 謝辞
 #### 関連プロジェクト
 - [CPsyCoun](https://github.com/CAS-SIAT-XinHai/CPsyCoun)

@@ -355,6 +355,13 @@ If this project is helpful in your work, please use the following citation forma
     year={2024}
 }
 ```
+#### Work list
+A non-exhaustive list of works citing EmoLLM is provided below. The order of appearance does not imply ranking. Contributions to this list are welcome.
+- Yin C, Li F, Zhang S, et al. Mdd-5k: A new diagnostic conversation dataset for mental disorders synthesized via neuro-symbolic llm agents[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2025, 39(24): 25715-25723.
+- Gu Q, Li S, Zheng T, et al. Steel-LLM: From Scratch to Open Source--A Personal Journey in Building a Chinese-Centric LLM[J]. arXiv preprint arXiv:2502.06635, 2025.
+- Dai C, Hu J, Shi H, et al. Psyche-R1: Towards Reliable Psychological LLMs through Unified Empathy, Expertise, and Reasoning[J]. arXiv preprint arXiv:2508.10848, 2025.
+- Wang M, Wang P, Wu L, et al. AnnaAgent: Dynamic Evolution Agent System with Multi-Session Memory for Realistic Seeker Simulation[J]. arXiv preprint arXiv:2506.00551, 2025.
+- Feng Y, Wang Q, Liu K, et al. AI PsyRoom: Artificial Intelligence Platform for Segmented Yearning and Reactive Outcome Optimization Method[J]. arXiv preprint arXiv:2506.06740, 2025.
 
 ### Acknowledgments
 #### Related Projects
