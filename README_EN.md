@@ -215,6 +215,7 @@ The Model aims to fully understand and promote the mental health of individuals,
     - [Version control](#version-control)
     - [Authors (in no particular order)](#authors-in-no-particular-order)
     - [Copyright Notice](#copyright-notice)
+    - [Citation](#citation)
     - [Acknowledgments](#acknowledgments)
       - [Related Projects](#related-projects)
       - [People](#people)

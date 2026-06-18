@@ -24,8 +24,8 @@
 
 <h3 align="center">EmoLLM</h3>
 
-  <div align="center">
-      简体中文| <a href="README_EN.md" >English</a> | <a href="README_JP.md" >日本語</a>
+  <p align="center">
+  简体中文 | <a href="README_EN.md">English</a> | <a href="README_JP.md">日本語</a>
     <br />
     <br />
     <a href="https://github.com/SmartFlowAI/EmoLLM"><strong>探索本项目的文档 »</strong></a>
@@ -36,7 +36,9 @@
     <a href="https://github.com/SmartFlowAI/EmoLLM/issues">报告Bug</a>
     ·
     <a href="https://github.com/SmartFlowAI/EmoLLM/issues">提出新特性</a>
-  </div>
+  </p>
+
+</p>
 
 <!-- 本篇README.md面向开发者 -->
 
@@ -208,6 +210,7 @@
     - [🎓评测指南](#评测指南)
     - [使用到的框架](#使用到的框架)
       - [如何参与本项目](#如何参与本项目)
+    - [版本控制](#版本控制)
     - [作者（排名不分先后）](#作者排名不分先后)
     - [版权说明](#版权说明)
     - [引用](#引用)
@@ -298,6 +301,10 @@ git clone https://github.com/SmartFlowAI/EmoLLM.git
 5. Open a Pull Request
 
 </details>
+
+### 版本控制
+
+本项目使用 Git 进行版本控制，你可以在仓库中查看当前可用的版本。
 
 ### 作者（排名不分先后）
 
