@@ -1,3 +1,4 @@
+-r requirements-search.txt
 loguru
 langchain==0.1.13
 langchain_community==0.0.29
