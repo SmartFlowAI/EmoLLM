@@ -10,12 +10,8 @@ import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer, BitsAndBytesConfig
 from threading import Thread
-import requests
-import json
+from web_search import new_conversation_id, search_web
 from rag.src.pipeline import EmoLLMRAG
-
-LANGSEARCH_API_URL = "https://api.langsearch.com/v1/web-search"
-LANGSEARCH_API_KEY = os.getenv('LANGSEARCH_API_KEY') 
 
 print("downloading model")
 base_path = "model"
@@ -47,32 +43,6 @@ prompt_style = """
 ### Response:
 <think>
 """
-
-def langsearch(query, max_results=5):
-    payload = json.dumps({
-    "query": query,
-    "freshness": "noLimit",
-    "summary": True,
-    "count": 10
-    })
-    headers = {
-    'Authorization': f'Bearer {LANGSEARCH_API_KEY}',
-    'Content-Type': 'application/json'
-    }
-    response = requests.request("POST", LANGSEARCH_API_URL, headers=headers, data=payload)
-    if response.status_code == 200:
-        print("Response Success: 200")
-        results = json.loads(response.text).get("data").get("webPages").get("value")
-        search_results = []
-        for result in results:
-            title = result.get("name", "")
-            snippet = result.get("snippet", "")
-            url = result.get("url", "")
-            search_results.append(f"标题: {title}\n摘要: {snippet}\n链接: {url}\n")
-        return "\n".join(search_results)
-    else:
-        print(f"Error: {response.status_code}")
-        return ""
 
 def tavily_search(query, max_results=5):
     search_info = "\n搜索结果：\n"
@@ -182,6 +152,11 @@ details {
 }
 """
 
+def stop_generation(active_gen):
+    active_gen[0] = False
+    return active_gen
+
+
 def user(message, history):
     return "", history + [[message, None]]
 
@@ -248,9 +223,12 @@ def format_response(state, elapsed):
 
     return collapsible, answer_part
 
-def generate_response(history, temperature, top_p, max_tokens, active_gen):
+def generate_response(history, temperature, top_p, max_tokens, active_gen, conversation_id, search_enabled):
     user_message = history[-1][0]
-    search_results = langsearch(user_message)
+    search_results = search_web(user_message, conversation_id, enabled=search_enabled,
+                                cancelled=lambda: not active_gen[0])
+    if not active_gen[0]:
+        return
     if search_results:
         print("联网搜索结果：", search_results)
     else:
@@ -259,7 +237,7 @@ def generate_response(history, temperature, top_p, max_tokens, active_gen):
     conversation = []
     for user, assistant in history[:-1]:
         conversation.extend([{"role": "user", "content": user}, {"role": "assistant", "content": assistant}])
-    conversation.append({"role": "user", "content": prompt_style.format(user_message, search_results)})
+    conversation.append({"role": "user", "content": prompt_style.format(search_results, "", user_message)})
 
     input_ids = tokenizer.apply_chat_template(conversation, tokenize=False, add_generation_prompt=True)
     input_ids = tokenizer([input_ids], return_tensors="pt").to(model.device)
@@ -305,9 +283,13 @@ def generate_response(history, temperature, top_p, max_tokens, active_gen):
         t.join()
 
 def generate_response_and_tts(history, temperature, top_p, max_tokens, active_gen, 
-                              audio_select, ref_text, prompt_language, text_language, how_to_cut):
+                              audio_select, ref_text, prompt_language, text_language, how_to_cut,
+                              conversation_id, search_enabled):
     user_message = history[-1][0]
-    search_results = langsearch(user_message)
+    search_results = search_web(user_message, conversation_id, enabled=search_enabled,
+                                cancelled=lambda: not active_gen[0])
+    if not active_gen[0]:
+        return
     if search_results:
         print("联网搜索结果：", search_results)
     else:
@@ -831,6 +813,8 @@ with gr.Blocks(css=CSS) as demo:
     gr.Markdown(DESCRIPTION)
 
     active_gen = gr.State([False])
+    conversation_id = gr.State(value=new_conversation_id)
+    search_enabled = gr.Checkbox(value=True, label="Web search (send message to search provider)")
     
     chatbot = gr.Chatbot(
         elem_id="chatbot",
@@ -908,11 +892,11 @@ with gr.Blocks(css=CSS) as demo:
         [chatbot, temperature, top_p, max_tokens, active_gen, 
          gr.State(DEFAULT_AUDIO_SELECT), gr.State(DEFAULT_REF_TEXT), 
          gr.State(DEFAULT_PROMPT_LANGUAGE), gr.State(DEFAULT_TEXT_LANGUAGE), 
-         gr.State(DEFAULT_HOW_TO_CUT)], 
+         gr.State(DEFAULT_HOW_TO_CUT), conversation_id, search_enabled],
         [chatbot, output_audio]
     )
 
-    msg.submit(
+    enter_event = msg.submit(
         user, [msg, chatbot], [msg, chatbot], queue=False
     ).then(
         lambda: [True], outputs=active_gen
@@ -921,18 +905,18 @@ with gr.Blocks(css=CSS) as demo:
         [chatbot, temperature, top_p, max_tokens, active_gen, 
          gr.State(DEFAULT_AUDIO_SELECT), gr.State(DEFAULT_REF_TEXT), 
          gr.State(DEFAULT_PROMPT_LANGUAGE), gr.State(DEFAULT_TEXT_LANGUAGE), 
-         gr.State(DEFAULT_HOW_TO_CUT)], 
+         gr.State(DEFAULT_HOW_TO_CUT), conversation_id, search_enabled],
         [chatbot, output_audio]
     )
 
     stop_btn.click(
-        lambda: [False], None, active_gen, cancels=[submit_event]
+        stop_generation, active_gen, active_gen, cancels=[submit_event, enter_event], queue=False
     )
-    
+
     clear_btn.click(
-        lambda: [False], None, active_gen, cancels=[submit_event]
+        stop_generation, active_gen, active_gen, cancels=[submit_event, enter_event], queue=False
     ).then(
-        lambda: None, None, chatbot, queue=False
+        lambda: (None, new_conversation_id()), None, [chatbot, conversation_id], queue=False
     )
 
 
